@@ -63,7 +63,7 @@
 				<li>
 					<a href="#">
 						<span class="avatar bg-warning"><i class="fa fa-warning"></i></span>
-						<span class="name">Update Status</span>
+						<span class="name">Update Status,</span>
 						<span class="desc">Failed to get available update data. To ensure the please contact us.</span>
 						<span class="time">30 min</span>
 					</a>
