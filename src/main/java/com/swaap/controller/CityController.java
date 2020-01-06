@@ -57,7 +57,7 @@ public class CityController {
 		CityVO foundCityVO=(CityVO)cityList.get(0);
 		foundCityVO.setStatus(false);
 		this.cityService.insertCity(foundCityVO);
-		return new ModelAndView("redirect:mall/viewState");
+		return new ModelAndView("redirect:/");
 	}
 	
 	@RequestMapping(value="updateCity", method=RequestMethod.GET)

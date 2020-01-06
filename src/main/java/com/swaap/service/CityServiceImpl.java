@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.swaap.dao.CityDAO;
 import com.swaap.model.CityVO;
+import com.swaap.model.StateVO;
 
 @Service
 @Transactional
@@ -26,8 +27,8 @@ public class CityServiceImpl implements CityService {
 
 	@Override
 	public List searchCity() {
-		List ls=this.cityDAO.searchCity();
-		return ls;
+		List cityList=this.cityDAO.searchCity();
+		return cityList;
 	}
 
 

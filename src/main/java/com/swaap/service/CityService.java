@@ -3,6 +3,7 @@ package com.swaap.service;
 import java.util.List;
 
 import com.swaap.model.CityVO;
+import com.swaap.model.StateVO;
 
 public interface CityService {
 

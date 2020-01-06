@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.swaap.model.CityVO;
+import com.swaap.model.StateVO;
 
 @Repository
 public class CityDAOImpl implements CityDAO {
@@ -25,7 +26,7 @@ public class CityDAOImpl implements CityDAO {
 	@Override
 	public List searchCity() {
 		Session session = sessionFactory.openSession();
-		Query q=session.createQuery("from CityVO where status=true");
+		Query q=session.createQuery("from CityVO where status=true and stateVO.status=true");
 		List cityList=q.list();
 		return cityList;
 	}
@@ -37,5 +38,6 @@ public class CityDAOImpl implements CityDAO {
 		List cityList=q.list();
 		return cityList;
 	}
+
 
 }

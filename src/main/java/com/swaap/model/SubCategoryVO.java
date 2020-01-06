@@ -9,27 +9,23 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.Cascade;
-import org.hibernate.annotations.CascadeType;
-import javax.persistence.CascadeType.*;
-
 @Entity
-@Table(name="CityTable")
-public class CityVO {
+@Table(name="SubCategoryTable")
+public class SubCategoryVO {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
 	private int id;
 	
-	@Column(name="city_name")
-	private String cityName;
+	@Column(name="subCategory_name")
+	private String subCategoryName;
 	
 	@Column(name="status")
 	private boolean status=false;
 	
 	@ManyToOne
-	@JoinColumn(name="stateVO")
-	private StateVO stateVO;
+	@JoinColumn(name="categoryVO")
+	private CategoryVO categoryVO;
 
 	public int getId() {
 		return id;
@@ -39,12 +35,12 @@ public class CityVO {
 		this.id = id;
 	}
 
-	public String getCityName() {
-		return cityName;
+	public String getSubCategoryName() {
+		return subCategoryName;
 	}
 
-	public void setCityName(String cityName) {
-		this.cityName = cityName;
+	public void setSubCategoryName(String subCategoryName) {
+		this.subCategoryName = subCategoryName;
 	}
 
 	public boolean isStatus() {
@@ -55,12 +51,13 @@ public class CityVO {
 		this.status = status;
 	}
 
-	public StateVO getStateVO() {
-		return stateVO;
+	public CategoryVO getCategoryVO() {
+		return categoryVO;
 	}
 
-	public void setStateVO(StateVO stateVO) {
-		this.stateVO = stateVO;
+	public void setCategoryVO(CategoryVO categoryVO) {
+		this.categoryVO = categoryVO;
 	}
+
 
 }

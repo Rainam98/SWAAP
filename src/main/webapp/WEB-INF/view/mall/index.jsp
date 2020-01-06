@@ -503,10 +503,10 @@
 
 			<div class="col-xl-3 col-lg-6 col-12">
 				<div class="box-content user-info">
-					<div class="avatar"><img src="adminResources/image/avatar-1.jpg" alt=""></div>
+					<div class="avatar"><img src="adminResources/image/avatar-4.jpg" alt=""></div>
 					<!-- /.avatar -->
 					<div class="right-content">
-						<h4 class="name">Betty Simmons</h4>
+						<h4 class="name">Harsh Yadav</h4>
 						<!-- /.name -->
 						<p><a href="/cdn-cgi/l/email-protection#9af2fff6f6f5daf4f3f4f0fbeefffbf7b4f5e8fd"><span class="__cf_email__" data-cfemail="b1d9d4dddddef1dfd8dfdbd0c5d4d0dc9fdec3d6">[email&#160;protected]</span></a></p>
 						<div class="text-warning small">Manager</div>
@@ -519,13 +519,13 @@
 			<!-- /.col-xl-3 col-lg-6 col-12 -->
 			<div class="col-xl-3 col-lg-6 col-12">
 				<div class="box-content user-info">
-					<div class="avatar"><img src="adminResources/image/avatar-2.jpg" alt=""></div>
+					<div class="avatar"><img src="adminResources/image/avatar-4.jpg" alt=""></div>
 					<!-- /.avatar -->
 					<div class="right-content">
-						<h4 class="name">Michael Zenaty</h4>
+						<h4 class="name">Rainam Shah</h4>
 						<!-- /.name -->
 						<p><a href="/cdn-cgi/l/email-protection#0a626f6666654a646364606b7e6f6b672465786d"><span class="__cf_email__" data-cfemail="d8b0bdb4b4b798b6b1b6b2b9acbdb9b5f6b7aabf">[email&#160;protected]</span></a></p>
-						<div class="text-custom small">Support</div>
+						<div class="text-custom small">Developer</div>
 						<!-- /.text-custom -->
 					</div>
 					<!-- /.right-content -->
@@ -538,7 +538,7 @@
 					<div class="avatar"><img src="adminResources/image/avatar-3.jpg" alt=""></div>
 					<!-- /.avatar -->
 					<div class="right-content">
-						<h4 class="name">Denise Peterson</h4>
+						<h4 class="name">Ritu Shah</h4>
 						<!-- /.name -->
 						<p><a href="/cdn-cgi/l/email-protection#8ce4e9e0e0e3cce2e5e2e6edf8e9ede1a2e3feeb"><span class="__cf_email__" data-cfemail="660e030a0a0926080f080c071203070b48091401">[email&#160;protected]</span></a></p>
 						<div class="text-success small">Designer</div>
@@ -554,7 +554,7 @@
 					<div class="avatar"><img src="adminResources/image/avatar-4.jpg" alt=""></div>
 					<!-- /.avatar -->
 					<div class="right-content">
-						<h4 class="name">Pamela Wood</h4>
+						<h4 class="name">Tanay Shah</h4>
 						<!-- /.name -->
 						<p><a href="/cdn-cgi/l/email-protection#d8b0bdb4b4b798b6b1b6b2b9acbdb9b5f6b7aabf"><span class="__cf_email__" data-cfemail="a2cac7cececde2cccbccc8c3d6c7c3cf8ccdd0c5">[email&#160;protected]</span></a></p>
 						<div class="text-danger small">Developer</div>

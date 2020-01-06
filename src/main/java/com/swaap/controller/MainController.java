@@ -11,5 +11,10 @@ public class MainController {
 	{
 		return new ModelAndView("mall/index");
 	}
-
+	
+	@RequestMapping(value="index")
+	public ModelAndView loadIndex()
+	{
+		return new ModelAndView("mall/index");
+	}
 }

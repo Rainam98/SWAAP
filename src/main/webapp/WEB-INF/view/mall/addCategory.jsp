@@ -10,7 +10,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>Add State</title>
+	<title>Add Category</title>
 
 	<!-- Main Styles -->
 	<link rel="stylesheet" href="adminResources/css/style.css">
@@ -67,16 +67,16 @@
 		<div class="row small-spacing">
 			<div class="col-12">
 				<div class="box-content">
-					<f:form data-toggle="validator" modelAttribute="stateVO" action="saveState" method="post">
-					<h1 class="page-title">Add State</h1>
+					<f:form data-toggle="validator" modelAttribute="categoryVO" action="saveCategory" method="post">
+					<h1 class="page-title">Add Category</h1>
 						<div class="form-group">
-							<label for="inputComplaintSubject" class="control-label">State</label>
-							<f:input path="stateName" name="stnme" class="form-control" id="inputName" placeholder="Enter State Name" required="true" />
+							<label for="inputComplaintSubject" class="control-label">Category</label>
+							<f:input path="categoryName" name="catnme" class="form-control" id="inputName" placeholder="Enter Category Name" required="true" />
 							<f:hidden path="id"/>
 						</div>
 						
 						<div class="form-group">
-							<button type="submit" name="addst" class="btn btn-primary waves-effect waves-light">Add State</button>
+							<button type="submit" name="addst" class="btn btn-primary waves-effect waves-light">Add Category</button>
 						</div>
 					</f:form>
 				</div>

@@ -23,8 +23,8 @@ public class StateServiceImpl implements StateService{
 	}
 	public List searchState()
 	{
-		List ls=this.stateDAO.searchState();
-		return ls;
+		List stateList=this.stateDAO.searchState();
+		return stateList;
 	}
 	
 	public List editState(StateVO stateVO)

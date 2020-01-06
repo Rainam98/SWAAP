@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.swaap.model.CityVO;
 import com.swaap.model.StateVO;
+import com.swaap.service.CityService;
 import com.swaap.service.StateService;
 
 @Controller
