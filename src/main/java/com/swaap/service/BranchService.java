@@ -1,5 +1,13 @@
 package com.swaap.service;
 
-public interface BranchService {
+import java.util.List;
 
+import com.swaap.model.BranchVO;
+
+public interface BranchService {
+	public void insertBranch(BranchVO branchVO);
+
+	public List searchBranch();
+
+	public List editBranch(BranchVO branchVO);
 }

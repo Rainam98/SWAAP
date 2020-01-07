@@ -9,31 +9,32 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.swaap.model.BranchVO;
+import com.swaap.model.ProductVO;
+
 @Repository
-public class BranchDAOImpl implements BranchDAO{
+public class ProductDAOImpl implements ProductDAO{
 	@Autowired
 	SessionFactory sessionFactory;
 
-	public void insertBranch(BranchVO branchVO) 
+	public void insertProduct(ProductVO productVO) 
 	{
 		Session session=sessionFactory.getCurrentSession();
-		session.saveOrUpdate(branchVO);		
+		session.saveOrUpdate(productVO);		
 	}
 
 	@Override
-	public List searchBranch() {
+	public List searchProduct() {
 		Session session = sessionFactory.openSession();
-		Query q=session.createQuery("from BranchVO where status=true and stateVO.status=true");
-		List branchList=q.list();
-		return branchList;
+		Query q=session.createQuery("from ProductVO where status=true and categoryVO.status=true");
+		List productList=q.list();
+		return productList;
 	}
 
 	@Override
-	public List editBranch(BranchVO branchVO) {
+	public List editProduct(ProductVO productVO) {
 		Session session = sessionFactory.openSession();		
-		Query q=session.createQuery("from BranchVO where id="+branchVO.getId());		
-		List branchList=q.list();
-		return branchList;
+		Query q=session.createQuery("from ProductVO where id="+productVO.getId());		
+		List productList=q.list();
+		return productList;
 	}
-
 }
