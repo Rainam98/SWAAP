@@ -9,7 +9,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>View Product</title>
+	<title>Manage Complaints</title>
 
 	<!-- Main Styles -->
 	<link rel="stylesheet" href="adminResources/css/style.css">
@@ -38,10 +38,6 @@
 
 	<jsp:include page="header.jsp"></jsp:include>
 	<!-- /.fixed-navbar -->
-
-
-
-	
 	<div id="color-switcher">
 		<div id="color-switcher-button" class="btn-switcher">
 			<div class="inside waves-effect waves-circle waves-light">
@@ -66,13 +62,26 @@
 		<!-- /.content -->
 	</div>
 	<!-- #color-switcher -->
+	<%@taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
 	<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+
 	<div id="wrapper">
 		<div class="main-content">
 			<div class="row small-spacing">
 				<div class="col-12">
 					<div class="box-content">
-						<h4 class="box-title">View Product</h4>
+						<h4 class="box-title">View Complaints</h4>
+							<div class="form-group">
+						<label for="categoryName" name="brn" class="control-label">Branch Location</label>
+						<div class="form-group margin-bottom-20">
+								<f:select class="form-control" path="branchVO.id" placeholder="Select Branch">
+									<c:forEach items="${branchList}" var="branchVariable">
+										<f:option value="${branchVariable.id}">${branchVariable.branchName }</f:option>
+									</c:forEach>
+								</f:select>									
+						</div>
+					</div>
+					</div>
 						<!-- /.box-title -->
 						<div class="dropdown js__drop_down">
 							<a href="#" class="dropdown-icon fas fa-ellipsis-v js__drop_down_button"></a>
@@ -89,50 +98,27 @@
 						<table id="example" class="table table-striped table-bordered display" style="width:100%">
 							<thead>
 								<tr>
-									<th>ID</th>
 									<th>Branch Name</th>
-									<th>Category Name</th>
-									<th>Sub-Category Name</th>
-									<th>Product Name</th>
-									<th>Product Description</th>
-									<th>Product Weight</th>
-									<th>Product Price</th>
-									<th>Barcode File</th>
-									<th>Delete</th>
-									<th>Update</th>
+									<th>Subject</th>
+									<th>Description</th>
+									<th>Reply</th>
 								</tr>
 							</thead>
 							<tfoot>
 								<tr>
-									<th>ID</th>
 									<th>Branch Name</th>
-									<th>Category Name</th>
-									<th>Sub-Category Name</th>
-									<th>Product Name</th>
-									<th>Product Description</th>
-									<th>Product Weight</th>
-									<th>Product Price</th>
-									<th>Barcode File</th>
-									<th>Delete</th>
-									<th>Update</th>
+									<th>Subject</th>
+									<th>Description</th>
+									<th>Reply</th>
 								</tr>
 							</tfoot>
 							<tbody>
-								<c:forEach items="${productList}" var="productVariable">
-									<tr>
-										<td>${productVariable.id}</td>
-										<td>${subCategoryVariable.branchVO.branchName}</td>
-										<td>${subCategoryVariable.categoryVO.categoryName}</td>
-										<td>${subCategoryVariable.subCategoryVO.subCategoryName}</td>
-										<td>${productVariable.productName}</td>
-										<td>${productVariable.productDescription}</td>
-										<td>${productVariable.productWeight}</td>
-										<td>${productVariable.prodcutPrice}</td>
-										<td></td>
-										<td><a  href="deleteSubCategory?findById=${productVariable.id}"><i class="menu-icon fa fa-trash-alt" aria-hidden="true"></i></a></td>
-										<td><a  href="updateSubCategory?findById=${productVariable.id}"><i class="menu-icon fa fa-edit" aria-hidden="true"></i></a></td>
-									</tr>
-								</c:forEach>
+								<tr>
+									<td>Tiger Nixon</td>
+									<td>System Architect</td>
+									<td>Edinburgh</td>
+									<td><a  href="replyComplaint?findById=${complaintVariable.id}"><i class="menu-icon fa fa-reply" aria-hidden="true"></i></a></td>
+								</tr>
 							</tbody>
 						</table>
 					</div>

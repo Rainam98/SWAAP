@@ -75,8 +75,8 @@
 				<li>
 					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon fas fa-briefcase"></i><span>Manage Product</span><span class="menu-arrow fa fa-angle-down"></span></a>
 					<ul class="sub-menu js__content">
-						<li><a href="ui-buttons.html">Add Product</a></li>
-						<li><a href="ui-cards.html">View Product</a></li>
+						<li><a href="addProduct">Add Product</a></li>
+						<li><a href="viewProduct">View Product</a></li>
 					</ul>
 					<!-- /.sub-menu js__content -->
 				</li>
@@ -97,12 +97,12 @@
 					<!-- /.sub-menu js__content -->
 				</li>
 				<li>
-					<a class="waves-effect" href="#"><i class="menu-icon far fa-smile" aria-hidden="true"></i><span>Feedback</span></a>
+					<a class="waves-effect" href="viewFeedback"><i class="menu-icon far fa-smile" aria-hidden="true"></i><span>Feedback</span></a>
 					
 					<!-- /.sub-menu js__content -->
 				</li>
 				<li>
-					<a class="waves-effect" href="#"><i class="menu-icon fas fa-comments" aria-hidden="true"></i><span>Manage Complaint</span></a>
+					<a class="waves-effect" href="viewComplaint"><i class="menu-icon fas fa-comments" aria-hidden="true"></i><span>Manage Complaint</span></a>
 					
 					<!-- /.sub-menu js__content -->
 				</li>

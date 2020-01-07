@@ -36,175 +36,6 @@
 
 <!-- /.fixed-navbar -->
 
-<div id="notification-popup" class="notice-popup js__toggle" data-space="75">
-	<h2 class="popup-title">Your Notifications</h2>
-	<!-- /.popup-title -->
-	<div class="content">
-		<ul class="notice-list">
-			<li>
-				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-sm-1.jpg" alt=""></span>
-					<span class="name">John Doe</span>
-					<span class="desc">Like your post: “Contact Form 7 Multi-Step”</span>
-					<span class="time">10 min</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-sm-2.jpg" alt=""></span>
-					<span class="name">Anna William</span>
-					<span class="desc">Like your post: “Facebook Messenger”</span>
-					<span class="time">15 min</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="avatar bg-warning"><i class="fa fa-warning"></i></span>
-					<span class="name">Update Status</span>
-					<span class="desc">Failed to get available update data. To ensure the please contact us.</span>
-					<span class="time">30 min</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-1.jpg" alt=""></span>
-					<span class="name">Jennifer</span>
-					<span class="desc">Like your post: “Contact Form 7 Multi-Step”</span>
-					<span class="time">45 min</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-sm-6.jpg" alt=""></span>
-					<span class="name">Michael Zenaty</span>
-					<span class="desc">Like your post: “Contact Form 7 Multi-Step”</span>
-					<span class="time">50 min</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-sm-4.jpg" alt=""></span>
-					<span class="name">Simon</span>
-					<span class="desc">Like your post: “Facebook Messenger”</span>
-					<span class="time">1 hour</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="avatar bg-violet"><i class="fa fa-flag"></i></span>
-					<span class="name">Account Contact Change</span>
-					<span class="desc">A contact detail associated with your account has been changed.</span>
-					<span class="time">2 hours</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-sm-7.jpg" alt=""></span>
-					<span class="name">Helen 987</span>
-					<span class="desc">Like your post: “Facebook Messenger”</span>
-					<span class="time">Yesterday</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-2.jpg" alt=""></span>
-					<span class="name">Denise Jenny</span>
-					<span class="desc">Like your post: “Contact Form 7 Multi-Step”</span>
-					<span class="time">Oct, 28</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-sm-8.jpg" alt=""></span>
-					<span class="name">Thomas William</span>
-					<span class="desc">Like your post: “Facebook Messenger”</span>
-					<span class="time">Oct, 27</span>
-				</a>
-			</li>
-		</ul>
-		<!-- /.notice-list -->
-		<a href="#" class="notice-read-more">See more messages <i class="fa fa-angle-down"></i></a>
-	</div>
-	<!-- /.content -->
-</div>
-<!-- /#notification-popup -->
-
-<div id="message-popup" class="notice-popup js__toggle" data-space="75">
-	<h2 class="popup-title">Recent Messages<a href="#" class="float-right text-danger">New message</a></h2>
-	<!-- /.popup-title -->
-	<div class="content">
-		<ul class="notice-list">
-			<li>
-				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-sm-1.jpg" alt=""></span>
-					<span class="name">John Doe</span>
-					<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere repellat voluptates.</span>
-					<span class="time">10 min</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-sm-3.jpg" alt=""></span>
-					<span class="name">Harry Halen</span>
-					<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere repellat voluptates.</span>
-					<span class="time">15 min</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-sm-4.jpg" alt=""></span>
-					<span class="name">Thomas Taylor</span>
-					<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere repellat voluptates.</span>
-					<span class="time">30 min</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-1.jpg" alt=""></span>
-					<span class="name">Jennifer</span>
-					<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere repellat voluptates.</span>
-					<span class="time">45 min</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-sm-5.jpg" alt=""></span>
-					<span class="name">Helen Candy</span>
-					<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere repellat voluptates.</span>
-					<span class="time">45 min</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-2.jpg" alt=""></span>
-					<span class="name">Anna Cavan</span>
-					<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere repellat voluptates.</span>
-					<span class="time">1 hour ago</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="avatar bg-success"><i class="fa fa-user"></i></span>
-					<span class="name">Jenny Betty</span>
-					<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere repellat voluptates.</span>
-					<span class="time">1 day ago</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-5.jpg" alt=""></span>
-					<span class="name">Denise Peterson</span>
-					<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere repellat voluptates.</span>
-					<span class="time">1 year ago</span>
-				</a>
-			</li>
-		</ul>
-		<!-- /.notice-list -->
-		<a href="#" class="notice-read-more">See more messages <i class="fa fa-angle-down"></i></a>
-	</div>
-	<!-- /.content -->
-</div>
-<!-- /#message-popup -->
 <div id="color-switcher">
 	<div id="color-switcher-button" class="btn-switcher">
 		<div class="inside waves-effect waves-circle waves-light">
@@ -229,77 +60,77 @@
 	<!-- /.content -->
 </div>
 <!-- #color-switcher -->
-
+<%@taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 <div id="wrapper">
 	<div class="main-content">
 		<div class="row small-spacing">
 			<div class="col-12">
 				<div class="box-content">
-					<form data-toggle="validator">
-					<h1 class="page-title">Product</h1>
+					<f:form data-toggle="validator" modelAttribute="productVO" method="post" action="saveProduct">
+					<h1 class="page-title">Add Product</h1>
 					<div class="form-group">
-						<label for="categoryName" class="control-label">Select Branch</label>
+						<label for="categoryName" name="brn" class="control-label">Branch Location</label>
 						<div class="form-group margin-bottom-20">
-								<select class="form-control" name="sltbrn">
-									<option value="">Nothing selected</option>
-									<option value="1">Dropdown 1</option>
-									<option value="2">Dropdown 1</option>
-									<option value="3">Dropdown 1</option>
-								</select>
+								<f:select class="form-control" path="branchVO.id" placeholder="Select Branch">
+									<c:forEach items="${branchList}" var="branchVariable">
+										<f:option value="${branchVariable.id}">${branchVariable.branchName }</f:option>
+									</c:forEach>
+								</f:select>									
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="subCategoryName" name="scatnme" class="control-label">Category</label>
+						<div class="form-group margin-bottom-20">
+								<f:select class="form-control" path="categoryVO.id" placeholder="Select Category">
+									<c:forEach items="${categoryList}" var="categoryVariable">
+										<f:option value="${categoryVariable.id}">${categoryVariable.categoryName }</f:option>
+									</c:forEach>
+								</f:select>									
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="subCategoryName" name="scatnme" class="control-label">Sub-Category</label>
+						<div class="form-group margin-bottom-20">
+								<f:select class="form-control" path="subCategoryVO.id" placeholder="Select Sub-Category">
+									<c:forEach items="${subCategoryList}" var="subCategoryVariable">
+										<f:option value="${subCategoryVariable.id}">${subCategoryVariable.subCategoryName }</f:option>
+									</c:forEach>
+								</f:select>									
 						</div>
 					</div>
 					
-					<div class="form-group">
-						<label for="categoryName" class="control-label">Select Category</label>
-						<div class="form-group margin-bottom-20">
-								<select class="form-control" name="sltcat">
-									<option value="">Nothing selected</option>
-									<option value="1">Dropdown 1</option>
-									<option value="2">Dropdown 1</option>
-									<option value="3">Dropdown 1</option>
-								</select>
-						</div>
-					</div>
 					
 					<div class="form-group">
-						<label for="subcategoryName" class="control-label">Select Sub-Category</label>
-						<div class="form-group margin-bottom-20">
-								<select class="form-control" name="sltsub">
-									<option value="">Nothing selected</option>
-									<option value="1">Dropdown 1</option>
-									<option value="2">Dropdown 1</option>
-									<option value="3">Dropdown 1</option>
-								</select>
+							<f:hidden path="id"/>
+							<label for="subCategoryName" class="control-label">Product Name</label>
+							<f:input path="productName" name="scatnme" class="form-control" id="inputName" placeholder="Enter Product Name" required="true"/>
 						</div>
-					</div>
-					
-					<div class="form-group">
-								<label for="inp-type-1" class=" control-label">Product Name</label>
-								<input type="text" name="pdnme" class="form-control" id="inp-type-1" placeholder="Enter Product Name">
-					</div>
-					<div class="form-group">
-								<label for="inp-type-5" class="control-label">Product Description</label>
-								<textarea class="form-control" name="pddes" id="inp-type-5" placeholder="Enter Product Description"></textarea>
-							</div>
-					<div class="form-group">
-								<label for="inp-type-1" class=" control-label">Product Weight</label>
-								<input type="text" class="form-control" name="pdwght" id="inp-type-1" placeholder="Enter Product Weight">
-					</div>
-					<div class="form-group">
-								<label for="inp-type-1" class=" control-label">Product Price</label>
-								<input type="text" class="form-control" name="pdprc" id="inp-type-1" placeholder="Enter Product Price">
-					</div>
+						<div class="form-group">
+							<label for="productDescription" class="control-label">Product Description</label>
+							<f:textarea path="productDescription" name="scatnme" class="form-control" id="inp-type-5" placeholder="Enter Product Description" required="true"/>
+						</div>
+						<div class="form-group">
+							<label for="productWeight" class="control-label">Product Weight</label>
+							<f:input path="productWeight" name="scatnme" class="form-control" id="inputName" placeholder="Enter Product Weight" required="true"/>
+						</div>
+						<div class="form-group">
+							<label for="productPrice" class="control-label">Product Price</label>
+							<f:input path="productPrice" name="scatnme" class="form-control" id="inputName" placeholder="Enter Product Price" required="true"/>
+						</div>
 					<div class="form-group">
 								<label for="exampleInputFile">Barcode Image Input</label><br>
 								<input type="file" name="img" id="exampleInputFile">
 								<p class="help-block">Add Barcode Image</p>
 							</div>
-					</div>
+					
 						
 						<div class="form-group">
-							<button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+							<button type="submit" class="btn btn-primary waves-effect waves-light">Add Product</button>
 						</div>
-					</form>
+						</f:form>
+				</div>
+			
 				</div>
 				<jsp:include page="footer.jsp"></jsp:include>
 				<!-- /.box-content -->
@@ -309,7 +140,7 @@
 		<!-- /.row small-spacing -->		
 	</div>
 	<!-- /.main-content -->
-</div><!--/#wrapper -->
+<!--/#wrapper -->
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
 		<script src="adminResources/js/html5shiv.min.js"></script>

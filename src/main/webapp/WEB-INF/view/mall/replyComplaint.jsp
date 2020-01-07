@@ -10,7 +10,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>Add Sub-Category</title>
+	<title>Reply Complaint</title>
 
 	<!-- Main Styles -->
 	<link rel="stylesheet" href="adminResources/css/style.css">
@@ -37,7 +37,6 @@
 
 <!-- /.fixed-navbar -->
 
-
 <div id="color-switcher">
 	<div id="color-switcher-button" class="btn-switcher">
 		<div class="inside waves-effect waves-circle waves-light">
@@ -62,37 +61,31 @@
 	<!-- /.content -->
 </div>
 <!-- #color-switcher -->
-<%@taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+
 <div id="wrapper">
 	<div class="main-content">
 		<div class="row small-spacing">
 			<div class="col-12">
 				<div class="box-content">
-				
-					<f:form data-toggle="validator" modelAttribute="subCategoryVO" method="post" action="saveSubCategory">
-				
-					<h1 class="page-title">Add Sub-Category</h1>
-					<div class="form-group">
-						<label for="subCategoryName" name="scatnme" class="control-label">Category</label>
-						<div class="form-group margin-bottom-20">
-								<f:select class="form-control" path="categoryVO.id" placeholder="Select Category">
-									<c:forEach items="${categoryList}" var="categoryVariable">
-										<f:option value="${categoryVariable.id}">${categoryVariable.categoryName }</f:option>
-									</c:forEach>
-								</f:select>									
-						</div>
-					</div>
+					<form data-toggle="validator">
+					<h1 class="page-title">Reply Complaint</h1>
 						<div class="form-group">
-							<f:hidden path="id"/>
-							<label for="subCategoryName" class="control-label">Sub-Category</label>
-							<f:input path="subCategoryName" name="scatnme" class="form-control" id="inputName" placeholder="Enter Sub-Category Name" required="true"/>
+							<label for="inputComplaintSubject" class="control-label">Subject</label>
+							<input type="text" class="form-control" name="sub" id="inputName" placeholder="Subject" required=true>
+						</div>
+						<div class="form-group">
+							<label for="complaintDescription" class="control-label">Description</label>
+									<textarea class="form-control" name="comp" id="inp-type-5" placeholder="Write your meassage"></textarea>
+						</div>
+						<div class="form-group">
+							<label for="complaintDescription" class="control-label">Reply</label>
+									<textarea class="form-control" name="comp" id="inp-type-5" placeholder="Write your meassage"></textarea>
 						</div>
 						
 						<div class="form-group">
-							<button type="submit" name="addst" class="btn btn-primary waves-effect waves-light">Add Sub-Category</button>
+							<button type="submit" name="addcomp" class="btn btn-primary waves-effect waves-light">Add Complaint</button>
 						</div>
-					</f:form>
+					</form>
 				</div>
 				<!-- /.box-content -->
 			</div>
