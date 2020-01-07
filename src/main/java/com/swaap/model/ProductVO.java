@@ -26,6 +26,9 @@ public class ProductVO {
 	@Column(name="product_price")
 	private String productPrice;
 	
+	@Column(name="product_description")
+	private String productDescription;
+	
 	@Column(name="barcode_file_name")
 	private String barcodeFileName;
 	
@@ -125,5 +128,13 @@ public class ProductVO {
 
 	public void setSubCategoryVO(SubCategoryVO subCategoryVO) {
 		this.subCategoryVO = subCategoryVO;
+	}
+
+	public String getProductDescription() {
+		return productDescription;
+	}
+
+	public void setProductDescription(String productDescription) {
+		this.productDescription = productDescription;
 	}
 }

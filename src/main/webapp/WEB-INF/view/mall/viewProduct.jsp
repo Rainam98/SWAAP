@@ -121,13 +121,13 @@
 								<c:forEach items="${productList}" var="productVariable">
 									<tr>
 										<td>${productVariable.id}</td>
-										<td>${subCategoryVariable.branchVO.branchName}</td>
-										<td>${subCategoryVariable.categoryVO.categoryName}</td>
-										<td>${subCategoryVariable.subCategoryVO.subCategoryName}</td>
+										<td>${productVariable.branchVO.branchName}</td>
+										<td>${productVariable.categoryVO.categoryName}</td>
+										<td>${productVariable.subCategoryVO.subCategoryName}</td>
 										<td>${productVariable.productName}</td>
 										<td>${productVariable.productDescription}</td>
 										<td>${productVariable.productWeight}</td>
-										<td>${productVariable.prodcutPrice}</td>
+										<td>${productVariable.productPrice}</td>
 										<td></td>
 										<td><a  href="deleteSubCategory?findById=${productVariable.id}"><i class="menu-icon fa fa-trash-alt" aria-hidden="true"></i></a></td>
 										<td><a  href="updateSubCategory?findById=${productVariable.id}"><i class="menu-icon fa fa-edit" aria-hidden="true"></i></a></td>
