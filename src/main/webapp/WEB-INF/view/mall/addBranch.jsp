@@ -104,7 +104,7 @@
 						<div class="form-group">
 							<f:hidden path="id"/>
 							<label for="inputComplaintSubject" class="control-label">Password</label>
-							<f:password path="password" name="pwd" class="form-control" id="inputName" placeholder="Enter Branch Name" required="true"/>
+							<f:password path="password" name="pwd" class="form-control" id="inputName" placeholder="Enter Password" required="true"/>
 						</div>
 						
 						
