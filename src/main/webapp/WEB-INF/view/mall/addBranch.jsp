@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -33,177 +34,8 @@
 <!-- /.main-menu -->
 
 <jsp:include page="header.jsp"></jsp:include>
+
 <!-- /.fixed-navbar -->
-
-<div id="notification-popup" class="notice-popup js__toggle" data-space="75">
-	<h2 class="popup-title">Your Notifications</h2>
-	<!-- /.popup-title -->
-	<div class="content">
-		<ul class="notice-list">
-			<li>
-				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-sm-1.jpg" alt=""></span>
-					<span class="name">John Doe</span>
-					<span class="desc">Like your post: “Contact Form 7 Multi-Step”</span>
-					<span class="time">10 min</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-sm-2.jpg" alt=""></span>
-					<span class="name">Anna William</span>
-					<span class="desc">Like your post: “Facebook Messenger”</span>
-					<span class="time">15 min</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="avatar bg-warning"><i class="fa fa-warning"></i></span>
-					<span class="name">Update Status</span>
-					<span class="desc">Failed to get available update data. To ensure the please contact us.</span>
-					<span class="time">30 min</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-1.jpg" alt=""></span>
-					<span class="name">Jennifer</span>
-					<span class="desc">Like your post: “Contact Form 7 Multi-Step”</span>
-					<span class="time">45 min</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-sm-6.jpg" alt=""></span>
-					<span class="name">Michael Zenaty</span>
-					<span class="desc">Like your post: “Contact Form 7 Multi-Step”</span>
-					<span class="time">50 min</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-sm-4.jpg" alt=""></span>
-					<span class="name">Simon</span>
-					<span class="desc">Like your post: “Facebook Messenger”</span>
-					<span class="time">1 hour</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="avatar bg-violet"><i class="fa fa-flag"></i></span>
-					<span class="name">Account Contact Change</span>
-					<span class="desc">A contact detail associated with your account has been changed.</span>
-					<span class="time">2 hours</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-sm-7.jpg" alt=""></span>
-					<span class="name">Helen 987</span>
-					<span class="desc">Like your post: “Facebook Messenger”</span>
-					<span class="time">Yesterday</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-2.jpg" alt=""></span>
-					<span class="name">Denise Jenny</span>
-					<span class="desc">Like your post: “Contact Form 7 Multi-Step”</span>
-					<span class="time">Oct, 28</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-sm-8.jpg" alt=""></span>
-					<span class="name">Thomas William</span>
-					<span class="desc">Like your post: “Facebook Messenger”</span>
-					<span class="time">Oct, 27</span>
-				</a>
-			</li>
-		</ul>
-		<!-- /.notice-list -->
-		<a href="#" class="notice-read-more">See more messages <i class="fa fa-angle-down"></i></a>
-	</div>
-	<!-- /.content -->
-</div>
-<!-- /#notification-popup -->
-
-<div id="message-popup" class="notice-popup js__toggle" data-space="75">
-	<h2 class="popup-title">Recent Messages<a href="#" class="float-right text-danger">New message</a></h2>
-	<!-- /.popup-title -->
-	<div class="content">
-		<ul class="notice-list">
-			<li>
-				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-sm-1.jpg" alt=""></span>
-					<span class="name">John Doe</span>
-					<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere repellat voluptates.</span>
-					<span class="time">10 min</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-sm-3.jpg" alt=""></span>
-					<span class="name">Harry Halen</span>
-					<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere repellat voluptates.</span>
-					<span class="time">15 min</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-sm-4.jpg" alt=""></span>
-					<span class="name">Thomas Taylor</span>
-					<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere repellat voluptates.</span>
-					<span class="time">30 min</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-1.jpg" alt=""></span>
-					<span class="name">Jennifer</span>
-					<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere repellat voluptates.</span>
-					<span class="time">45 min</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-sm-5.jpg" alt=""></span>
-					<span class="name">Helen Candy</span>
-					<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere repellat voluptates.</span>
-					<span class="time">45 min</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-2.jpg" alt=""></span>
-					<span class="name">Anna Cavan</span>
-					<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere repellat voluptates.</span>
-					<span class="time">1 hour ago</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="avatar bg-success"><i class="fa fa-user"></i></span>
-					<span class="name">Jenny Betty</span>
-					<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere repellat voluptates.</span>
-					<span class="time">1 day ago</span>
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-5.jpg" alt=""></span>
-					<span class="name">Denise Peterson</span>
-					<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere repellat voluptates.</span>
-					<span class="time">1 year ago</span>
-				</a>
-			</li>
-		</ul>
-		<!-- /.notice-list -->
-		<a href="#" class="notice-read-more">See more messages <i class="fa fa-angle-down"></i></a>
-	</div>
-	<!-- /.content -->
-</div>
-<!-- /#message-popup -->
 <div id="color-switcher">
 	<div id="color-switcher-button" class="btn-switcher">
 		<div class="inside waves-effect waves-circle waves-light">
@@ -228,61 +60,65 @@
 	<!-- /.content -->
 </div>
 <!-- #color-switcher -->
-
+<%@taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 <div id="wrapper">
 	<div class="main-content">
 		<div class="row small-spacing">
 			<div class="col-12">
 				<div class="box-content">
-					<form data-toggle="validator">
+				
+					<f:form data-toggle="validator" modelAttribute="branchVO" method="post" action="saveBranch">
+				
 					<h1 class="page-title">Add Branch</h1>
-						<div class="form-group">
-						<label for="categoryName" name="brnst" class="control-label">Branch State</label>
+					<div class="form-group">
+						<label for="stateName" name="brnst" class="control-label">Branch State</label>
 						<div class="form-group margin-bottom-20">
-								<select class="form-control">
-									<option value="">Nothing selected</option>
-									<option value="1">Dropdown 1</option>
-									<option value="2">Dropdown 1</option>
-									<option value="3">Dropdown 1</option>
-								</select>
+								<f:select class="form-control" path="stateVO.id" placeholder="Select State">
+									<c:forEach items="${stateList}" var="stateVariable">
+										<f:option value="${stateVariable.id}">${stateVariable.stateName }</f:option>
+									</c:forEach>
+								</f:select>									
 						</div>
 					</div>
-					
 					<div class="form-group">
-						<label for="categoryName" name="brnct" class="control-label">Branch City	</label>
+						<label for="cityName" name="brnct" class="control-label">Branch City</label>
 						<div class="form-group margin-bottom-20">
-								<select class="form-control">
-									<option value="">Nothing selected</option>
-									<option value="1">Dropdown 1</option>
-									<option value="2">Dropdown 1</option>
-									<option value="3">Dropdown 1</option>
-								</select>
+								<f:select class="form-control" path="cityVO.id" placeholder="Select City">
+									<c:forEach items="${cityList}" var="cityVariable">
+										<f:option value="${cityVariable.id}">${cityVariable.cityName }</f:option>
+									</c:forEach>
+								</f:select>									
+						</div>
+					</div>
+						<div class="form-group">
+							<f:hidden path="id"/>
+							<label for="inputComplaintSubject" class="control-label">Branch Name</label>
+							<f:input path="branchName" name="brnnme" class="form-control" id="inputName" placeholder="Enter Branch Name" required="true"/>
 						</div>
 						<div class="form-group">
-								<label for="inp-type-1" class=" control-label">Branch Name</label>
-								<input type="text" name="brnme" class="form-control" id="inp-type-1" placeholder="Enter Branch Name">
+							<f:hidden path="id"/>
+							<label for="inputComplaintSubject" class="control-label">User Name</label>
+							<f:input path="userName" name="unme" class="form-control" id="inputName" placeholder="Enter User Name" required="true"/>
 						</div>
 						<div class="form-group">
-							<label for="inp-type-1" class=" control-label">Username</label>
-							<input id="ig-1" type="text" name="uname" class="form-control" placeholder="Username">
+							<f:hidden path="id"/>
+							<label for="inputComplaintSubject" class="control-label">Password</label>
+							<f:password path="password" name="pwd" class="form-control" id="inputName" placeholder="Enter Branch Name" required="true"/>
 						</div>
+						
+						
 						<div class="form-group">
-								<label for="inp-type-3" class="control-label">Password</label>
-								<input type="password" name="pwd" class="form-control" id="inp-type-3" placeholder="Password" value="Password">
-							</div>
-						<div class="form-group">
-							<button type="submit" name="addbrn" class="btn btn-primary waves-effect waves-light">Add</button>
+							<button type="submit" name="addst" class="btn btn-primary waves-effect waves-light">Add Branch</button>
 						</div>
-					</form>
+					</f:form>
 				</div>
 				<!-- /.box-content -->
-				
 			</div>
-			<jsp:include page="footer.jsp"></jsp:include>
 			<!-- /.col-12 -->
 		</div>
 		<!-- /.row small-spacing -->		
-		
+		<jsp:include page="footer.jsp"></jsp:include>
 	</div>
 	<!-- /.main-content -->
 </div><!--/#wrapper -->

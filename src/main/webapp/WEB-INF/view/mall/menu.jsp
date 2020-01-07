@@ -53,7 +53,7 @@
 					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon fas fa-code-branch" aria-hidden="true"></i><span>Manage Branch</span><span class="menu-arrow fa fa-angle-down"></span></a>
 					<ul class="sub-menu js__content">
 						<li><a href="addBranch">Add Branch</a></li>
-						<li><a href="page-register.html">View Branch</a></li>
+						<li><a href="viewBranch">View Branch</a></li>
 					</ul>
 				</li>
 				<li>
