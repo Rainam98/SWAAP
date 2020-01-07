@@ -57,7 +57,7 @@
 					</ul>
 				</li>
 				<li>
-					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon far fa-shopping-bag"></i><span>Manage Category</span><span class="menu-arrow fa fa-angle-down"></span></a>
+					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon fa fa-shopping-bag"></i><span>Manage Category</span><span class="menu-arrow fa fa-angle-down"></span></a>
 					<ul class="sub-menu js__content">
 						<li><a href="addCategory">Add Category</a></li>
 						<li><a href="viewCategory">View Category</a></li>
@@ -65,7 +65,7 @@
 					<!-- /.sub-menu js__content -->
 				</li>
 				<li>
-					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon far fa-shopping-basket"></i><span>Manage Sub-Category</span><span class="menu-arrow fa fa-angle-down"></span></a>
+					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon fa fa-shopping-basket"></i><span>Manage Sub-Category</span><span class="menu-arrow fa fa-angle-down"></span></a>
 					<ul class="sub-menu js__content">
 						<li><a href="addSubCategory">Add Sub-Category</a></li>
 						<li><a href="viewSubCategory">View Sub-Category</a></li>

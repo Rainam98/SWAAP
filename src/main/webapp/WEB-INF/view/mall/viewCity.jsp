@@ -238,7 +238,7 @@
 			<div class="row small-spacing">
 				<div class="col-12">
 					<div class="box-content">
-						<h4 class="box-title">View State</h4>
+						<h4 class="box-title">View City</h4>
 						<!-- /.box-title -->
 						<div class="dropdown js__drop_down">
 							<a href="#" class="dropdown-icon fas fa-ellipsis-v js__drop_down_button"></a>
