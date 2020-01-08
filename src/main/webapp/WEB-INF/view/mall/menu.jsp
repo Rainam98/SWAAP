@@ -37,7 +37,7 @@
 				</li>
 				<li >
 					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon fas fa-location-arrow" aria-hidden="true"></i><span>Manage State</span><span class="menu-arrow fa fa-angle-down"></span></a>
-					<ul class="sub-menu js__content" style="display: block;">
+					<ul class="sub-menu js__content">
 						<li><a href="addState">Add State</a></li>
 						<li><a href="viewState">View State</a></li>
 					</ul>
