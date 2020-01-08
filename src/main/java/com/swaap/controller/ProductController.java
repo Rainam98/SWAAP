@@ -49,7 +49,7 @@ public class ProductController {
 	{
 		productVO.setStatus(true);
 		this.productService.insertProduct(productVO);
-		return new ModelAndView("redirect:/");
+		return new ModelAndView("redirect:mall/viewProduct");
 	}
 	
 	@RequestMapping(value="viewProduct", method=RequestMethod.GET)
@@ -67,7 +67,7 @@ public class ProductController {
 		ProductVO foundProductVO=(ProductVO)productList.get(0);
 		foundProductVO.setStatus(false);
 		this.productService.insertProduct(foundProductVO);
-		return new ModelAndView("redirect:/");
+		return new ModelAndView("redirect:mall/viewProduct");
 	}
 	
 	@RequestMapping(value="updateProduct", method=RequestMethod.GET)

@@ -114,7 +114,7 @@
 									<tr>
 										<td>${offerVariable.id}</td>
 										<td>${offerVariable.offerName}</td>
-										<td>${offerVariable.offerPercent}</td>
+										<td>${offerVariable.discountPercent}</td>
 										<td>${offerVariable.offerValidFrom}</td>
 										<td>${offerVariable.offerValidTill}</td>
 										<td><a  href="deleteOffer?findById=${offerVariable.id}"><i class="menu-icon fa fa-trash-alt" aria-hidden="true"></i></a></td>

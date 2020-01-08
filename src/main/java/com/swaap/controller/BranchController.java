@@ -44,7 +44,7 @@ public class BranchController {
 	{
 		branchVO.setStatus(true);
 		this.branchService.insertBranch(branchVO);
-		return new ModelAndView("redirect:/");
+		return new ModelAndView("redirect:mall/viewBranch");
 	}
 	
 	@RequestMapping(value="viewBranch", method=RequestMethod.GET)
@@ -62,7 +62,7 @@ public class BranchController {
 		BranchVO foundBranchVO=(BranchVO)branchList.get(0);
 		foundBranchVO.setStatus(false);
 		this.branchService.insertBranch(foundBranchVO);
-		return new ModelAndView("redirect:/");
+		return new ModelAndView("redirect:mall/viewBranch");
 	}
 	
 	@RequestMapping(value="updateBranch", method=RequestMethod.GET)
