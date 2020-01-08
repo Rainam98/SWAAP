@@ -76,8 +76,10 @@
 						<div class="form-group">
 								<label for="inp-type-1" class=" control-label">Select Type</label>
 								<input type="radio" name="offerType" id="underwear1" required="true">
-								<label for="underwear1">Category</label>
-								<label for="underwear1">Sub-Category</label>
+								<label for="underwear1">Category</label>&nbsp&nbsp
+								<input type="radio" name="offerType" id="underwear1" required="true">
+								<label for="underwear1">Sub-Category</label>&nbsp&nbsp
+								<input type="radio" name="offerType" id="underwear1" required="true">
 								<label for="underwear1">Product</label>
 						</div>
 						<div class="form-group">
