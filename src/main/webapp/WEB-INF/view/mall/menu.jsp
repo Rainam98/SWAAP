@@ -83,8 +83,8 @@
 				<li>
 					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon fas fa-gift"></i><span>Manage Offers</span><span class="menu-arrow fa fa-angle-down"></span></a>
 					<ul class="sub-menu js__content">
-						<li><a href="ui-buttons.html">Add Offers</a></li>
-						<li><a href="ui-cards.html">View Offers</a></li>
+						<li><a href="addOffer">Add Offers</a></li>
+						<li><a href="viewOffer">View Offers</a></li>
 					</ul>
 					<!-- /.sub-menu js__content -->
 				</li>
