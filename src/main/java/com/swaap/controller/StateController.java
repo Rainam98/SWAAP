@@ -31,7 +31,7 @@ public class StateController {
 	{
 		stateVO.setStatus(true);
 		this.stateService.insertState(stateVO);
-		return new ModelAndView("redirect:/");
+		return new ModelAndView("redirect:mall/viewState");
 	}
 	
 	@RequestMapping(value="deleteState", method=RequestMethod.GET)
@@ -42,7 +42,7 @@ public class StateController {
 		StateVO foundStateVO=(StateVO)stateList.get(0);
 		foundStateVO.setStatus(false);
 		this.stateService.insertState(foundStateVO);
-		return new ModelAndView("redirect:/");
+		return new ModelAndView("redirect:mall/viewState");
 	}
 	
 	@RequestMapping(value="viewState")

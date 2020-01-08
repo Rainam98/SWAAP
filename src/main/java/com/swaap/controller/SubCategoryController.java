@@ -38,7 +38,7 @@ public class SubCategoryController {
 	{
 		subCategoryVO.setStatus(true);
 		this.subCategoryService.insertSubCategory(subCategoryVO);
-		return new ModelAndView("redirect:/");
+		return new ModelAndView("redirect:mall/viewSubCategory");
 	}
 	
 	@RequestMapping(value="viewSubCategory", method=RequestMethod.GET)
@@ -56,7 +56,7 @@ public class SubCategoryController {
 		SubCategoryVO foundSubCategoryVO=(SubCategoryVO)subCategoryList.get(0);
 		foundSubCategoryVO.setStatus(false);
 		this.subCategoryService.insertSubCategory(foundSubCategoryVO);
-		return new ModelAndView("redirect:/");
+		return new ModelAndView("redirect:mall/viewSubCategory");
 	}
 	
 	@RequestMapping(value="updateSubCategory", method=RequestMethod.GET)

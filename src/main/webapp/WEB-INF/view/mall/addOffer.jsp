@@ -74,11 +74,11 @@
 					<f:form data-toggle="validator" modelAttribute="offerVO" method="post" action="saveOffer">
 						<h4 class="box-title">Add Offer</h4>
 						<div class="form-group">
-								<label for="inp-type-1" class=" control-label">Select Type</label>
+								<label for="inp-type-1" class=" control-label">Select Type</label><br>
 								<input type="radio" name="offerType" id="underwear1" required="true">
-								<label for="underwear1">Category</label>&nbsp&nbsp
+								<label for="underwear1">Category</label>&nbsp&nbsp&nbsp&nbsp&nbsp
 								<input type="radio" name="offerType" id="underwear1" required="true">
-								<label for="underwear1">Sub-Category</label>&nbsp&nbsp
+								<label for="underwear1">Sub-Category</label>&nbsp&nbsp&nbsp&nbsp&nbsp
 								<input type="radio" name="offerType" id="underwear1" required="true">
 								<label for="underwear1">Product</label>
 						</div>
@@ -102,7 +102,7 @@
 						<!-- /.dropdown js__dropdown -->
 						
 					<div class="form-group">
-						<label for="subCategoryName" name="scatnme" class="control-label">Category</label>
+						<label for="categoryName" name="scatnme" class="control-label">Category</label>
 						<div class="form-group margin-bottom-20">
 								<f:select class="form-control" path="categoryVO.id" placeholder="Select Category">
 									<c:forEach items="${categoryList}" var="categoryVariable">

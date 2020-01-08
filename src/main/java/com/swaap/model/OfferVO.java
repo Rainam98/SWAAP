@@ -23,9 +23,6 @@ public class OfferVO {
 	@Column(name="discount_percent")
 	private String discountPercent;
 	
-	@Column(name="product_description")
-	private String productDescription;
-	
 	@Column(name="offer_valid_from")
 	private String offerValidFrom;
 	
@@ -69,14 +66,6 @@ public class OfferVO {
 
 	public void setDiscountPercent(String discountPercent) {
 		this.discountPercent = discountPercent;
-	}
-
-	public String getProductDescription() {
-		return productDescription;
-	}
-
-	public void setProductDescription(String productDescription) {
-		this.productDescription = productDescription;
 	}
 
 	public String getOfferValidFrom() {
