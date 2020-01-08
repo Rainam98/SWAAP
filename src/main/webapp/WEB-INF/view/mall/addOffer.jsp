@@ -137,7 +137,7 @@
 								<f:input path="discountPercent" type="text" name="dis" class="form-control" id="inp-type-1" placeholder="Enter Discount value"/>
 						</div>
 						<div class="form-group">
-										<label for="inp-type-1" class=" control-label">Valid from</label>
+										<label for="inp-type-1" class=" control-label">Offer Valid from</label>
 											<div class="input-group">
 												<f:input path="offerValidFrom" type="text" name="from" class="form-control" placeholder="mm/dd/yyyy" id="datepicker-autoclose"/>
 												<span class="input-group-addon bg-primary text-white"><i class="fa fa-calendar"></i></span>
@@ -145,7 +145,7 @@
 											<!-- /.input-group -->
 										</div>
 						<div class="form-group">
-										<label for="inp-type-1" class=" control-label">Valid till</label>
+										<label for="inp-type-1" class=" control-label">Offer Valid till</label>
 											<div class="input-group">
 												<f:input path="offerValidTill" type="text" name="till" class="form-control" placeholder="mm/dd/yyyy" id="datepicker-autoclose"/>
 												<span class="input-group-addon bg-primary text-white"><i class="fa fa-calendar"></i></span>
