@@ -20,25 +20,25 @@ public class CustomizeAuthenticationSuccessHandler implements AuthenticationSucc
 		// set our response to OK status
 		response.setStatus(HttpServletResponse.SC_OK);
 
-		boolean admin = false;
-		boolean staff = false;
+		boolean mall = false;
+		boolean branch = false;
 		
 		System.out.println("AT onAuthenticationSuccess(...) function!");
 
 		for (GrantedAuthority auth : authentication.getAuthorities()) {
 			if ("ROLE_MALL".equals(auth.getAuthority())) {
-				admin = true;
+				mall = true;
 			}else if ("ROLE_BRANCH".equals(auth.getAuthority())) {
-				staff = true;
+				branch = true;
 			}else {
 				
 			}
 		}
 
-		if (admin) {
+		if (mall) {
 			System.out.println("user is mall");
 			response.sendRedirect("/mall/index");
-		} else if(staff) {
+		} else if(branch) {
 			System.out.println("user is branch");
 			response.sendRedirect("/branch/index");
 		}else {
