@@ -21,7 +21,7 @@
 <body>
 
 <div id="single-wrapper">
-	<form action="#" class="frm-single">
+	<form action="j_spring_security_check" class="frm-single">
 		<div class="inside">
 			<div class="title"><strong>SWAAP</strong></div>
 			<!-- /.title -->

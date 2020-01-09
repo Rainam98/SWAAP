@@ -1,4 +1,4 @@
-package com.project.Configuration;
+package com.swaap.configuration;
 
 import javax.sql.DataSource;
 
