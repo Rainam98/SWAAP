@@ -41,7 +41,8 @@ public class LoginController {
 	
 	@RequestMapping(value = "/branch/index", method = RequestMethod.GET)
 	public ModelAndView userIndex() {
-
+		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		String userName = user.getUsername();
 		return new ModelAndView("branch/index");
 	}
 	

@@ -22,14 +22,15 @@
 
 <div id="single-wrapper">
 	<form action="/j_spring_security_check" class="frm-single" method="post">
+
 		<div class="inside">
 			<div class="title"><strong>SWAAP</strong></div>
 			<!-- /.title -->
 			<div class="frm-title">Login</div>
 			<!-- /.frm-title -->
-			<div class="frm-input"><input type="text" name="uname" placeholder="Username" class="frm-inp"><i class="fa fa-user frm-ico"></i></div>
+			<div class="frm-input"><input type="text" name="username" placeholder="Username" class="frm-inp"><i class="fa fa-user frm-ico"></i></div>
 			<!-- /.frm-input -->
-			<div class="frm-input"><input type="password" name="pwd" placeholder="Password" class="frm-inp"><i class="fa fa-lock frm-ico"></i></div>
+			<div class="frm-input"><input type="password" name="password" placeholder="Password" class="frm-inp"><i class="fa fa-lock frm-ico"></i></div>
 			<!-- /.frm-input -->
 			<div class="clearfix margin-bottom-20">
 				<div class="float-left">
