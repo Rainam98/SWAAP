@@ -12,20 +12,20 @@
 	<title>Request Report</title>
 
 	<!-- Main Styles -->
-	<link rel="stylesheet" href="adminResources/css/style.css">
-<link rel="stylesheet" href="adminResources/css/custom.css">
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/style.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/custom.css">
 
 	<!-- mCustomScrollbar -->
-	<link rel="stylesheet" href="adminResources/css/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/jquery.mCustomScrollbar.min.css">
 
 	<!-- Waves Effect -->
-	<link rel="stylesheet" href="adminResources/css/waves.min.css">
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/waves.min.css">
 
 	<!-- Sweet Alert -->
-	<link rel="stylesheet" href="adminResources/css/sweetalert.css">
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/sweetalert.css">
 	
 	<!-- Color Picker -->
-	<link rel="stylesheet" href="adminResources/css/color-switcher.min.css">
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/color-switcher.min.css">
 </head>
 
 <body>
@@ -43,7 +43,7 @@
 		<ul class="notice-list">
 			<li>
 				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-sm-1.jpg" alt=""></span>
+					<span class="avatar"><img src="<%=request.getContextPath()%>/adminResources/image/avatar-sm-1.jpg" alt=""></span>
 					<span class="name">John Doe</span>
 					<span class="desc">Like your post: “Contact Form 7 Multi-Step”</span>
 					<span class="time">10 min</span>
@@ -51,7 +51,7 @@
 			</li>
 			<li>
 				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-sm-2.jpg" alt=""></span>
+					<span class="avatar"><img src="<%=request.getContextPath()%>/adminResources/image/avatar-sm-2.jpg" alt=""></span>
 					<span class="name">Anna William</span>
 					<span class="desc">Like your post: “Facebook Messenger”</span>
 					<span class="time">15 min</span>
@@ -67,7 +67,7 @@
 			</li>
 			<li>
 				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-1.jpg" alt=""></span>
+					<span class="avatar"><img src="<%=request.getContextPath()%>/adminResources/image/avatar-1.jpg" alt=""></span>
 					<span class="name">Jennifer</span>
 					<span class="desc">Like your post: “Contact Form 7 Multi-Step”</span>
 					<span class="time">45 min</span>
@@ -75,7 +75,7 @@
 			</li>
 			<li>
 				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-sm-6.jpg" alt=""></span>
+					<span class="avatar"><img src="<%=request.getContextPath()%>/adminResources/image/avatar-sm-6.jpg" alt=""></span>
 					<span class="name">Michael Zenaty</span>
 					<span class="desc">Like your post: “Contact Form 7 Multi-Step”</span>
 					<span class="time">50 min</span>
@@ -83,7 +83,7 @@
 			</li>
 			<li>
 				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-sm-4.jpg" alt=""></span>
+					<span class="avatar"><img src="<%=request.getContextPath()%>/adminResources/image/avatar-sm-4.jpg" alt=""></span>
 					<span class="name">Simon</span>
 					<span class="desc">Like your post: “Facebook Messenger”</span>
 					<span class="time">1 hour</span>
@@ -99,7 +99,7 @@
 			</li>
 			<li>
 				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-sm-7.jpg" alt=""></span>
+					<span class="avatar"><img src="<%=request.getContextPath()%>/adminResources/image/avatar-sm-7.jpg" alt=""></span>
 					<span class="name">Helen 987</span>
 					<span class="desc">Like your post: “Facebook Messenger”</span>
 					<span class="time">Yesterday</span>
@@ -107,7 +107,7 @@
 			</li>
 			<li>
 				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-2.jpg" alt=""></span>
+					<span class="avatar"><img src="<%=request.getContextPath()%>/adminResources/image/avatar-2.jpg" alt=""></span>
 					<span class="name">Denise Jenny</span>
 					<span class="desc">Like your post: “Contact Form 7 Multi-Step”</span>
 					<span class="time">Oct, 28</span>
@@ -115,7 +115,7 @@
 			</li>
 			<li>
 				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-sm-8.jpg" alt=""></span>
+					<span class="avatar"><img src="<%=request.getContextPath()%>/adminResources/image/avatar-sm-8.jpg" alt=""></span>
 					<span class="name">Thomas William</span>
 					<span class="desc">Like your post: “Facebook Messenger”</span>
 					<span class="time">Oct, 27</span>
@@ -136,7 +136,7 @@
 		<ul class="notice-list">
 			<li>
 				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-sm-1.jpg" alt=""></span>
+					<span class="avatar"><img src="<%=request.getContextPath()%>/adminResources/image/avatar-sm-1.jpg" alt=""></span>
 					<span class="name">John Doe</span>
 					<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere repellat voluptates.</span>
 					<span class="time">10 min</span>
@@ -144,7 +144,7 @@
 			</li>
 			<li>
 				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-sm-3.jpg" alt=""></span>
+					<span class="avatar"><img src="<%=request.getContextPath()%>/adminResources/image/avatar-sm-3.jpg" alt=""></span>
 					<span class="name">Harry Halen</span>
 					<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere repellat voluptates.</span>
 					<span class="time">15 min</span>
@@ -152,7 +152,7 @@
 			</li>
 			<li>
 				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-sm-4.jpg" alt=""></span>
+					<span class="avatar"><img src="<%=request.getContextPath()%>/adminResources/image/avatar-sm-4.jpg" alt=""></span>
 					<span class="name">Thomas Taylor</span>
 					<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere repellat voluptates.</span>
 					<span class="time">30 min</span>
@@ -160,7 +160,7 @@
 			</li>
 			<li>
 				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-1.jpg" alt=""></span>
+					<span class="avatar"><img src="<%=request.getContextPath()%>/adminResources/image/avatar-1.jpg" alt=""></span>
 					<span class="name">Jennifer</span>
 					<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere repellat voluptates.</span>
 					<span class="time">45 min</span>
@@ -168,7 +168,7 @@
 			</li>
 			<li>
 				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-sm-5.jpg" alt=""></span>
+					<span class="avatar"><img src="<%=request.getContextPath()%>/adminResources/image/avatar-sm-5.jpg" alt=""></span>
 					<span class="name">Helen Candy</span>
 					<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere repellat voluptates.</span>
 					<span class="time">45 min</span>
@@ -176,7 +176,7 @@
 			</li>
 			<li>
 				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-2.jpg" alt=""></span>
+					<span class="avatar"><img src="<%=request.getContextPath()%>/adminResources/image/avatar-2.jpg" alt=""></span>
 					<span class="name">Anna Cavan</span>
 					<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere repellat voluptates.</span>
 					<span class="time">1 hour ago</span>
@@ -192,7 +192,7 @@
 			</li>
 			<li>
 				<a href="#">
-					<span class="avatar"><img src="adminResources/image/avatar-5.jpg" alt=""></span>
+					<span class="avatar"><img src="<%=request.getContextPath()%>/adminResources/image/avatar-5.jpg" alt=""></span>
 					<span class="name">Denise Peterson</span>
 					<span class="desc">Amet odio neque nobis consequuntur consequatur a quae, impedit facere repellat voluptates.</span>
 					<span class="time">1 year ago</span>
@@ -265,28 +265,28 @@
 </div><!--/#wrapper -->
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
-		<script src="adminResources/js/html5shiv.min.js"></script>
-		<script src="adminResources/js/respond.min.js"></script>
+		<script src="<%=request.getContextPath()%>/adminResources/js/html5shiv.min.js"></script>
+		<script src="<%=request.getContextPath()%>/adminResources/js/respond.min.js"></script>
 	<![endif]-->
 	<!-- 
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="adminResources/js/jquery.min.js"></script>
-	<script src="adminResources/js/modernizr.min.js"></script>
-<script src="adminResources/js/popper.min.js"></script>
-	<script src="adminResources/js/bootstrap.min.js"></script>
-	<script src="adminResources/js/jquery.mCustomScrollbar.concat.min.js"></script>
-	<script src="adminResources/js/nprogress.js"></script>
-	<script src="adminResources/js/sweetalert.min.js"></script>
-	<script src="adminResources/js/waves.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/jquery.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/modernizr.min.js"></script>
+<script src="<%=request.getContextPath()%>/adminResources/js/popper.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/bootstrap.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/nprogress.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/sweetalert.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/waves.min.js"></script>
 	<!-- Full Screen Plugin -->
-	<script src="adminResources/js/jquery.fullscreen-min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/jquery.fullscreen-min.js"></script>
 
 	<!-- Validator -->
-	<script src="adminResources/js/validator.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/validator.min.js"></script>
 
-	<script src="adminResources/js/main.min.js"></script>
-<script src="adminResources/js/mycommon.js"></script>
-	<script src="adminResources/js/color-switcher.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/main.min.js"></script>
+<script src="<%=request.getContextPath()%>/adminResources/js/mycommon.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/color-switcher.min.js"></script>
 </body>
 </html>

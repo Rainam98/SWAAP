@@ -3,7 +3,7 @@
 		<a href="index.html" class="logo">NinjaTeam</a>
 		<button type="button" class="button-close fa fa-times js__menu_close"></button>
 		<div class="user">
-			<a href="#" class="avatar"><img src="adminResources/image/avatar.png" alt=""><span class="status online"></span></a>
+			<a href="#" class="avatar"><img src="<%=request.getContextPath()%>/adminResources/image/avatar.png" alt=""><span class="status online"></span></a>
 			<h5 class="name"><a href="profile.html">Emily Stanley</a></h5>
 			<h5 class="position">Administrator</h5>
 			<!-- /.name -->
