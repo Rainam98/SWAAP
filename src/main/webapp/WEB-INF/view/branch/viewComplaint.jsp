@@ -44,11 +44,11 @@
 					<form data-toggle="validator">
 						<div class="form-group">
 							<label for="inputName" class="control-label">Subject</label>
-							<input type="text" class="form-control" name="sub" id="inputName" placeholder="Cina Saffary" required>
+							<input type="text" class="form-control" name="sub" id="inputName" placeholder="Write Complaint Subject" required=true readonly>
 						</div>
 						<div class="form-group">
 							<label for="inp-type-5" class="control-label">Complaint</label>
-							<textarea class="form-control" name="comp" id="inp-type-5" placeholder="Write your meassage"></textarea>
+							<textarea class="form-control" name="comp" id="inp-type-5" placeholder="Write your meassage" readonly></textarea>
 						</div>
 						<div class="form-group">
 							<label for="inp-type-5" class="control-label">Reply</label>
