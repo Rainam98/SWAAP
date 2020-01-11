@@ -20,13 +20,13 @@ public class StateController {
 	@Autowired
 	StateService stateService;
 	
-	@RequestMapping(value="addState", method=RequestMethod.GET)
+	@RequestMapping(value="mall/addState", method=RequestMethod.GET)
 	public ModelAndView addState()
 	{
 		return new ModelAndView("mall/addState","stateVO", new StateVO());
 	}
 	
-	@RequestMapping(value="saveState", method=RequestMethod.POST)
+	@RequestMapping(value="mall/saveState", method=RequestMethod.POST)
 	public ModelAndView saveState(@ModelAttribute StateVO stateVO)
 	{
 		stateVO.setStatus(true);
@@ -34,7 +34,7 @@ public class StateController {
 		return new ModelAndView("redirect:mall/viewState");
 	}
 	
-	@RequestMapping(value="deleteState", method=RequestMethod.GET)
+	@RequestMapping(value="mall/deleteState", method=RequestMethod.GET)
 	public ModelAndView deleteState(@ModelAttribute StateVO stateVO, @RequestParam int findById)
 	{
 		stateVO.setId(findById);
@@ -45,14 +45,14 @@ public class StateController {
 		return new ModelAndView("redirect:mall/viewState");
 	}
 	
-	@RequestMapping(value="viewState")
+	@RequestMapping(value="mall/viewState")
 	public ModelAndView viewState()
 	{
 		List stateList=this.stateService.searchState();
 		return new ModelAndView("mall/viewState","stateList",stateList);
 	}
 
-	@RequestMapping(value="updateState", method=RequestMethod.GET)
+	@RequestMapping(value="mall/updateState", method=RequestMethod.GET)
 	public ModelAndView updateState(@ModelAttribute StateVO stateVO, @RequestParam int findById)
 	{
 		stateVO.setId(findById);
