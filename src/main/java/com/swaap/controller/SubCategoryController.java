@@ -24,7 +24,7 @@ public class SubCategoryController {
 	@Autowired
 	SubCategoryService subCategoryService;
 	
-	@RequestMapping(value="addSubCategory", method=RequestMethod.GET)
+	@RequestMapping(value="mall/addSubCategory", method=RequestMethod.GET)
 	public ModelAndView addSubCategory(Model model)
 	{
 		List CategoryList=this.categoryService.searchCategory();
@@ -33,7 +33,7 @@ public class SubCategoryController {
 		return new ModelAndView("mall/addSubCategory");
 	}
 	
-	@RequestMapping(value="saveSubCategory", method=RequestMethod.POST)
+	@RequestMapping(value="mall/saveSubCategory", method=RequestMethod.POST)
 	public ModelAndView saveSubCategory(@ModelAttribute SubCategoryVO subCategoryVO)
 	{
 		subCategoryVO.setStatus(true);
@@ -41,14 +41,14 @@ public class SubCategoryController {
 		return new ModelAndView("redirect:mall/viewSubCategory");
 	}
 	
-	@RequestMapping(value="viewSubCategory", method=RequestMethod.GET)
+	@RequestMapping(value="mall/viewSubCategory", method=RequestMethod.GET)
 	public ModelAndView viewSubCategory(@ModelAttribute SubCategoryVO subCategoryVO)
 	{
 		List subCategoryList=this.subCategoryService.searchSubCategory();
 		return new ModelAndView("mall/viewSubCategory","subCategoryList",subCategoryList);
 	}
 	
-	@RequestMapping(value="deleteSubCategory", method=RequestMethod.GET)
+	@RequestMapping(value="mall/deleteSubCategory", method=RequestMethod.GET)
 	public ModelAndView deleteSubCategory(@ModelAttribute SubCategoryVO subCategoryVO, @RequestParam int findById)
 	{
 		subCategoryVO.setId(findById);
@@ -59,7 +59,7 @@ public class SubCategoryController {
 		return new ModelAndView("redirect:mall/viewSubCategory");
 	}
 	
-	@RequestMapping(value="updateSubCategory", method=RequestMethod.GET)
+	@RequestMapping(value="mall/updateSubCategory", method=RequestMethod.GET)
 	public ModelAndView updateSubCategory(@ModelAttribute SubCategoryVO subCategoryVO, @RequestParam int findById, Model model)
 	{
 		subCategoryVO.setId(findById);

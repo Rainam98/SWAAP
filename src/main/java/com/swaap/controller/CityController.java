@@ -25,7 +25,7 @@ public class CityController {
 	@Autowired
 	CityService cityService;
 	
-	@RequestMapping(value="addCity", method=RequestMethod.GET)
+	@RequestMapping(value="mall/addCity", method=RequestMethod.GET)
 	public ModelAndView addCity(Model model)
 	{
 		List StateList=this.stateService.searchState();
@@ -34,7 +34,7 @@ public class CityController {
 		return new ModelAndView("mall/addCity");
 	}
 	
-	@RequestMapping(value="saveCity", method=RequestMethod.POST)
+	@RequestMapping(value="mall/saveCity", method=RequestMethod.POST)
 	public ModelAndView saveCity(@ModelAttribute CityVO cityVO)
 	{
 		cityVO.setStatus(true);
@@ -42,14 +42,14 @@ public class CityController {
 		return new ModelAndView("redirect:mall/viewCity");
 	}
 	
-	@RequestMapping(value="viewCity", method=RequestMethod.GET)
+	@RequestMapping(value="mall/viewCity", method=RequestMethod.GET)
 	public ModelAndView viewCity(@ModelAttribute CityVO cityVO)
 	{
 		List cityList=this.cityService.searchCity();
 		return new ModelAndView("mall/viewCity","cityList",cityList);
 	}
 	
-	@RequestMapping(value="deleteCity", method=RequestMethod.GET)
+	@RequestMapping(value="mall/deleteCity", method=RequestMethod.GET)
 	public ModelAndView deleteCity(@ModelAttribute CityVO cityVO, @RequestParam int findById)
 	{
 		cityVO.setId(findById);
@@ -60,7 +60,7 @@ public class CityController {
 		return new ModelAndView("redirect:mall/viewCity");
 	}
 	
-	@RequestMapping(value="updateCity", method=RequestMethod.GET)
+	@RequestMapping(value="mall/updateCity", method=RequestMethod.GET)
 	public ModelAndView updateCity(@ModelAttribute CityVO cityVO, @RequestParam int findById, Model model)
 	{
 		cityVO.setId(findById);

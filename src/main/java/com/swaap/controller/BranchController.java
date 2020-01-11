@@ -28,7 +28,7 @@ public class BranchController {
 	@Autowired
 	BranchService branchService;
 	
-	@RequestMapping(value="addBranch", method=RequestMethod.GET)
+	@RequestMapping(value="mall/addBranch", method=RequestMethod.GET)
 	public ModelAndView addBranch(Model model)
 	{
 		List StateList=this.stateService.searchState();
@@ -39,7 +39,7 @@ public class BranchController {
 		return new ModelAndView("mall/addBranch");
 	}
 	
-	@RequestMapping(value="saveBranch", method=RequestMethod.POST)
+	@RequestMapping(value="mall/saveBranch", method=RequestMethod.POST)
 	public ModelAndView saveBranch(@ModelAttribute BranchVO branchVO)
 	{
 		branchVO.setStatus(true);
@@ -47,14 +47,14 @@ public class BranchController {
 		return new ModelAndView("redirect:mall/viewBranch");
 	}
 	
-	@RequestMapping(value="viewBranch", method=RequestMethod.GET)
+	@RequestMapping(value="mall/viewBranch", method=RequestMethod.GET)
 	public ModelAndView viewBranch(@ModelAttribute BranchVO branchVO)
 	{
 		List branchList=this.branchService.searchBranch();
 		return new ModelAndView("mall/viewBranch","branchList",branchList);
 	}
 	
-	@RequestMapping(value="deleteBranch", method=RequestMethod.GET)
+	@RequestMapping(value="mall/deleteBranch", method=RequestMethod.GET)
 	public ModelAndView deleteBranch(@ModelAttribute BranchVO branchVO, @RequestParam int findById)
 	{
 		branchVO.setId(findById);
@@ -65,7 +65,7 @@ public class BranchController {
 		return new ModelAndView("redirect:mall/viewBranch");
 	}
 	
-	@RequestMapping(value="updateBranch", method=RequestMethod.GET)
+	@RequestMapping(value="mall/updateBranch", method=RequestMethod.GET)
 	public ModelAndView updateBranch(@ModelAttribute BranchVO branchVO, @RequestParam int findById, Model model)
 	{
 		branchVO.setId(findById);

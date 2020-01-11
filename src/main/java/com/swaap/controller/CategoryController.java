@@ -18,13 +18,13 @@ public class CategoryController {
 	@Autowired
 	CategoryService categoryService;
 	
-	@RequestMapping(value="addCategory", method=RequestMethod.GET)
+	@RequestMapping(value="mall/addCategory", method=RequestMethod.GET)
 	public ModelAndView addCategory()
 	{
 		return new ModelAndView("mall/addCategory","categoryVO", new CategoryVO());
 	}
 	
-	@RequestMapping(value="saveCategory", method=RequestMethod.POST)
+	@RequestMapping(value="mall/saveCategory", method=RequestMethod.POST)
 	public ModelAndView saveCategory(@ModelAttribute CategoryVO categoryVO)
 	{
 		categoryVO.setStatus(true);
@@ -32,7 +32,7 @@ public class CategoryController {
 		return new ModelAndView("redirect:mall/viewCategory");
 	}
 	
-	@RequestMapping(value="deleteCategory", method=RequestMethod.GET)
+	@RequestMapping(value="mall/deleteCategory", method=RequestMethod.GET)
 	public ModelAndView deleteCategory(@ModelAttribute CategoryVO categoryVO, @RequestParam int findById)
 	{
 		categoryVO.setId(findById);
@@ -43,14 +43,14 @@ public class CategoryController {
 		return new ModelAndView("redirect:mall/viewCategory");
 	}
 	
-	@RequestMapping(value="viewCategory")
+	@RequestMapping(value="mall/viewCategory")
 	public ModelAndView viewCategory()
 	{
 		List categoryList=this.categoryService.searchCategory();
 		return new ModelAndView("mall/viewCategory","categoryList",categoryList);
 	}
 
-	@RequestMapping(value="updateCategory", method=RequestMethod.GET)
+	@RequestMapping(value="mall/updateCategory", method=RequestMethod.GET)
 	public ModelAndView updateCategory(@ModelAttribute CategoryVO categoryVO, @RequestParam int findById)
 	{
 		categoryVO.setId(findById);

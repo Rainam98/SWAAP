@@ -31,7 +31,7 @@ public class ProductController {
 	@Autowired
 	BranchService branchService;
 	
-	@RequestMapping(value="addProduct", method=RequestMethod.GET)
+	@RequestMapping(value="mall/addProduct", method=RequestMethod.GET)
 	public ModelAndView addProduct(Model model)
 	{
 		List CategoryList=this.categoryService.searchCategory();
@@ -44,7 +44,7 @@ public class ProductController {
 		return new ModelAndView("mall/addProduct");
 	}
 	
-	@RequestMapping(value="saveProduct", method=RequestMethod.POST)
+	@RequestMapping(value="mall/saveProduct", method=RequestMethod.POST)
 	public ModelAndView saveProduct(@ModelAttribute ProductVO productVO)
 	{
 		productVO.setStatus(true);
@@ -52,14 +52,14 @@ public class ProductController {
 		return new ModelAndView("redirect:mall/viewProduct");
 	}
 	
-	@RequestMapping(value="viewProduct", method=RequestMethod.GET)
+	@RequestMapping(value="mall/viewProduct", method=RequestMethod.GET)
 	public ModelAndView viewProduct(@ModelAttribute ProductVO productVO)
 	{
 		List productList=this.productService.searchProduct();
 		return new ModelAndView("mall/viewProduct","productList",productList);
 	}
 	
-	@RequestMapping(value="deleteProduct", method=RequestMethod.GET)
+	@RequestMapping(value="mall/deleteProduct", method=RequestMethod.GET)
 	public ModelAndView deleteProduct(@ModelAttribute ProductVO productVO, @RequestParam int findById)
 	{
 		productVO.setId(findById);
@@ -70,7 +70,7 @@ public class ProductController {
 		return new ModelAndView("redirect:mall/viewProduct");
 	}
 	
-	@RequestMapping(value="updateProduct", method=RequestMethod.GET)
+	@RequestMapping(value="mall/updateProduct", method=RequestMethod.GET)
 	public ModelAndView updateProduct(@ModelAttribute ProductVO productVO, @RequestParam int findById, Model model)
 	{
 		productVO.setId(findById);

@@ -31,7 +31,7 @@ public class OfferController {
 	@Autowired
 	OfferService offerService;
 	
-	@RequestMapping(value="addOffer", method=RequestMethod.GET)
+	@RequestMapping(value="mall/addOffer", method=RequestMethod.GET)
 	public ModelAndView addOffer(Model model)
 	{
 		List productList=this.productService.searchProduct();
@@ -44,21 +44,21 @@ public class OfferController {
 		return new ModelAndView("mall/addOffer");
 	}
 	
-	@RequestMapping(value="saveOffer", method=RequestMethod.POST)
+	@RequestMapping(value="mall/saveOffer", method=RequestMethod.POST)
 	public ModelAndView saveOffer(@ModelAttribute OfferVO offerVO)
 	{
 		offerVO.setStatus(true);
 		this.offerService.insertOffer(offerVO);
 		return new ModelAndView("redirect:mall/viewOffer");
 	}
-	@RequestMapping(value="viewOffer", method=RequestMethod.GET)
+	@RequestMapping(value="mall/viewOffer", method=RequestMethod.GET)
 	public ModelAndView viewOffer(@ModelAttribute OfferVO offerVO)
 	{
 		List offerList=this.offerService.searchOffer();
 		return new ModelAndView("mall/viewOffer","offerList",offerList);
 	}
 	
-	@RequestMapping(value="deleteOffer", method=RequestMethod.GET)
+	@RequestMapping(value="mall/deleteOffer", method=RequestMethod.GET)
 	public ModelAndView deleteOffer(@ModelAttribute OfferVO offerVO, @RequestParam int findById)
 	{
 		offerVO.setId(findById);
@@ -69,7 +69,7 @@ public class OfferController {
 		return new ModelAndView("redirect:mall/viewOffer");
 	}
 	
-	@RequestMapping(value="updateOffer", method=RequestMethod.GET)
+	@RequestMapping(value="mall/updateOffer", method=RequestMethod.GET)
 	public ModelAndView updateOffer(@ModelAttribute OfferVO offerVO, @RequestParam int findById, Model model)
 	{
 		offerVO.setId(findById);
