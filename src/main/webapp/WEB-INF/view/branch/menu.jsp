@@ -31,29 +31,26 @@
 					<a class="waves-effect" href="index.html"><i class="menu-icon fa fa-home"></i><span>Dashboard</span></a>
 				</li>
 				<li>
-					<a class="waves-effect" href="#"><i class="menu-icon fa fa-user" aria-hidden="true"></i><span>Login</span></a>
+					<a class="waves-effect" href="viewCategory"><i class="menu-icon fa fa-shopping-bag" aria-hidden="true"></i><span>Category</span></a>
 				</li>
 				<li>
-					<a class="waves-effect" href="index.html"><i class="menu-icon fa fa-list-alt" aria-hidden="true"></i><span>Categories</span></a>
+					<a class="waves-effect" href="viewSubCategory"><i class="menu-icon fa fa-shopping-basket" aria-hidden="true"></i><span>Sub-Category</span><span class="menu-arrow fa fa-angle-down"></span></a>
 				</li>
 				<li>
-					<a class="waves-effect" href="index.html"><i class="menu-icon fa fa-briefcase" aria-hidden="true"></i><span>Products</span></a>
+					<a class="waves-effect" href="viewProduct"><i class="menu-icon fa fa-briefcase" aria-hidden="true"></i><span>Products</span></a>
 				</li>
 				<li>
-					<a class="waves-effect" href="index.html"><i class="menu-icon fa fa-gift" aria-hidden="true"></i><span>Offers</span></a>
+					<a class="waves-effect" href="viewOffer"><i class="menu-icon fa fa-gift" aria-hidden="true"></i><span>Offers</span></a>
 				</li>
 				<li>
 					<a class="waves-effect" href="index.html"><i class="menu-icon fa fa-clipboard-list" aria-hidden="true"></i><span>Checklist</span></a>
-				</li>
-				<li>
-					<a class="waves-effect" href="index.html"><i class="menu-icon fa fa-smile" aria-hidden="true"></i><span>Feedback</span></a>
 				</li>
 				
 				<li>
 					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon fa fa-comments" aria-hidden="true"></i><span>Manage Complaint</span><span class="menu-arrow fa fa-angle-down"></span></a>
 					<ul class="sub-menu js__content">
 						<li><a href="icons-font-awesome-icons.html">Add Complaint</a></li>
-						<li><a href="icons-fontello.html">View Complaint</a></li>
+						<li><a href="icons-fontello.html">Reply Complaint</a></li>
 					
 					</ul>
 					<!-- /.sub-menu js__content -->
