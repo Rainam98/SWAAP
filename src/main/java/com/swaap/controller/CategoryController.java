@@ -57,4 +57,11 @@ public class CategoryController {
 		List categoryList=this.categoryService.editCategory(categoryVO);
 		return new ModelAndView("mall/addCategory","stateVO",(CategoryVO)categoryList.get(0));
 	}
+	@RequestMapping(value="branch/viewCategory")
+	public ModelAndView viewBranchCategory()
+	{
+		List categoryList=this.categoryService.searchCategory();
+		return new ModelAndView("branch/viewCategory","categoryList",categoryList);
+	}
+
 }

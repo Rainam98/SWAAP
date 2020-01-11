@@ -83,4 +83,10 @@ public class OfferController {
 		model.addAttribute("offerVO",(OfferVO)offerList.get(0));
 		return new ModelAndView("mall/addOffer");
 	}
+	@RequestMapping(value="branch/viewOffer", method=RequestMethod.GET)
+	public ModelAndView viewBranchOffer(@ModelAttribute OfferVO offerVO)
+	{
+		List offerList=this.offerService.searchOffer();
+		return new ModelAndView("branch/viewOffer","offerList",offerList);
+	}
 }

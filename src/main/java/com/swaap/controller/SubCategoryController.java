@@ -69,6 +69,11 @@ public class SubCategoryController {
 		model.addAttribute("categoryList",categoryList);
 		return new ModelAndView("mall/addSubCategory");
 	}
-	
+	@RequestMapping(value="branch/viewSubCategory", method=RequestMethod.GET)
+	public ModelAndView viewBranchSubCategory(@ModelAttribute SubCategoryVO subCategoryVO)
+	{
+		List subCategoryList=this.subCategoryService.searchSubCategory();
+		return new ModelAndView("branch/viewSubCategory","subCategoryList",subCategoryList);
+	}
 	
 }

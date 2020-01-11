@@ -84,4 +84,10 @@ public class ProductController {
 		model.addAttribute("branchList",BranchList);
 		return new ModelAndView("mall/addProduct");
 	}
+	@RequestMapping(value="branch/viewProduct", method=RequestMethod.GET)
+	public ModelAndView viewBranchProduct(@ModelAttribute ProductVO productVO)
+	{
+		List productList=this.productService.searchProduct();
+		return new ModelAndView("branch/viewProduct","productList",productList);
+	}
 }

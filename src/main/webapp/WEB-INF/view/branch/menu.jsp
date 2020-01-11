@@ -4,8 +4,8 @@
 		<button type="button" class="button-close fa fa-times js__menu_close"></button>
 		<div class="user">
 			<a href="#" class="avatar"><img src="<%=request.getContextPath()%>/adminResources/image/avatar.png" alt=""><span class="status online"></span></a>
-			<h5 class="name"><a href="profile.html">Emily Stanley</a></h5>
-			<h5 class="position">Administrator</h5>
+			<h5 class="name"><a href="profile.html">Ritu Shah</a></h5>
+			<h5 class="position">Designer</h5>
 			<!-- /.name -->
 			<div class="control-wrap js__drop_down">
 				<i class="fa fa-caret-down js__drop_down_button"></i>
@@ -27,14 +27,14 @@
 			<h5 class="title">Navigation</h5>
 			<!-- /.title -->
 			<ul class="menu js__accordion">
-				<li class="current">
+				<li>
 					<a class="waves-effect" href="index.html"><i class="menu-icon fa fa-home"></i><span>Dashboard</span></a>
 				</li>
 				<li>
 					<a class="waves-effect" href="viewCategory"><i class="menu-icon fa fa-shopping-bag" aria-hidden="true"></i><span>Category</span></a>
 				</li>
 				<li>
-					<a class="waves-effect" href="viewSubCategory"><i class="menu-icon fa fa-shopping-basket" aria-hidden="true"></i><span>Sub-Category</span><span class="menu-arrow fa fa-angle-down"></span></a>
+					<a class="waves-effect" href="viewSubCategory"><i class="menu-icon fa fa-shopping-basket" aria-hidden="true"></i><span>Sub-Category</span></a>
 				</li>
 				<li>
 					<a class="waves-effect" href="viewProduct"><i class="menu-icon fa fa-briefcase" aria-hidden="true"></i><span>Products</span></a>
