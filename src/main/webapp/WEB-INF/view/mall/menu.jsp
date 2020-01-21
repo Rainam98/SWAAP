@@ -97,6 +97,13 @@
 					<!-- /.sub-menu js__content -->
 				</li>
 				<li>
+					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon far fa-clipboard"></i><span>Manage Complain</span><span class="menu-arrow fa fa-angle-down"></span></a>
+					<ul class="sub-menu js__content">
+						<li><a href="viewMallComplain">View Complain</a></li>
+					</ul>
+					<!-- /.sub-menu js__content -->
+				</li>
+				<li>
 					<a class="waves-effect" href="viewFeedback"><i class="menu-icon far fa-smile" aria-hidden="true"></i><span>Feedback</span></a>
 					
 					<!-- /.sub-menu js__content -->

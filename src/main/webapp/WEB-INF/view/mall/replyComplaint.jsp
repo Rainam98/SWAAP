@@ -14,7 +14,7 @@
 
 	<!-- Main Styles -->
 	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/style.css">
-<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/custom.css">
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/custom.css">
 
 	<!-- mCustomScrollbar -->
 	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/jquery.mCustomScrollbar.min.css">
@@ -25,6 +25,10 @@
 	<!-- Sweet Alert -->
 	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/sweetalert.css">
 	
+	<!-- Data Tables -->
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/responsive.bootstrap.min.css">
+
 	<!-- Color Picker -->
 	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/color-switcher.min.css">
 </head>
@@ -58,7 +62,7 @@
 						</div>
 						
 						<div class="form-group">
-							<button type="submit" name="addcomp" class="btn btn-primary waves-effect waves-light">Add Complaint</button>
+							<button type="submit" name="addcomp" class="btn btn-primary waves-effect waves-light">Add Reply</button>
 						</div>
 					</form>
 				</div>

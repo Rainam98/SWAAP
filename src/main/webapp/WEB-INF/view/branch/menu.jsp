@@ -49,8 +49,9 @@
 				<li>
 					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon fa fa-comments" aria-hidden="true"></i><span>Manage Complaint</span><span class="menu-arrow fa fa-angle-down"></span></a>
 					<ul class="sub-menu js__content">
-						<li><a href="addComplaint">Add Complaint</a></li>
-						<li><a href="viewComplaint">Reply Complaint</a></li>
+						<li><a href="addComplain">Add Complaint</a></li>
+						<li><a href="viewBranchComplain">View Complaint History</a></li>
+						<li><a href="viewComplain">Reply Complaint</a></li>
 					
 					</ul>
 					<!-- /.sub-menu js__content -->
