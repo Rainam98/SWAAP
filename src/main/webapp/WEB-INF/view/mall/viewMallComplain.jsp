@@ -15,7 +15,7 @@
 
 <!-- Main Styles -->
 	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/style.css">
-	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/custom.css">
+<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/custom.css">
 
 	<!-- mCustomScrollbar -->
 	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/jquery.mCustomScrollbar.min.css">
@@ -26,10 +26,6 @@
 	<!-- Sweet Alert -->
 	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/sweetalert.css">
 	
-	<!-- Data Tables -->
-	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/dataTables.bootstrap4.min.css">
-	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/responsive.bootstrap.min.css">
-
 	<!-- Color Picker -->
 	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/color-switcher.min.css">
 
@@ -244,33 +240,31 @@
 				</div>
 				<!-- /.col-12 -->
 		<!--/#wrapper -->
+	<!--/#wrapper -->
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
-		<script src="<%=request.getContextPath() %>/adminResource/js/html5shiv.min.js"></script>
-		<script src="<%=request.getContextPath() %>/adminResource/js/respond.min.js"></script>
+		<script src="<%=request.getContextPath()%>/adminResources/js/html5shiv.min.js"></script>
+		<script src="<%=request.getContextPath()%>/adminResources/js/respond.min.js"></script>
 	<![endif]-->
 	<!-- 
-		================================================== -->
+	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="<%=request.getContextPath() %>/adminResource/js/jquery.min.js"></script>
-	<script src="<%=request.getContextPath() %>/adminResource/js/modernizr.min.js"></script>
-	<script src="<%=request.getContextPath() %>/adminResource/js/bootstrap.min.js"></script>
-	<script src="<%=request.getContextPath() %>/adminResource/js/jquery.mCustomScrollbar.concat.min.js"></script>
-	<script src="<%=request.getContextPath() %>/adminResource/js/nprogress.js"></script>
-	<script src="<%=request.getContextPath() %>/adminResource/js/sweetalert.min.js"></script>
-	<script src="<%=request.getContextPath() %>/adminResource/js/waves.min.js"></script>
-	<!-- Sparkline Chart -->
-	<script src="<%=request.getContextPath() %>/adminResource/js/jquery.sparkline.min.js"></script>
-	<script src="<%=request.getContextPath() %>/adminResource/js/chart.sparkline.init.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/jquery.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/modernizr.min.js"></script>
+<script src="<%=request.getContextPath()%>/adminResources/js/popper.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/bootstrap.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/nprogress.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/sweetalert.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/waves.min.js"></script>
+	<!-- Full Screen Plugin -->
+	<script src="<%=request.getContextPath()%>/adminResources/js/jquery.fullscreen-min.js"></script>
 
-	<!-- Data Tables -->
-	<script src="<%=request.getContextPath() %>/adminResource/js/jquery.dataTables.min.js"></script>
-	<script src="<%=request.getContextPath() %>/adminResource/js/dataTables.bootstrap4.min.js"></script>
-	<script src="<%=request.getContextPath() %>/adminResource/js/dataTables.responsive.min.js"></script>
-	<script src="<%=request.getContextPath() %>/adminResource/js/responsive.bootstrap.min.js"></script>
-	<script src="<%=request.getContextPath() %>/adminResource/js/datatables.demo.min.js"></script>
+	<!-- Validator -->
+	<script src="<%=request.getContextPath()%>/adminResources/js/validator.min.js"></script>
 
-	<script src="<%=request.getContextPath() %>/adminResource/js/main.min.js"></script>
-	<script src="<%=request.getContextPath() %>/adminResource/js/mycommon.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/main.min.js"></script>
+<script src="<%=request.getContextPath()%>/adminResources/js/mycommon.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/color-switcher.min.js"></script>
 </body>
 </html>

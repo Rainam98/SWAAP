@@ -29,7 +29,7 @@ public class CategoryController {
 	{
 		categoryVO.setStatus(true);
 		this.categoryService.insertCategory(categoryVO);
-		return new ModelAndView("redirect:mall/viewCategory");
+		return new ModelAndView("redirect:/mall/viewCategory");
 	}
 	
 	@RequestMapping(value="mall/deleteCategory", method=RequestMethod.GET)
@@ -40,7 +40,7 @@ public class CategoryController {
 		CategoryVO foundCategoryVO=(CategoryVO)categoryList.get(0);
 		foundCategoryVO.setStatus(false);
 		this.categoryService.insertCategory(foundCategoryVO);
-		return new ModelAndView("redirect:mall/viewCategory");
+		return new ModelAndView("redirect:/mall/viewCategory");
 	}
 	
 	@RequestMapping(value="mall/viewCategory")

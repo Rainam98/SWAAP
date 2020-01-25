@@ -104,13 +104,7 @@
 					<!-- /.sub-menu js__content -->
 				</li>
 				<li>
-					<a class="waves-effect" href="viewFeedback"><i class="menu-icon far fa-smile" aria-hidden="true"></i><span>Feedback</span></a>
-					
-					<!-- /.sub-menu js__content -->
-				</li>
-				<li>
-					<a class="waves-effect" href="viewComplaint"><i class="menu-icon fas fa-comments" aria-hidden="true"></i><span>Manage Complaint</span></a>
-					
+					<a class="waves-effect parent-item js__control" href="viewFeedback"><i class="menu-icon far fa-smile" aria-hidden="true"></i><span>Feedback</span></a>
 					<!-- /.sub-menu js__content -->
 				</li>
 			</ul>

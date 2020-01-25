@@ -49,7 +49,7 @@ public class OfferController {
 	{
 		offerVO.setStatus(true);
 		this.offerService.insertOffer(offerVO);
-		return new ModelAndView("redirect:mall/viewOffer");
+		return new ModelAndView("redirect:/mall/viewOffer");
 	}
 	@RequestMapping(value="mall/viewOffer", method=RequestMethod.GET)
 	public ModelAndView viewOffer(@ModelAttribute OfferVO offerVO)

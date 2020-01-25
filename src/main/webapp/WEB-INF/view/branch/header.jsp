@@ -14,7 +14,7 @@
 			<i class="far fa-user" aria-hidden="true"></i>
 		</div> -->
 		<!-- /.ico-item -->
-		<a href="#" class="ico-item fa fa-power-off js__logout"></a>
+		<a href="/logout" class="ico-item fa fa-power-off"></a>
 	</div>
 	<!-- /.float-right -->
 </div>

@@ -39,7 +39,7 @@ public class CityController {
 	{
 		cityVO.setStatus(true);
 		this.cityService.insertCity(cityVO);
-		return new ModelAndView("redirect:mall/viewCity");
+		return new ModelAndView("redirect:/mall/viewCity");
 	}
 	
 	@RequestMapping(value="mall/viewCity", method=RequestMethod.GET)
@@ -57,7 +57,7 @@ public class CityController {
 		CityVO foundCityVO=(CityVO)cityList.get(0);
 		foundCityVO.setStatus(false);
 		this.cityService.insertCity(foundCityVO);
-		return new ModelAndView("redirect:mall/viewCity");
+		return new ModelAndView("redirect:/mall/viewCity");
 	}
 	
 	@RequestMapping(value="mall/updateCity", method=RequestMethod.GET)
