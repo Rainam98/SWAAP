@@ -11,30 +11,32 @@
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
 
     <!-- Favicone Icon -->
-    <link rel="shortcut icon" type="image/x-icon" href="userResources/imagefavicon.ico">
-    <link rel="icon" type="img/png" href="userResources/image/favicon.png">
-    <link rel="apple-touch-icon" href="userResources/image/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/<%=request.getContextPath()%>/userResources/imagefavicon.ico">
+    <link rel="icon" type="img/png" href="<%=request.getContextPath()%>/userResources/image/favicon.png">
+    <link rel="apple-touch-icon" href="<%=request.getContextPath()%>/userResources/image/favicon.png">
 
     <!-- CSS -->
-    <link href="userResources/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="<%=request.getContextPath()%>/userResources/css/bootstrap.css" rel="stylesheet" type="text/css" />
     <!-- bootstrap css -->
-    <link href="userResources/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="<%=request.getContextPath()%>/userResources/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <!-- fontawesome css -->
-    <link href="userResources/css/animate.css" rel="stylesheet" type="text/css" />
+    <link href="<%=request.getContextPath()%>/userResources/css/animate.css" rel="stylesheet" type="text/css" />
     <!-- animate css -->
-    <link href="userResources/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="<%=request.getContextPath()%>/userResources/css/style.css" rel="stylesheet" type="text/css" />
     <!-- template css -->
-    <link href="userResources/css/settings-ver.5.3.1.css" rel="stylesheet" type="text/css" />
+    <link href="<%=request.getContextPath()%>/userResources/css/settings-ver.5.3.1.css" rel="stylesheet" type="text/css" />
     <!-- Slider Revolution Css Setting -->
 
 </head>
 <body>
 
+	<jsp:include page="header.jsp"></jsp:include>
+	
     <!-- Newsletter Popup ---------------------------------------------------->
     <section id="nlpopup" data-expires="30" data-delay="10">
         <!--Close Button-->
         <a href="javascript:void(0)" class="nlpopup_close nlpopup_close_icon">
-            <img src="userResources/image/close-icon-white.png" alt="Newsletter Close" /></a>
+            <img src="<%=request.getContextPath()%>/userResources/image/close-icon-white.png" alt="Newsletter Close" /></a>
         <!--End Close Button-->
 
         <h3 class="mb-40">Join Our Mailing List </h3>
@@ -85,7 +87,7 @@
                         <li>
                             <!--Item Image-->
                             <a href="#" class="product-image">
-                                <img src="userResources/image/product-img/product_12547554.jpg" alt="" /></a>
+                                <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_12547554.jpg" alt="" /></a>
 
                             <!--Item Content-->
                             <div class="product-content">
@@ -106,7 +108,7 @@
                         <li>
                             <!--Item Image-->
                             <a href="#" class="product-image">
-                                <img src="userResources/image/product-img/product_12547555.jpg" alt="" /></a>
+                                <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_12547555.jpg" alt="" /></a>
 
                             <!--Item Content-->
                             <div class="product-content">
@@ -163,12 +165,12 @@
             <!-- Search Form -->
             <form role="search" id="searchform" action="/search" method="get">
                 <div class="search-icon-lg">
-                    <img src="userResources/image/search-icon-lg.png" alt="" />
+                    <img src="<%=request.getContextPath()%>/userResources/image/search-icon-lg.png" alt="" />
                 </div>
                 <label class="h6 normal search-input-label" for="search-query">Enter keywords to Search Product</label>
                 <input value="" name="q" type="search" placeholder="Search..." />
                 <button type="submit">
-                    <img src="userResources/image/search-lg-go-icon.png" alt="" />
+                    <img src="<%=request.getContextPath()%>/userResources/image/search-lg-go-icon.png" alt="" />
                 </button>
             </form>
             <!-- End Search Form -->
@@ -182,379 +184,7 @@
     <!--==========================================-->
     <div class="wraper">
         <!-- Header -->
-        <header class="header">
-            <!--Topbar-->
-            <div class="header-topbar">
-                <div class="header-topbar-inner">
-                    <!--Topbar Left-->
-                    <div class="topbar-left hidden-sm-down">
-                        <div class="phone"><i class="fa fa-phone left" aria-hidden="true"></i>Customer Support : <b>+77 7565 348 576</b></div>
-                    </div>
-                    <!--End Topbar Left-->
-
-                    <!--Topbar Right-->
-                    <div class="topbar-right">
-                        <ul class="list-none">
-                            <li>
-                                <a href="login-register.html"><i class="fa fa-lock left" aria-hidden="true"></i><span class="hidden-sm-down">Login</span></a>
-                            </li>
-                            <li class="dropdown-nav">
-                                <a href="login-register.html"><i class="fa fa-user left" aria-hidden="true"></i><span class="hidden-sm-down">My Account</span><i class="fa fa-angle-down right" aria-hidden="true"></i></a>
-                                <!--Dropdown-->
-                                <div class="dropdown-menu">
-                                    <ul>
-                                        <li><a href="login-register.html">My Account</a></li>
-                                        <li><a href="#">Order History</a></li>
-                                        <li><a href="#">Returns</a></li>
-                                        <li><a href="#">My Wishlist</a></li>
-                                        <li><a href="checkout.html">Checkout</a></li>
-                                    </ul>
-                                    <span class="divider"></span>
-                                    <ul>
-                                        <li><a href="login-register.html"><i class="fa fa-lock left" aria-hidden="true"></i>Login</a></li>
-                                        <li><a href="login-register.html"><i class="fa fa-user left" aria-hidden="true"></i>Create an Account</a></li>
-                                    </ul>
-                                </div>
-                                <!--End Dropdown-->
-                            </li>
-                            <li class="dropdown-nav">
-                                <a href="#">USD<i class="fa fa-angle-down right" aria-hidden="true"></i></a>
-                                <!--Dropdown-->
-                                <div class="dropdown-menu">
-                                    <ul>
-                                        <li><a href="#">USD</a></li>
-                                        <li><a href="#">EUR</a></li>
-                                        <li><a href="#">GBP</a></li>
-                                        <li><a href="#">AUD</a></li>
-                                    </ul>
-                                </div>
-                                <!--End Dropdown-->
-                            </li>
-                            <li>
-                                <a href="about.html">About</a>
-                            </li>
-                            <li>
-                                <a href="contact.html">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- End Topbar Right -->
-                </div>
-            </div>
-            <!--End Topbart-->
-
-            <!-- Header Container -->
-            <div id="header-sticky" class="header-main">
-                <div class="header-main-inner">
-                    <!-- Logo -->
-                    <div class="logo">
-                        <a href="index.html">
-                            <img src="userResources/image/logo_black.png" alt="Philos" />
-                        </a>
-                    </div>
-                    <!-- End Logo -->
-
-
-                    <!-- Right Sidebar Nav -->
-                    <div class="header-rightside-nav">
-                        <!-- Login-Register Link -->
-                        <div class="header-btn-link hidden-lg-down"><a href="#" class="btn btn-sm btn-color">Buy Now</a></div>
-                        <!-- End Login-Register Link -->
-
-                        <!-- Sidebar Icon -->
-                        <div class="sidebar-icon-nav">
-                            <ul class="list-none-ib">
-                                <!-- Search-->
-                                <li><a id="search-overlay-menu-btn"><i aria-hidden="true" class="fa fa-search"></i></a></li>
-
-                                <!-- Whishlist-->
-                                <li><a class="js_whishlist-btn"><i aria-hidden="true" class="fa fa-heart"></i><span class="countTip">10</span></a></li>
-
-                                <!-- Cart-->
-                                <li><a id="sidebar_toggle_btn">
-                                    <div class="cart-icon">
-                                        <i aria-hidden="true" class="fa fa-shopping-bag"></i>
-                                    </div>
-
-                                    <div class="cart-title">
-                                        <span class="cart-count">2</span>
-                                        /
-                                    <span class="cart-price strong">$698.00</span>
-                                    </div>
-                                </a></li>
-                            </ul>
-                        </div>
-                        <!-- End Sidebar Icon -->
-                    </div>
-                    <!-- End Right Sidebar Nav -->
-
-
-                    <!-- Navigation Menu -->
-                    <nav class="navigation-menu">
-                        <ul>
-                            <li>
-                                <a href="index.html">Home</a>
-                            </li>
-                            <li>
-                                <a href="shop_grid.html">Man</a>
-                                <!-- Drodown Menu ------->
-                                <ul class="nav-dropdown js-nav-dropdown">
-                                    <li class="container">
-                                        <ul class="row">
-                                            <!--Grid 1-->
-                                            <li class="nav-dropdown-grid">
-                                                <h6>New In</h6>
-                                                <ul>
-                                                    <li><a href="#">New In Clothing</a></li>
-                                                    <li><a href="#">New In Shoes<span class="new-label">New</span></a></li>
-                                                    <li><a href="#">New In Bags</a></li>
-                                                    <li><a href="#">New In Watches</a></li>
-                                                    <li><a href="#">New In Accesories</a></li>
-                                                </ul>
-                                            </li>
-                                            <!--Grid 2-->
-                                            <li class="nav-dropdown-grid">
-                                                <h6>Clothing</h6>
-                                                <ul>
-                                                    <li><a href="#">Polos & Tees</a></li>
-                                                    <li><a href="#">Casual Shirts</a></li>
-                                                    <li><a href="#">Jeans</a></li>
-                                                    <li><a href="#">Casual Trousers</a></li>
-                                                    <li><a href="#">Formal Shirts<span class="sale-label">Sale</span></a></li>
-                                                    <li><a href="#">Formal Trousers</a></li>
-                                                    <li><a href="#">Suits & Blazers</a></li>
-                                                    <li><a href="#">Winter Jackets</a></li>
-                                                    <li><a href="#">Track wear</a></li>
-                                                </ul>
-                                            </li>
-                                            <!--Grid 3-->
-                                            <li class="nav-dropdown-grid">
-                                                <h6>ACCESSORIES</h6>
-                                                <ul>
-                                                    <li><a href="#">Mens Jewellery</a></li>
-                                                    <li><a href="#">Bag</a></li>
-                                                    <li><a href="#">Sunglasses</a></li>
-                                                    <li><a href="#">Watches</a></li>
-                                                    <li><a href="#">Hair Care</a></li>
-                                                    <li><a href="#">Ties & Cufflinks</a></li>
-                                                    <li><a href="#">Perfume</a></li>
-                                                    <li><a href="#">Belt</a></li>
-                                                </ul>
-                                            </li>
-                                            <!--Grid 4-->
-                                            <li class="nav-dropdown-grid">
-                                                <h6>Brand</h6>
-                                                <ul>
-                                                    <li><a href="#">Analog</a></li>
-                                                    <li><a href="#">Chronograph</a></li>
-                                                    <li><a href="#">Digital</a></li>
-                                                    <li><a href="#">Watch Cases</a></li>
-                                                    <li><a href="#">Samsung</a></li>
-                                                    <li><a href="#">Apple</a></li>
-                                                    <li><a href="#">Hitachi</a></li>
-                                                </ul>
-                                            </li>
-
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <!-- End Drodown Menu -->
-                            </li>
-                            <li>
-                                <a href="shop_grid.html">Women</a>
-                                <!-- Drodown Menu ------->
-                                <ul class="nav-dropdown js-nav-dropdown">
-                                    <li class="container">
-                                        <ul class="row">
-                                            <!--Grid 1-->
-                                            <li class="nav-dropdown-grid">
-                                                <h6>New In</h6>
-                                                <ul>
-                                                    <li><a href="#">New In Clothing</a></li>
-                                                    <li><a href="#">New In Shoes</a></li>
-                                                    <li><a href="#">New In Bags</a></li>
-                                                    <li><a href="#">New In Watches</a></li>
-                                                    <li><a href="#">Sweaters</a></li>
-                                                    <li><a href="#">Winter Shrugs</a></li>
-                                                </ul>
-                                            </li>
-                                            <!--Grid 2-->
-                                            <li class="nav-dropdown-grid">
-                                                <h6>Clothing</h6>
-                                                <ul>
-                                                    <li><a href="#">Tops , tees & shirts</a></li>
-                                                    <li><a href="#">Dresses & Jumpsuits</a></li>
-                                                    <li><a href="#">Trousers & Jeans</a></li>
-                                                    <li><a href="#">Leggings & Jeggings</a></li>
-                                                    <li><a href="#">Capris,Shorts & Skirts</a></li>
-                                                    <li><a href="#">Winter Jackets</a></li>
-                                                    <li><a href="#">Clothing Accessories</a></li>
-                                                    <li><a href="#">Sweaters</a></li>
-                                                    <li><a href="#">Winter Shrugs</a></li>
-                                                </ul>
-                                            </li>
-                                            <!--Grid 3-->
-                                            <li class="nav-dropdown-grid">
-                                                <h6>Brand</h6>
-                                                <ul>
-                                                    <li><a href="#">A&C Signature</a></li>
-                                                    <li><a href="#">Angry Birds</a></li>
-                                                    <li><a href="#">Macadamia</a></li>
-                                                    <li><a href="#">Miller & Schweizer</a></li>
-                                                    <li><a href="#">Stylet</a></li>
-                                                    <li><a href="#">Van Heusen</a></li>
-                                                    <li><a href="#">Wrangler</a></li>
-                                                    <li><a href="#">Wills Lifestyle</a></li>
-                                                    <li><a href="#">X'Pose</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="nav-dropdown-grid">
-                                                <a href="#" class="sub-banner">
-                                                    <img src="userResources/image/banner/banner_115145.jpg" alt="" /></a>
-                                            </li>
-
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <!-- End Drodown Menu -->
-                            </li>
-                            <li>
-                                <a href="shop_grid.html">Kids</a>
-                                <!-- Drodown Menu ------->
-                                <ul class="nav-dropdown js-nav-dropdown">
-                                    <li class="container">
-                                        <ul class="row">
-                                            <!--Grid 1-->
-                                            <li class="nav-dropdown-grid">
-                                                <h6>Kid's</h6>
-                                                <ul>
-                                                    <li><a href="#">Tops & Tunics</a></li>
-                                                    <li><a href="#">Shorts & Capris</a></li>
-                                                    <li><a href="#">Twin Sets</a></li>
-                                                    <li><a href="#">Jeans & Trousers</a></li>
-                                                    <li><a href="#">Leggings & Jeggings</a></li>
-                                                    <li><a href="#">Skirts</a></li>
-                                                    <li><a href="#">Jumpsuits</a></li>
-                                                    <li><a href="#">Casual Dresses</a></li>
-                                                    <li><a href="#">Ethnic Wear</a></li>
-                                                </ul>
-                                            </li>
-
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <!-- End Drodown Menu -->
-                            </li>
-                            <li>
-                                <a href="shop_grid.html">Brand</a>
-                                <!-- Drodown Menu ------->
-                                <ul class="nav-dropdown js-nav-dropdown">
-                                    <li class="container">
-                                        <ul class="row">
-                                            <!--Grid 1-->
-                                            <li class="nav-dropdown-grid">
-                                                <ul>
-                                                    <li><a href="#">A&C Signature</a></li>
-                                                    <li><a href="#">Angry Birds</a></li>
-                                                    <li><a href="#">Macadamia</a></li>
-                                                    <li><a href="#">Miller & Schweizer</a></li>
-                                                    <li><a href="#">Stylet</a></li>
-                                                    <li><a href="#">Van Heusen</a></li>
-                                                    <li><a href="#">Wrangler</a></li>
-                                                    <li><a href="#">Wills Lifestyle</a></li>
-                                                    <li><a href="#">X'Pose</a></li>
-                                                </ul>
-                                            </li>
-                                            <!--Grid 2-->
-                                            <li class="nav-dropdown-grid">
-                                                <ul>
-                                                    <li><a href="#">Apple</a></li>
-                                                    <li><a href="#">United State</a></li>
-                                                    <li><a href="#">Google</a></li>
-                                                    <li><a href="#">Coca-Cola</a></li>
-                                                    <li><a href="#">Microsoft</a></li>
-                                                    <li><a href="#">Samsung</a></li>
-                                                    <li><a href="#">Apple</a></li>
-                                                    <li><a href="#">Facebook</a></li>
-                                                    <li><a href="#">Twitter</a></li>
-                                                    <li><a href="#">Instagram</a></li>
-
-                                                </ul>
-                                            </li>
-
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <!-- End Drodown Menu -->
-                            </li>
-                            <li>
-                                <a href="shop_grid.html">Accessories<span class="nav-label-sale"></span></a>
-                            </li>
-                            <li>
-                                <a href="#">Pages</a>
-                                <!-- Drodown Menu ------->
-                                <ul class="nav-dropdown js-nav-dropdown">
-                                    <li class="container">
-                                        <ul class="row">
-
-                                            <!--Grid 1-->
-                                            <li class="nav-dropdown-grid">
-                                                <h6>Shop Page</h6>
-                                                <ul>
-                                                    <li><a href="shop_grid.html">Shop Grid - Sidebar Left</a></li>
-                                                    <li><a href="shop_grid-sidebar_right.html">Shop Grid - Sidebar Right</a></li>
-                                                    <li><a href="shop_grid-no_sidebar.html">Shop Grid - No Sidebar</a></li>
-                                                    <li><a href="shop_list.html">Shop List - Sidebar Left</a></li>
-                                                    <li><a href="shop_list-sidebar_right.html">Shop List - Sidebar Right</a></li>
-                                                </ul>
-                                            </li>
-                                            <!--Grid 2-->
-                                            <li class="nav-dropdown-grid">
-                                                <h6>Product Page</h6>
-                                                <ul>
-                                                    <li><a href="product_detail.html">Product Page - Default</a></li>
-                                                    <li><a href="product_detail-with_sidebar.html">Product Page - With Sidebar</a></li>
-                                                    <li><a href="cart.html">Cart Page</a></li>
-                                                    <li><a href="checkout.html">Checkout Page</a></li>
-                                                </ul>
-                                            </li>
-                                            <!--Grid 3-->
-                                            <li class="nav-dropdown-grid">
-                                                <h6>Extra Page</h6>
-                                                <ul>
-                                                    <li><a href="index.html">Home</a></li>
-                                                    <li><a href="about.html">About Us</a></li>
-                                                    <li><a href="contact.html">Contact Us</a></li>
-                                                    <li><a href="portfolio.html">Portfolio</a></li>
-                                                    <li><a href="portfolio-single.html">Portfolio Detail</a></li>
-
-                                                </ul>
-                                            </li>
-
-                                            <!--Grid 1-->
-                                            <li class="nav-dropdown-grid">
-                                                <h6 class="white">Extra Page</h6>
-                                                <ul>
-                                                    <li><a href="blog.html">Blog</a></li>
-                                                    <li><a href="blog-with_sidebar.html">Blog - With sidebar</a></li>
-                                                    <li><a href="blog-single.html">Blog Detail</a></li>
-                                                    <li><a href="login-register.html">Login & Register</a></li>
-                                                </ul>
-                                            </li>
-
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <!-- End Drodown Menu -->
-                            </li>
-                        </ul>
-                    </nav>
-                    <!-- End Navigation Menu -->
-
-                </div>
-            </div>
-            <!-- End Header Container -->
-        </header>
+        
         <!-- End Header -->
 
         <!-- Page Content Wraper -->
@@ -568,7 +198,7 @@
                         <ul>
                             <li class="dark-bg" data-index="rs-1" data-transition="random" data-slotamount="7" data-masterspeed="500" data-thumb="" data-saveperformance="off" data-title="01">
                                 <!-- Main Image Layer 0-->
-                                <img src="userResources/image/slide-img/slide_bg1.jpg" alt="h" title="home-1-slide-1" width="1920" height="1100" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="6" class="rev-slidebg" data-no-retina />
+                                <img src="<%=request.getContextPath()%>/userResources/image/slide-img/slide_bg1.jpg" alt="h" title="home-1-slide-1" width="1920" height="1100" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="6" class="rev-slidebg" data-no-retina />
 
 
                                 <!--Layer 1-->
@@ -634,7 +264,7 @@
                             </li>
                             <li data-index="rs-2" data-transition="random" data-slotamount="7" data-masterspeed="500" data-thumb="" data-saveperformance="off" data-title="02">
                                 <!-- Main Image Layer 0-->
-                                <img src="userResources/image/slide-img/slide_bg2.jpg" alt="h" title="home-1-slide-1" width="1920" height="1100" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="6" class="rev-slidebg" data-no-retina />
+                                <img src="<%=request.getContextPath()%>/userResources/image/slide-img/slide_bg2.jpg" alt="h" title="home-1-slide-1" width="1920" height="1100" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="6" class="rev-slidebg" data-no-retina />
                                 <!-- LAYERS -->
 
                                 <!--Layer 1-->
@@ -698,7 +328,7 @@
                             </li>
                             <li data-index="rs-3" data-transition="random" data-slotamount="7" data-masterspeed="500" data-thumb="" data-saveperformance="off" data-title="03">
                                 <!-- Main Image Layer 0-->
-                                <img src="userResources/image/slide-img/slide_bg3.jpg" alt="h" title="home-1-slide-1" width="1920" height="1100" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="6" class="rev-slidebg" data-no-retina />
+                                <img src="<%=request.getContextPath()%>/userResources/image/slide-img/slide_bg3.jpg" alt="h" title="home-1-slide-1" width="1920" height="1100" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="6" class="rev-slidebg" data-no-retina />
                                 <!-- LAYERS -->
 
                                 <!--Layer 1-->
@@ -718,7 +348,7 @@
                                     data-splitin="none"
                                     data-splitout="none"
                                     data-responsive_offset="on">
-                                    <img src="userResources/image/slider-caption-sale.png" alt="" style="width: 100%; max-width: 682px;" />
+                                    <img src="<%=request.getContextPath()%>/userResources/image/slider-caption-sale.png" alt="" style="width: 100%; max-width: 682px;" />
                                 </div>
 
                                 <!--Layer 2-->
@@ -795,7 +425,7 @@
                                     <!-- banner No.1 -->
                                     <div class="promo-banner-wrap">
                                         <a href="#" class="promo-image-wrap">
-                                            <img src="userResources/image/banner/promo-banner4.jpg" alt="Accesories" />
+                                            <img src="<%=request.getContextPath()%>/userResources/image/banner/promo-banner4.jpg" alt="Accesories" />
                                         </a>
                                     </div>
 
@@ -805,7 +435,7 @@
                                     <!-- banner No.2 -->
                                     <div class="promo-banner-wrap">
                                         <a href="#" class="promo-image-wrap">
-                                            <img src="userResources/image/banner/promo-banner3.jpg" alt="Accesories" />
+                                            <img src="<%=request.getContextPath()%>/userResources/image/banner/promo-banner3.jpg" alt="Accesories" />
                                         </a>
                                     </div>
 
@@ -821,7 +451,7 @@
                                     <!-- banner No.3 -->
                                     <div class="promo-banner-wrap">
                                         <a href="#" class="promo-image-wrap">
-                                            <img src="userResources/image/banner/promo-banner2.jpg" alt="Accesories" />
+                                            <img src="<%=request.getContextPath()%>/userResources/image/banner/promo-banner2.jpg" alt="Accesories" />
                                         </a>
                                     </div>
                                 </div>
@@ -829,7 +459,7 @@
                                     <!-- banner No.4 -->
                                     <div class="promo-banner-wrap">
                                         <a href="#" class="promo-image-wrap">
-                                            <img src="userResources/image/banner/promo-banner5.jpg" alt="Accesories" />
+                                            <img src="<%=request.getContextPath()%>/userResources/image/banner/promo-banner5.jpg" alt="Accesories" />
                                         </a>
                                     </div>
                                 </div>
@@ -865,7 +495,7 @@
                                 <div class="product-item">
                                     <div class="product-item-inner">
                                         <div class="product-img-wrap">
-                                            <img src="userResources/image/product-img/product_125470001.jpg" alt="">
+                                            <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470001.jpg" alt="">
                                         </div>
                                         <div class="product-button">
                                             <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -893,7 +523,7 @@
                                     <div class="product-item-inner">
                                         <div class="new-label">New</div>
                                         <div class="product-img-wrap">
-                                            <img src="userResources/image/product-img/product_125470002.jpg" alt="">
+                                            <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470002.jpg" alt="">
                                         </div>
                                         <div class="product-button">
                                             <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -920,7 +550,7 @@
                                 <div class="product-item">
                                     <div class="product-item-inner">
                                         <div class="product-img-wrap">
-                                            <img src="userResources/image/product-img/product_125470003.jpg" alt="">
+                                            <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470003.jpg" alt="">
                                         </div>
                                         <div class="product-button">
                                             <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -948,7 +578,7 @@
                                     <div class="product-item-inner">
                                         <div class="sale-label">sale</div>
                                         <div class="product-img-wrap">
-                                            <img src="userResources/image/product-img/product_125470004.jpg" alt="">
+                                            <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470004.jpg" alt="">
                                         </div>
                                         <div class="product-button">
                                             <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -975,7 +605,7 @@
                                 <div class="product-item">
                                     <div class="product-item-inner">
                                         <div class="product-img-wrap">
-                                            <img src="userResources/image/product-img/product_125470005.jpg" alt="">
+                                            <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470005.jpg" alt="">
                                         </div>
                                         <div class="product-button">
                                             <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -1002,7 +632,7 @@
                                 <div class="product-item">
                                     <div class="product-item-inner">
                                         <div class="product-img-wrap">
-                                            <img src="userResources/image/product-img/product_125470006.jpg" alt="">
+                                            <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470006.jpg" alt="">
                                         </div>
                                         <div class="product-button">
                                             <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -1029,7 +659,7 @@
                                 <div class="product-item">
                                     <div class="product-item-inner">
                                         <div class="product-img-wrap">
-                                            <img src="userResources/image/product-img/product_125470007.jpg" alt="">
+                                            <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470007.jpg" alt="">
                                         </div>
                                         <div class="product-button">
                                             <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -1063,7 +693,7 @@
                                 <div class="product-item">
                                     <div class="product-item-inner">
                                         <div class="product-img-wrap">
-                                            <img src="userResources/image/product-img/product_125470005.jpg" alt="">
+                                            <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470005.jpg" alt="">
                                         </div>
                                         <div class="product-button">
                                             <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -1090,7 +720,7 @@
                                 <div class="product-item">
                                     <div class="product-item-inner">
                                         <div class="product-img-wrap">
-                                            <img src="userResources/image/product-img/product_125470006.jpg" alt="">
+                                            <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470006.jpg" alt="">
                                         </div>
                                         <div class="product-button">
                                             <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -1117,7 +747,7 @@
                                 <div class="product-item">
                                     <div class="product-item-inner">
                                         <div class="product-img-wrap">
-                                            <img src="userResources/image/product-img/product_125470007.jpg" alt="">
+                                            <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470007.jpg" alt="">
                                         </div>
                                         <div class="product-button">
                                             <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -1144,7 +774,7 @@
                                 <div class="product-item">
                                     <div class="product-item-inner">
                                         <div class="product-img-wrap">
-                                            <img src="userResources/image/product-img/product_125470001.jpg" alt="">
+                                            <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470001.jpg" alt="">
                                         </div>
                                         <div class="product-button">
                                             <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -1171,7 +801,7 @@
                                 <div class="product-item">
                                     <div class="product-item-inner">
                                         <div class="product-img-wrap">
-                                            <img src="userResources/image/product-img/product_125470002.jpg" alt="">
+                                            <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470002.jpg" alt="">
                                         </div>
                                         <div class="product-button">
                                             <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -1198,7 +828,7 @@
                                 <div class="product-item">
                                     <div class="product-item-inner">
                                         <div class="product-img-wrap">
-                                            <img src="userResources/image/product-img/product_125470003.jpg" alt="">
+                                            <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470003.jpg" alt="">
                                         </div>
                                         <div class="product-button">
                                             <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -1225,7 +855,7 @@
                                 <div class="product-item">
                                     <div class="product-item-inner">
                                         <div class="product-img-wrap">
-                                            <img src="userResources/image/product-img/product_125470004.jpg" alt="">
+                                            <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470004.jpg" alt="">
                                         </div>
                                         <div class="product-button">
                                             <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -1260,7 +890,7 @@
                                 <div class="product-item">
                                     <div class="product-item-inner">
                                         <div class="product-img-wrap">
-                                            <img src="userResources/image/product-img/product_125470001.jpg" alt="">
+                                            <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470001.jpg" alt="">
                                         </div>
                                         <div class="product-button">
                                             <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -1288,7 +918,7 @@
                                     <div class="product-item-inner">
                                         <div class="new-label">New</div>
                                         <div class="product-img-wrap">
-                                            <img src="userResources/image/product-img/product_125470002.jpg" alt="">
+                                            <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470002.jpg" alt="">
                                         </div>
                                         <div class="product-button">
                                             <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -1315,7 +945,7 @@
                                 <div class="product-item">
                                     <div class="product-item-inner">
                                         <div class="product-img-wrap">
-                                            <img src="userResources/image/product-img/product_125470003.jpg" alt="">
+                                            <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470003.jpg" alt="">
                                         </div>
                                         <div class="product-button">
                                             <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -1343,7 +973,7 @@
                                     <div class="product-item-inner">
                                         <div class="sale-label">sale</div>
                                         <div class="product-img-wrap">
-                                            <img src="userResources/image/product-img/product_125470004.jpg" alt="">
+                                            <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470004.jpg" alt="">
                                         </div>
                                         <div class="product-button">
                                             <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -1370,7 +1000,7 @@
                                 <div class="product-item">
                                     <div class="product-item-inner">
                                         <div class="product-img-wrap">
-                                            <img src="userResources/image/product-img/product_125470005.jpg" alt="">
+                                            <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470005.jpg" alt="">
                                         </div>
                                         <div class="product-button">
                                             <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -1397,7 +1027,7 @@
                                 <div class="product-item">
                                     <div class="product-item-inner">
                                         <div class="product-img-wrap">
-                                            <img src="userResources/image/product-img/product_125470006.jpg" alt="">
+                                            <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470006.jpg" alt="">
                                         </div>
                                         <div class="product-button">
                                             <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -1424,7 +1054,7 @@
                                 <div class="product-item">
                                     <div class="product-item-inner">
                                         <div class="product-img-wrap">
-                                            <img src="userResources/image/product-img/product_125470007.jpg" alt="">
+                                            <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470007.jpg" alt="">
                                         </div>
                                         <div class="product-button">
                                             <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -1457,7 +1087,7 @@
 
             <!-- Categories -->
             <section class="">
-                <div class="section-padding container-fluid bg-image text-center overlay-light90" data-background-img="userResources/image/bg/bg_5.jpg" data-bg-position-x="center center">
+                <div class="section-padding container-fluid bg-image text-center overlay-light90" data-background-img="<%=request.getContextPath()%>/userResources/image/bg/bg_5.jpg" data-bg-position-x="center center">
                     <div class="container">
                         <h2 class="page-title">Shop by Categories</h2>
                     </div>
@@ -1467,7 +1097,7 @@
                         <div class="col-md-4">
                             <div class="categories-box">
                                 <div class="categories-image-wrap">
-                                    <img src="userResources/image/categories/Categories_cupple.jpg" alt="" />
+                                    <img src="<%=request.getContextPath()%>/userResources/image/categories/Categories_cupple.jpg" alt="" />
                                 </div>
                                 <div class="categories-content">
                                     <a href="#">
@@ -1481,7 +1111,7 @@
                         <div class="col-md-4">
                             <div class="categories-box">
                                 <div class="categories-image-wrap">
-                                    <img src="userResources/image/categories/Categories_women.jpg" alt="" />
+                                    <img src="<%=request.getContextPath()%>/userResources/image/categories/Categories_women.jpg" alt="" />
                                 </div>
                                 <div class="categories-content">
                                     <a href="#">
@@ -1495,7 +1125,7 @@
                         <div class="col-md-4">
                             <div class="categories-box">
                                 <div class="categories-image-wrap">
-                                    <img src="userResources/image/categories/Categories_man.jpg" alt="" />
+                                    <img src="<%=request.getContextPath()%>/userResources/image/categories/Categories_man.jpg" alt="" />
                                 </div>
                                 <div class="categories-content">
                                     <a href="#">
@@ -1522,7 +1152,7 @@
                         <div class="product-item">
                             <div class="product-item-inner">
                                 <div class="product-img-wrap">
-                                    <img src="userResources/image/product-img/product_125470001.jpg" alt="">
+                                    <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470001.jpg" alt="">
                                 </div>
                                 <div class="product-button">
                                     <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -1549,7 +1179,7 @@
                         <div class="product-item">
                             <div class="product-item-inner">
                                 <div class="product-img-wrap">
-                                    <img src="userResources/image/product-img/product_125470002.jpg" alt="">
+                                    <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470002.jpg" alt="">
                                 </div>
                                 <div class="product-button">
                                     <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -1576,7 +1206,7 @@
                         <div class="product-item">
                             <div class="product-item-inner">
                                 <div class="product-img-wrap">
-                                    <img src="userResources/image/product-img/product_125470003.jpg" alt="">
+                                    <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470003.jpg" alt="">
                                 </div>
                                 <div class="product-button">
                                     <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -1603,7 +1233,7 @@
                         <div class="product-item">
                             <div class="product-item-inner">
                                 <div class="product-img-wrap">
-                                    <img src="userResources/image/product-img/product_125470004.jpg" alt="">
+                                    <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470004.jpg" alt="">
                                 </div>
                                 <div class="product-button">
                                     <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -1630,7 +1260,7 @@
                         <div class="product-item">
                             <div class="product-item-inner">
                                 <div class="product-img-wrap">
-                                    <img src="userResources/image/product-img/product_125470005.jpg" alt="">
+                                    <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470005.jpg" alt="">
                                 </div>
                                 <div class="product-button">
                                     <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -1657,7 +1287,7 @@
                         <div class="product-item">
                             <div class="product-item-inner">
                                 <div class="product-img-wrap">
-                                    <img src="userResources/image/product-img/product_125470006.jpg" alt="">
+                                    <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470006.jpg" alt="">
                                 </div>
                                 <div class="product-button">
                                     <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -1684,7 +1314,7 @@
                         <div class="product-item">
                             <div class="product-item-inner">
                                 <div class="product-img-wrap">
-                                    <img src="userResources/image/product-img/product_125470007.jpg" alt="">
+                                    <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470007.jpg" alt="">
                                 </div>
                                 <div class="product-button">
                                     <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -1740,7 +1370,7 @@
                         <div class="product-item">
                             <div class="blog-box">
                                 <div class="blog-img-wrap">
-                                    <img src="userResources/image/blog/blog_01.jpg" alt="philos" />
+                                    <img src="<%=request.getContextPath()%>/userResources/image/blog/blog_01.jpg" alt="philos" />
                                 </div>
                                 <div class="blog-box-content">
                                     <div class="blog-box-content-inner">
@@ -1754,7 +1384,7 @@
                         <div class="product-item">
                             <div class="blog-box">
                                 <div class="blog-img-wrap">
-                                    <img src="userResources/image/blog/blog_02.jpg" alt="theme" />
+                                    <img src="<%=request.getContextPath()%>/userResources/image/blog/blog_02.jpg" alt="theme" />
                                 </div>
                                 <div class="blog-box-content">
                                     <div class="blog-box-content-inner">
@@ -1768,7 +1398,7 @@
                         <div class="product-item">
                             <div class="blog-box">
                                 <div class="blog-img-wrap">
-                                    <img src="userResources/image/blog/blog_03.jpg" alt="template" />
+                                    <img src="<%=request.getContextPath()%>/userResources/image/blog/blog_03.jpg" alt="template" />
                                 </div>
                                 <div class="blog-box-content">
                                     <div class="blog-box-content-inner">
@@ -1786,7 +1416,7 @@
 
             <!-- Newsletter -->
 
-            <section class="section-padding dark-bg container-fluid bg-image text-center overlay-black40" data-background-img="userResources/image/bg/bg_7.jpg" data-bg-position-x="center top">
+            <section class="section-padding dark-bg container-fluid bg-image text-center overlay-black40" data-background-img="<%=request.getContextPath()%>/userResources/image/bg/bg_7.jpg" data-bg-position-x="center top">
                 <div class="container newsletter section-padding-b">
                     <h2 class="page-title">Subscribe To Newsletter</h2>
                     <form name="form-newsletter" class="newsletter-from" id="form-newsletter" method="post">
@@ -1848,47 +1478,47 @@
                 <div class="container">
                     <ul class="list-none-ib brand-logo-carousel owl-carousel owl-theme">
                         <li class="brand-item"><a href="#">
-                            <img src="userResources/image/logo/01.png" alt="nileforest" />
+                            <img src="<%=request.getContextPath()%>/userResources/image/logo/01.png" alt="nileforest" />
                         </a>
                         </li>
                         <li class="brand-item">
                             <a href="#">
-                                <img src="userResources/image/logo/02.png" alt="niletheme" />
+                                <img src="<%=request.getContextPath()%>/userResources/image/logo/02.png" alt="niletheme" />
                             </a>
                         </li>
                         <li class="brand-item">
                             <a href="#">
-                                <img src="userResources/image/logo/03.png" alt="nile" />
+                                <img src="<%=request.getContextPath()%>/userResources/image/logo/03.png" alt="nile" />
                             </a>
                         </li>
                         <li class="brand-item">
                             <a href="#">
-                                <img src="userResources/image/logo/04.png" alt="forest" />
+                                <img src="<%=request.getContextPath()%>/userResources/image/logo/04.png" alt="forest" />
                             </a>
                         </li>
                         <li class="brand-item">
                             <a href="#">
-                                <img src="userResources/image/logo/05.png" alt="themeforest" />
+                                <img src="<%=request.getContextPath()%>/userResources/image/logo/05.png" alt="themeforest" />
                             </a>
                         </li>
                         <li class="brand-item">
                             <a href="#">
-                                <img src="userResources/image/logo/06.png" alt="woocommerce" />
+                                <img src="<%=request.getContextPath()%>/userResources/image/logo/06.png" alt="woocommerce" />
                             </a>
                         </li>
                         <li class="brand-item">
                             <a href="#">
-                                <img src="userResources/image/logo/07.png" alt="ecommerce" />
+                                <img src="<%=request.getContextPath()%>/userResources/image/logo/07.png" alt="ecommerce" />
                             </a>
                         </li>
                         <li class="brand-item">
                             <a href="#">
-                                <img src="userResources/image/logo/08.png" alt="html" />
+                                <img src="<%=request.getContextPath()%>/userResources/image/logo/08.png" alt="html" />
                             </a>
                         </li>
                         <li class="brand-item">
                             <a href="#">
-                                <img src="userResources/image/logo/09.png" alt="multiprapose" />
+                                <img src="<%=request.getContextPath()%>/userResources/image/logo/09.png" alt="multiprapose" />
                             </a>
                         </li>
 
@@ -1908,27 +1538,27 @@
                     <ul class="intagram-feed">
                         <li>
                             <a href="#">
-                                <img src="userResources/image/instagram/insta-1.jpg" alt="">
+                                <img src="<%=request.getContextPath()%>/userResources/image/instagram/insta-1.jpg" alt="">
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="userResources/image/instagram/insta-2.jpg" alt="">
+                                <img src="<%=request.getContextPath()%>/userResources/image/instagram/insta-2.jpg" alt="">
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="userResources/image/instagram/insta-3.jpg" alt="">
+                                <img src="<%=request.getContextPath()%>/userResources/image/instagram/insta-3.jpg" alt="">
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="userResources/image/instagram/insta-4.jpg" alt="">
+                                <img src="<%=request.getContextPath()%>/userResources/image/instagram/insta-4.jpg" alt="">
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="userResources/image/instagram/insta-5.jpg" alt="">
+                                <img src="<%=request.getContextPath()%>/userResources/image/instagram/insta-5.jpg" alt="">
                             </a>
                         </li>
                     </ul>
@@ -1945,7 +1575,7 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-12 col-sm-12 mb-sm-45">
                         <div class="footer-block about-us-block">
-                            <img src="userResources/image/logo_white.png" width="125" alt="">
+                            <img src="<%=request.getContextPath()%>/userResources/image/logo_white.png" width="125" alt="">
                             <p>Gumbo beet greens corn soko endive gum gourd. Parsley allot courgette tatsoi pea sprouts fava bean soluta nobis est ses eligendi optio.</p>
                             <ul class="footer-social-icon list-none-ib">
                                 <li><a href="http://facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -2029,7 +1659,7 @@
                 <div class="copyrights">
                     <p class="copyright">&copy; Created by <a href="http://nileforest.com/" target="_blank">NileForest</a>. Philos Responsive Woocommerce Theme 2017</p>
                     <p class="payment">
-                        <img src="userResources/image/payment_logos.png" alt="payment">
+                        <img src="<%=request.getContextPath()%>/userResources/image/payment_logos.png" alt="payment">
                     </p>
                 </div>
             </div>
@@ -2043,34 +1673,30 @@
     <!--==========================================-->
     <!-- JAVASCRIPT -->
     <!--==========================================-->
-    <script type="text/javascript" src="userResources/js/jquery.min.js"></script>
-    <script type="text/javascript" src="userResources/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/jquery.min.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/jquery-ui.js"></script>
     <!-- jquery library js -->
-    <script type="text/javascript" src="userResources/js/modernizr.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/modernizr.js"></script>
     <!--modernizr Js-->
-    <script type="text/javascript" src="userResources/js/jquery.themepunch.revolution.min.js"></script>
-    <script type="text/javascript" src="userResources/js/jquery.themepunch.tools.min.js"></script>
-    <script type="text/javascript" src="userResources/js/revolution.extension.navigation.min.js"></script>
-    <script type="text/javascript" src="userResources/js/revolution.extension.parallax.min.js"></script>
-    <script type="text/javascript" src="userResources/js/revolution.extension.slideanims.min.js"></script>
-    <script type="text/javascript" src="userResources/js/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/revolution.extension.parallax.min.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/revolution.extension.layeranimation.min.js"></script>
     <!--Slider Revolution Js File-->
-    <script type="text/javascript" src="userResources/js/tether.min.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/tether.min.js"></script>
     <!--Bootstrap tooltips require Tether (Tether Js)-->
-    <script type="text/javascript" src="userResources/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/bootstrap.min.js"></script>
     <!-- bootstrap js -->
-    <script type="text/javascript" src="userResources/js/owl.carousel.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/owl.carousel.js"></script>
     <!-- OWL carousel js -->
-    <script type="text/javascript" src="userResources/js/slick.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/slick.js"></script>
     <!-- Slick Slider js -->
-    <script type="text/javascript" src="userResources/js/plugins-all.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/plugins-all.js"></script>
     <!-- Plugins All js -->
-    <script type="text/javascript" src="userResources/js/custom.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/custom.js"></script>
     <!-- custom js -->
     <!-- end jquery -->
-
-
-
-
 </body>
 </html>

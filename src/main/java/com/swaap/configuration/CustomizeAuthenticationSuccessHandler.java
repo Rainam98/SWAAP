@@ -22,6 +22,7 @@ public class CustomizeAuthenticationSuccessHandler implements AuthenticationSucc
 
 		boolean mall = false;
 		boolean branch = false;
+		boolean user=false;
 		
 		System.out.println("AT onAuthenticationSuccess(...) function!");
 
@@ -30,6 +31,8 @@ public class CustomizeAuthenticationSuccessHandler implements AuthenticationSucc
 				mall = true;
 			}else if ("ROLE_BRANCH".equals(auth.getAuthority())) {
 				branch = true;
+			}else if ("ROLE_USER".equals(auth.getAuthority())) {
+				user = true;
 			}else {
 				
 			}
@@ -41,6 +44,9 @@ public class CustomizeAuthenticationSuccessHandler implements AuthenticationSucc
 		} else if(branch) {
 			System.out.println("user is branch");
 			response.sendRedirect("/branch/index");
+		}else if(user) {
+			System.out.println("user is user");
+			response.sendRedirect("/user/index");
 		}else {
 			System.out.println("user is anonymous");
 			response.sendRedirect("/403");

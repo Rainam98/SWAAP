@@ -29,7 +29,6 @@
 
 </head>
 <body>
-
     <!-- Newsletter Popup ---------------------------------------------------->
     <section id="nlpopup" data-expires="30" data-delay="10">
         <!--Close Button-->
@@ -567,7 +566,7 @@
                         <div class="col-12">
                             <nav class="breadcrumb-link">
                                 <a href="#">Home</a>
-                                <span>Blog Single</span>
+                                <span>Login & Register</span>
                             </nav>
                         </div>
                     </div>
@@ -579,213 +578,36 @@
             <section class="content-page">
                 <div class="container">
                     <div class="row">
-                        <!-- Blog Content -->
-                        <div class="col-md-9 blog-single style-1">
-                            <div class="blog-box">
-                                <div class="blog-img-wrap">
-                                    <img src="userResources/image/blog/blog_01.jpg" alt="philos" />
-                                </div>
-                                <div class="blog-box-content">
-                                    <div class="blog-box-content-inner">
-                                        <h4 class="blog-title"><a href="blog-single.html">Fresh review of coming trends for Summer '15</a></h4>
-                                        <p class="info"><span>by <a href="#">Philos Team</a></span><span>29 Jan 2017</span></p>
-                                        <div class="blog-description-content">
-                                            <p>You can remember what your childhood bedroom is like, right? That is your imagination doing that. You know the sound that your feet make when you walk across gravel don't you? You can imagine it, but you are not hearing it in your ears, are you? Just imagine these things as best as you can.</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, eiusmod tempor incididunt ut labore. Lorem ipsum dolor sit amet, consectetur adipiscing aptent taciti sociosqu ad litora torquent.</p>
-                                        </div>
-                                        <p class="info"><span>Tags: <a href="#">Fashion</a>,&nbsp;<a href="#">Blog</a>,&nbsp;<a href="#">Model</a>,&nbsp;<a href="#">Vintage</a>,&nbsp;<a href="#">Offer</a></span></p>
+                        <div class="col-md-6">
+                            <div class="form-border-box">
+                                <form>
+                                    <h2 class="normal"><span>Registered Customers</span></h2>
+                                    <p>Lorem ipsum dolor amet, conse adipiscing, eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <div class="form-field-wrapper">
+                                        <label>Enter Your Email <span class="required">*</span></label>
+                                        <input id="author-email" class="input-md form-full-width" name="author" placeholder="Enter Your Email Address" value="" size="30" aria-required="true" required="" type="email">
                                     </div>
-                                </div>
-                                <hr class="mb-30" />
-                                <div class="comments">
-                                    <h6 class="review-title">Comments posted <span class="comment-count">(2)</span></h6>
-                                    <!--<p class="review-blank">There are no reviews yet.</p>-->
-                                    <ul class="commentlist">
-                                        <li id="comment-101" class="comment-101">
-                                            <img src="userResources/image/avatar.jpg" class="avatar" alt="author" />
-                                            <div class="comment-text">
-                                                <div class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating" title="Rated 4 out of 5">
-                                                    <span style="width: 100%"></span>
-                                                </div>
-                                                <p class="meta">
-                                                    <strong itemprop="author">James Koster</strong>
-                                                    &nbsp;&mdash;&nbsp;
-                                                    <time itemprop="datePublished" datetime="">April 25, 2016</time>
-                                                </p>
-                                                <div class="description" itemprop="description">
-                                                    <p>Wow Amazing!</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li id="102" class="comment-102">
-                                            <img src="userResources/image/avatar.jpg" class="avatar" alt="author" />
-                                            <div class="comment-text">
-                                                <div class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating" title="Rated 4 out of 5">
-                                                    <span style="width: 80%"></span>
-                                                </div>
-                                                <p class="meta">
-                                                    <strong itemprop="author">Michel</strong>
-                                                    &nbsp;&mdash;&nbsp;
-                                                    <time itemprop="datePublished" datetime="">April 14, 2016</time>
-                                                </p>
-                                                <div class="description" itemprop="description">
-                                                    <p>Wow Special!</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li id="comment-103" class="comment-103">
-                                            <img src="userResources/image/avatar.jpg" class="avatar" alt="author" />
-                                            <div class="comment-text">
-                                                <div class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating" title="Rated 4 out of 5">
-                                                    <span style="width: 60%"></span>
-                                                </div>
-                                                <p class="meta">
-                                                    <em>Your comment is awaiting approval</em>
-                                                    <!-- <strong itemprop="author">Kerry</strong>
-                                                    &nbsp;&mdash;&nbsp;
-                                                    <time itemprop="datePublished" datetime="">march 19, 2016</time>-->
-                                                </p>
-                                                <div class="description" itemprop="description">
-                                                    <p>When an unknown printer took a galley!</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <hr class="mb-30 mt-45" />
-                                <div class="review-form-wrapper">
-                                    <h6 class="review-title">Write a comment</h6>
-                                    <form class="comment-form">
-                                        <div class="form-field-wrapper">
-                                            <label>Your Rating</label>
-                                            <p class="stars">
-                                                <span>
-                                                    <a class="star-1" href="#">1</a>
-                                                    <a class="star-2" href="#">2</a>
-                                                    <a class="star-3" href="#">3</a>
-                                                    <a class="star-4 active" href="#">4</a>
-                                                    <a class="star-5" href="#">5</a>
-                                                </span>
-                                            </p>
-                                        </div>
-                                        <div class="form-field-wrapper">
-                                            <label>Your Review <span class="required">*</span></label>
-                                            <textarea id="comment" class="form-full-width" name="comment" cols="45" rows="8" aria-required="true" required=""></textarea>
-                                        </div>
-                                        <div class="form-field-wrapper">
-                                            <label>Name <span class="required">*</span></label>
-                                            <input id="author" class="input-md form-full-width" name="author" value="" size="30" aria-required="true" required="" type="text">
-                                        </div>
-                                        <div class="form-field-wrapper">
-                                            <label>Email <span class="required">*</span></label>
-                                            <input id="email" class="input-md form-full-width" name="email" value="" size="30" aria-required="true" required="" type="email">
-                                        </div>
-                                        <div class="form-field-wrapper">
-                                            <input name="submit" id="submit" class="submit btn btn-md btn-color" value="Submit" type="submit">
-                                        </div>
-                                    </form>
-                                </div>
+                                    <div class="form-field-wrapper">
+                                        <label>Enter Your Password <span class="required">*</span></label>
+                                        <input id="author-pass" class="input-md form-full-width" name="author-pass" placeholder="Enter Your Password" value="" size="30" aria-required="true" required="" type="password">
+                                    </div>
+                                    <div class="form-field-wrapper">
+                                        <input name="submit" id="submit" class="submit btn btn-md btn-black" value="Sign In" type="submit">
+                                    </div>
+                                </form>
                             </div>
                         </div>
-                        <!-- End Blog Content -->
-
-                        <!-- Sidebar -->
-                        <div class="sidebar-container col-md-3">
-
-                            <!-- Categories -->
-                            <div class="widget-sidebar">
-                                <h6 class="widget-title">Blog Categories</h6>
-                                <ul class="widget-content">
-                                    <li><a href="#">All about Clothing</a></li>
-                                    <li><a href="#">Make-up & Beauty</a></li>
-                                    <li><a href="#">Accessories</a></li>
-                                    <li><a href="#">Fashion Trends</a></li>
-                                    <li><a href="sdsd">Haircuts & Hairstyles</a></li>
-                                    <li><a href="sdsd">Blog</a></li>
-                                    <li><a href="sdsd">About Us</a></li>
-                                </ul>
+                        <div class="col-md-6">
+                            <div class="form-border-box">
+                                <form>
+                                    <h2 class="normal"><span>New Customers</span></h2>
+                                    <p>Lorem ipsum dolor amet, conse adipiscing, eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <div class="form-field-wrapper">
+                                        <input name="submit" id="submit1" class="submit btn btn-md btn-color" value="Create An Account" type="submit">
+                                    </div>
+                                </form>
                             </div>
-
-                            <!-- Recent Posts -->
-                            <div class="widget-sidebar widget-product">
-                                <h6 class="widget-title">Recent Posts</h6>
-                                <ul class="widget-content">
-
-                                    <!--Item-->
-                                    <li>
-                                        <a class="product-img" href="#">
-                                            <img src="userResources/image/blog/blog_01.jpg" alt="">
-                                        </a>
-                                        <div class="product-content">
-                                            <a class="product-link" href="#">New Lunched Vintage Collaction</a>
-                                            <span class="date-description">16 June 2017</span>
-                                        </div>
-                                    </li>
-
-                                    <!--Item-->
-                                    <li>
-                                        <a class="product-img" href="#">
-                                            <img src="userResources/image/blog/blog_03.jpg" alt="">
-                                        </a>
-                                        <div class="product-content">
-                                            <a class="product-link" href="#">Fresh review of coming trends for Summer '15</a>
-                                            <span class="date-description">04 November 2017</span>
-                                        </div>
-                                    </li>
-
-                                    <!--Item-->
-                                    <li>
-                                        <a class="product-img" href="#">
-                                            <img src="userResources/image/blog/blog_02.jpg" alt="">
-                                        </a>
-                                        <div class="product-content">
-                                            <a class="product-link" href="#">New collection from Armiani 2013</a>
-                                            <span class="date-description">24 March 2017</span>
-                                        </div>
-                                    </li>
-
-                                </ul>
-                            </div>
-
-
-                            <!-- Tag -->
-                            <div class="widget-sidebar widget-filter-tag">
-                                <h6 class="widget-title">Popular Tag</h6>
-                                <ul class="widget-content">
-                                    <li>
-                                        <a href="#">Shirt</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Bag</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Vintage</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Sweaters</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">t-shirt</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">white</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Black</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">New</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Popular</a>
-                                    </li>
-                                </ul>
-                            </div>
-
-
                         </div>
-                        <!-- End Sidebar -->
-
                     </div>
                 </div>
             </section>
@@ -907,7 +729,7 @@
     <script type="text/javascript" src="userResources/js/jquery.themepunch.revolution.min.js"></script>
     <script type="text/javascript" src="userResources/js/jquery.themepunch.tools.min.js"></script>
     <script type="text/javascript" src="userResources/js/revolution.extension.navigation.min.js"></script>
-    <script type="text/javascript" src="userResources/js/revolution.extension.parallax.min.js"></script>
+    <script type="text/javascript" src="userResources/userResources/js/revolution.extension.parallax.min.js"></script>
     <script type="text/javascript" src="userResources/js/revolution.extension.slideanims.min.js"></script>
     <script type="text/javascript" src="userResources/js/revolution.extension.layeranimation.min.js"></script>
     <!--Slider Revolution Js File-->

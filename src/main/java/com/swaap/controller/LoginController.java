@@ -1,5 +1,7 @@
 package com.swaap.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -9,13 +11,18 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.swaap.model.CategoryVO;
 import com.swaap.model.LoginVO;
+import com.swaap.model.SubCategoryVO;
+import com.swaap.service.CategoryService;
 import com.swaap.service.LoginService;
+import com.swaap.service.SubCategoryService;
 
 
 @Controller
@@ -23,7 +30,10 @@ public class LoginController {
 
 	@Autowired
 	LoginService loginService;
-
+	@Autowired
+	CategoryService categoryService;
+	@Autowired
+	SubCategoryService subCategoryService;
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ModelAndView loadLogin() {
 
@@ -31,11 +41,14 @@ public class LoginController {
 	}
 	
 	@RequestMapping(value = "/mall/index", method = RequestMethod.GET)
-	public ModelAndView mallIndex(LoginVO loginVO ) {
+	public ModelAndView mallIndex(LoginVO loginVO,CategoryVO categoryVO, SubCategoryVO subCategoryVO, Model model ) {
 
 		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		String userName = user.getUsername();
-		
+		List categoryList=this.categoryService.searchCategory();
+		List subCategoryList=this.subCategoryService.searchSubCategory();
+		model.addAttribute("categoryList",categoryList);
+		model.addAttribute("subCategoryList",subCategoryList);
 		return new ModelAndView("mall/index");
 	}
 	
@@ -45,7 +58,14 @@ public class LoginController {
 		String userName = user.getUsername();
 		return new ModelAndView("branch/index");
 	}
-	
+	@RequestMapping(value = "/user/index", method = RequestMethod.GET)
+	public ModelAndView userIndex(LoginVO loginVO ) {
+
+		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		String userName = user.getUsername();
+		
+		return new ModelAndView("user/index");
+	}
 	@RequestMapping(value = "/logout", method = {RequestMethod.POST, RequestMethod.GET})	
 	public String viewUserDetails(ModelMap model,HttpServletResponse response,HttpServletRequest request) {
 
