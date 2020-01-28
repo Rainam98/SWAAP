@@ -68,7 +68,6 @@
 
                                     <div class="cart-title">
                                         <span class="cart-count">2</span>
-                                        /
                                     <span class="cart-price strong">$698.00</span>
                                     </div>
                                 </a></li>
