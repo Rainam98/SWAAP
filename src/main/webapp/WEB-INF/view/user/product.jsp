@@ -187,7 +187,7 @@
         <!-- End Header -->
 
         <!-- Page Content Wraper -->
-        <div class="page-content-wraper">
+       <div class="page-content-wraper">
             <!-- Bread Crumb -->
             <section class="breadcrumb">
                 <div class="container">
@@ -208,9 +208,8 @@
             <section class="content-page">
                 <div class="container">
                     <div class="row">
-
                         <!-- Product Content -->
-                        <div class="col-12">
+                        <div class="col-md-9 push-md-3">
                             <!-- Title -->
                             <div class="list-page-title">
                                 <h2 class="">Men Polos & Tees <small>120 Products</small></h2>
@@ -256,11 +255,11 @@
                                     <!--Product List/Grid Icon-->
                                     <div class="product-view-switcher">
                                         <label>View</label>
-                                        <div class="product-view-icon product-grid-switcher product-view-icon-active">
-                                            <a class="" href="#"><i class="fa fa-th" aria-hidden="true"></i></a>
+                                        <div class="product-view-icon product-grid-switcher">
+                                            <a class="" href=""><i class="fa fa-th" aria-hidden="true"></i></a>
                                         </div>
-                                        <div class="product-view-icon product-list-switcher">
-                                            <a class="" href="#"><i class="fa fa-th-list" aria-hidden="true"></i></a>
+                                        <div class="product-view-icon product-list-switcher product-view-icon-active">
+                                            <a class="" href=""><i class="fa fa-th-list" aria-hidden="true"></i></a>
                                         </div>
                                     </div>
 
@@ -272,7 +271,7 @@
                             <div class="container product-filter-dropdown toggle-content" id="filter-slide-toggle">
                                 <div class="row col mlr-0">
                                     <!-- Shop Categories -->
-                                    <div class="widget-sidebar col-sm-6 col-md-6 col-lg-3">
+                                    <div class="widget-sidebar col-sm-12 col-md-6 col-lg-3">
                                         <h6 class="widget-title">Categories</h6>
                                         <ul class="widget-content widget-product-categories jq-accordian">
                                             <li>
@@ -309,7 +308,7 @@
                                     <!-- End Shop Categories -->
 
                                     <!-- Filter Price -->
-                                    <div class="widget-sidebar widget-filter-price col-sm-6 col-md-6 col-lg-3">
+                                    <div class="widget-sidebar widget-filter-price col-sm-12 col-md-6 col-lg-3">
                                         <h6 class="widget-title">Select Price</h6>
                                         <ul class="widget-content">
                                             <li>
@@ -361,7 +360,7 @@
                                     <!-- End Filter Price -->
 
                                     <!-- Filter Color -->
-                                    <div class="widget-sidebar widget-filter-color col-sm-6 col-md-6 col-lg-3">
+                                    <div class="widget-sidebar widget-filter-color col-sm-12 col-md-6 col-lg-3">
                                         <h6 class="widget-title">Select Color</h6>
                                         <ul class="widget-content">
                                             <li>
@@ -411,7 +410,7 @@
                                     <!-- End Filter Color -->
 
                                     <!-- Filter Size -->
-                                    <div class="widget-sidebar widget-filter-size col-sm-6 col-md-6 col-lg-3">
+                                    <div class="widget-sidebar widget-filter-size col-sm-12 col-md-6 col-lg-3">
                                         <h6 class="widget-title">Select Size</h6>
                                         <ul class="widget-content ">
                                             <li>
@@ -449,15 +448,15 @@
                             </div>
                             <!-- End Product filters Toggle-->
 
-                            <!-- Product Grid -->
-                            <div class="row product-list-item">
+                            <!-- Product List -->
+                            <div class="row product-list-item product-list-view">
                                 <!-- item.1 -->
-                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
+                                <div class="product-item-element col-sm-6 col-md-6 col-lg-4">
                                     <!--Product Item-->
                                     <div class="product-item">
                                         <div class="product-item-inner">
                                             <div class="product-img-wrap">
-                                                <img src="userResources/image/product-img/food.jpg" alt="">
+                                                <img src="userResources/image/product-img/product_125470001.jpg" alt="">
                                             </div>
                                             <div class="product-button">
                                                 <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -484,12 +483,12 @@
                                 </div>
 
                                 <!-- item.2 -->
-                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
+                                <div class="product-item-element col-sm-6 col-md-6 col-lg-4">
                                     <!--Product Item-->
                                     <div class="product-item">
                                         <div class="product-item-inner">
                                             <div class="product-img-wrap">
-                                                <img src="userResources/image/product-img/clothes.jpg" alt="">
+                                                <img src="userResources/image/product-img/product_125470002.jpg" alt="">
                                             </div>
                                             <div class="product-button">
                                                 <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -516,12 +515,12 @@
                                 </div>
 
                                 <!-- item.3 -->
-                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
+                                <div class="product-item-element col-sm-6 col-md-6 col-lg-4">
                                     <!--Product Item-->
                                     <div class="product-item">
                                         <div class="product-item-inner">
                                             <div class="product-img-wrap">
-                                                <img src="userResources/image/product-img/accessories.jpg" alt="">
+                                                <img src="userResources/image/product-img/product_125470003.jpg" alt="">
                                             </div>
                                             <div class="product-button">
                                                 <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -548,12 +547,12 @@
                                 </div>
 
                                 <!-- item.4 -->
-                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
+                                <div class="product-item-element col-sm-6 col-md-6 col-lg-4">
                                     <!--Product Item-->
                                     <div class="product-item">
                                         <div class="product-item-inner">
                                             <div class="product-img-wrap">
-                                                <img src="userResources/image/product-img/electronics.jpg" alt="">
+                                                <img src="userResources/image/product-img/product_125470004.jpg" alt="">
                                             </div>
                                             <div class="product-button">
                                                 <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -580,12 +579,12 @@
                                 </div>
 
                                 <!-- item.5 -->
-                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
+                                <div class="product-item-element col-sm-6 col-md-6 col-lg-4">
                                     <!--Product Item-->
                                     <div class="product-item">
                                         <div class="product-item-inner">
                                             <div class="product-img-wrap">
-                                                <img src="userResources/image/product-img/home.jpg" alt="">
+                                                <img src="userResources/image/product-img/product_125470005.jpg" alt="">
                                             </div>
                                             <div class="product-button">
                                                 <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -612,12 +611,12 @@
                                 </div>
 
                                 <!-- item.6 -->
-                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
+                                <div class="product-item-element col-sm-6 col-md-6 col-lg-4">
                                     <!--Product Item-->
                                     <div class="product-item">
                                         <div class="product-item-inner">
                                             <div class="product-img-wrap">
-                                                <img src="userResources/image/product-img/health.jpg" alt="">
+                                                <img src="userResources/image/product-img/product_125470006.jpg" alt="">
                                             </div>
                                             <div class="product-button">
                                                 <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -644,12 +643,12 @@
                                 </div>
 
                                 <!-- item.7 -->
-                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
+                                <div class="product-item-element col-sm-6 col-md-6 col-lg-4">
                                     <!--Product Item-->
                                     <div class="product-item">
                                         <div class="product-item-inner">
                                             <div class="product-img-wrap">
-                                                <img src="userResources/image/product-img/sports.jpg" alt="">
+                                                <img src="userResources/image/product-img/product_125470007.jpg" alt="">
                                             </div>
                                             <div class="product-button">
                                                 <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -676,12 +675,12 @@
                                 </div>
 
                                 <!-- item.8 -->
-                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
+                                <div class="product-item-element col-sm-6 col-md-6 col-lg-4">
                                     <!--Product Item-->
                                     <div class="product-item">
                                         <div class="product-item-inner">
                                             <div class="product-img-wrap">
-                                                <img src="userResources/image/product-img/beauty_makeup.jpg" alt="">
+                                                <img src="userResources/image/product-img/product_125470001.jpg" alt="">
                                             </div>
                                             <div class="product-button">
                                                 <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -707,9 +706,233 @@
                                     <!-- End Product Item-->
                                 </div>
 
-                                
+                                <!-- item.9 -->
+                                <div class="product-item-element col-sm-6 col-md-6 col-lg-4">
+                                    <!--Product Item-->
+                                    <div class="product-item">
+                                        <div class="product-item-inner">
+                                            <div class="product-img-wrap">
+                                                <img src="userResources/image/product-img/product_125470002.jpg" alt="">
+                                            </div>
+                                            <div class="product-button">
+                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
+                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Whishlist"><i class="fa fa-heart"></i></a>
+                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-detail">
+                                            <a class="tag" href="#">Men Fashion</a>
+                                            <p class="product-title"><a href="product_detail.html">United Colors of Benetton</a></p>
+                                            <div class="product-rating">
+                                                <div class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating" title="Rated 4 out of 5">
+                                                    <span style="width: 60%"></span>
+                                                </div>
+                                                <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
+                                            </div>
+                                            <p class="product-description">
+                                                When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.
+                                            </p>
+                                            <h5 class="item-price">$39.00</h5>
+                                        </div>
+                                    </div>
+                                    <!-- End Product Item-->
+                                </div>
+
+                                <!-- item.10 -->
+                                <div class="product-item-element col-sm-6 col-md-6 col-lg-4">
+                                    <!--Product Item-->
+                                    <div class="product-item">
+                                        <div class="product-item-inner">
+                                            <div class="product-img-wrap">
+                                                <img src="userResources/image/product-img/product_125470003.jpg" alt="">
+                                            </div>
+                                            <div class="product-button">
+                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
+                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Whishlist"><i class="fa fa-heart"></i></a>
+                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-detail">
+                                            <a class="tag" href="#">Men Fashion</a>
+                                            <p class="product-title"><a href="product_detail.html">United Colors of Benetton</a></p>
+                                            <div class="product-rating">
+                                                <div class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating" title="Rated 4 out of 5">
+                                                    <span style="width: 60%"></span>
+                                                </div>
+                                                <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
+                                            </div>
+                                            <p class="product-description">
+                                                When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.
+                                            </p>
+                                            <h5 class="item-price"><del>$79.00</del>$39.00</h5>
+                                        </div>
+                                    </div>
+                                    <!-- End Product Item-->
+                                </div>
+
+                                <!-- item.11 -->
+                                <div class="product-item-element col-sm-6 col-md-6 col-lg-4">
+                                    <!--Product Item-->
+                                    <div class="product-item">
+                                        <div class="product-item-inner">
+                                            <div class="product-img-wrap">
+                                                <img src="userResources/image/product-img/product_125470004.jpg" alt="">
+                                            </div>
+                                            <div class="product-button">
+                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
+                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Whishlist"><i class="fa fa-heart"></i></a>
+                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-detail">
+                                            <a class="tag" href="#">Men Fashion</a>
+                                            <p class="product-title"><a href="product_detail.html">United Colors of Benetton</a></p>
+                                            <div class="product-rating">
+                                                <div class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating" title="Rated 4 out of 5">
+                                                    <span style="width: 60%"></span>
+                                                </div>
+                                                <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
+                                            </div>
+                                            <p class="product-description">
+                                                When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.
+                                            </p>
+                                            <h5 class="item-price">$39.00</h5>
+                                        </div>
+                                    </div>
+                                    <!-- End Product Item-->
+                                </div>
+
+                                <!-- item.12 -->
+                                <div class="product-item-element col-sm-6 col-md-6 col-lg-4">
+                                    <!--Product Item-->
+                                    <div class="product-item">
+                                        <div class="product-item-inner">
+                                            <div class="product-img-wrap">
+                                                <img src="userResources/image/product-img/product_125470005.jpg" alt="">
+                                            </div>
+                                            <div class="product-button">
+                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
+                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Whishlist"><i class="fa fa-heart"></i></a>
+                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-detail">
+                                            <a class="tag" href="#">Men Fashion</a>
+                                            <p class="product-title"><a href="product_detail.html">United Colors of Benetton</a></p>
+                                            <div class="product-rating">
+                                                <div class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating" title="Rated 4 out of 5">
+                                                    <span style="width: 60%"></span>
+                                                </div>
+                                                <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
+                                            </div>
+                                            <p class="product-description">
+                                                When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.
+                                            </p>
+                                            <h5 class="item-price"><del>$79.00</del>$39.00</h5>
+                                        </div>
+                                    </div>
+                                    <!-- End Product Item-->
+                                </div>
+
+                                <!-- item.13 -->
+                                <div class="product-item-element col-sm-6 col-md-6 col-lg-4">
+                                    <!--Product Item-->
+                                    <div class="product-item">
+                                        <div class="product-item-inner">
+                                            <div class="product-img-wrap">
+                                                <img src="userResources/image/product-img/product_125470006.jpg" alt="">
+                                            </div>
+                                            <div class="product-button">
+                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
+                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Whishlist"><i class="fa fa-heart"></i></a>
+                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-detail">
+                                            <a class="tag" href="#">Men Fashion</a>
+                                            <p class="product-title"><a href="product_detail.html">United Colors of Benetton</a></p>
+                                            <div class="product-rating">
+                                                <div class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating" title="Rated 4 out of 5">
+                                                    <span style="width: 60%"></span>
+                                                </div>
+                                                <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
+                                            </div>
+                                            <p class="product-description">
+                                                When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.
+                                            </p>
+                                            <h5 class="item-price"><del>$79.00</del>$39.00</h5>
+                                        </div>
+                                    </div>
+                                    <!-- End Product Item-->
+                                </div>
+
+                                <!-- item.14 -->
+                                <div class="product-item-element col-sm-6 col-md-6 col-lg-4">
+                                    <!--Product Item-->
+                                    <div class="product-item">
+                                        <div class="product-item-inner">
+                                            <div class="product-img-wrap">
+                                                <img src="userResources/image/product-img/product_125470007.jpg" alt="">
+                                            </div>
+                                            <div class="product-button">
+                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
+                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Whishlist"><i class="fa fa-heart"></i></a>
+                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-detail">
+                                            <a class="tag" href="#">Men Fashion</a>
+                                            <p class="product-title"><a href="product_detail.html">United Colors of Benetton</a></p>
+                                            <div class="product-rating">
+                                                <div class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating" title="Rated 4 out of 5">
+                                                    <span style="width: 60%"></span>
+                                                </div>
+                                                <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
+                                            </div>
+                                            <p class="product-description">
+                                                When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.
+                                            </p>
+                                            <h5 class="item-price"><del>$79.00</del>$39.00</h5>
+                                        </div>
+                                    </div>
+                                    <!-- End Product Item-->
+                                </div>
+
+                                <!-- item.15 -->
+                                <div class="product-item-element col-sm-6 col-md-6 col-lg-4">
+                                    <!--Product Item-->
+                                    <div class="product-item">
+                                        <div class="product-item-inner">
+                                            <div class="product-img-wrap">
+                                                <img src="userResources/image/product-img/product_125470001.jpg" alt="">
+                                            </div>
+                                            <div class="product-button">
+                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
+                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Whishlist"><i class="fa fa-heart"></i></a>
+                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-detail">
+                                            <a class="tag" href="#">Men Fashion</a>
+                                            <p class="product-title"><a href="product_detail.html">United Colors of Benetton</a></p>
+                                            <div class="product-rating">
+                                                <div class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating" title="Rated 4 out of 5">
+                                                    <span style="width: 60%"></span>
+                                                </div>
+                                                <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
+                                            </div>
+                                            <p class="product-description">
+                                                When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.
+                                            </p>
+                                            <h5 class="item-price"><del>$79.00</del>$39.00</h5>
+                                        </div>
+                                    </div>
+                                    <!-- End Product Item-->
+                                </div>
+
+
                             </div>
-                            <!-- End Product Grid -->
+                            <!-- End Product List -->
 
                             <div class="pagination-wraper">
                                 <p>Showing 1 - 15 of 120 results</p>
@@ -742,6 +965,237 @@
 
                         </div>
                         <!-- End Product Content -->
+
+                        <!-- Sidebar -->
+                        <div class="sidebar-container col-md-3 pull-md-9">
+
+                            <!-- Categories -->
+                            <div class="widget-sidebar">
+                                <h6 class="widget-title">Shop Categories</h6>
+                                <ul class="widget-content widget-product-categories jq-accordian">
+                                    <li>
+                                        <a href="#">Accessories</a>
+                                    </li>
+                                    <li>
+                                        <a>Clothings</a>
+                                        <ul class="children">
+                                            <li><a href="#">All</a></li>
+                                            <li><a href="#">Coats & Jackets</a></li>
+                                            <li><a href="#">Shirts</a></li>
+                                            <li><a href="#">Sportswear</a></li>
+                                            <li><a href="#">Swimwear</a></li>
+                                            <li><a href="#">Trousers</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Man</a>
+                                        <ul>
+                                            <li><a href="#">All</a></li>
+                                            <li><a href="#">Coats & Jackets</a></li>
+                                            <li><a href="#">Shirts</a></li>
+                                            <li><a href="#">Sportswear</a></li>
+                                            <li><a href="#">Swimwear</a></li>
+                                            <li><a href="#">Trousers</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Jacket</a></li>
+                                    <li><a href="#">New arrivals</a></li>
+                                    <li><a href="#">Shoes</a></li>
+                                    <li><a href="sdsd">Socks</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Filter By Price -->
+                            <div class="widget-sidebar widget-price-range">
+                                <h6 class="widget-title">Filter By Price</h6>
+                                <form class="widget-content" method="get" action="#">
+                                    <div class="price-range-slider"></div>
+                                    <div class="price-range-amount">
+                                        <input id="price_range_min" name="price_range_min" value="" data-min="140" placeholder="Min price" style="display: none;" type="text">
+                                        <input id="price_range_max" name="price_range_max" value="" data-max="1100" placeholder="Max price" style="display: none;" type="text">
+                                        <div id="price-range-from-to">
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-xs btn-black pull-right" type="submit">Filter</button>
+                                </form>
+                            </div>
+
+                            <!-- Filter By Color -->
+                            <div class="widget-sidebar widget-filter-color">
+                                <h6 class="widget-title">Filter By Color</h6>
+                                <ul class="widget-content">
+                                    <li>
+                                        <a href="#">
+                                            <div class="filter-color-switcher"><span style="background-color: #ff4040"></span></div>
+                                            Red</a>
+                                        <span class="color-count">(9)</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="filter-color-switcher"><span style="background-color: #000"></span></div>
+                                            Black</a>
+                                        <span class="color-count">(112)</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="filter-color-switcher"><span style="background-color: #ff9000"></span></div>
+                                            Orange</a>
+                                        <span class="color-count">(56)</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="filter-color-switcher"><span style="background-color: #ffcf3d"></span></div>
+                                            Yellow</a>
+                                        <span class="color-count">(24)</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="filter-color-switcher"><span style="background-color: #55b0da"></span></div>
+                                            Blue</a>
+                                        <span class="color-count">(18)</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="filter-color-switcher"><span style="background-color: #9ada55"></span></div>
+                                            Green</a>
+                                        <span class="color-count">(72)</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="filter-color-switcher"><span style="background-color: #7a463b"></span></div>
+                                            Brown</a>
+                                        <span class="color-count">(5)</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Filter By Size -->
+                            <div class="widget-sidebar widget-filter-size">
+                                <h6 class="widget-title">Filter By Size</h6>
+                                <ul class="widget-content">
+                                    <li>
+                                        <a href="#">L</a>
+                                        <span>(24)</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">M</a>
+                                        <span>(34)</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">S</a>
+                                        <span>(45)</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">X</a>
+                                        <span>(102)</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">XL</a>
+                                        <span>(60)</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">XS</a>
+                                        <span>(78)</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">XXL</a>
+                                        <span>(35)</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Filter By Tag -->
+                            <div class="widget-sidebar widget-filter-tag">
+                                <h6 class="widget-title">Popular Tag</h6>
+                                <ul class="widget-content">
+                                    <li>
+                                        <a href="#">Shirt</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Bag</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Vintage</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sweaters</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">t-shirt</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">white</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Black</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">New</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Popular</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Widget Product -->
+                            <div class="widget-sidebar widget-product">
+                                <h6 class="widget-title">Popular Product</h6>
+                                <ul class="widget-content">
+
+                                    <!--Item-->
+                                    <li>
+                                        <a class="product-img" href="#">
+                                            <img src="userResources/image/product-img/product_125470007.jpg" alt="">
+                                        </a>
+                                        <div class="product-content">
+                                            <a class="product-link" href="#">Alpha Block Black Polo Sleem T-Shirt</a>
+                                            <div class="star-rating">
+                                                <span style="width: 80%;"></span>
+                                            </div>
+                                            <span class="product-amount">$399.00</span>
+                                        </div>
+                                    </li>
+
+                                    <!--Item-->
+                                    <li>
+                                        <a class="product-img" href="#">
+                                            <img src="userResources/image/product-img/product_125470006.jpg" alt="">
+                                        </a>
+                                        <div class="product-content">
+                                            <a class="product-link" href="#">Red Printed Round Neck T-Shirt</a>
+                                            <div class="star-rating">
+                                                <span style="width: 100%;"></span>
+                                            </div>
+                                            <span class="product-amount">$399.00</span>
+                                        </div>
+                                    </li>
+
+                                    <!--Item-->
+                                    <li>
+                                        <a class="product-img" href="#">
+                                            <img src="userResources/image/product-img/product_125470005.jpg" alt="">
+                                        </a>
+                                        <div class="product-content">
+                                            <a class="product-link" href="#">Maroon Solid Henley T-Shirts</a>
+                                            <div class="star-rating">
+                                                <span style="width: 100%;"></span>
+                                            </div>
+                                            <span class="product-amount">$399.00</span>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                            <div class="widget-sidebar widget-banner">
+                                <a href="#" class="banner-image-wrap">
+                                    <img src="userResources/image/banner/banner_115146.jpg" alt="" />
+                                </a>
+                            </div>
+
+                        </div>
+                        <!-- End Sidebar -->
 
                     </div>
                 </div>
