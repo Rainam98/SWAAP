@@ -74,7 +74,7 @@ public class ComplainController {
 	@RequestMapping(value="/mall/viewMallComplain")
 	public ModelAndView viewMallComplain()
 	{
-		List complainList=this.complainService.searchComplain();
+		List complainList=this.complainService.searchBranchComplain();
 		return new ModelAndView("mall/viewMallComplain","complainList",complainList);
 	}
 	

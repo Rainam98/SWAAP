@@ -11,7 +11,7 @@ public interface ComplainService {
 	
 	public List findByIdComplain(ComplainVO complainVO);
 	
-	public List searchComplain();
+	public List searchBranchComplain();
 
 	public List searchUserComplain(LoginVO loginId);
 }

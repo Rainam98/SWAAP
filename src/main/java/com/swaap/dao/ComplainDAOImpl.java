@@ -24,10 +24,10 @@ public class ComplainDAOImpl implements ComplainDAO {
 		session.saveOrUpdate(complainVO);
 	}
 	
-	public List searchComplain()
+	public List searchBranchComplain()
 	{
 		Session session = sessionFactory.openSession();
-		Query q=session.createQuery("from ComplainVO where status=true and loginVO.status=true");
+		Query q=session.createQuery("from ComplainVO where status=true and loginVO.status=true and loginVO.role='ROLE_BRANCH'");
 		List ls=q.list();
 		return ls;
 	}
