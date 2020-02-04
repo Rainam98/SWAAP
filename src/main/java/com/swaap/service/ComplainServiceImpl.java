@@ -26,9 +26,9 @@ public class ComplainServiceImpl implements ComplainService{
 		this.complainDAO.insertComplain(complainVO);
 	}
 
-	public List searchComplain()
+	public List searchBranchComplain()
 	{
-		return this.complainDAO.searchComplain();
+		return this.complainDAO.searchBranchComplain();
 	}
 		
 	public List findByIdComplain(ComplainVO complainVO)

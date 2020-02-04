@@ -11,20 +11,20 @@
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
 
     <!-- Favicone Icon -->
-    <link rel="shortcut icon" type="image/x-icon" href="userResources/image/favicon.ico">
-    <link rel="icon" type="img/png" href="userResources/image/favicon.png">
-    <link rel="apple-touch-icon" href="userResources/image/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="<%=request.getContextPath()%>/<%=request.getContextPath()%>/userResources/image/favicon.ico">
+    <link rel="icon" type="img/png" href="<%=request.getContextPath()%>/userResources/image/favicon.png">
+    <link rel="apple-touch-icon" href="<%=request.getContextPath()%>/userResources/image/favicon.png">
 
     <!-- CSS -->
-    <link href="userResources/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="<%=request.getContextPath()%>/userResources/css/bootstrap.css" rel="stylesheet" type="text/css" />
     <!-- bootstrap css -->
-    <link href="userResources/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="<%=request.getContextPath()%>/userResources/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <!-- fontawesome css -->
-    <link href="userResources/css/animate.css" rel="stylesheet" type="text/css" />
+    <link href="<%=request.getContextPath()%>/userResources/css/animate.css" rel="stylesheet" type="text/css" />
     <!-- animate css -->
-    <link href="userResources/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="<%=request.getContextPath()%>/userResources/css/style.css" rel="stylesheet" type="text/css" />
     <!-- template css -->
-    <link href="userResources/css/settings-ver.5.3.1.css" rel="stylesheet" type="text/css" />
+    <link href="<%=request.getContextPath()%>/userResources/css/settings-ver.5.3.1.css" rel="stylesheet" type="text/css" />
     <!-- Slider Revolution Css Setting -->
 
 </head>
@@ -33,7 +33,7 @@
     <section id="nlpopup" data-expires="30" data-delay="10">
         <!--Close Button-->
         <a href="javascript:void(0)" class="nlpopup_close nlpopup_close_icon">
-            <img src="userResources/image/close-icon-white.png" alt="Newsletter Close" /></a>
+            <img src="<%=request.getContextPath()%>/userResources/image/close-icon-white.png" alt="Newsletter Close" /></a>
         <!--End Close Button-->
 
         <h3 class="mb-40">Join Our Mailing List </h3>
@@ -85,7 +85,7 @@
                         <li>
                             <!--Item Image-->
                             <a href="#" class="product-image">
-                                <img src="userResources/image/product-img/product_12547554.jpg" alt="" /></a>
+                                <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_12547554.jpg" alt="" /></a>
 
                             <!--Item Content-->
                             <div class="product-content">
@@ -106,7 +106,7 @@
                         <li>
                             <!--Item Image-->
                             <a href="#" class="product-image">
-                                <img src="userResources/image/product-img/product_12547555.jpg" alt="" /></a>
+                                <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_12547555.jpg" alt="" /></a>
 
                             <!--Item Content-->
                             <div class="product-content">
@@ -163,12 +163,12 @@
             <!-- Search Form -->
             <form role="search" id="searchform" action="/search" method="get">
                 <div class="search-icon-lg">
-                    <img src="userResources/image/search-icon-lg.png" alt="" />
+                    <img src="<%=request.getContextPath()%>/userResources/image/search-icon-lg.png" alt="" />
                 </div>
                 <label class="h6 normal search-input-label" for="search-query">Enter keywords to Search Product</label>
                 <input value="" name="q" type="search" placeholder="Search..." />
                 <button type="submit">
-                    <img src="userResources/image/search-lg-go-icon.png" alt="" />
+                    <img src="<%=request.getContextPath()%>/userResources/image/search-lg-go-icon.png" alt="" />
                 </button>
             </form>
             <!-- End Search Form -->
@@ -249,7 +249,7 @@
                     <!-- Logo -->
                     <div class="logo">
                         <a href="index.html">
-                            <img src="userResources/image/logo_black.png" alt="Philos" />
+                            <img src="<%=request.getContextPath()%>/userResources/image/logo_black.png" alt="Philos" />
                         </a>
                     </div>
                     <!-- End Logo -->
@@ -410,7 +410,7 @@
                                             </li>
                                             <li class="nav-dropdown-grid">
                                                 <a href="#" class="sub-banner">
-                                                    <img src="userResources/image/banner/banner_115145.jpg" alt="" /></a>
+                                                    <img src="<%=request.getContextPath()%>/userResources/image/banner/banner_115145.jpg" alt="" /></a>
                                             </li>
 
                                         </ul>
@@ -623,7 +623,7 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-12 col-sm-12 mb-sm-45">
                         <div class="footer-block about-us-block">
-                            <img src="userResources/image/logo_white.png" width="125" alt="">
+                            <img src="<%=request.getContextPath()%>/userResources/image/logo_white.png" width="125" alt="">
                             <p>Gumbo beet greens corn soko endive gum gourd. Parsley allot courgette tatsoi pea sprouts fava bean soluta nobis est ses eligendi optio.</p>
                             <ul class="footer-social-icon list-none-ib">
                                 <li><a href="http://facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -707,7 +707,7 @@
                 <div class="copyrights">
                     <p class="copyright">&copy; Created by <a href="http://nileforest.com/" target="_blank">NileForest</a>. Philos Responsive Woocommerce Theme 2017</p>
                     <p class="payment">
-                        <img src="userResources/image/payment_logos.png" alt="payment">
+                        <img src="<%=request.getContextPath()%>/userResources/image/payment_logos.png" alt="payment">
                     </p>
                 </div>
             </div>
@@ -721,29 +721,29 @@
     <!--==========================================-->
     <!-- JAVASCRIPT -->
     <!--==========================================-->
-    <script type="text/javascript" src="userResources/js/jquery.min.js"></script>
-    <script type="text/javascript" src="userResources/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/jquery.min.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/jquery-ui.js"></script>
     <!-- jquery library js -->
-    <script type="text/javascript" src="userResources/js/modernizr.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/modernizr.js"></script>
     <!--modernizr Js-->
-    <script type="text/javascript" src="userResources/js/jquery.themepunch.revolution.min.js"></script>
-    <script type="text/javascript" src="userResources/js/jquery.themepunch.tools.min.js"></script>
-    <script type="text/javascript" src="userResources/js/revolution.extension.navigation.min.js"></script>
-    <script type="text/javascript" src="userResources/userResources/js/revolution.extension.parallax.min.js"></script>
-    <script type="text/javascript" src="userResources/js/revolution.extension.slideanims.min.js"></script>
-    <script type="text/javascript" src="userResources/js/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/<%=request.getContextPath()%>/userResources/js/revolution.extension.parallax.min.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/revolution.extension.layeranimation.min.js"></script>
     <!--Slider Revolution Js File-->
-    <script type="text/javascript" src="userResources/js/tether.min.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/tether.min.js"></script>
     <!--Bootstrap tooltips require Tether (Tether Js)-->
-    <script type="text/javascript" src="userResources/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/bootstrap.min.js"></script>
     <!-- bootstrap js -->
-    <script type="text/javascript" src="userResources/js/owl.carousel.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/owl.carousel.js"></script>
     <!-- carousel js -->
-    <script type="text/javascript" src="userResources/js/slick.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/slick.js"></script>
     <!-- Slick Slider js -->
-    <script type="text/javascript" src="userResources/js/plugins-all.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/plugins-all.js"></script>
     <!-- Plugins All js -->
-    <script type="text/javascript" src="userResources/js/custom.js"></script>
+    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/custom.js"></script>
     <!-- custom js -->
     <!-- end jquery -->
 
