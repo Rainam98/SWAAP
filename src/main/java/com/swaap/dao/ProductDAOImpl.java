@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import com.swaap.model.BranchVO;
 import com.swaap.model.ProductVO;
+import com.swaap.model.SubCategoryVO;
 
 @Repository
 public class ProductDAOImpl implements ProductDAO{
@@ -34,6 +35,14 @@ public class ProductDAOImpl implements ProductDAO{
 	public List editProduct(ProductVO productVO) {
 		Session session = sessionFactory.openSession();		
 		Query q=session.createQuery("from ProductVO where id="+productVO.getId());		
+		List productList=q.list();
+		return productList;
+	}
+
+	@Override
+	public List searchProductBySubCategory(SubCategoryVO subCategoryVO) {
+		Session session = sessionFactory.openSession();		
+		Query q=session.createQuery("from ProductVO where subCategoryVO.id="+subCategoryVO.getId());		
 		List productList=q.list();
 		return productList;
 	}

@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.swaap.dao.ProductDAO;
 import com.swaap.model.BranchVO;
 import com.swaap.model.ProductVO;
+import com.swaap.model.SubCategoryVO;
 
 @Service
 @Transactional
@@ -33,6 +34,13 @@ public class ProductServiceImpl implements ProductService{
 	@Override
 	public List editProduct(ProductVO productVO) {
 		List productList=this.productDAO.editProduct(productVO);
+		return productList;
+	}
+
+
+	@Override
+	public List searchProductBySubCategory(SubCategoryVO subCategoryVO) {
+		List productList=this.productDAO.searchProductBySubCategory(subCategoryVO);
 		return productList;
 	}
 }

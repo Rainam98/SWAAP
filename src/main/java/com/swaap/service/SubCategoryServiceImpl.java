@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.swaap.dao.SubCategoryDAO;
+import com.swaap.model.CategoryVO;
 import com.swaap.model.SubCategoryVO;
 
 @Service
@@ -33,6 +34,13 @@ public class SubCategoryServiceImpl implements SubCategoryService{
 	@Override
 	public List editSubCategory(SubCategoryVO subCategoryVO) {
 		List subCategoryList=this.subCategoryDAO.editSubCategory(subCategoryVO);
+		return subCategoryList;
+	}
+
+
+	@Override
+	public List searchSubCategoryByCategory(CategoryVO categoryVO) {
+		List subCategoryList=this.subCategoryDAO.searchSubCategoryByCategory(categoryVO);
 		return subCategoryList;
 	}
 }

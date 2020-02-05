@@ -216,7 +216,7 @@
                         <div class="col-12">
                             <!-- Title -->
                             <div class="list-page-title">
-                                <h2 class="">Categories<small></small></h2>
+                                <h2 class="">Sub-Categories<small></small></h2>
                             </div>
                             <!-- End Title -->
 
@@ -455,10 +455,9 @@
                             <!-- Product Grid -->
                             <div class="row product-list-item">
                                 <!-- item.1 -->
-                                <c:forEach items="${categoryList}" var="categoryVariable">
+                                <c:forEach items="${subCategoryList}" var="subCategoryVariable">
                                 <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
                                     <!--Product Item-->
-                                    
                                     <div class="product-item">
                                     
                                         <div class="product-item-inner">
@@ -474,7 +473,7 @@
                                         
                                         <div class="product-detail">
                                             
-                                            <p class="product-title"><a href="subCategoryDetail?categoryId=${categoryVariable.id }">${categoryVariable.categoryName}</a></p>
+                                            <p class="product-title"><a href="productDetail?subCategoryId=${subCategoryVariable.id }">${subCategoryVariable.subCategoryName}</a></p>
                                             <div class="product-rating">
                                                 <div class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating" title="Rated 4 out of 5">
                                                     <span style="width: 60%"></span>
@@ -491,8 +490,9 @@
                                    
                                     <!-- End Product Item-->
                                 </div>
-
                                 </c:forEach>
+
+                                
                             <!-- End Product Grid -->
 
                             <div class="pagination-wraper">

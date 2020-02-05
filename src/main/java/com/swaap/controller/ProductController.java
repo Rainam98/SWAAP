@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.swaap.model.CategoryVO;
 import com.swaap.model.ProductVO;
+import com.swaap.model.SubCategoryVO;
 import com.swaap.service.BranchService;
 import com.swaap.service.CategoryService;
 import com.swaap.service.ProductService;
@@ -89,5 +91,14 @@ public class ProductController {
 	{
 		List productList=this.productService.searchProduct();
 		return new ModelAndView("branch/viewProduct","productList",productList);
+	}
+	@RequestMapping(value="user/productDetail", method=RequestMethod.GET)
+	public ModelAndView viewProductDetail(@ModelAttribute SubCategoryVO subCategoryVO, @RequestParam int subCategoryId, @ModelAttribute ProductVO productVO)
+	{
+		subCategoryVO.setId(subCategoryId);
+		productVO.setSubCategoryVO(subCategoryVO);
+		List productList=this.productService.searchProductBySubCategory(productVO.getSubCategoryVO());
+		System.out.println(productList.get(0).toString());
+		return new ModelAndView("user/productDetail","productList",productList);
 	}
 }

@@ -45,10 +45,10 @@ public class LoginController {
 
 		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		String userName = user.getUsername();
-		List categoryList=this.categoryService.searchCategory();
+	/*	List categoryList=this.categoryService.searchCategory();
 		List subCategoryList=this.subCategoryService.searchSubCategory();
 		model.addAttribute("categoryList",categoryList);
-		model.addAttribute("subCategoryList",subCategoryList);
+		model.addAttribute("subCategoryList",subCategoryList);*/
 		return new ModelAndView("mall/index");
 	}
 	
@@ -59,11 +59,12 @@ public class LoginController {
 		return new ModelAndView("branch/index");
 	}
 	@RequestMapping(value = "/user/index", method = RequestMethod.GET)
-	public ModelAndView userIndex(LoginVO loginVO ) {
+	public ModelAndView userIndex(LoginVO loginVO, Model model ) {
 
 		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		String userName = user.getUsername();
-		
+		List categoryList=this.categoryService.searchCategory();
+		model.addAttribute("categoryList",categoryList);		
 		return new ModelAndView("user/index");
 	}
 	@RequestMapping(value = "/logout", method = {RequestMethod.POST, RequestMethod.GET})	

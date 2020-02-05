@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-
+import com.swaap.model.CategoryVO;
 import com.swaap.model.SubCategoryVO;
 import com.swaap.service.CategoryService;
 import com.swaap.service.SubCategoryService;
@@ -74,6 +74,14 @@ public class SubCategoryController {
 	{
 		List subCategoryList=this.subCategoryService.searchSubCategory();
 		return new ModelAndView("branch/viewSubCategory","subCategoryList",subCategoryList);
+	}
+	@RequestMapping(value="user/subCategoryDetail", method=RequestMethod.GET)
+	public ModelAndView viewSubCategoryDetail(@ModelAttribute SubCategoryVO subCategoryVO, @RequestParam int categoryId, @ModelAttribute CategoryVO categoryVO)
+	{
+		categoryVO.setId(categoryId);
+		subCategoryVO.setCategoryVO(categoryVO);
+		List subCategoryList=this.subCategoryService.searchSubCategoryByCategory(subCategoryVO.getCategoryVO());
+		return new ModelAndView("user/subCategoryDetail","subCategoryList",subCategoryList);
 	}
 	
 }
