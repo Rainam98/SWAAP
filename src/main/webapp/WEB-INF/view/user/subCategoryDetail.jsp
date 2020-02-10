@@ -480,10 +480,7 @@
                                                 </div>
                                                 <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
                                             </div>
-                                            <p class="product-description">
-                                                When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.
-                                            </p>
-                                            <h5 class="item-price">$39.00</h5>
+                                            
                                         </div>
                                          
                                     </div>

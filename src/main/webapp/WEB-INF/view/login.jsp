@@ -43,8 +43,13 @@
 			</div>
 			<!-- /.clearfix -->
 			<button type="submit" name="login" class="frm-submit">Login<i class="fa fa-arrow-circle-right"></i></button>
+			
 			<div class="row small-spacing">
-				
+				<div class="clearfix margin-bottom-20">
+					<div class="float-left">
+						New User?<a href="register">Register</a>
+					</div>
+				</div>
 			</div>
 			<!-- /.row -->
 			<div class="frm-footer">SWAAP © 2016.</div>

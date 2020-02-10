@@ -29,7 +29,7 @@
 </head>
 <body>
 
-	<jsp:include page="header.jsp"></jsp:include>
+	
 	
     <!-- Newsletter Popup ---------------------------------------------------->
     <section id="nlpopup" data-expires="30" data-delay="10">
@@ -183,7 +183,7 @@
     <!--==========================================-->
     <div class="wraper">
         <!-- Header -->
-        
+        <jsp:include page="header.jsp"></jsp:include>
         <!-- End Header -->
 
         <!-- Page Content Wraper -->
@@ -194,9 +194,9 @@
                     <div class="row">
                         <div class="col-12">
                             <nav class="breadcrumb-link">
-                                <a href="#">Home</a>
-                                <a href="#">Categories</a>
-                                <span>Men Polos & Tees</span>
+                                <a href="index">Home</a>
+                                <a href="subCategoryDetail">Sub-Categories</a>
+                                <span>Products</span>
                             </nav>
                         </div>
                     </div>
@@ -212,7 +212,7 @@
                         <div class="col-md-9 push-md-3">
                             <!-- Title -->
                             <div class="list-page-title">
-                                <h2 class="">Men Polos & Tees <small>120 Products</small></h2>
+                                <h2 class="">Products</h2>
                             </div>
                             <!-- End Title -->
 
@@ -521,9 +521,9 @@
                         <!-- End Product Content -->
 
                         <!-- Sidebar -->
-                        <div class="sidebar-container col-md-3 pull-md-9">
+                        <!-- <div class="sidebar-container col-md-3 pull-md-9">
 
-                            <!-- Categories -->
+                            Categories
                             <div class="widget-sidebar">
                                 <h6 class="widget-title">Shop Categories</h6>
                                 <ul class="widget-content widget-product-categories jq-accordian">
@@ -559,7 +559,7 @@
                                 </ul>
                             </div>
 
-                            <!-- Filter By Price -->
+                            Filter By Price
                             <div class="widget-sidebar widget-price-range">
                                 <h6 class="widget-title">Filter By Price</h6>
                                 <form class="widget-content" method="get" action="#">
@@ -574,7 +574,7 @@
                                 </form>
                             </div>
 
-                            <!-- Filter By Color -->
+                            Filter By Color
                             <div class="widget-sidebar widget-filter-color">
                                 <h6 class="widget-title">Filter By Color</h6>
                                 <ul class="widget-content">
@@ -623,7 +623,7 @@
                                 </ul>
                             </div>
 
-                            <!-- Filter By Size -->
+                            Filter By Size
                             <div class="widget-sidebar widget-filter-size">
                                 <h6 class="widget-title">Filter By Size</h6>
                                 <ul class="widget-content">
@@ -658,7 +658,7 @@
                                 </ul>
                             </div>
 
-                            <!-- Filter By Tag -->
+                            Filter By Tag
                             <div class="widget-sidebar widget-filter-tag">
                                 <h6 class="widget-title">Popular Tag</h6>
                                 <ul class="widget-content">
@@ -691,56 +691,8 @@
                                     </li>
                                 </ul>
                             </div>
-
-                            <!-- Widget Product -->
-                            <div class="widget-sidebar widget-product">
-                                <h6 class="widget-title">Popular Product</h6>
-                                <ul class="widget-content">
-
-                                    <!--Item-->
-                                    <li>
-                                        <a class="product-img" href="#">
-                                            <img src="userResources/image/product-img/product_125470007.jpg" alt="">
-                                        </a>
-                                        <div class="product-content">
-                                            <a class="product-link" href="#">Alpha Block Black Polo Sleem T-Shirt</a>
-                                            <div class="star-rating">
-                                                <span style="width: 80%;"></span>
-                                            </div>
-                                            <span class="product-amount">$399.00</span>
-                                        </div>
-                                    </li>
-
-                                    <!--Item-->
-                                    <li>
-                                        <a class="product-img" href="#">
-                                            <img src="userResources/image/product-img/product_125470006.jpg" alt="">
-                                        </a>
-                                        <div class="product-content">
-                                            <a class="product-link" href="#">Red Printed Round Neck T-Shirt</a>
-                                            <div class="star-rating">
-                                                <span style="width: 100%;"></span>
-                                            </div>
-                                            <span class="product-amount">$399.00</span>
-                                        </div>
-                                    </li>
-
-                                    <!--Item-->
-                                    <li>
-                                        <a class="product-img" href="#">
-                                            <img src="userResources/image/product-img/product_125470005.jpg" alt="">
-                                        </a>
-                                        <div class="product-content">
-                                            <a class="product-link" href="#">Maroon Solid Henley T-Shirts</a>
-                                            <div class="star-rating">
-                                                <span style="width: 100%;"></span>
-                                            </div>
-                                            <span class="product-amount">$399.00</span>
-                                        </div>
-                                    </li>
-
-                                </ul>
-                            </div>
+ -->
+                           
 
                             <div class="widget-sidebar widget-banner">
                                 <a href="#" class="banner-image-wrap">

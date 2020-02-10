@@ -58,6 +58,12 @@ public class LoginController {
 		String userName = user.getUsername();
 		return new ModelAndView("branch/index");
 	}
+	@RequestMapping(value = "/register", method = RequestMethod.GET)
+	public ModelAndView register() {
+		/*User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		String userName = user.getUsername();*/
+		return new ModelAndView("mall/register");
+	}
 	@RequestMapping(value = "/user/index", method = RequestMethod.GET)
 	public ModelAndView userIndex(LoginVO loginVO, Model model ) {
 
