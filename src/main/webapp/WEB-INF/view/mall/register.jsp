@@ -21,7 +21,7 @@
 <body>
 
 <div id="single-wrapper">
-	<form action="#" class="frm-single">
+	<form action="/login" class="frm-single">
 		<div class="inside">
 			<div class="title"><strong>Ninja</strong>Admin</div>
 			<!-- /.title -->
@@ -33,10 +33,6 @@
 			<!-- /.frm-input -->
 			<div class="frm-input"><input type="password" placeholder="Password" class="frm-inp"><i class="fa fa-lock frm-ico"></i></div>
 			<!-- /.frm-input -->
-			<div class="clearfix margin-bottom-20">
-				<div class="checkbox primary"><input type="checkbox" id="accept"><label for="accept">I accept Terms and Conditions</label></div>
-				<!-- /.checkbox -->
-			</div>
 			<!-- /.clearfix -->
 			<button type="submit" class="frm-submit">Register<i class="fa fa-arrow-circle-right"></i></button>
 			<div class="row small-spacing">
