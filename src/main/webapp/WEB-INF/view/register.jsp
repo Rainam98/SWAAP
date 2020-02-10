@@ -21,21 +21,22 @@
 <body>
 
 <div id="single-wrapper">
-	<form action="#" class="frm-single">
+<%@taglib prefix="f" uri="http://www.springframework.org/tags/form"%>
+<f:form class="frm-single" data-toggle="validator" action="insert" modelAttribute="registerVO" method="post">
 		<div class="inside">
 			<div class="title"><strong>SWAAP</strong></div>
 			<!-- /.title -->
 			<div class="frm-title">Register</div>
 			<!-- /.frm-input -->
-			<div class="frm-input"><input type="text"  placeholder="Name" class="frm-inp" required="true"/><i class="fa fa-user-circle frm-ico"></i></div>
+			<div class="frm-input"><f:input paath="" placeholder="Name" class="frm-inp" required="true"/><i class="fa fa-user-circle frm-ico"></i></div>
 			<!-- /.frm-input -->
-			<div class="frm-input radio"><input type="radio" name="underwear" id="underwear1" class="frm-inp" required="true"/><label for="underwear1">Male</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="radio" name="underwear" id="underwear2" class="frm-inp" required="true"/><label for="underwear2">Female</label></div>
+			<div class="frm-input radio"><f:radiobutton path="" value="Male" name="underwear" id="underwear1" class="frm-inp" required="true"/><label for="underwear1">Male</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<f:radiobutton path="" value="Female" name="underwear" id="underwear2" class="frm-inp" required="true"/><label for="underwear2">Female</label></div>
 			<!-- /.frm-input -->
-			<div class="frm-input"><input type="text"  placeholder="Contact Number" class="frm-inp" required="true"/><i class="fa fa-phone frm-ico"></i></div>
+			<div class="frm-input"><f:input path=""  placeholder="Contact Number" class="frm-inp" required="true"/><i class="fa fa-phone frm-ico"></i></div>
 			<!-- /.frm-input -->
-			<div class="frm-input"><input type="email"  placeholder="Username" class="frm-inp" required="true"/><i class="fa fa-user frm-ico"></i></div>
+			<div class="frm-input"><f:input path=""  placeholder="Username" class="frm-inp" data-error="Bruh, that email address is invalid" required="true"/><i class="fa fa-user frm-ico"></i></div>
 			<!-- /.frm-input -->
-			<div class="frm-input"><input type="password" placeholder="Password" id="inputPassword" class="frm-inp" required="true"/><i class="fa fa-lock frm-ico"></i></div>
+			<div class="frm-input"><f:password path="" placeholder="Password" data-minlength="8" id="inputPassword" class="frm-inp" required="true"/><i class="fa fa-lock frm-ico"></i></div>
 			<!-- /.frm-input -->
 			<div class="frm-input"><input type="password" placeholder="Confirm Password" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="Whoops, these don't match" class="frm-inp" required="true"/><i class="fa fa-lock frm-ico"></i></div>
 			<!-- /.frm-input -->
@@ -62,7 +63,7 @@
 			<!-- /.footer -->
 		</div>
 		<!-- .inside -->
-	</form>
+	</f:form>
 	<!-- /.frm-single -->
 </div><!--/#single-wrapper -->
 
