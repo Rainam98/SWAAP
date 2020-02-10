@@ -28,7 +28,7 @@
 			<!-- /.title -->
 			<div class="frm-title">Register</div>
 			<!-- /.frm-input -->
-			<div class="frm-input"><f:input paath="" placeholder="Name" class="frm-inp" required="true"/><i class="fa fa-user-circle frm-ico"></i></div>
+			<div class="frm-input"><f:input path="" placeholder="Name" class="frm-inp" required="true"/><i class="fa fa-user-circle frm-ico"></i></div>
 			<!-- /.frm-input -->
 			<div class="frm-input radio"><f:radiobutton path="" value="Male" name="underwear" id="underwear1" class="frm-inp" required="true"/><label for="underwear1">Male</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<f:radiobutton path="" value="Female" name="underwear" id="underwear2" class="frm-inp" required="true"/><label for="underwear2">Female</label></div>
 			<!-- /.frm-input -->
