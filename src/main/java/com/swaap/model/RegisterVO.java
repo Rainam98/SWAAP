@@ -18,12 +18,12 @@ public class RegisterVO {
 	@Column(name="registerId")
 	private int registerId;
 	
-	@Column(name="firstName")
-	private String firstName;
+	@Column(name="name")
+	private String name;
 
-	@Column(name="lastName")
-	private String lastName;
-	
+	@Column(name="gender")
+	private String gender;
+
 	@Column(name="mobileNumber")
 	private String mobileNumber;
 	
@@ -37,20 +37,20 @@ public class RegisterVO {
 		this.registerId = registerId;
 	}
 
-	public String getFirstName() {
-		return firstName;
+	public String getName() {
+		return name;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public String getLastName() {
-		return lastName;
+	public String getGender() {
+		return gender;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 
 	public LoginVO getLoginVO() {

@@ -27,13 +27,13 @@ public class RegisterController {
 		loginVO.setUsername(registerVO.getLoginVO().getUsername());
 		loginVO.setPassword(registerVO.getLoginVO().getPassword());
 		loginVO.setEnabled("1");
-		loginVO.setRole("ROLE_STAFF");
+		loginVO.setRole("ROLE_USER");
 		loginVO.setStatus(true);
 		this.loginService.insertLogin(loginVO);
 		
 		registerVO.setLoginVO(loginVO);
 		this.registerService.insertRegister(registerVO);
 
-		return new ModelAndView("redirect:/");
+		return new ModelAndView("redirect:/login");
 	}
 }
