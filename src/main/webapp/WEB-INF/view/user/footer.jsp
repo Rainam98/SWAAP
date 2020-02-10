@@ -16,7 +16,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-2 col-md-4 col-sm-4 mb-sm-45">
+                    <!-- <div class="col-lg-2 col-md-4 col-sm-4 mb-sm-45">
                         <div class="footer-block information-block">
                             <h6>Information</h6>
                             <ul>
@@ -54,17 +54,17 @@
                                 <li><a href="#">Shipping policy</a></li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-lg-3 col-md-12 col-sm-12">
                         <div class="footer-block contact-block">
                             <h6>Contact</h6>
                             <ul>
-                                <li><i class="fa fa-map-marker" aria-hidden="true"></i>1 Wintergreen Dr. Huntley
+                                <li><i class="fa fa-map-marker" aria-hidden="true"></i>SWAAP,Naranpura
                                     <br>
-                                    IL 60142, Usa</li>
-                                <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@sky.com">info@sky.com</a></li>
-                                <li><i class="fa fa-phone" aria-hidden="true"></i>(013) 456789</li>
-                                <li><i class="fa fa-fax" aria-hidden="true"></i>89567989</li>
+                                    Ahmedabad, Gujarat, India</li>
+                                <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@sky.com">swaap@gmail.com</a></li>
+                                <li><i class="fa fa-phone" aria-hidden="true"></i>+91 9426149721</li>
+                                <li><i class="fa fa-fax" aria-hidden="true"></i>2354689</li>
                             </ul>
                         </div>
                     </div>
@@ -73,7 +73,7 @@
             <!-- End Footer Info -->
 
             <!-- Footer Newsletter -->
-            <div class="container">
+            <!-- <div class="container">
                 <div class="footer-newsletter">
                     <h4>Subscribe Newsletter</h4>
                     <form class="footer-newslettr-inner">
@@ -81,13 +81,13 @@
                         <button class="btn btn-md btn-color fancy">Sing Up</button>
                     </form>
                 </div>
-            </div>
+            </div> -->
             <!-- End Footer Newsletter -->
 
             <!-- Footer Copyright -->
             <div class="container">
                 <div class="copyrights">
-                    <p class="copyright">&copy; Created by <a href="http://nileforest.com/" target="_blank">NileForest</a>. Philos Responsive Woocommerce Theme 2017</p>
+                    <p class="copyright">&copy; Created by <a href="http://nileforest.com/" target="_blank">SWAAP</a>.2017</p>
                     <p class="payment">
                         <img src="<%=request.getContextPath()%>/userResources/image/payment_logos.png" alt="payment">
                     </p>

@@ -32,26 +32,7 @@
 	<jsp:include page="header.jsp"></jsp:include>
 	
     <!-- Newsletter Popup ---------------------------------------------------->
-    <section id="nlpopup" data-expires="30" data-delay="10">
-        <!--Close Button-->
-        <a href="javascript:void(0)" class="nlpopup_close nlpopup_close_icon">
-            <img src="<%=request.getContextPath()%>/userResources/image/close-icon-white.png" alt="Newsletter Close" /></a>
-        <!--End Close Button-->
-
-        <h3 class="mb-40">Join Our Mailing List </h3>
-        <p class="black mb-20">
-            But I must explain to you how all this mistaken<br />
-            idea of denouncing pleasure pain.
-        </p>
-        <form>
-            <input class="input-md" name="footeremail" title="Enter Email Address.." placeholder="example@domain.com" type="email">
-            <button class="btn btn-md btn-color">Subscribe</button>
-        </form>
-        <label class="mt-20">
-            Sign up For Exclusive Updates, New Arrivals<br />
-            And Insider-Only Discount.</label>
-        <a class="nlpopup_close nlpopup_close_link mt-40">&#10006; Close</a>
-    </section>
+    
     <!-- Overlay -->
     <div id="nlpopup_overlay"></div>
     <!-- End Newsletter Popup ------------------------------------------------>
@@ -229,7 +210,7 @@
 
                                     <!--Product Sort By-->
                                     <form class="product-sort-by">
-                                        <label for="short-by">Short By</label>
+                                        <label for="short-by">Sort By</label>
                                         <select name="short-by" id="short-by" class="nice-select-box">
                                             <option value="default_sorting" selected="selected">Default sorting</option>
                                             <option value="sort_by_popularity">Popularity</option>
@@ -275,44 +256,11 @@
                             <div class="container product-filter-dropdown toggle-content" id="filter-slide-toggle">
                                 <div class="row col mlr-0">
                                     <!-- Shop Categories -->
-                                    <div class="widget-sidebar col-sm-6 col-md-6 col-lg-3">
-                                        <h6 class="widget-title">Categories</h6>
-                                        <ul class="widget-content widget-product-categories jq-accordian">
-                                            <li>
-                                                <a href="#">Accessories</a>
-                                            </li>
-                                            <li>
-                                                <a class="javascript:void(0)">Clothings<span class="jq-accordionIcon"></span></a>
-                                                <ul class="children" style="display: none;">
-                                                    <li><a href="#">All</a></li>
-                                                    <li><a href="#">Coats &amp; Jackets</a></li>
-                                                    <li><a href="#">Shirts</a></li>
-                                                    <li><a href="#">Sportswear</a></li>
-                                                    <li><a href="#">Swimwear</a></li>
-                                                    <li><a href="#">Trousers</a></li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)">Man<span class="jq-accordionIcon"></span></a>
-                                                <ul style="display: none;">
-                                                    <li><a href="#">All</a></li>
-                                                    <li><a href="#">Coats &amp; Jackets</a></li>
-                                                    <li><a href="#">Shirts</a></li>
-                                                    <li><a href="#">Sportswear</a></li>
-                                                    <li><a href="#">Swimwear</a></li>
-                                                    <li><a href="#">Trousers</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Jacket</a></li>
-                                            <li><a href="#">New arrivals</a></li>
-                                            <li><a href="#">Shoes</a></li>
-                                            <li><a href="sdsd">Socks</a></li>
-                                        </ul>
-                                    </div>
+                                    
                                     <!-- End Shop Categories -->
 
                                     <!-- Filter Price -->
-                                    <!-- <div class="widget-sidebar widget-filter-price col-sm-6 col-md-6 col-lg-3">
+                                    <div class="widget-sidebar widget-filter-price col-sm-6 col-md-6 col-lg-3">
                                         <h6 class="widget-title">Select Price</h6>
                                         <ul class="widget-content">
                                             <li>
@@ -360,93 +308,15 @@
                                                 </a>
                                             </li>
                                         </ul>
-                                    </div> -->
+                                    </div>
                                     <!-- End Filter Price -->
 
                                     <!-- Filter Color -->
-                                    <!-- <div class="widget-sidebar widget-filter-color col-sm-6 col-md-6 col-lg-3">
-                                        <h6 class="widget-title">Select Color</h6>
-                                        <ul class="widget-content">
-                                            <li>
-                                                <a href="#">
-                                                    <div class="filter-color-switcher"><span style="background-color: #ff4040"></span></div>
-                                                    Red</a>
-                                                <span class="color-count">(9)</span>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <div class="filter-color-switcher"><span style="background-color: #000"></span></div>
-                                                    Black</a>
-                                                <span class="color-count">(112)</span>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <div class="filter-color-switcher"><span style="background-color: #ff9000"></span></div>
-                                                    Orange</a>
-                                                <span class="color-count">(56)</span>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <div class="filter-color-switcher"><span style="background-color: #ffcf3d"></span></div>
-                                                    Yellow</a>
-                                                <span class="color-count">(24)</span>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <div class="filter-color-switcher"><span style="background-color: #55b0da"></span></div>
-                                                    Blue</a>
-                                                <span class="color-count">(18)</span>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <div class="filter-color-switcher"><span style="background-color: #9ada55"></span></div>
-                                                    Green</a>
-                                                <span class="color-count">(72)</span>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <div class="filter-color-switcher"><span style="background-color: #7a463b"></span></div>
-                                                    Brown</a>
-                                                <span class="color-count">(5)</span>
-                                            </li>
-                                        </ul>
-                                    </div> -->
+                                    
                                     <!-- End Filter Color -->
 
                                     <!-- Filter Size -->
-                                    <!-- <div class="widget-sidebar widget-filter-size col-sm-6 col-md-6 col-lg-3">
-                                        <h6 class="widget-title">Select Size</h6>
-                                        <ul class="widget-content ">
-                                            <li>
-                                                <a href="#">L</a>
-                                                <span>(24)</span>
-                                            </li>
-                                            <li>
-                                                <a href="#">M</a>
-                                                <span>(34)</span>
-                                            </li>
-                                            <li>
-                                                <a href="#">S</a>
-                                                <span>(45)</span>
-                                            </li>
-                                            <li>
-                                                <a href="#">X</a>
-                                                <span>(102)</span>
-                                            </li>
-                                            <li>
-                                                <a href="#">XL</a>
-                                                <span>(60)</span>
-                                            </li>
-                                            <li>
-                                                <a href="#">XS</a>
-                                                <span>(78)</span>
-                                            </li>
-                                            <li>
-                                                <a href="#">XXL</a>
-                                                <span>(35)</span>
-                                            </li>
-                                        </ul>
-                                    </div> -->
+                                   
                                     <!-- End Filter Size -->
                                 </div>
                             </div>

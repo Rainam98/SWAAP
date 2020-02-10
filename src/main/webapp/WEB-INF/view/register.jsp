@@ -23,15 +23,21 @@
 <div id="single-wrapper">
 	<form action="#" class="frm-single">
 		<div class="inside">
-			<div class="title"><strong>Ninja</strong>Admin</div>
+			<div class="title"><strong>SWAAP</strong></div>
 			<!-- /.title -->
 			<div class="frm-title">Register</div>
-			<!-- /.frm-title -->
-			<div class="frm-input"><input type="email"  placeholder="Email" class="frm-inp"><i class="fa fa-envelope frm-ico"></i></div>
 			<!-- /.frm-input -->
-			<div class="frm-input"><input type="text" placeholder="Username" class="frm-inp"><i class="fa fa-user frm-ico"></i></div>
+			<div class="frm-input"><input type="text"  placeholder="Name" class="frm-inp" required="true"/><i class="fa fa-user-circle frm-ico"></i></div>
 			<!-- /.frm-input -->
-			<div class="frm-input"><input type="password" placeholder="Password" class="frm-inp"><i class="fa fa-lock frm-ico"></i></div>
+			<div class="frm-input radio"><input type="radio" name="underwear" id="underwear1" class="frm-inp" required="true"/><label for="underwear1">Male</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="radio" name="underwear" id="underwear2" class="frm-inp" required="true"/><label for="underwear2">Female</label></div>
+			<!-- /.frm-input -->
+			<div class="frm-input"><input type="text"  placeholder="Contact Number" class="frm-inp" required="true"/><i class="fa fa-phone frm-ico"></i></div>
+			<!-- /.frm-input -->
+			<div class="frm-input"><input type="email"  placeholder="Username" class="frm-inp" required="true"/><i class="fa fa-user frm-ico"></i></div>
+			<!-- /.frm-input -->
+			<div class="frm-input"><input type="password" placeholder="Password" id="inputPassword" class="frm-inp" required="true"/><i class="fa fa-lock frm-ico"></i></div>
+			<!-- /.frm-input -->
+			<div class="frm-input"><input type="password" placeholder="Confirm Password" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="Whoops, these don't match" class="frm-inp" required="true"/><i class="fa fa-lock frm-ico"></i></div>
 			<!-- /.frm-input -->
 			<div class="clearfix margin-bottom-20">
 				<div class="checkbox primary"><input type="checkbox" id="accept"><label for="accept">I accept Terms and Conditions</label></div>
