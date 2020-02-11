@@ -2,6 +2,7 @@ package com.swaap.controller;
 
 import java.util.List;
 
+import com.swaap.service.EmailSendService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -27,6 +28,9 @@ public class BranchController {
 	
 	@Autowired
 	BranchService branchService;
+
+	@Autowired
+	EmailSendService emailSendService;
 	
 	@RequestMapping(value="mall/addBranch", method=RequestMethod.GET)
 	public ModelAndView addBranch(Model model)
@@ -36,14 +40,16 @@ public class BranchController {
 		model.addAttribute("stateList",StateList);
 		model.addAttribute("cityList",CityList);
 		model.addAttribute("branchVO", new BranchVO());
+
 		return new ModelAndView("mall/addBranch");
 	}
-	
+
 	@RequestMapping(value="mall/saveBranch", method=RequestMethod.POST)
 	public ModelAndView saveBranch(@ModelAttribute BranchVO branchVO)
 	{
 		branchVO.setStatus(true);
 		this.branchService.insertBranch(branchVO);
+//		emailSendService.sendMail(branchVO.getUserName(),"User added","your  password is: "+branchVO.getPassword());
 		return new ModelAndView("redirect:/mall/viewBranch");
 	}
 	
@@ -75,6 +81,6 @@ public class BranchController {
 		model.addAttribute("branchVO",(BranchVO)branchList.get(0));
 		model.addAttribute("stateList",StateList);
 		model.addAttribute("cityList",CityList);
-		return new ModelAndView("mall/addBranch");
+		return new ModelAndView("mall/addBrafnch");
 	}
 }

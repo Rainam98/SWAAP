@@ -51,17 +51,17 @@
 					<f:form data-toggle="validator" modelAttribute="offerVO" method="post" action="saveOffer">
 						<h4 class="box-title">Add Offer</h4>
 						<div class="form-group">
-								<label for="inp-type-1" class=" control-label">Select Type</label><br>
-								<input type="radio" name="offerType" id="underwear1" required="true">
-								<label for="underwear1">Category</label>&nbsp&nbsp&nbsp&nbsp&nbsp
-								<input type="radio" name="offerType" id="underwear1" required="true">
-								<label for="underwear1">Sub-Category</label>&nbsp&nbsp&nbsp&nbsp&nbsp
-								<input type="radio" name="offerType" id="underwear1" required="true">
-								<label for="underwear1">Product</label>
+								<label for="category" class=" control-label">Select Type</label><br>
+								<input type="radio" name="offType" id="category" required="true">
+								<label for="subCategory">Category</label>&nbsp&nbsp&nbsp&nbsp&nbsp
+								<input type="radio" name="offType" id="subCategory" required="true">
+								<label for="product">Sub-Category</label>&nbsp&nbsp&nbsp&nbsp&nbsp
+								<input type="radio" name="offType" id="product" required="true">
+								<label for="product">Product</label>
 						</div>
 						<div class="form-group">
 							<f:hidden path="id"/>
-							<label for="subCategoryName" class="control-label">Offer Name</label>
+							<label for="offnme" class="control-label">Offer Name</label>
 							<f:input path="offerName" name="offnme" class="form-control" id="inputName" placeholder="Enter Offer Name" required="true"/>
 						</div>
 						<!-- /.box-title -->
@@ -173,7 +173,7 @@
 		<script src="<%=request.getContextPath()%>/adminResources/js/datatables.demo.min.js"></script>
 
 		<script src="<%=request.getContextPath()%>/adminResources/js/main.min.js"></script>
-<script src="<%=request.getContextPath()%>/adminResources/js/mycommon.js"></script>
+		<script src="<%=request.getContextPath()%>/adminResources/js/mycommon.js"></script>
 		<script src="<%=request.getContextPath()%>/adminResources/js/color-switcher.min.js"></script>
 	</body>
 	</html>
