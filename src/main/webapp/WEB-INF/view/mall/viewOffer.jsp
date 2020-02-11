@@ -49,11 +49,7 @@
 						<div class="dropdown js__drop_down">
 							<a href="#" class="dropdown-icon fas fa-ellipsis-v js__drop_down_button"></a>
 							<ul class="sub-menu">
-								<li><a href="#">Action</a></li>
-								<li><a href="#">Another action</a></li>
-								<li><a href="#">Something else there</a></li>
-								<li class="split"></li>
-								<li><a href="#">Separated link</a></li>
+								<li><a href="addOffer">Add Offer</a></li>
 							</ul>
 							<!-- /.sub-menu -->
 						</div>
