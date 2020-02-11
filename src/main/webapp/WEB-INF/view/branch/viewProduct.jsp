@@ -82,7 +82,6 @@
 									<th>Product Description</th>
 									<th>Product Weight</th>
 									<th>Product Price</th>
-									<th>Barcode File</th>
 								</tr>
 							</tfoot>
 							<tbody>
@@ -96,7 +95,6 @@
 										<td>${productVariable.productDescription}</td>
 										<td>${productVariable.productWeight}</td>
 										<td>${productVariable.productPrice}</td>
-										<td></td>
 									</tr>
 								</c:forEach>
 							</tbody>
