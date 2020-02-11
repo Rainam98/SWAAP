@@ -10,7 +10,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="StateTable")
+@Table(name="state_table")
 public class StateVO 
 {
 		@Id

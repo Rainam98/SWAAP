@@ -10,7 +10,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="SubCategoryTable")
+@Table(name="subcategory_table")
 public class SubCategoryVO {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)

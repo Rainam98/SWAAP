@@ -89,15 +89,14 @@
 					<!-- /.sub-menu js__content -->
 				</li>
 				<li>
-					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon far fa-clipboard"></i><span>Manage Checklist</span><span class="menu-arrow fa fa-angle-down"></span></a>
+					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon far fa-clipboard-list"></i><span>Manage Checklist</span><span class="menu-arrow fa fa-angle-down"></span></a>
 					<ul class="sub-menu js__content">
-						<li><a href="ui-buttons.html">Add Offers</a></li>
-						<li><a href="ui-cards.html">View Offers</a></li>
+						<li><a href="viewChecklistMall">View Checklist History</a></li>
 					</ul>
 					<!-- /.sub-menu js__content -->
 				</li>
 				<li>
-					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon far fa-clipboard"></i><span>Manage Complain</span><span class="menu-arrow fa fa-angle-down"></span></a>
+					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon far fa-comments"></i><span>Manage Complain</span><span class="menu-arrow fa fa-angle-down"></span></a>
 					<ul class="sub-menu js__content">
 						<li><a href="viewMallComplain">View Complain</a></li>
 					</ul>

@@ -95,6 +95,10 @@
 							<label for="productPrice" class="control-label">Product Price</label>
 							<f:input path="productPrice" name="scatnme" class="form-control" id="inputName" placeholder="Enter Product Price" required="true"/>
 						</div>
+						<div class="form-group">
+							<label for="productQuantity" class="control-label">Product Quantity</label>
+							<f:input path="productQuantity" name="scatnme" class="form-control" id="inputName" placeholder="Enter Product Quantity" required="true"/>
+						</div>
 					<div class="form-group">
 								<label for="exampleInputFile">Barcode Image Input</label><br>
 								<input type="file" name="img" id="exampleInputFile">

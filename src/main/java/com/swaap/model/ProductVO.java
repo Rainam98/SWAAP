@@ -10,7 +10,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="ProductTable")
+@Table(name="product_table")
 public class ProductVO {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -25,6 +25,9 @@ public class ProductVO {
 	
 	@Column(name="product_price")
 	private String productPrice;
+	
+	@Column(name="product_quantity")
+	private String productQuantity;
 	
 	@Column(name="product_description")
 	private String productDescription;
@@ -80,6 +83,14 @@ public class ProductVO {
 
 	public void setProductPrice(String productPrice) {
 		this.productPrice = productPrice;
+	}
+	
+	public String getProductQuantity() {
+		return productQuantity;
+	}
+
+	public void setProductQuantity(String productQuantity) {
+		this.productQuantity = productQuantity;
 	}
 
 	public String getBarcodeFileName() {

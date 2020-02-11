@@ -70,6 +70,7 @@
 									<th>Product Description</th>
 									<th>Product Weight</th>
 									<th>Product Price</th>
+									<th>Product Quantity</th>
 									<th>Barcode File</th>
 									<th>Delete</th>
 									<th>Update</th>
@@ -85,6 +86,7 @@
 									<th>Product Description</th>
 									<th>Product Weight</th>
 									<th>Product Price</th>
+									<th>Product Quantity</th>
 									<th>Barcode File</th>
 									<th>Delete</th>
 									<th>Update</th>
@@ -101,6 +103,7 @@
 										<td>${productVariable.productDescription}</td>
 										<td>${productVariable.productWeight}</td>
 										<td>${productVariable.productPrice}</td>
+										<td>${productVariable.productQuantity}</td>
 										<td></td>
 										<td><a  href="deleteSubCategory?findById=${productVariable.id}"><i class="menu-icon fa fa-trash-alt" aria-hidden="true"></i></a></td>
 										<td><a  href="updateSubCategory?findById=${productVariable.id}"><i class="menu-icon fa fa-edit" aria-hidden="true"></i></a></td>

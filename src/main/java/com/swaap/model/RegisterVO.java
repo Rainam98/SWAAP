@@ -10,7 +10,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name="Register_table")
+@Table(name="register_table")
 public class RegisterVO {
 
 	@Id
