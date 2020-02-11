@@ -47,7 +47,7 @@
 			<div class="row small-spacing">
 				<div class="clearfix margin-bottom-20">
 					<div class="float-left">
-						New User?<a href="register">Register</a>
+						New User?<a href="/register">Register</a>
 					</div>
 				</div>
 			</div>
