@@ -28,22 +28,18 @@
 			<!-- /.title -->
 			<div class="frm-title">Register</div>
 			<!-- /.frm-input -->
-			<div class="frm-input"><f:input path="" placeholder="Name" class="frm-inp" required="true"/><i class="fa fa-user-circle frm-ico"></i></div>
+			<div class="frm-input"><f:input path="name" placeholder="Name" class="frm-inp" required="true"/><i class="fa fa-user-circle frm-ico"></i></div>
 			<!-- /.frm-input -->
-			<div class="frm-input radio"><f:radiobutton path="" value="Male" name="underwear" id="underwear1" class="frm-inp" required="true"/><label for="underwear1">Male</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<f:radiobutton path="" value="Female" name="underwear" id="underwear2" class="frm-inp" required="true"/><label for="underwear2">Female</label></div>
+			<div class="frm-input radio"><f:radiobutton path="gender" value="Male" name="underwear" id="underwear1" class="frm-inp" required="true"/><label for="underwear1">Male</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<f:radiobutton path="gender" value="Female" name="underwear" id="underwear2" class="frm-inp" required="true"/><label for="underwear2">Female</label></div>
 			<!-- /.frm-input -->
-			<div class="frm-input"><f:input path=""  placeholder="Contact Number" class="frm-inp" required="true"/><i class="fa fa-phone frm-ico"></i></div>
+			<div class="frm-input"><f:input path="mobileNumber"  placeholder="Contact Number" class="frm-inp" required="true"/><i class="fa fa-phone frm-ico"></i></div>
 			<!-- /.frm-input -->
-			<div class="frm-input"><f:input path=""  placeholder="Username" class="frm-inp" data-error="Bruh, that email address is invalid" required="true"/><i class="fa fa-user frm-ico"></i></div>
+			<div class="frm-input"><f:input path="loginVO.username"  placeholder="Username" class="frm-inp" data-error="Bruh, that email address is invalid" required="true"/><i class="fa fa-user frm-ico"></i></div>
 			<!-- /.frm-input -->
-			<div class="frm-input"><f:password path="" placeholder="Password" data-minlength="8" id="inputPassword" class="frm-inp" required="true"/><i class="fa fa-lock frm-ico"></i></div>
+			<div class="frm-input"><f:password path="loginVO.password" placeholder="Password" data-minlength="8" id="inputPassword" class="frm-inp" required="true"/><i class="fa fa-lock frm-ico"></i></div>
 			<!-- /.frm-input -->
 			<div class="frm-input"><input type="password" placeholder="Confirm Password" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="Whoops, these don't match" class="frm-inp" required="true"/><i class="fa fa-lock frm-ico"></i></div>
 			<!-- /.frm-input -->
-			<div class="clearfix margin-bottom-20">
-				<div class="checkbox primary"><input type="checkbox" id="accept"><label for="accept">I accept Terms and Conditions</label></div>
-				<!-- /.checkbox -->
-			</div>
 			<!-- /.clearfix -->
 			<button type="submit" class="frm-submit">Register<i class="fa fa-arrow-circle-right"></i></button>
 			<div class="row small-spacing">

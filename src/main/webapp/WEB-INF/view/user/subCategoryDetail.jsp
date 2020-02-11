@@ -343,14 +343,14 @@
                                         
                                         <div class="product-detail">
                                             
-                                            <p class="product-title"><a href="productDetail?subCategoryId=${subCategoryVariable.id }">${subCategoryVariable.subCategoryName}</a></p>
+                           <p class="product-title"><a href="productDetail?subCategoryId=${subCategoryVariable.id }">${subCategoryVariable.subCategoryName}</a></p>
                                            <!--  <div class="product-rating">
                                                 <div class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating" title="Rated 4 out of 5">
                                                     <span style="width: 60%"></span>
                                                 </div>
                                                 <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
                                             </div> -->
-                                            
+
                                         </div>
                                          
                                     </div>

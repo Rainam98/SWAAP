@@ -100,9 +100,9 @@
 							<f:input path="productQuantity" name="scatnme" class="form-control" id="inputName" placeholder="Enter Product Quantity" required="true"/>
 						</div>
 					<div class="form-group">
-								<label for="exampleInputFile">Barcode Image Input</label><br>
+								<label for="exampleInputFile">Product Image Input</label><br>
 								<input type="file" name="img" id="exampleInputFile">
-								<p class="help-block">Add Barcode Image</p>
+								<p class="help-block">Add Product Image</p>
 							</div>
 					
 						
