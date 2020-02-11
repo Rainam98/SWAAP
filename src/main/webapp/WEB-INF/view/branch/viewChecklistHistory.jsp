@@ -10,7 +10,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>View Mall Complain</title>
+<title>View Checklist History</title>
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 
 <!-- Main Styles -->
@@ -63,37 +63,27 @@
 							style="width: 100%">
 							<thead>
 								<tr>
-									<th>Complain Id</th>
-									<th>Complain Subject</th>
-									<th>Complain Description</th>
-									<th>Complain Date</th>
-									<th>Reply</th>
-									<th>Reply Date</th>
-									<th>Login Id</th>
-									<th>Action</th>
+									<th>Checklist Id</th>
+									<th>Product Name</th>
+									<th>Current Quantity</th>
+									<th>Request Quantity</th>
+									<th>Request Date</th>
+									<th>Approval Date</th>
+									<th>Status</th>
 								</tr>
 								
 							</thead>
 							<tbody>
 							
-							<c:forEach var="i" items="${complainList}">
+							<c:forEach var="i" items="${checkList}">
 								<tr>
 									<td>${i.id}</td>
-									<td>${i.complainSubject}</td>
-									<td>${i.complainDescription}</td>
-									<td>${i.complainDate}</td>
-									<td>${i.reply}</td>
-									<td>${i.replyDate}</td>
-									<td>${i.loginVO.loginId}</td>
-									
-									<td>
-										<c:if test="${i.complainStatus eq 'Pending'}">
-											<button><a href="reply?id=${i.id}">Reply</a></button>
-										</c:if>
-										<c:if test="${i.complainStatus ne 'Pending'}">
-											<button disabled="disabled">Resolved</a></button>
-										</c:if>
-									</td>
+									<td>${i.productVO.productName}</td>
+									<td>${i.productVO.productQuantity}</td>
+									<td>${i.requestQuantity}</td>
+									<td>${i.requestDate}</td>
+									<td>${i.approvalDate}</td>
+									<td>${i.checklistStatus}</td>
 								</tr>
 							</c:forEach>
 							</tbody>

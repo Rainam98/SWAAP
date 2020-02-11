@@ -1,19 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, user-scalable=no">
-<meta name="description" content="">
-<meta name="author" content="">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
 
-<title>View Complain</title>
-<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+	<title>View Checklist</title>
 
-<!-- Main Styles -->
+	<!-- Main Styles -->
 	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/style.css">
 	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/custom.css">
 
@@ -36,24 +34,22 @@
 
 <body>
 	<jsp:include page="menu.jsp"></jsp:include>
-
 	<!-- /.main-menu -->
 
 	<jsp:include page="header.jsp"></jsp:include>
 	<!-- /.fixed-navbar -->
 
 	
-	<!-- /#message-popup -->
+	<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 	<div id="wrapper">
 		<div class="main-content">
 			<div class="row small-spacing">
 				<div class="col-12">
 					<div class="box-content">
-						<h4 class="box-title">VIEW COMPLAIN</h4>
+						<h4 class="box-title">View Checklist</h4>
 						<!-- /.box-title -->
 						<div class="dropdown js__drop_down">
-							<a href="#"
-								class="dropdown-icon glyphicon glyphicon-option-vertical js__drop_down_button"></a>
+							<a href="#" class="dropdown-icon fas fa-ellipsis-v js__drop_down_button"></a>
 							<ul class="sub-menu">
 								<li><a href="#">Action</a></li>
 								<li><a href="#">Another action</a></li>
@@ -64,41 +60,46 @@
 							<!-- /.sub-menu -->
 						</div>
 						<!-- /.dropdown js__dropdown -->
-						<table id="example"
-							class="table table-striped table-bordered display"
-							style="width: 100%">
+						<table id="example" class="table table-striped table-bordered display" style="width:100%">
 							<thead>
 								<tr>
-									<th>Complain Id</th>
-									<th>Complain Subject</th>
-									<th>Complain Description</th>
-									<th>Complain Date</th>
-									<th>Reply</th>
-									<th>Reply Date</th>
-									<th>Complain Status</th>
+									<th>ID</th>
+									<th>Product Name</th>
+									<th>Quantity</th>
+									<th>Action</th>
 								</tr>
 							</thead>
-							<tbody>
-							
-							<c:forEach var="i" items="${complainList}">
+							<tfoot>
 								<tr>
-									<td>${i.id}</td>
-									<td>${i.complainSubject}</td>
-									<td>${i.complainDescription}</td>
-									<td>${i.complainDate}</td>
-									<td>${i.reply}</td>
-									<td>${i.replyDate}</td>
-									<td>${i.complainStatus}</td>
+									<th>ID</th>
+									<th>Product Name</th>
+									<th>Quantity</th>
+									<th>Action</th>
 								</tr>
-							</c:forEach>
-								
+							</tfoot>
+							<tbody>
+							<c:forEach items="${checkList}" var="checklistVariable">
+								<tr>
+									<td>${checklistVariable.id}</td>
+									<td>${checklistVariable.productVO.productName}</td>
+									<td>${checklistVariable.productVO.productQuantity}</td>
+									<td><a  href="requestRefill?findById=${checklistVariable.id}"><i class="menu-icon fa fa-retweet" aria-hidden="true"></i></a></td>
+								</tr>
+								</c:forEach>
 							</tbody>
 						</table>
 					</div>
 					<!-- /.box-content -->
 				</div>
+				
+				</div>
 				<!-- /.col-12 -->
-		<!--/#wrapper -->
+				<jsp:include page="footer.jsp"></jsp:include>
+			</div>
+			<!-- /.row small-spacing -->		
+		</div>
+		<!-- /.main-content -->
+	</div><!--/#wrapper -->
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
 		<script src="<%=request.getContextPath()%>/adminResources/js/html5shiv.min.js"></script>
@@ -128,5 +129,5 @@
 		<script src="<%=request.getContextPath()%>/adminResources/js/main.min.js"></script>
 <script src="<%=request.getContextPath()%>/adminResources/js/mycommon.js"></script>
 		<script src="<%=request.getContextPath()%>/adminResources/js/color-switcher.min.js"></script>
-</body>
-</html>
+	</body>
+	</html>
