@@ -2,3 +2,6 @@
 + Add code to for one more field "email" in the add-branch option.
 + Add code in processing of insert branch page to add branch entry in login table with ROLE_BRANCH.
 + add real gmail account and password in the application.properties file and make sure gmail account have https://myaccount.google.com/lesssecureapps activated.
+
++fix add category section
++add code for list user in mall

@@ -3,7 +3,36 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
+<script>
+	async function getCities(stateId){
+		return  fetch(`http://localhost:8081/api/cityList/`+stateId)
+				.then(result => {
+					return result.json();
+				}).catch(error => document.getElementById('selectCityOptions').innerHtml = '');
+	}
+
+	function updateCities(option) {
+		let dataCities;
+		let stateId = option.value;
+
+		getCities(stateId).then(data=>{
+			dataCities = data;
+			var len = Object.keys(dataCities).length;
+
+			var selectCityOptions = document.getElementById('selectCityOptions');
+			selectCityOptions.innerHTML = '';
+			for(var i = 0 ; i < len; i++ ){
+				var cityName = data[i].cityName;
+				var cityId = data[i].id;
+				selectCityOptions.innerHTML += '<option value="'+cityId+'">'+ cityName + '</option>';
+			}
+		});
+	}
+</script>
+
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -11,10 +40,9 @@
 	<meta name="author" content="">
 
 	<title>Add Branch</title>
-
 	<!-- Main Styles -->
 	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/style.css">
-<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/custom.css">
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/custom.css">
 
 	<!-- mCustomScrollbar -->
 	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/jquery.mCustomScrollbar.min.css">
@@ -51,7 +79,8 @@
 					<div class="form-group">
 						<label for="stateName" name="brnst" class="control-label">Branch State</label>
 						<div class="form-group margin-bottom-20">
-								<f:select class="form-control" path="stateVO.id" placeholder="Select State">
+								<f:select onchange="updateCities(this)" class="form-control" path="stateVO.id" placeholder="Select State">
+									<f:option value="-1"> select branch </f:option>
 									<c:forEach items="${stateList}" var="stateVariable">
 										<f:option value="${stateVariable.id}">${stateVariable.stateName }</f:option>
 									</c:forEach>
@@ -60,11 +89,11 @@
 					</div>
 					<div class="form-group">
 						<label for="cityName" name="brnct" class="control-label">Branch City</label>
-						<div class="form-group margin-bottom-20">
-								<f:select class="form-control" path="cityVO.id" placeholder="Select City">
-									<c:forEach items="${cityList}" var="cityVariable">
-										<f:option value="${cityVariable.id}">${cityVariable.cityName }</f:option>
-									</c:forEach>
+						<div id="" class="form-group margin-bottom-20">
+								<f:select class="form-control" path="cityVO.id" placeholder="Select City" id="selectCityOptions">
+<%--									<c:forEach items="${cityList}" var="cityVariable">--%>
+<%--										<f:option value="${cityVariable.id}">${cityVariable.cityName }</f:option>--%>
+<%--									</c:forEach>--%>
 								</f:select>									
 						</div>
 					</div>
@@ -109,7 +138,7 @@
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="<%=request.getContextPath()%>/adminResources/js/jquery.min.js"></script>
 	<script src="<%=request.getContextPath()%>/adminResources/js/modernizr.min.js"></script>
-<script src="<%=request.getContextPath()%>/adminResources/js/popper.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/popper.min.js"></script>
 	<script src="<%=request.getContextPath()%>/adminResources/js/bootstrap.min.js"></script>
 	<script src="<%=request.getContextPath()%>/adminResources/js/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script src="<%=request.getContextPath()%>/adminResources/js/nprogress.js"></script>
@@ -122,7 +151,10 @@
 	<script src="<%=request.getContextPath()%>/adminResources/js/validator.min.js"></script>
 
 	<script src="<%=request.getContextPath()%>/adminResources/js/main.min.js"></script>
-<script src="<%=request.getContextPath()%>/adminResources/js/mycommon.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/mycommon.js"></script>
 	<script src="<%=request.getContextPath()%>/adminResources/js/color-switcher.min.js"></script>
+
+	<script src="<%=request.getContextPath()%>/adminResources/js/customAjaxHandler.js"></script>
+
 </body>
 </html>

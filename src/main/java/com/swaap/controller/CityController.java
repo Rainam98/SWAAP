@@ -70,6 +70,4 @@ public class CityController {
 		model.addAttribute("stateList",stateList);
 		return new ModelAndView("mall/addCity");
 	}
-	
-	
 }
