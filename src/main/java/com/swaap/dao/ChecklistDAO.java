@@ -9,4 +9,7 @@ public interface ChecklistDAO {
 	public void insertChecklist(ChecklistVO checklistVO);
 	
 	public List searchBranchChecklist();
+	
+	public List findByIdChecklist(int id);
 }
+

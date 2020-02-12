@@ -27,5 +27,10 @@ public class ChecklistServiceImpl implements ChecklistService{
 	{
 		return this.checklistDAO.searchBranchChecklist();
 	}
+	
+	public List findByIdChecklist(int id)
+	{
+		return this.checklistDAO.findByIdChecklist(id);
+	}
 		
 }

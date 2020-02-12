@@ -35,8 +35,10 @@ public class ChecklistController {
 	}
 	
 	@RequestMapping(value="/mall/approve")
-	public ModelAndView approve(@ModelAttribute ChecklistVO checklistVO)
+	public ModelAndView approve(@RequestParam int id)
 	{
+		List checkList=this.checklistService.findByIdChecklist(id);
+		ChecklistVO checklistVO=(ChecklistVO)checkList.get(0);
 		checklistVO.setStatus(true);
 		System.out.println(checklistVO.getProductVO().getId());
 		checklistVO.setChecklistStatus("Resolved");
