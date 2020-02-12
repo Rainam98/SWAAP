@@ -66,7 +66,7 @@
 									<th>Product ID</th>
 									<th>Product Name</th>
 									<th>Quantity</th>
-									<th>Action</th>
+									<th>Refill</th>
 								</tr>
 							</thead>
 							<tfoot>
@@ -74,7 +74,7 @@
 									<th>Product ID</th>
 									<th>Product Name</th>
 									<th>Quantity</th>
-									<th>Action</th>
+									<th>Refill</th>
 								</tr>
 							</tfoot>
 							<tbody>

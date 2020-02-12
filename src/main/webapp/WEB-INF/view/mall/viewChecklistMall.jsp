@@ -64,7 +64,7 @@
 							<thead>
 								<tr>
 									<th>Checklist Id</th>
-									<th>Product Nme</th>
+									<th>Product Name</th>
 									<th>Current Quantity</th>
 									<th>Request Quantity</th>
 									<th>Request Date</th>
