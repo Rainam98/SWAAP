@@ -82,7 +82,7 @@
 									<td>${i.productVO.productQuantity}</td>
 									<td>${i.requestQuantity}</td>
 									<td>${i.requestDate}</td>
-									<td>${i.approvalDate}</td>
+									<td>${i.approveDate}</td>
 									<td>${i.checklistStatus}</td>
 								</tr>
 							</c:forEach>

@@ -30,13 +30,15 @@ public class ChecklistController {
 	@RequestMapping(value="/mall/viewChecklistMall")
 	public ModelAndView viewMallComplain()
 	{
-		List checklistList=this.checklistService.searchBranchChecklist();
-		return new ModelAndView("mall/viewMallChecklist","checklistList",checklistList);
+		List checkList=this.checklistService.searchBranchChecklist();
+		return new ModelAndView("mall/viewChecklistMall","checkList",checkList);
 	}
 	
 	@RequestMapping(value="/mall/approve")
 	public ModelAndView approve(@ModelAttribute ChecklistVO checklistVO)
 	{
+		checklistVO.setStatus(true);
+		System.out.println(checklistVO.getProductVO().getId());
 		checklistVO.setChecklistStatus("Resolved");
 		Date date=new Date();
 		String setDateFormat="dd/MM/yyyy";
@@ -45,7 +47,7 @@ public class ChecklistController {
 		checklistVO.setApproveDate(formattedDate);
 		
 		this.checklistService.insertChecklist(checklistVO);
-		return new ModelAndView("redirect:/mall/viewMallChecklist");
+		return new ModelAndView("redirect:/mall/viewChecklistMall");
 	}
 
 	
@@ -70,9 +72,22 @@ public class ChecklistController {
 	@RequestMapping(value="/branch/addRequest")
 	public ModelAndView addRequest(@ModelAttribute ChecklistVO checklistVO)
 	{
+		System.out.println(checklistVO.getProductVO().getId());
 		checklistVO.setStatus(true);
 		checklistVO.setChecklistStatus("Pending");
+		Date date=new Date();
+		String setDateFormat="dd/MM/yyyy";
+		DateFormat dateformat=new SimpleDateFormat(setDateFormat);
+		String formattedDate=dateformat.format(date);
+		checklistVO.setRequestDate(formattedDate);
 		this.checklistService.insertChecklist(checklistVO);
-		return new ModelAndView("redirect:/branch/viewChecklist");
+		return new ModelAndView("redirect:/branch/viewChecklistHistory");
+	}
+	
+	@RequestMapping(value="/branch/viewChecklistHistory")
+	public ModelAndView viewChecklistHistory(@ModelAttribute ChecklistVO checklistVO)
+	{
+		List checkList=this.checklistService.searchBranchChecklist();
+		return new ModelAndView("branch/viewChecklistHistory","checkList",checkList);
 	}
 }

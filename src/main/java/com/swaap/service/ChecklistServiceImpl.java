@@ -16,8 +16,6 @@ import com.swaap.model.LoginVO;
 public class ChecklistServiceImpl implements ChecklistService{
 	@Autowired
 	ChecklistDAO checklistDAO;
-	@Autowired
-	LoginDAO loginDAO;
 	
 	public void insertChecklist(ChecklistVO checklistVO)
 	{
@@ -30,12 +28,4 @@ public class ChecklistServiceImpl implements ChecklistService{
 		return this.checklistDAO.searchBranchChecklist();
 	}
 		
-	public List findByIdComplain(ComplainVO complainVO)
-	{
-		return this.checklistDAO.findByIdComplain(complainVO);
-	}
-
-	public List searchUserComplain(LoginVO loginId) {
-		return this.checklistDAO.searchUserComplain(loginId);
-	}
 }

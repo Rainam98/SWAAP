@@ -21,9 +21,6 @@ public class ChecklistVO {
 	@ManyToOne
 	@JoinColumn(name="product_id")
 	private ProductVO productVO;
-
-	@Column(name="complain_subject")
-	private String complainSubject;
 		
 	@Column(name="status")
 	private boolean status=true;
@@ -54,14 +51,6 @@ public class ChecklistVO {
 
 	public void setProductVO(ProductVO productVO) {
 		this.productVO = productVO;
-	}
-
-	public String getComplainSubject() {
-		return complainSubject;
-	}
-
-	public void setComplainSubject(String complainSubject) {
-		this.complainSubject = complainSubject;
 	}
 
 	public boolean isStatus() {

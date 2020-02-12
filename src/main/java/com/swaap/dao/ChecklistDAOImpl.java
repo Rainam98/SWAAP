@@ -30,20 +30,4 @@ public class ChecklistDAOImpl implements ChecklistDAO{
 		List ls=q.list();
 		return ls;
 	}
-	
-	public List findByIdComplain(ComplainVO complainVO)
-	{
-			Session session = sessionFactory.openSession();
-			Query q=session.createQuery("from ComplainVO where id="+complainVO.getId());
-			List ls=q.list();
-			return ls;
-	}
-	
-	public List searchUserComplain(LoginVO loginId) {
-		Session session = sessionFactory.openSession();
-		Query q=session.createQuery("from ComplainVO where login_id="+loginId.getLoginId());
-		List ls=q.list();
-		return ls;
-	}
-
 }
