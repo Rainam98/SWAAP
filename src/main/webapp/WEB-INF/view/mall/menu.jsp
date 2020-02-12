@@ -89,7 +89,7 @@
 					<!-- /.sub-menu js__content -->
 				</li>
 				<li>
-					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon far fa-clipboard-list"></i><span>Manage Checklist</span><span class="menu-arrow fa fa-angle-down"></span></a>
+					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon far fa-check-square"></i><span>Manage Checklist</span><span class="menu-arrow fa fa-angle-down"></span></a>
 					<ul class="sub-menu js__content">
 						<li><a href="viewChecklistMall">View Checklist History</a></li>
 					</ul>
