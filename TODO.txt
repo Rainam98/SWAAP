@@ -16,7 +16,3 @@ Rainam
 Ritu
 +database
 +set images for category and sub-category for user side
-
-Tanay
-+manage offer
-+add product

@@ -45,17 +45,20 @@
 			<div class="col-12">
 				<div class="box-content">
 					<f:form data-toggle="validator" modelAttribute="categoryVO" action="saveCategory" method="post">
-					<h1 class="page-title">Add Category</h1>
-						<div class="form-group">
-							<label for="inputComplaintSubject" class="control-label">Category</label>
-							<f:input path="categoryName" name="catnme" class="form-control" id="inputName" placeholder="Enter Category Name" required="true" />
-							<f:hidden path="id"/>
-						</div>
-						
-						<div class="form-group">
-							<button type="submit" name="addst" class="btn btn-primary waves-effect waves-light">Add Category</button>
-						</div>
-					</f:form>
+                        <h1 class="page-title">Add Category</h1>
+                        <div class="form-group">
+                            <label for="inputComplaintSubject" class="control-label">Category</label>
+                            <f:hidden path="id"/>
+                            <f:input path="categoryName" name="catnme" class="form-control" id="inputName"
+                                     placeholder="Enter Category Name" required="true"/>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" name="addst" class="btn btn-primary waves-effect waves-light">Add
+                                Category
+                            </button>
+                        </div>
+                    </f:form>
 				</div>
 				<!-- /.box-content -->
 			</div>

@@ -1,24 +1,24 @@
 package com.swaap.dao;
 
-import java.util.List;
-
+import com.swaap.model.CategoryVO;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.swaap.model.CategoryVO;
+import java.util.List;
 @Repository
 public class CategoryDAOImpl implements CategoryDAO {
 	@Autowired
 	SessionFactory sessionFactory;
 
 	public void insertCategory(CategoryVO categoryVO) {
-		Session session=this.sessionFactory.getCurrentSession();
-		session.saveOrUpdate(categoryVO);
-		
-	}
+        Session session = this.sessionFactory.getCurrentSession();
+        System.out.println("REceicve ::::::::::::::::::::;;");
+        session.saveOrUpdate(categoryVO);
+
+    }
 
 	public List searchCategory() 
 	{
