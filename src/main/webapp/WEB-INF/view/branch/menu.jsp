@@ -43,12 +43,10 @@
 					<a class="waves-effect" href="viewOffer"><i class="menu-icon fa fa-gift" aria-hidden="true"></i><span>Offers</span></a>
 				</li>
 				<li>
-					<a class="waves-effect" href="index.html"><i class="menu-icon fa +" aria-hidden="true"></i><span>Checklist</span></a>
+					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon fa fa-check-square" aria-hidden="true"></i><span>Checklist</span><span class="menu-arrow fa fa-angle-down"></span></a>
 					<ul class="sub-menu js__content">
 						<li><a href="viewChecklist">View Checklist</a></li>
 						<li><a href="viewChecklistHistory">View Checklist History</a></li>
-
-					
 					</ul>
 				</li>
 				
@@ -57,8 +55,6 @@
 					<ul class="sub-menu js__content">
 						<li><a href="addComplain">Add Complain</a></li>
 						<li><a href="viewBranchComplain">View Complain History</a></li>
-
-					
 					</ul>
 					<!-- /.sub-menu js__content -->
 				</li>

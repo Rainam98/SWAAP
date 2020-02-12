@@ -40,31 +40,32 @@
 <jsp:include page="header.jsp"></jsp:include>
 
 <!-- /.fixed-navbar -->
-
+<%@taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
 <div id="wrapper">
 	<div class="main-content">
 		<div class="row small-spacing">
 			<div class="col-12">
 				<div class="box-content">
-					<form data-toggle="validator">
+					<f:form data-toggle="validator" modelAttribute="checklistVO" action="addRequest">
 					<h1 class="page-title">Request Refill</h1>
 						<div class="form-group">
 							<label for="productName" class="control-label">Product Name</label>
-							<input type="text" class="form-control" name="sub" id="inputName" placeholder="Subject" required=true readonly>
+							<f:input path="productVO.productName" type="text" class="form-control" name="sub" id="inputName" placeholder="Subject" required="true"></f:input>
 						</div>
 						<div class="form-group">
 							<label for="productQuantity" class="control-label">Product Quantity</label>
-							<input type="text" class="form-control" name="sub" id="inputName" placeholder="Subject" required=true readonly>
+							<f:input path="productVO.productQuantity" type="text" class="form-control" name="sub" id="inputName" placeholder="Subject" required="true"></f:input>
 						</div>
 						<div class="form-group">
-							<label for="complaintDescription" class="control-label">Request Quantity</label>
-							<input type="text" class="form-control" name="sub" id="inputName" placeholder="Enter Quantity" required=true>
+							<label for="complainDescription" class="control-label">Request Quantity</label>
+							<f:input path="requestQuantity" type="text" class="form-control" name="sub" id="inputName" placeholder="Enter Quantity" required="true"></f:input>
 						</div>
-						
+						<f:hidden path="id"/>
+						<f:hidden path="productVO.id"/>
 						<div class="form-group">
-							<button type="submit" name="addcomp" class="btn btn-primary waves-effect waves-light">Request</button>
+							<button type="submit" name="addcomp" class="btn btn-primary waves-effect waves-light">Submit</button>
 						</div>
-					</form>
+					</f:form>
 				</div>
 				<!-- /.box-content -->
 			</div>

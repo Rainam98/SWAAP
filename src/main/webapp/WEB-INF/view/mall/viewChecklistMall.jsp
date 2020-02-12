@@ -64,12 +64,12 @@
 							<thead>
 								<tr>
 									<th>Checklist Id</th>
-									<th>Product Nme</th>
+									<th>Product Name</th>
 									<th>Current Quantity</th>
 									<th>Request Quantity</th>
 									<th>Request Date</th>
 									<th>Approval Date</th>
-									<th>Branch Name</th>
+									
 									<th>Status</th>
 								</tr>
 								
@@ -84,7 +84,7 @@
 									<td>${i.requestQuantity}</td>
 									<td>${i.requestDate}</td>
 									<td>${i.approveDate}</td>
-									<td>${i.branchVO.branchName}</td>
+									
 									
 									<td>
 										<c:if test="${i.checklistStatus eq 'Pending'}">
@@ -101,6 +101,10 @@
 					</div>
 					<!-- /.box-content -->
 				</div>
+			</div>
+		</div>
+	</div>
+				
 				<!-- /.col-12 -->
 		<!--/#wrapper -->
 	<!--/#wrapper -->

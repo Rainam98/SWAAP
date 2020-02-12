@@ -43,9 +43,9 @@
 			<div class="row small-spacing">
 				<div class="col-12">
 					<div class="box-content">
-						<h4 class="box-title">VIEW COMPLAIN</h4>
+						<h4 class="box-title">View Checklist</h4>
 						<!-- /.box-title -->
-						<!-- <div class="dropdown js__drop_down">
+						<!-- <!-- <div class="dropdown js__drop_down">
 							<a href="#"
 								class="dropdown-icon glyphicon glyphicon-option-vertical js__drop_down_button"></a>
 							<ul class="sub-menu">
@@ -55,8 +55,8 @@
 								<li class="split"></li>
 								<li><a href="#">Separated link</a></li>
 							</ul>
-							/.sub-menu
-						</div> -->
+							<!-- /.sub-menu -->
+						</div> --> -->
 						<!-- /.dropdown js__dropdown -->
 						<table id="example"
 							class="table table-striped table-bordered display"
@@ -82,7 +82,7 @@
 									<td>${i.productVO.productQuantity}</td>
 									<td>${i.requestQuantity}</td>
 									<td>${i.requestDate}</td>
-									<td>${i.approvalDate}</td>
+									<td>${i.approveDate}</td>
 									<td>${i.checklistStatus}</td>
 								</tr>
 							</c:forEach>
@@ -90,6 +90,9 @@
 						</table>
 					</div>
 					<!-- /.box-content -->
+				</div>
+				</div>
+				</div>
 				</div>
 				<!-- /.col-12 -->
 		<!--/#wrapper -->
