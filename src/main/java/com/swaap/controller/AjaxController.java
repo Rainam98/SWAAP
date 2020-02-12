@@ -31,7 +31,7 @@ public class AjaxController {
         List<CityVO> cities = q.list();
 
         if(cities==null || cities.isEmpty())
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<List<CityVO>>(HttpStatus.NOT_FOUND);
 
         return new ResponseEntity<List<CityVO>>(cities, HttpStatus.OK);
     }
@@ -44,7 +44,7 @@ public class AjaxController {
         List<SubCategoryVO> subCategories = q.list();
 
         if(subCategories==null && subCategories.isEmpty())
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<List<SubCategoryVO>>(HttpStatus.NOT_FOUND);
 
         return new ResponseEntity<List<SubCategoryVO>>(subCategories, HttpStatus.OK);
     }
@@ -57,7 +57,7 @@ public class AjaxController {
         List<ProductVO> products = q.list();
 
         if(products == null || products.isEmpty())
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<List<ProductVO>>(HttpStatus.NOT_FOUND);
 
         return new ResponseEntity<List<ProductVO>>(products, HttpStatus.OK);
     }

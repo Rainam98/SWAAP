@@ -5,3 +5,18 @@
 
 +fix add category section
 +add code for list user in mall
+
+
+
+12-02-2020
+Rainam
++manage user
++multipart file upload
+
+Ritu
++database
++set images for category and sub-category for user side
+
+Tanay
++manage offer
++add product
