@@ -91,6 +91,9 @@
 					</div>
 					<!-- /.box-content -->
 				</div>
+				</div>
+				</div>
+				</div>
 				<!-- /.col-12 -->
 		<!--/#wrapper -->
 	<!--/#wrapper -->

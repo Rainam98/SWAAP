@@ -63,7 +63,7 @@
 						<table id="example" class="table table-striped table-bordered display" style="width:100%">
 							<thead>
 								<tr>
-									<th>ID</th>
+									<th>Product ID</th>
 									<th>Product Name</th>
 									<th>Quantity</th>
 									<th>Action</th>
@@ -71,19 +71,19 @@
 							</thead>
 							<tfoot>
 								<tr>
-									<th>ID</th>
+									<th>Product ID</th>
 									<th>Product Name</th>
 									<th>Quantity</th>
 									<th>Action</th>
 								</tr>
 							</tfoot>
 							<tbody>
-							<c:forEach items="${checkList}" var="checklistVariable">
+							<c:forEach items="${productList}" var="checklistVariable">
 								<tr>
 									<td>${checklistVariable.id}</td>
-									<td>${checklistVariable.productVO.productName}</td>
-									<td>${checklistVariable.productVO.productQuantity}</td>
-									<td><a  href="requestRefill?findById=${checklistVariable.id}"><i class="menu-icon fa fa-retweet" aria-hidden="true"></i></a></td>
+									<td>${checklistVariable.productName}</td>
+									<td>${checklistVariable.productQuantity}</td>
+									<td><a  href="requestRefill?productId=${checklistVariable.id}"><i class="menu-icon fa fa-retweet" aria-hidden="true"></i></a></td>
 								</tr>
 								</c:forEach>
 							</tbody>
