@@ -10,18 +10,15 @@
 
 12-02-2020
 Rainam
-+manage user
 +multipart file upload
++manage user should have active and disable function
 
 Ritu
-+database
-+set images for category and sub-category for user side
++Date picker
++database upload later
 
 Tanay
-+manage offer
-+add product
++changes in addOffer
++email validator
 
 
-Doubts
-+before adding to login the users must be registered or not ?
-+

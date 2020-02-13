@@ -2,7 +2,6 @@ package com.swaap.controller;
 
 import java.util.List;
 
-import com.swaap.service.EmailSendService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,9 +12,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.swaap.model.BranchVO;
-import com.swaap.model.CityVO;
+import com.swaap.model.LoginVO;
 import com.swaap.service.BranchService;
 import com.swaap.service.CityService;
+import com.swaap.service.EmailSendService;
+import com.swaap.service.LoginService;
 import com.swaap.service.StateService;
 
 @Controller
@@ -31,6 +32,9 @@ public class BranchController {
 
 	@Autowired
 	EmailSendService emailSendService;
+	
+	@Autowired
+	LoginService loginService;
 	
 	@RequestMapping(value="mall/addBranch", method=RequestMethod.GET)
 	public ModelAndView addBranch(Model model)
@@ -49,6 +53,12 @@ public class BranchController {
 	{
 		branchVO.setStatus(true);
 		this.branchService.insertBranch(branchVO);
+		LoginVO loginVO=new LoginVO();
+		loginVO.setPassword(branchVO.getPassword());
+		loginVO.setRole("ROLE_BRANCH");
+		loginVO.setUsername(branchVO.getUserName());
+		loginVO.setStatus(true);
+		this.loginService.insertLogin(loginVO);
 //		emailSendService.sendMail(branchVO.getUserName(),"User added","your  password is: "+branchVO.getPassword());
 		return new ModelAndView("redirect:/mall/viewBranch");
 	}
