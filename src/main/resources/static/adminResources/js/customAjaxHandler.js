@@ -1,4 +1,4 @@
-const ajaxAPILink = 'http://localhost:8081/api/';
+const ajaxAPILink = 'http://localhost:8080/api/';
 
 const CITY_OPTION_ID = 'selectCityOptions';
 const SUB_CATEGORY_OPTION_ID = 'selectSubCategoryOption';
