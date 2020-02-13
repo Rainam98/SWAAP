@@ -10,7 +10,6 @@
     <meta name="author" content="">
 
     <title>Add Offer</title>
-
     <!-- Main Styles -->
     <link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/style.css">
     <link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/custom.css">
@@ -52,7 +51,8 @@
                         <h4 class="box-title">Add Offer</h4>
                         <div class="form-group">
                             <label for="category" class=" control-label">Select Type</label><br>
-                            <input onclick="renderChanges(this);" type="radio" value="category" name="offType"
+                            <input onclick="renderChanges(this);updateCategories();" type="radio" value="category"
+                                   name="offType"
                                    id="category" required="true" checked="checked">
                             <label>Category</label>&nbsp&nbsp&nbsp&nbsp&nbsp
                             <input onclick="renderChanges(this);updateSubCategories({value:'-1'});" type="radio"
@@ -86,7 +86,7 @@
                         <div class="form-group" id="categorySection">
                             <label for="categoryName" name="scatnme" class="control-label">Category</label>
                             <div class="form-group margin-bottom-20">
-                                <f:select onclick="updateSubCategories(this)" class="form-control" path="categoryVO.id"
+                                <f:select class="form-control" path="categoryVO.id"
                                           placeholder="Select Category"
                                           id="selectCategoryOption">
                                     <f:option value="-1"> select category </f:option>
@@ -100,7 +100,7 @@
                         <div class="form-group" id="subCategorySection">
                             <label for="subCategoryName" name="scatnme" class="control-label">Sub-Category</label>
                             <div class="form-group margin-bottom-20">
-                                <f:select onclick="updateProducts(this)" class="form-control" path="subCategoryVO.id"
+                                <f:select class="form-control" path="subCategoryVO.id"
                                           placeholder="Select Sub-Category"
                                           id="selectSubCategoryOption">
                                     <f:option value="-1"> select sub-category </f:option>
@@ -176,10 +176,11 @@
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="<%=request.getContextPath()%>/adminResources/js/customAjaxHandler.js"></script>
+<script>renderChanges({id: 'category'})</script>
 
 <script src="<%=request.getContextPath()%>/adminResources/js/jquery.min.js"></script>
 <script src="<%=request.getContextPath()%>/adminResources/js/modernizr.min.js"></script>
-<script src="<%=request.getContextPath()%>/adminResources/js/popper.min"></script>
+<script src="<%=request.getContextPath()%>/adminResources/js/popper.min.js"></script>
 <script src="<%=request.getContextPath()%>/adminResources/js/bootstrap.min.js"></script>
 <script src="<%=request.getContextPath()%>/adminResources/js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="<%=request.getContextPath()%>/adminResources/js/nprogress.js"></script>

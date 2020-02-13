@@ -44,7 +44,8 @@
             <div class="col-12">
                 <div class="box-content">
 
-                    <f:form data-toggle="validator" modelAttribute="branchVO" method="post" action="saveBranch">
+                    <f:form onSubmit="return validateEmail();" data-toggle="validator" modelAttribute="branchVO"
+                            method="post" action="saveBranch">
 
                         <h1 class="page-title">Add Branch</h1>
                         <div class="form-group">
@@ -73,19 +74,20 @@
                         <div class="form-group">
                             <f:hidden path="id"/>
                             <label for="inputComplaintSubject" class="control-label">Branch Name</label>
-                            <f:input path="branchName" name="brnnme" class="form-control" id="inputName"
+                            <f:input path="branchName" name="brnnme" class="form-control"
                                      placeholder="Enter Branch Name" required="true"/>
                         </div>
                         <div class="form-group">
                             <f:hidden path="id"/>
                             <label for="inputComplaintSubject" class="control-label">User Name</label>
-                            <f:input path="userName" name="unme" class="form-control" id="inputName"
+                            <f:input onblur="validateEmail()" path="userName" name="unme" class="form-control"
+                                     id="username"
                                      placeholder="Enter User Name" required="true"/>
                         </div>
                         <div class="form-group">
                             <f:hidden path="id"/>
                             <label for="inputComplaintSubject" class="control-label">Password</label>
-                            <f:password path="password" name="pwd" class="form-control" id="inputName"
+                            <f:password path="password" name="pwd" class="form-control"
                                         placeholder="Enter Password" required="true"/>
                         </div>
 
@@ -114,6 +116,7 @@
 <!--
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
+<script src="<%=request.getContextPath()%>/adminResources/js/customValidator.js"></script>
 <script src="<%=request.getContextPath()%>/adminResources/js/customAjaxHandler.js"></script>
 
 

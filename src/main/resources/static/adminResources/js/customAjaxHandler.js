@@ -21,7 +21,7 @@ async function getCities(stateId) {
 
 async function getSubCategories(categoryId) {
     let apiUrlPath = 'subCategoryList/' + categoryId;
-    if (categoryId == null || categoryId == "" || categoryId == "-1")
+    if (categoryId == null || categoryId == "-1" || categoryId == "")
         apiUrlPath = 'allSubCategoryList/';
     return fetch(ajaxAPILink + apiUrlPath)
         .then(result => {
@@ -31,10 +31,17 @@ async function getSubCategories(categoryId) {
 
 async function getProducts(subCategoryId) {
     let apiUrlPath = 'productList/' + subCategoryId;
-    if (subCategoryId == null || subCategoryId == "" || subCategoryId == "-1") {
+    if (subCategoryId == null || subCategoryId == "-1" || subCategoryId == "") {
         apiUrlPath = 'allProductList/';
     }
     return fetch(ajaxAPILink + apiUrlPath)
+        .then(result => {
+            return result.json();
+        }).catch(error => document.getElementById(PRODUCT_OPTION_ID).innerHtml = '');
+}
+
+async function getAllCategories() {
+    return fetch(ajaxAPILink + 'allCategoryList/')
         .then(result => {
             return result.json();
         }).catch(error => document.getElementById(CATEGORY_OPTION_ID).innerHtml = '');
@@ -55,6 +62,23 @@ function updateCities(option) {
             let cityId = dataCities[i].id;
             let cityName = dataCities[i].cityName;
             selectCityOptions.innerHTML += '<option value="' + cityId + '">' + cityName + '</option>';
+        }
+    });
+}
+
+function updateCategories() {
+    let dataCategories;
+
+    getAllCategories().then(data => {
+        dataCategories = data;
+        let len = Object.keys(dataCategories).length;
+
+        let selectCategoryOption = document.getElementById(CATEGORY_OPTION_ID);
+        selectCategoryOption.innerHTML = '';
+        for (let i = 0; i < len; i++) {
+            let categoryId = dataCategories[i].id;
+            let categoryName = dataCategories[i].categoryName;
+            selectCategoryOption.innerHTML += '<option value="' + categoryId + '">' + categoryName + '</option>';
         }
     });
 }
@@ -108,20 +132,23 @@ function renderChanges(selectType) {
     switch (selectType.id) {
         case 'category':
             categorySection.style.display = 'block';
-            subCategorySection.style.display = 'block';
-            productSection.style.display = 'block';
+            subCategorySection.style.display = 'none';
+            selectSubCategoryOption.value = "-1";
+            selectProductOption.value = "-1";
+            productSection.style.display = 'none';
             break;
         case 'subCategory' :
             categorySection.style.display = 'none';
-            selectCategoryOption.value = "";
+            selectCategoryOption.value = "-1";
             subCategorySection.style.display = 'block';
-            productSection.style.display = 'block';
+            productSection.style.display = 'none';
+            selectProductOption.value = "-1";
             break;
         case 'product' :
             categorySection.style.display = 'none';
-            selectCategoryOption = "";
             subCategorySection.style.display = 'none';
-            selectSubCategoryOption = "";
+            selectCategoryOption.value = "-1";
+            selectSubCategoryOption.value = "-1";
             productSection.style.display = 'block';
             break;
     }
