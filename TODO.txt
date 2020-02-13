@@ -20,3 +20,8 @@ Ritu
 Tanay
 +manage offer
 +add product
+
+
+Doubts
++before adding to login the users must be registered or not ?
++

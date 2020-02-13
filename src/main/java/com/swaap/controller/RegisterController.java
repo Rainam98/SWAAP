@@ -19,14 +19,12 @@ public class RegisterController {
 	@Autowired LoginService loginService;
 	@RequestMapping(value = "/register", method = RequestMethod.GET)
 	public ModelAndView loadRegister(Model model) {
-		System.out.println("dfsdf");
 		model.addAttribute("registerVO",new RegisterVO());
-		System.out.println("dfsdf");
 		return new ModelAndView("register");
 	}
 	
 	@RequestMapping(value = "/insert", method = RequestMethod.POST)
-	public ModelAndView goToHomePage(@ModelAttribute RegisterVO registerVO,LoginVO loginVO) {
+	public ModelAndView goToHomePage(@ModelAttribute RegisterVO registerVO,@ModelAttribute LoginVO loginVO) {
 
 		loginVO.setUsername(registerVO.getLoginVO().getUsername());
 		loginVO.setPassword(registerVO.getLoginVO().getPassword());
