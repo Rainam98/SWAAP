@@ -1,7 +1,5 @@
 package com.swaap.configuration;
 
-import javax.sql.DataSource;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -13,15 +11,17 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.web.authentication.rememberme.InMemoryTokenRepositoryImpl;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 
+import javax.sql.DataSource;
+
 @Configuration
 @EnableWebSecurity
-public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
+public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-/*    @Autowired
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
-*/
+    /*    @Autowired
+        private BCryptPasswordEncoder bCryptPasswordEncoder;
+    */
     @Autowired
-	CustomizeAuthenticationSuccessHandler customizeAuthenticationSuccessHandler;
+    CustomizeAuthenticationSuccessHandler customizeAuthenticationSuccessHandler;
  
     @Autowired
     private DataSource dataSource;
@@ -51,14 +51,14 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
         http.csrf().disable();
  
         // The pages does not require login
-        http.authorizeRequests().antMatchers("/", "/login","/api", "/logout").permitAll();
+        http.authorizeRequests().antMatchers("/", "/login", "/logout").permitAll();
 
         // /userInfo page requires login as ROLE_USER or ROLE_ADMIN.
         // If no login, it will redirect to /login page.
         http.authorizeRequests().antMatchers("/branch/**").access("hasAnyRole('ROLE_BRANCH')");
  
         // For ADMIN only.
-        http.authorizeRequests().antMatchers("/mall/**").access("hasRole('ROLE_MALL')");
+        http.authorizeRequests().antMatchers("/mall/**"/*,"/api/**"*/).access("hasRole('ROLE_MALL')");
         
         http.authorizeRequests().antMatchers("/user/**").access("hasRole('ROLE_USER')");
  

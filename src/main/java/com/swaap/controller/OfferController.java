@@ -1,7 +1,10 @@
 package com.swaap.controller;
 
-import java.util.List;
-
+import com.swaap.model.OfferVO;
+import com.swaap.service.CategoryService;
+import com.swaap.service.OfferService;
+import com.swaap.service.ProductService;
+import com.swaap.service.SubCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,11 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.swaap.model.OfferVO;
-import com.swaap.service.CategoryService;
-import com.swaap.service.OfferService;
-import com.swaap.service.ProductService;
-import com.swaap.service.SubCategoryService;
+import java.util.List;
 
 @Controller
 public class OfferController {
@@ -45,9 +44,12 @@ public class OfferController {
 	}
 	
 	@RequestMapping(value="mall/saveOffer", method=RequestMethod.POST)
-	public ModelAndView saveOffer(@ModelAttribute OfferVO offerVO)
-	{
+	public ModelAndView saveOffer(@ModelAttribute OfferVO offerVO) {
 		offerVO.setStatus(true);
+		if (offerVO.getCategoryVO().getId() == -1)
+			offerVO.setCategoryVO(null);
+		if (offerVO.getSubCategoryVO().getId() == -1)
+			offerVO.setSubCategoryVO(null);
 		this.offerService.insertOffer(offerVO);
 		return new ModelAndView("redirect:/mall/viewOffer");
 	}
