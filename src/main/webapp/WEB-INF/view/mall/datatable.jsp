@@ -1745,25 +1745,25 @@
 	</div><!--/#wrapper -->
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
-		<script src="adminResources/js/html5shiv.min.js"></script>
-		<script src="adminResources/js/respond.min.js"></script>
+	<script src="adminResources/js/html5shiv.min.js"></script>
+	<script src="adminResources/js/respond.min.js"></script>
 	<![endif]-->
 	<!-- 
 		================================================== -->
-		<!-- Placed at the end of the document so the pages load faster -->
-		<script src="adminResources/js/jquery.min.js"></script>
-		<script src="adminResources/js/modernizr.min.js"></script>
-		<script src="adminResources/js/popper.min"></script>
-		<script src="adminResources/js/bootstrap.min.js"></script>
-		<script src="adminResources/js/jquery.mCustomScrollbar.concat.min.js"></script>
-		<script src="adminResources/js/nprogress.js"></script>
-		<script src="adminResources/js/sweetalert.min.js"></script>
-		<script src="adminResources/js/waves.min.js"></script>
-		<!-- Full Screen Plugin -->
-		<script src="adminResources/js/jquery.fullscreen-min.js"></script>
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="adminResources/js/jquery.min.js"></script>
+	<script src="adminResources/js/modernizr.min.js"></script>
+	<script src="adminResources/js/popper.min.js"></script>
+	<script src="adminResources/js/bootstrap.min.js"></script>
+	<script src="adminResources/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="adminResources/js/nprogress.js"></script>
+	<script src="adminResources/js/sweetalert.min.js"></script>
+	<script src="adminResources/js/waves.min.js"></script>
+	<!-- Full Screen Plugin -->
+	<script src="adminResources/js/jquery.fullscreen-min.js"></script>
 
-		<!-- Data Tables -->
-		<script src="adminResources/js/jquery.dataTables.min.js"></script>
+	<!-- Data Tables -->
+	<script src="adminResources/js/jquery.dataTables.min.js"></script>
 		<script src="adminResources/js/dataTables.bootstrap4.min.js"></script>
 		<script src="adminResources/js/dataTables.responsive.min.js"></script>
 		<script src="adminResources/js/responsive.bootstrap.min.js"></script>
