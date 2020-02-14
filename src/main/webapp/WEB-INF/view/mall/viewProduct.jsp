@@ -55,7 +55,7 @@
 							<!-- /.sub-menu -->
 						</div>
 						<!-- /.dropdown js__dropdown -->
-						<table id="example" class="table table-striped table-bordered display" style="width:100%">
+						<table id="example" class="table table-striped table-bordered display" style="width:100% ; height:100%">
 							<thead>
 								<tr>
 									<th>ID</th>
@@ -67,9 +67,9 @@
 									<th>Product Weight</th>
 									<th>Product Price</th>
 									<th>Product Quantity</th>
-									<th>Barcode File</th>
+									<th>Product Image</th>
 									<th>Delete</th>
-									<th>Update</th>
+									<th >Update</th>
 								</tr>
 							</thead>
 							<tfoot>
@@ -83,7 +83,7 @@
 									<th>Product Weight</th>
 									<th>Product Price</th>
 									<th>Product Quantity</th>
-									<th>Barcode File</th>
+									<th>Product Image</th>
 									<th>Delete</th>
 									<th>Update</th>
 								</tr>
@@ -100,7 +100,7 @@
 										<td>${productVariable.productWeight}</td>
 										<td>${productVariable.productPrice}</td>
 										<td>${productVariable.productQuantity}</td>
-										<td></td>
+										<td>${productVariable.productFilePath }</td>
 										<td><a  href="deleteSubCategory?findById=${productVariable.id}"><i class="menu-icon fa fa-trash-alt" aria-hidden="true"></i></a></td>
 										<td><a  href="updateSubCategory?findById=${productVariable.id}"><i class="menu-icon fa fa-edit" aria-hidden="true"></i></a></td>
 									</tr>

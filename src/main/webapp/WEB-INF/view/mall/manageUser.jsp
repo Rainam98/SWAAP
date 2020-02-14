@@ -78,7 +78,7 @@
 							<tbody>
 							<c:forEach items="${userList}" var="userVariable">
 								<tr>
-									<td>${userVariable.id}</td>
+									<td>${userVariable.registerId}</td>
 									<td>${userVariable.name}</td>
 									<td>${userVariable.mobileNumber}</td>
 									<td>${userVariable.loginVO.username}</td>

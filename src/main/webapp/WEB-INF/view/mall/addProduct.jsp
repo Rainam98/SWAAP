@@ -44,7 +44,7 @@
         <div class="row small-spacing">
             <div class="col-12">
                 <div class="box-content">
-                    <f:form data-toggle="validator" modelAttribute="productVO" method="post" action="saveProduct">
+                    <f:form data-toggle="validator" modelAttribute="productVO" method="post" action="saveProduct" enctype="multipart/form-data">
                         <h1 class="page-title">Add Product</h1>
                         <div class="form-group">
                             <label for="categoryName" name="brn" class="control-label">Branch Location</label>
@@ -112,7 +112,7 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputFile">Product Image Input</label><br>
-                            <input type="file" name="img" id="exampleInputFile">
+                            <input type="file" name="file" id="exampleInputFile">
                             <p class="help-block">Add Product Image</p>
                         </div>
 

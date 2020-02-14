@@ -46,7 +46,7 @@
 			<div class="col-12">
 				<div class="box-content">
 				<%@taglib prefix="f" uri="http://www.springframework.org/tags/form"%>
-					<f:form data-toggle="validator" action="insertComplain" modelAttribute="complainVO">
+					<f:form data-toggle="validator" action="insertComplain" modelAttribute="complainVO" enctype="multipart/form-data">
 					<h1 class="page-title">ADD COMPLAIN</h1>
 						<div class="form-group">
 							<label for="inputName" class="control-label">Complain Subject: </label>
@@ -59,7 +59,7 @@
 						</div>
 						<div class="form-group">
 							<label for="exampleInputFile">Attach file: </label>
-							<input type="file" id="exampleInputFile"><br>
+							<input type="file" name="file" id="exampleInputFile"><br>
 						</div>
 						<div class="form-group">
 							<button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>

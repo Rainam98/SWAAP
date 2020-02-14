@@ -1,5 +1,8 @@
 package com.swaap.dao;
 
+import java.util.List;
+
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,5 +20,15 @@ public class RegisterDAOImp implements RegisterDAO {
 	public void insertRegister(RegisterVO registerVO) {
 		Session session = this.sessionFactory.getCurrentSession();
 		session.save(registerVO);
+	}
+	
+	@Override
+	public List searchUser() {
+		// TODO Auto-generated method stub
+		Session session = sessionFactory.openSession();
+		Query q=session.createQuery("from RegisterVO where status=true and loginVO.role='ROLE_USER'");
+		List users=q.list();
+		return users;
+	
 	}
 }

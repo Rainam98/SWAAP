@@ -1,5 +1,10 @@
 package com.swaap.controller;
 
+import java.io.BufferedOutputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +14,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.swaap.model.CategoryVO;
@@ -33,6 +39,7 @@ public class ProductController {
 	@Autowired
 	BranchService branchService;
 	
+	private static String UPLOAD_FOLDER = "D:\\Imp\\projectworkspace\\SWAAP\\src\\main\\resources\\static\\userResources\\image\\product";
 	@RequestMapping(value="mall/addProduct", method=RequestMethod.GET)
 	public ModelAndView addProduct(Model model)
 	{
@@ -47,9 +54,23 @@ public class ProductController {
 	}
 	
 	@RequestMapping(value="mall/saveProduct", method=RequestMethod.POST)
-	public ModelAndView saveProduct(@ModelAttribute ProductVO productVO)
+	public ModelAndView saveProduct(@ModelAttribute ProductVO productVO, @RequestParam("file") MultipartFile file)
 	{
 		productVO.setStatus(true);
+		String fileName = productVO.getProductName();
+		try {
+			byte[] b = file.getBytes();
+			Path path = Paths.get(UPLOAD_FOLDER + fileName);
+			BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(new FileOutputStream(path+fileName));
+			bufferedOutputStream.write(b);
+			productVO.setProductFilePath(path.toString()); 
+			productVO.setProductFileName(fileName);	
+			bufferedOutputStream.flush();
+			bufferedOutputStream.close();
+		
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		this.productService.insertProduct(productVO);
 		return new ModelAndView("redirect:/mall/viewProduct");
 	}

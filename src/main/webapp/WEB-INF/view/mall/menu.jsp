@@ -31,7 +31,7 @@
 					<a class="waves-effect" href="index"><i class="menu-icon fa fa-home"></i><span>Dashboard</span></a>
 				</li>
 				<li>
-					<a class="waves-effect" href="#"><i class="menu-icon far fa-user" aria-hidden="true"></i><span>Manage User</span></a>
+					<a class="waves-effect" href="viewUser"><i class="menu-icon far fa-user" aria-hidden="true"></i><span>Manage User</span></a>
 					
 					<!-- /.sub-menu js__content -->
 				</li>
