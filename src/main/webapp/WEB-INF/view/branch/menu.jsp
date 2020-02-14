@@ -1,6 +1,6 @@
 <div class="main-menu">
 	<header class="header">
-		<a href="index.html" class="logo">NinjaTeam</a>
+		<a href="index.html" class="logo">SWAAP Team</a>
 		<button type="button" class="button-close fa fa-times js__menu_close"></button>
 		<div class="user">
 			<a href="#" class="avatar"><img src="<%=request.getContextPath()%>/adminResources/image/avatar.png" alt=""><span class="status online"></span></a>
@@ -27,9 +27,6 @@
 			<h5 class="title">Navigation</h5>
 			<!-- /.title -->
 			<ul class="menu js__accordion">
-				<li>
-					<a class="waves-effect" href="index.html"><i class="menu-icon fa fa-home"></i><span>Dashboard</span></a>
-				</li>
 				<li>
 					<a class="waves-effect" href="viewCategory"><i class="menu-icon fa fa-shopping-bag" aria-hidden="true"></i><span>Category</span></a>
 				</li>
