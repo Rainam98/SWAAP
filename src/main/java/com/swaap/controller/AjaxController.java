@@ -99,4 +99,14 @@ public class AjaxController {
         return new ResponseEntity<List<ProductVO>>(products, HttpStatus.OK);
     }
 
+    @GetMapping("toggleUser/{userId}/{enabled}")
+    public ResponseEntity toggleUser(@PathVariable int userId, @PathVariable boolean enabled) {
+        Session session = sessionFactory.openSession();
+        Query q = session.createQuery(" update LoginVO set enabled=:enabled where id=:userId");
+        q.setParameter("enabled", enabled ? "1" : "0");
+        q.setParameter("userId", userId);
+        int updateCount = q.executeUpdate();
+        return new ResponseEntity(updateCount == 1 ? HttpStatus.OK : HttpStatus.NOT_ACCEPTABLE);
+    }
+
 }

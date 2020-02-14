@@ -11,6 +11,9 @@
 
 	<title>View Users</title>
 
+	<!-- Custom Styles -->
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/custom-switch-toggle.css">
+
 	<!-- Main Styles -->
 	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/style.css">
 	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/custom.css">
@@ -82,10 +85,15 @@
 									<td>${userVariable.name}</td>
 									<td>${userVariable.mobileNumber}</td>
 									<td>${userVariable.loginVO.username}</td>
-									<td></td>								
+									<td>
+										<label class="switch">
+											<input onclick="toggleUser(${userVariable.loginVO.loginId},this.checked)"
+												   type="checkbox" ${userVariable.loginVO.enabled.trim().equals("1")?"checked":""}>
+											<span class="slider round"></span>
+										</label>
+									</td>
 								</tr>
-									
-								</c:forEach>
+							</c:forEach>
 							</tbody>
 						</table>
 					</div>
@@ -101,6 +109,8 @@
 		<!-- /.main-content -->
 	</div><!--/#wrapper -->
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<script src="<%=request.getContextPath()%>/adminResources/js/customAjaxHandler.js"></script>
+
 	<!--[if lt IE 9]>
 		<script src="<%=request.getContextPath()%>/adminResources/js/html5shiv.min.js"></script>
 		<script src="<%=request.getContextPath()%>/adminResources/js/respond.min.js"></script>
@@ -127,7 +137,7 @@
 		<script src="<%=request.getContextPath()%>/adminResources/js/datatables.demo.min.js"></script>
 
 		<script src="<%=request.getContextPath()%>/adminResources/js/main.min.js"></script>
-<script src="<%=request.getContextPath()%>/adminResources/js/mycommon.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/mycommon.js"></script>
 		<script src="<%=request.getContextPath()%>/adminResources/js/color-switcher.min.js"></script>
 	</body>
 	</html>
