@@ -46,7 +46,7 @@
 			<div class="col-12">
 				<div class="box-content">
 				<%@taglib prefix="f" uri="http://www.springframework.org/tags/form"%>
-					<f:form data-toggle="validator" action="insertComplain" modelAttribute="complainVO">
+					<f:form data-toggle="validator" action="insertComplain" modelAttribute="complainVO" enctype="multipart/form-data">
 					<h1 class="page-title">ADD COMPLAIN</h1>
 						<div class="form-group">
 							<label for="inputName" class="control-label">Complain Subject: </label>
@@ -59,7 +59,7 @@
 						</div>
 						<div class="form-group">
 							<label for="exampleInputFile">Attach file: </label>
-							<input type="file" id="exampleInputFile"><br>
+							<input type="file" name="file" id="exampleInputFile"><br>
 						</div>
 						<div class="form-group">
 							<button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
@@ -82,20 +82,20 @@
 	<![endif]-->
 	<!-- 
 		================================================== -->
-		<!-- Placed at the end of the document so the pages load faster -->
-		<script src="<%=request.getContextPath()%>/adminResources/js/jquery.min.js"></script>
-		<script src="<%=request.getContextPath()%>/adminResources/js/modernizr.min.js"></script>
-		<script src="<%=request.getContextPath()%>/adminResources/js/popper.min"></script>
-		<script src="<%=request.getContextPath()%>/adminResources/js/bootstrap.min.js"></script>
-		<script src="<%=request.getContextPath()%>/adminResources/js/jquery.mCustomScrollbar.concat.min.js"></script>
-		<script src="<%=request.getContextPath()%>/adminResources/js/nprogress.js"></script>
-		<script src="<%=request.getContextPath()%>/adminResources/js/sweetalert.min.js"></script>
-		<script src="<%=request.getContextPath()%>/adminResources/js/waves.min.js"></script>
-		<!-- Full Screen Plugin -->
-		<script src="<%=request.getContextPath()%>/adminResources/js/jquery.fullscreen-min.js"></script>
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="<%=request.getContextPath()%>/adminResources/js/jquery.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/modernizr.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/popper.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/bootstrap.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/nprogress.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/sweetalert.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/waves.min.js"></script>
+	<!-- Full Screen Plugin -->
+	<script src="<%=request.getContextPath()%>/adminResources/js/jquery.fullscreen-min.js"></script>
 
-		<!-- Data Tables -->
-		<script src="<%=request.getContextPath()%>/adminResources/js/jquery.dataTables.min.js"></script>
+	<!-- Data Tables -->
+	<script src="<%=request.getContextPath()%>/adminResources/js/jquery.dataTables.min.js"></script>
 		<script src="<%=request.getContextPath()%>/adminResources/js/dataTables.bootstrap4.min.js"></script>
 		<script src="<%=request.getContextPath()%>/adminResources/js/dataTables.responsive.min.js"></script>
 		<script src="<%=request.getContextPath()%>/adminResources/js/responsive.bootstrap.min.js"></script>

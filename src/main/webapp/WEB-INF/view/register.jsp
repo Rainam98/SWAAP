@@ -9,9 +9,10 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
+	<script src="adminResources/js/customValidator.js"></script>
 	<title>Home</title>
 	<link rel="stylesheet" href="adminResources/css/style.css">
-<link rel="stylesheet" href="adminResources/css/custom.css">
+	<link rel="stylesheet" href="adminResources/css/custom.css">
 
 	<!-- Waves Effect -->
 	<link rel="stylesheet" href="adminResources/css/waves.min.css">
@@ -22,23 +23,37 @@
 
 <div id="single-wrapper">
 <%@taglib prefix="f" uri="http://www.springframework.org/tags/form"%>
-<f:form class="frm-single" data-toggle="validator" action="insert" modelAttribute="registerVO" method="post">
+	<f:form class="frm-single" data-toggle="validator" action="insert" modelAttribute="registerVO" method="post">
 		<div class="inside">
 			<div class="title"><strong>SWAAP</strong></div>
 			<!-- /.title -->
 			<div class="frm-title">Register</div>
 			<!-- /.frm-input -->
-			<div class="frm-input"><f:input path="name" placeholder="Name" class="frm-inp" required="true"/><i class="fa fa-user-circle frm-ico"></i></div>
+			<div class="frm-input"><f:input onSubmit="return validateEmail()" path="name" placeholder="Name"
+											class="frm-inp" required="true"/><i class="fa fa-user-circle frm-ico"></i>
+			</div>
 			<!-- /.frm-input -->
-			<div class="frm-input radio"><f:radiobutton path="gender" value="Male" name="underwear" id="underwear1" class="frm-inp" required="true"/><label for="underwear1">Male</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<f:radiobutton path="gender" value="Female" name="underwear" id="underwear2" class="frm-inp" required="true"/><label for="underwear2">Female</label></div>
+			<div class="frm-input radio"><f:radiobutton path="gender" value="Male" name="underwear" id="underwear1"
+														class="frm-inp" required="true"/><label
+					for="underwear1">Male</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<f:radiobutton
+					path="gender" value="Female" name="underwear" id="underwear2" class="frm-inp"
+					required="true"/><label for="underwear2">Female</label></div>
 			<!-- /.frm-input -->
-			<div class="frm-input"><f:input path="mobileNumber"  placeholder="Contact Number" class="frm-inp" required="true"/><i class="fa fa-phone frm-ico"></i></div>
+			<div class="frm-input"><f:input path="mobileNumber" placeholder="Contact Number" class="frm-inp"
+											required="true"/><i class="fa fa-phone frm-ico"></i></div>
 			<!-- /.frm-input -->
-			<div class="frm-input"><f:input path="loginVO.username"  placeholder="Username" class="frm-inp" data-error="Bruh, that email address is invalid" required="true"/><i class="fa fa-user frm-ico"></i></div>
+			<div class="frm-input"><f:input onblur="validateEmail()" id="username" path="loginVO.username"
+											placeholder="Username" class="frm-inp"
+											data-error="Bruh, that email address is invalid" required="true"/><i
+					class="fa fa-user frm-ico"></i></div>
 			<!-- /.frm-input -->
-			<div class="frm-input"><f:password path="loginVO.password" placeholder="Password" data-minlength="8" id="inputPassword" class="frm-inp" required="true"/><i class="fa fa-lock frm-ico"></i></div>
+			<div class="frm-input"><f:password path="loginVO.password" placeholder="Password" data-minlength="8"
+											   id="inputPassword" class="frm-inp" required="true"/><i
+					class="fa fa-lock frm-ico"></i></div>
 			<!-- /.frm-input -->
-			<div class="frm-input"><input type="password" placeholder="Confirm Password" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="Whoops, these don't match" class="frm-inp" required="true"/><i class="fa fa-lock frm-ico"></i></div>
+			<div class="frm-input"><input type="password" placeholder="Confirm Password" id="inputPasswordConfirm"
+										  data-match="#inputPassword" data-match-error="Whoops, these don't match"
+										  class="frm-inp" required="true"/><i class="fa fa-lock frm-ico"></i></div>
 			<!-- /.frm-input -->
 			<!-- /.clearfix -->
 			<button type="submit" class="frm-submit">Register<i class="fa fa-arrow-circle-right"></i></button>
@@ -64,21 +79,22 @@
 </div><!--/#single-wrapper -->
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-		<script src="adminResources/js/html5shiv.min.js"></script>
-		<script src="adminResources/js/respond.min.js"></script>
-	<![endif]-->
-	<!-- 
-	================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="adminResources/js/jquery.min.js"></script>
-	<script src="adminResources/js/modernizr.min.js"></script>
-<script src="adminResources/js/popper.min.js"></script>
-	<script src="adminResources/js/bootstrap.min.js"></script>
-	<script src="adminResources/js/nprogress.js"></script>
-	<script src="adminResources/js/waves.min.js"></script>
+<!--[if lt IE 9]>
+<script src="adminResources/js/html5shiv.min.js"></script>
+<script src="adminResources/js/respond.min.js"></script>
 
-	<script src="adminResources/js/main.min.js"></script>
+<![endif]-->
+<!--
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="adminResources/js/jquery.min.js"></script>
+<script src="adminResources/js/modernizr.min.js"></script>
+<script src="adminResources/js/popper.min.js"></script>
+<script src="adminResources/js/bootstrap.min.js"></script>
+<script src="adminResources/js/nprogress.js"></script>
+<script src="adminResources/js/waves.min.js"></script>
+
+<script src="adminResources/js/main.min.js"></script>
 <script src="adminResources/js/mycommon.js"></script>
 </body>
 </html>

@@ -55,7 +55,7 @@
 							<!-- /.sub-menu -->
 						</div>
 						<!-- /.dropdown js__dropdown -->
-						<table id="example" class="table table-striped table-bordered display" style="width:100%">
+						<table id="example" class="table table-striped table-bordered display" style="width:100% ; height:100%">
 							<thead>
 								<tr>
 									<th>ID</th>
@@ -67,9 +67,9 @@
 									<th>Product Weight</th>
 									<th>Product Price</th>
 									<th>Product Quantity</th>
-									<th>Barcode File</th>
+									<th>Product Image</th>
 									<th>Delete</th>
-									<th>Update</th>
+									<th >Update</th>
 								</tr>
 							</thead>
 							<tfoot>
@@ -83,7 +83,7 @@
 									<th>Product Weight</th>
 									<th>Product Price</th>
 									<th>Product Quantity</th>
-									<th>Barcode File</th>
+									<th>Product Image</th>
 									<th>Delete</th>
 									<th>Update</th>
 								</tr>
@@ -100,7 +100,7 @@
 										<td>${productVariable.productWeight}</td>
 										<td>${productVariable.productPrice}</td>
 										<td>${productVariable.productQuantity}</td>
-										<td></td>
+										<td>${productVariable.productFilePath }</td>
 										<td><a  href="deleteSubCategory?findById=${productVariable.id}"><i class="menu-icon fa fa-trash-alt" aria-hidden="true"></i></a></td>
 										<td><a  href="updateSubCategory?findById=${productVariable.id}"><i class="menu-icon fa fa-edit" aria-hidden="true"></i></a></td>
 									</tr>
@@ -126,20 +126,20 @@
 	<![endif]-->
 	<!-- 
 		================================================== -->
-		<!-- Placed at the end of the document so the pages load faster -->
-		<script src="<%=request.getContextPath()%>/adminResources/js/jquery.min.js"></script>
-		<script src="<%=request.getContextPath()%>/adminResources/js/modernizr.min.js"></script>
-		<script src="<%=request.getContextPath()%>/adminResources/js/popper.min"></script>
-		<script src="<%=request.getContextPath()%>/adminResources/js/bootstrap.min.js"></script>
-		<script src="<%=request.getContextPath()%>/adminResources/js/jquery.mCustomScrollbar.concat.min.js"></script>
-		<script src="<%=request.getContextPath()%>/adminResources/js/nprogress.js"></script>
-		<script src="<%=request.getContextPath()%>/adminResources/js/sweetalert.min.js"></script>
-		<script src="<%=request.getContextPath()%>/adminResources/js/waves.min.js"></script>
-		<!-- Full Screen Plugin -->
-		<script src="<%=request.getContextPath()%>/adminResources/js/jquery.fullscreen-min.js"></script>
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="<%=request.getContextPath()%>/adminResources/js/jquery.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/modernizr.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/popper.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/bootstrap.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/nprogress.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/sweetalert.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/waves.min.js"></script>
+	<!-- Full Screen Plugin -->
+	<script src="<%=request.getContextPath()%>/adminResources/js/jquery.fullscreen-min.js"></script>
 
-		<!-- Data Tables -->
-		<script src="<%=request.getContextPath()%>/adminResources/js/jquery.dataTables.min.js"></script>
+	<!-- Data Tables -->
+	<script src="<%=request.getContextPath()%>/adminResources/js/jquery.dataTables.min.js"></script>
 		<script src="<%=request.getContextPath()%>/adminResources/js/dataTables.bootstrap4.min.js"></script>
 		<script src="<%=request.getContextPath()%>/adminResources/js/dataTables.responsive.min.js"></script>
 		<script src="<%=request.getContextPath()%>/adminResources/js/responsive.bootstrap.min.js"></script>

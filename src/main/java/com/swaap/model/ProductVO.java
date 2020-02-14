@@ -32,11 +32,11 @@ public class ProductVO {
 	@Column(name="product_description")
 	private String productDescription;
 	
-	@Column(name="barcode_file_name")
-	private String barcodeFileName;
+	@Column(name="product_file_name")
+	private String productFileName;
 	
-	@Column(name="barcode_file_path")
-	private String barcodeFilePath;
+	@Column(name="product_file_path")
+	private String productFilePath;
 	
 	@Column(name="status")
 	private boolean status=false;
@@ -93,20 +93,20 @@ public class ProductVO {
 		this.productQuantity = productQuantity;
 	}
 
-	public String getBarcodeFileName() {
-		return barcodeFileName;
+	public String getProductFileName() {
+		return productFileName;
 	}
 
-	public void setBarcodeFileName(String barcodeFileName) {
-		this.barcodeFileName = barcodeFileName;
+	public void setProductFileName(String productFileName) {
+		this.productFileName = productFileName;
 	}
 
-	public String getBarcodeFilePath() {
-		return barcodeFilePath;
+	public String getProductFilePath() {
+		return productFilePath;
 	}
 
-	public void setBarcodeFilePath(String barcodeFilePath) {
-		this.barcodeFilePath = barcodeFilePath;
+	public void setProductFilePath(String productFilePath) {
+		this.productFilePath = productFilePath;
 	}
 
 	public boolean isStatus() {

@@ -1750,20 +1750,20 @@
 	<![endif]-->
 	<!-- 
 		================================================== -->
-		<!-- Placed at the end of the document so the pages load faster -->
-		<script src="<%=request.getContextPath()%>/adminResources/js/jquery.min.js"></script>
-		<script src="<%=request.getContextPath()%>/adminResources/js/modernizr.min.js"></script>
-		<script src="<%=request.getContextPath()%>/adminResources/js/popper.min"></script>
-		<script src="<%=request.getContextPath()%>/adminResources/js/bootstrap.min.js"></script>
-		<script src="<%=request.getContextPath()%>/adminResources/js/jquery.mCustomScrollbar.concat.min.js"></script>
-		<script src="<%=request.getContextPath()%>/adminResources/js/nprogress.js"></script>
-		<script src="<%=request.getContextPath()%>/adminResources/js/sweetalert.min.js"></script>
-		<script src="<%=request.getContextPath()%>/adminResources/js/waves.min.js"></script>
-		<!-- Full Screen Plugin -->
-		<script src="<%=request.getContextPath()%>/adminResources/js/jquery.fullscreen-min.js"></script>
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="<%=request.getContextPath()%>/adminResources/js/jquery.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/modernizr.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/popper.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/bootstrap.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/nprogress.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/sweetalert.min.js"></script>
+	<script src="<%=request.getContextPath()%>/adminResources/js/waves.min.js"></script>
+	<!-- Full Screen Plugin -->
+	<script src="<%=request.getContextPath()%>/adminResources/js/jquery.fullscreen-min.js"></script>
 
-		<!-- Data Tables -->
-		<script src="<%=request.getContextPath()%>/adminResources/js/jquery.dataTables.min.js"></script>
+	<!-- Data Tables -->
+	<script src="<%=request.getContextPath()%>/adminResources/js/jquery.dataTables.min.js"></script>
 		<script src="<%=request.getContextPath()%>/adminResources/js/dataTables.bootstrap4.min.js"></script>
 		<script src="<%=request.getContextPath()%>/adminResources/js/dataTables.responsive.min.js"></script>
 		<script src="<%=request.getContextPath()%>/adminResources/js/responsive.bootstrap.min.js"></script>

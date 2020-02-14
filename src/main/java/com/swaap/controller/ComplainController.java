@@ -1,5 +1,10 @@
 package com.swaap.controller;
 
+import java.io.BufferedOutputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -11,6 +16,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.swaap.model.ComplainVO;
@@ -28,7 +34,7 @@ public class ComplainController {
 	@Autowired
 	LoginService loginService;
 	
-	
+	private static String UPLOAD_FOLDER = "D:\\Imp\\projectworkspace\\SWAAP\\src\\main\\resources\\static\\adminResources\\image\\complain";
 	@RequestMapping(value="/branch/addComplain", method=RequestMethod.GET)
 	public ModelAndView loadComplain()
 	{
@@ -36,7 +42,7 @@ public class ComplainController {
 	}
 
 	@RequestMapping(value="/branch/insertComplain")
-	public ModelAndView insertComplain(@ModelAttribute ComplainVO complainVO,@ModelAttribute LoginVO loginVO)
+	public ModelAndView insertComplain(@ModelAttribute ComplainVO complainVO,@ModelAttribute LoginVO loginVO, @RequestParam("file") MultipartFile file)
 	{
 		complainVO.setStatus(true);
 		complainVO.setComplainStatus("Pending");
@@ -52,6 +58,20 @@ public class ComplainController {
 		String formattedDate=dateformat.format(date);
 		complainVO.setComplainDate(formattedDate);
 		
+		String fileName = complainVO.getComplainSubject();
+		try {
+			byte[] b = file.getBytes();
+			Path path = Paths.get(UPLOAD_FOLDER + fileName);
+			BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(new FileOutputStream(path+fileName));
+			bufferedOutputStream.write(b);
+			complainVO.setFilePath(path.toString()); 
+			complainVO.setFileName(fileName);	
+			bufferedOutputStream.flush();
+			bufferedOutputStream.close();
+		
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		this.complainService.insertComplain(complainVO);
 		return new ModelAndView("redirect:/branch/index");
 	}

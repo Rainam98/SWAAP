@@ -1,5 +1,6 @@
 package com.swaap.controller;
 
+import com.swaap.model.CategoryVO;
 import com.swaap.model.CityVO;
 import com.swaap.model.ProductVO;
 import com.swaap.model.SubCategoryVO;
@@ -26,18 +27,30 @@ public class AjaxController {
     @GetMapping("cityList/{stateId}")
     public ResponseEntity<List<CityVO>> getCityList(@PathVariable int stateId){
         Session session = sessionFactory.openSession();
-        Query q=session.createQuery("from CityVO where status=true and stateVO.status=true and stateVO.id =:stateId");
-        q.setParameter("stateId",stateId);
+        Query q = session.createQuery("from CityVO where status=true and stateVO.status=true and stateVO.id =:stateId");
+        q.setParameter("stateId", stateId);
         List<CityVO> cities = q.list();
 
-        if(cities==null || cities.isEmpty())
+        if (cities == null || cities.isEmpty())
             return new ResponseEntity<List<CityVO>>(HttpStatus.NOT_FOUND);
 
         return new ResponseEntity<List<CityVO>>(cities, HttpStatus.OK);
     }
 
+    @GetMapping("allCategoryList/")
+    public ResponseEntity<List<CategoryVO>> getSubcategories() {
+        Session session = sessionFactory.openSession();
+        Query q = session.createQuery("from CategoryVO where status=true");
+        List<CategoryVO> categories = q.list();
+
+        if (categories == null && categories.isEmpty())
+            return new ResponseEntity<List<CategoryVO>>(HttpStatus.NOT_FOUND);
+
+        return new ResponseEntity<List<CategoryVO>>(categories, HttpStatus.OK);
+    }
+
     @GetMapping("subCategoryList/{categoryId}")
-    public ResponseEntity<List<SubCategoryVO>> getSubcategories(@PathVariable int categoryId){
+    public ResponseEntity<List<SubCategoryVO>> getSubcategories(@PathVariable int categoryId) {
         Session session = sessionFactory.openSession();
         Query q = session.createQuery("from SubCategoryVO where status=true and categoryVO.status = true and categoryVO.id =:categoryId");
         q.setParameter("categoryId", categoryId);
@@ -84,6 +97,16 @@ public class AjaxController {
             return new ResponseEntity<List<ProductVO>>(HttpStatus.NOT_FOUND);
 
         return new ResponseEntity<List<ProductVO>>(products, HttpStatus.OK);
+    }
+
+    @GetMapping("toggleUser/{userId}/{enabled}")
+    public ResponseEntity toggleUser(@PathVariable int userId, @PathVariable boolean enabled) {
+        Session session = sessionFactory.openSession();
+        Query q = session.createQuery(" update LoginVO set enabled=:enabled where id=:userId");
+        q.setParameter("enabled", enabled ? "1" : "0");
+        q.setParameter("userId", userId);
+        int updateCount = q.executeUpdate();
+        return new ResponseEntity(updateCount == 1 ? HttpStatus.OK : HttpStatus.NOT_ACCEPTABLE);
     }
 
 }
