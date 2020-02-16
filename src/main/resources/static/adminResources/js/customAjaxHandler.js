@@ -47,6 +47,10 @@ async function getAllCategories() {
         }).catch(error => document.getElementById(CATEGORY_OPTION_ID).innerHtml = '');
 }
 
+async function toggleUser(id, enabled) {
+    fetch(ajaxAPILink + 'toggleUser/' + id + '/' + enabled);
+}
+
 //functions for updating data dynamically
 function updateCities(option) {
     let dataCities;
