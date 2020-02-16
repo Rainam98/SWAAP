@@ -100,7 +100,7 @@
 										<td>${productVariable.productWeight}</td>
 										<td>${productVariable.productPrice}</td>
 										<td>${productVariable.productQuantity}</td>
-										<td>${productVariable.productFilePath }</td>
+										<td><img src="${productVariable.productFilePath }" height="20px" width="20px"></td>
 										<td><a  href="deleteSubCategory?findById=${productVariable.id}"><i class="menu-icon fa fa-trash-alt" aria-hidden="true"></i></a></td>
 										<td><a  href="updateSubCategory?findById=${productVariable.id}"><i class="menu-icon fa fa-edit" aria-hidden="true"></i></a></td>
 									</tr>

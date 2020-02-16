@@ -57,10 +57,10 @@ public class ProductController {
 	public ModelAndView saveProduct(@ModelAttribute ProductVO productVO, @RequestParam("file") MultipartFile file)
 	{
 		productVO.setStatus(true);
-		String fileName = productVO.getProductName();
+		String fileName = "\\"+productVO.getProductName()+".jpg";
 		try {
 			byte[] b = file.getBytes();
-			Path path = Paths.get(UPLOAD_FOLDER + fileName);
+			Path path = Paths.get(UPLOAD_FOLDER);
 			BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(new FileOutputStream(path+fileName));
 			bufferedOutputStream.write(b);
 			productVO.setProductFilePath(path.toString()); 
