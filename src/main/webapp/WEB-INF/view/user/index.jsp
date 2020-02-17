@@ -332,9 +332,9 @@
                                     <div class="product-item">
                                     
                                         <div class="product-item-inner">
-                                            <!-- <div class="product-img-wrap">
+                                            <div class="product-img-wrap">
                                                 <img src="userResources/image/01.png">
-                                            </div> -->
+                                            </div>
                                             <div class="product-button">
                                                 <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
                                                 <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Whishlist"><i class="fa fa-heart"></i></a>
