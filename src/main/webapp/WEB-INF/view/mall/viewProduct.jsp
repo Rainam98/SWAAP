@@ -63,11 +63,9 @@
 									<th>Category Name</th>
 									<th>Sub-Category Name</th>
 									<th>Product Name</th>
-									<th>Product Description</th>
 									<th>Product Weight</th>
 									<th>Product Price</th>
 									<th>Product Quantity</th>
-									<th>Product Image</th>
 									<th>Delete</th>
 									<th >Update</th>
 								</tr>
@@ -79,11 +77,9 @@
 									<th>Category Name</th>
 									<th>Sub-Category Name</th>
 									<th>Product Name</th>
-									<th>Product Description</th>
 									<th>Product Weight</th>
 									<th>Product Price</th>
 									<th>Product Quantity</th>
-									<th>Product Image</th>
 									<th>Delete</th>
 									<th>Update</th>
 								</tr>
@@ -96,11 +92,9 @@
 										<td>${productVariable.categoryVO.categoryName}</td>
 										<td>${productVariable.subCategoryVO.subCategoryName}</td>
 										<td>${productVariable.productName}</td>
-										<td>${productVariable.productDescription}</td>
 										<td>${productVariable.productWeight}</td>
 										<td>${productVariable.productPrice}</td>
 										<td>${productVariable.productQuantity}</td>
-										<td><img src="${productVariable.productFilePath }" height="20px" width="20px"></td>
 										<td><a  href="deleteSubCategory?findById=${productVariable.id}"><i class="menu-icon fa fa-trash-alt" aria-hidden="true"></i></a></td>
 										<td><a  href="updateSubCategory?findById=${productVariable.id}"><i class="menu-icon fa fa-edit" aria-hidden="true"></i></a></td>
 									</tr>
