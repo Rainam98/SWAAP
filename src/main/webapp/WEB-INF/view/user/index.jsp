@@ -333,7 +333,7 @@
                                     
                                         <div class="product-item-inner">
                                             <div class="product-img-wrap">
-                                                <img src="userResources/image/01.png">
+                                                <img src="<%=request.getContextPath()%>/category/${categoryVariable.categoryName}.jpg">
                                             </div>
                                             <div class="product-button">
                                                 <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
