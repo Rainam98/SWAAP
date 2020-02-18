@@ -45,11 +45,11 @@ public class OfferController {
     @RequestMapping(value = "mall/saveOffer", method = RequestMethod.POST)
     public ModelAndView saveOffer(@ModelAttribute OfferVO offerVO) {
         offerVO.setStatus(true);
-        if (offerVO.getCategoryVO().getId() == -1)
+        if (offerVO.getCategoryVO() == null || offerVO.getCategoryVO().getId() == -1)
             offerVO.setCategoryVO(null);
-        if (offerVO.getSubCategoryVO().getId() == -1)
+        if (offerVO.getSubCategoryVO() == null || offerVO.getSubCategoryVO().getId() == -1)
             offerVO.setSubCategoryVO(null);
-        if (offerVO.getProductVO().getId() == -1)
+        if (offerVO.getProductVO() == null || offerVO.getProductVO().getId() == -1)
             offerVO.setProductVO(null);
         this.offerService.insertOffer(offerVO);
         return new ModelAndView("redirect:/mall/viewOffer");
