@@ -325,6 +325,7 @@
                                     <div class="product-item">
                                         <div class="product-item-inner">
                                             <div class="product-img-wrap">
+                                                <img src="${productVariable.productFilePath }" alt="">
                                                 <img src="<%=request.getContextPath()%>/product/${productVariable.productFileName}" alt="">
                                             </div>
                                             <div class="product-button">
