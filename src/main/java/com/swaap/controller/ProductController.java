@@ -7,7 +7,10 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -39,7 +42,6 @@ public class ProductController {
 	@Autowired
 	BranchService branchService;
 	
-	private static String UPLOAD_FOLDER = "D:\\Imp\\projectworkspace\\SWAAP\\src\\main\\resources\\static\\userResources\\image\\product";
 	@RequestMapping(value="mall/addProduct", method=RequestMethod.GET)
 	public ModelAndView addProduct(Model model)
 	{
@@ -54,16 +56,18 @@ public class ProductController {
 	}
 	
 	@RequestMapping(value="mall/saveProduct", method=RequestMethod.POST)
-	public ModelAndView saveProduct(@ModelAttribute ProductVO productVO, @RequestParam("file") MultipartFile file)
+	public ModelAndView saveProduct(@ModelAttribute ProductVO productVO, @RequestParam("file") MultipartFile file,HttpSession session)
 	{
 		productVO.setStatus(true);
+		
+		String path = session.getServletContext().getRealPath("/product");
+		
 		String fileName = "\\"+productVO.getProductName()+".jpg";
 		try {
 			byte[] b = file.getBytes();
-			Path path = Paths.get(UPLOAD_FOLDER);
 			BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(new FileOutputStream(path+fileName));
 			bufferedOutputStream.write(b);
-			productVO.setProductFilePath(path.toString()); 
+			productVO.setProductFilePath(path); 
 			productVO.setProductFileName(fileName);	
 			bufferedOutputStream.flush();
 			bufferedOutputStream.close();

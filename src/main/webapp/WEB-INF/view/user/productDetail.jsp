@@ -325,12 +325,14 @@
                                     <div class="product-item">
                                         <div class="product-item-inner">
                                             <div class="product-img-wrap">
+<<<<<<< HEAD
                                                 <img src="${productVariable.productFilePath }" alt="">
+=======
+                                                <img src="<%=request.getContextPath()%>/product/${productVariable.productFileName}" alt="">
+>>>>>>> c9709b774af175ad234fec11f4ad1bd952857a02
                                             </div>
                                             <div class="product-button">
                                                 <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Whishlist"><i class="fa fa-heart"></i></a>
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
                                             </div>
                                         </div>
                                         <div class="product-detail">
