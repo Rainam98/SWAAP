@@ -65,9 +65,9 @@
                             <div id="" class="form-group margin-bottom-20">
                                 <f:select class="form-control" path="cityVO.id" placeholder="Select City"
                                           id="selectCityOptions">
-                                    <%--									<c:forEach items="${cityList}" var="cityVariable">--%>
-                                    <%--										<f:option value="${cityVariable.id}">${cityVariable.cityName }</f:option>--%>
-                                    <%--									</c:forEach>--%>
+                                    <%--                                        <c:forEach items="${cityList}" var="cityVariable">--%>
+                                    <%--                                            <f:option value="${cityVariable.id}">${cityVariable.cityName }</f:option>--%>
+                                    <%--                                        </c:forEach>--%>
                                 </f:select>
                             </div>
                         </div>

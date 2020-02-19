@@ -1,7 +1,8 @@
 package com.swaap.controller;
 
-import java.util.List;
-
+import com.swaap.model.BranchVO;
+import com.swaap.model.LoginVO;
+import com.swaap.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,13 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.swaap.model.BranchVO;
-import com.swaap.model.LoginVO;
-import com.swaap.service.BranchService;
-import com.swaap.service.CityService;
-import com.swaap.service.EmailSendService;
-import com.swaap.service.LoginService;
-import com.swaap.service.StateService;
+import java.util.List;
 
 @Controller
 public class BranchController {
@@ -92,6 +87,6 @@ public class BranchController {
 		model.addAttribute("branchVO",(BranchVO)branchList.get(0));
 		model.addAttribute("stateList",StateList);
 		model.addAttribute("cityList",CityList);
-		return new ModelAndView("mall/addBrafnch");
+        return new ModelAndView("mall/addBranch");
 	}
 }
