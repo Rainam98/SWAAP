@@ -31,26 +31,7 @@
 <body>
 
     <!-- Newsletter Popup ---------------------------------------------------->
-    <section id="nlpopup" data-expires="30" data-delay="10">
-        <!--Close Button-->
-        <a href="javascript:void(0)" class="nlpopup_close nlpopup_close_icon">
-            <img src="<%=request.getContextPath()%>/userResources/image/close-icon-white.png" alt="Newsletter Close" /></a>
-        <!--End Close Button-->
-
-        <h3 class="mb-40">Join Our Mailing List </h3>
-        <p class="black mb-20">
-            But I must explain to you how all this mistaken<br />
-            idea of denouncing pleasure pain.
-        </p>
-        <form>
-            <input class="input-md" name="footeremail" title="Enter Email Address.." placeholder="example@domain.com" type="email">
-            <button class="btn btn-md btn-color">Subscribe</button>
-        </form>
-        <label class="mt-20">
-            Sign up For Exclusive Updates, New Arrivals<br />
-            And Insider-Only Discount.</label>
-        <a class="nlpopup_close nlpopup_close_link mt-40">&#10006; Close</a>
-    </section>
+    
     <!-- Overlay -->
     <div id="nlpopup_overlay"></div>
     <!-- End Newsletter Popup ------------------------------------------------>
@@ -189,7 +170,7 @@
         <!-- Page Content Wraper -->
         <div class="page-content-wraper">
             <!-- Bread Crumb -->
-            <section class="breadcrumb">
+          <!--   <section class="breadcrumb">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -201,19 +182,21 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
             <!-- Bread Crumb -->
 
             <!-- Page Content -->
+           <%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+            
             <section class="content-page">
-                <div class="container">
+                <div class="container"> 
                     <div class="row">
 
                         <!-- Product Content -->
                         <div class="col-12">
                             <!-- Title -->
                             <div class="list-page-title">
-                                <h2 class="">Men Polos & Tees <small>120 Products</small></h2>
+                                <h2 class="">Categories<small></small></h2>
                             </div>
                             <!-- End Title -->
 
@@ -226,7 +209,7 @@
 
                                     <!--Product Sort By-->
                                     <form class="product-sort-by">
-                                        <label for="short-by">Short By</label>
+                                        <label for="short-by">Sort By</label>
                                         <select name="short-by" id="short-by" class="nice-select-box">
                                             <option value="default_sorting" selected="selected">Default sorting</option>
                                             <option value="sort_by_popularity">Popularity</option>
@@ -272,39 +255,7 @@
                             <div class="container product-filter-dropdown toggle-content" id="filter-slide-toggle">
                                 <div class="row col mlr-0">
                                     <!-- Shop Categories -->
-                                    <div class="widget-sidebar col-sm-6 col-md-6 col-lg-3">
-                                        <h6 class="widget-title">Categories</h6>
-                                        <ul class="widget-content widget-product-categories jq-accordian">
-                                            <li>
-                                                <a href="#">Accessories</a>
-                                            </li>
-                                            <li>
-                                                <a class="javascript:void(0)">Clothings<span class="jq-accordionIcon"></span></a>
-                                                <ul class="children" style="display: none;">
-                                                    <li><a href="#">All</a></li>
-                                                    <li><a href="#">Coats &amp; Jackets</a></li>
-                                                    <li><a href="#">Shirts</a></li>
-                                                    <li><a href="#">Sportswear</a></li>
-                                                    <li><a href="#">Swimwear</a></li>
-                                                    <li><a href="#">Trousers</a></li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)">Man<span class="jq-accordionIcon"></span></a>
-                                                <ul style="display: none;">
-                                                    <li><a href="#">All</a></li>
-                                                    <li><a href="#">Coats &amp; Jackets</a></li>
-                                                    <li><a href="#">Shirts</a></li>
-                                                    <li><a href="#">Sportswear</a></li>
-                                                    <li><a href="#">Swimwear</a></li>
-                                                    <li><a href="#">Trousers</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Jacket</a></li>
-                                            <li><a href="#">New arrivals</a></li>
-                                            <li><a href="#">Shoes</a></li>
-                                            <li><a href="sdsd">Socks</a></li>
-                                        </ul>
+                                    
                                     </div>
                                     <!-- End Shop Categories -->
 
@@ -361,577 +312,49 @@
                                     <!-- End Filter Price -->
 
                                     <!-- Filter Color -->
-                                    <div class="widget-sidebar widget-filter-color col-sm-6 col-md-6 col-lg-3">
-                                        <h6 class="widget-title">Select Color</h6>
-                                        <ul class="widget-content">
-                                            <li>
-                                                <a href="#">
-                                                    <div class="filter-color-switcher"><span style="background-color: #ff4040"></span></div>
-                                                    Red</a>
-                                                <span class="color-count">(9)</span>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <div class="filter-color-switcher"><span style="background-color: #000"></span></div>
-                                                    Black</a>
-                                                <span class="color-count">(112)</span>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <div class="filter-color-switcher"><span style="background-color: #ff9000"></span></div>
-                                                    Orange</a>
-                                                <span class="color-count">(56)</span>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <div class="filter-color-switcher"><span style="background-color: #ffcf3d"></span></div>
-                                                    Yellow</a>
-                                                <span class="color-count">(24)</span>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <div class="filter-color-switcher"><span style="background-color: #55b0da"></span></div>
-                                                    Blue</a>
-                                                <span class="color-count">(18)</span>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <div class="filter-color-switcher"><span style="background-color: #9ada55"></span></div>
-                                                    Green</a>
-                                                <span class="color-count">(72)</span>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <div class="filter-color-switcher"><span style="background-color: #7a463b"></span></div>
-                                                    Brown</a>
-                                                <span class="color-count">(5)</span>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                
                                     <!-- End Filter Color -->
 
                                     <!-- Filter Size -->
-                                    <div class="widget-sidebar widget-filter-size col-sm-6 col-md-6 col-lg-3">
-                                        <h6 class="widget-title">Select Size</h6>
-                                        <ul class="widget-content ">
-                                            <li>
-                                                <a href="#">L</a>
-                                                <span>(24)</span>
-                                            </li>
-                                            <li>
-                                                <a href="#">M</a>
-                                                <span>(34)</span>
-                                            </li>
-                                            <li>
-                                                <a href="#">S</a>
-                                                <span>(45)</span>
-                                            </li>
-                                            <li>
-                                                <a href="#">X</a>
-                                                <span>(102)</span>
-                                            </li>
-                                            <li>
-                                                <a href="#">XL</a>
-                                                <span>(60)</span>
-                                            </li>
-                                            <li>
-                                                <a href="#">XS</a>
-                                                <span>(78)</span>
-                                            </li>
-                                            <li>
-                                                <a href="#">XXL</a>
-                                                <span>(35)</span>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    
                                     <!-- End Filter Size -->
                                 </div>
                             </div>
                             <!-- End Product filters Toggle-->
-
+							
                             <!-- Product Grid -->
                             <div class="row product-list-item">
                                 <!-- item.1 -->
+                                <c:forEach items="${categoryList}" var="categoryVariable">
                                 <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
                                     <!--Product Item-->
+                                    
                                     <div class="product-item">
+                                    
                                         <div class="product-item-inner">
                                             <div class="product-img-wrap">
-                                                <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470001.jpg" alt="">
+                                                <img src="<%=request.getContextPath()%>/category/${categoryVariable.categoryName}.jpg">
                                             </div>
-                                            <div class="product-button">
+                                            <!-- <div class="product-button">
                                                 <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
                                                 <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Whishlist"><i class="fa fa-heart"></i></a>
                                                 <a href="#" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
-                                            </div>
+                                            </div> -->
                                         </div>
+                                        
                                         <div class="product-detail">
-                                            <a class="tag" href="#">Men Fashion</a>
-                                            <p class="product-title"><a href="product_detail.html">United Colors of Benetton</a></p>
-                                            <div class="product-rating">
-                                                <div class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating" title="Rated 4 out of 5">
-                                                    <span style="width: 60%"></span>
-                                                </div>
-                                                <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
-                                            </div>
-                                            <p class="product-description">
-                                                When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.
-                                            </p>
-                                            <h5 class="item-price">$39.00</h5>
+                                            
+                                            <p class="product-title"><a href="subCategoryDetail?categoryId=${categoryVariable.id }">${categoryVariable.categoryName}</a></p>
+                                            
+                                           
                                         </div>
+                                         
                                     </div>
+                                   
                                     <!-- End Product Item-->
                                 </div>
 
-                                <!-- item.2 -->
-                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
-                                    <!--Product Item-->
-                                    <div class="product-item">
-                                        <div class="product-item-inner">
-                                            <div class="product-img-wrap">
-                                                <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470002.jpg" alt="">
-                                            </div>
-                                            <div class="product-button">
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Whishlist"><i class="fa fa-heart"></i></a>
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="product-detail">
-                                            <a class="tag" href="#">Men Fashion</a>
-                                            <p class="product-title"><a href="product_detail.html">United Colors of Benetton</a></p>
-                                            <div class="product-rating">
-                                                <div class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating" title="Rated 4 out of 5">
-                                                    <span style="width: 60%"></span>
-                                                </div>
-                                                <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
-                                            </div>
-                                            <p class="product-description">
-                                                When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.
-                                            </p>
-                                            <h5 class="item-price"><del>$79.00</del>$39.00</h5>
-                                        </div>
-                                    </div>
-                                    <!-- End Product Item-->
-                                </div>
-
-                                <!-- item.3 -->
-                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
-                                    <!--Product Item-->
-                                    <div class="product-item">
-                                        <div class="product-item-inner">
-                                            <div class="product-img-wrap">
-                                                <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470003.jpg" alt="">
-                                            </div>
-                                            <div class="product-button">
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Whishlist"><i class="fa fa-heart"></i></a>
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="product-detail">
-                                            <a class="tag" href="#">Men Fashion</a>
-                                            <p class="product-title"><a href="product_detail.html">United Colors of Benetton</a></p>
-                                            <div class="product-rating">
-                                                <div class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating" title="Rated 4 out of 5">
-                                                    <span style="width: 60%"></span>
-                                                </div>
-                                                <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
-                                            </div>
-                                            <p class="product-description">
-                                                When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.
-                                            </p>
-                                            <h5 class="item-price">$39.00</h5>
-                                        </div>
-                                    </div>
-                                    <!-- End Product Item-->
-                                </div>
-
-                                <!-- item.4 -->
-                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
-                                    <!--Product Item-->
-                                    <div class="product-item">
-                                        <div class="product-item-inner">
-                                            <div class="product-img-wrap">
-                                                <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470004.jpg" alt="">
-                                            </div>
-                                            <div class="product-button">
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Whishlist"><i class="fa fa-heart"></i></a>
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="product-detail">
-                                            <a class="tag" href="#">Men Fashion</a>
-                                            <p class="product-title"><a href="product_detail.html">United Colors of Benetton</a></p>
-                                            <div class="product-rating">
-                                                <div class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating" title="Rated 4 out of 5">
-                                                    <span style="width: 60%"></span>
-                                                </div>
-                                                <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
-                                            </div>
-                                            <p class="product-description">
-                                                When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.
-                                            </p>
-                                            <h5 class="item-price"><del>$79.00</del>$39.00</h5>
-                                        </div>
-                                    </div>
-                                    <!-- End Product Item-->
-                                </div>
-
-                                <!-- item.5 -->
-                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
-                                    <!--Product Item-->
-                                    <div class="product-item">
-                                        <div class="product-item-inner">
-                                            <div class="product-img-wrap">
-                                                <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470005.jpg" alt="">
-                                            </div>
-                                            <div class="product-button">
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Whishlist"><i class="fa fa-heart"></i></a>
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="product-detail">
-                                            <a class="tag" href="#">Men Fashion</a>
-                                            <p class="product-title"><a href="product_detail.html">United Colors of Benetton</a></p>
-                                            <div class="product-rating">
-                                                <div class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating" title="Rated 4 out of 5">
-                                                    <span style="width: 60%"></span>
-                                                </div>
-                                                <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
-                                            </div>
-                                            <p class="product-description">
-                                                When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.
-                                            </p>
-                                            <h5 class="item-price"><del>$79.00</del>$39.00</h5>
-                                        </div>
-                                    </div>
-                                    <!-- End Product Item-->
-                                </div>
-
-                                <!-- item.6 -->
-                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
-                                    <!--Product Item-->
-                                    <div class="product-item">
-                                        <div class="product-item-inner">
-                                            <div class="product-img-wrap">
-                                                <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470006.jpg" alt="">
-                                            </div>
-                                            <div class="product-button">
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Whishlist"><i class="fa fa-heart"></i></a>
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="product-detail">
-                                            <a class="tag" href="#">Men Fashion</a>
-                                            <p class="product-title"><a href="product_detail.html">United Colors of Benetton</a></p>
-                                            <div class="product-rating">
-                                                <div class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating" title="Rated 4 out of 5">
-                                                    <span style="width: 60%"></span>
-                                                </div>
-                                                <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
-                                            </div>
-                                            <p class="product-description">
-                                                When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.
-                                            </p>
-                                            <h5 class="item-price"><del>$79.00</del>$39.00</h5>
-                                        </div>
-                                    </div>
-                                    <!-- End Product Item-->
-                                </div>
-
-                                <!-- item.7 -->
-                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
-                                    <!--Product Item-->
-                                    <div class="product-item">
-                                        <div class="product-item-inner">
-                                            <div class="product-img-wrap">
-                                                <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470007.jpg" alt="">
-                                            </div>
-                                            <div class="product-button">
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Whishlist"><i class="fa fa-heart"></i></a>
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="product-detail">
-                                            <a class="tag" href="#">Men Fashion</a>
-                                            <p class="product-title"><a href="product_detail.html">United Colors of Benetton</a></p>
-                                            <div class="product-rating">
-                                                <div class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating" title="Rated 4 out of 5">
-                                                    <span style="width: 60%"></span>
-                                                </div>
-                                                <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
-                                            </div>
-                                            <p class="product-description">
-                                                When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.
-                                            </p>
-                                            <h5 class="item-price">$39.00</h5>
-                                        </div>
-                                    </div>
-                                    <!-- End Product Item-->
-                                </div>
-
-                                <!-- item.8 -->
-                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
-                                    <!--Product Item-->
-                                    <div class="product-item">
-                                        <div class="product-item-inner">
-                                            <div class="product-img-wrap">
-                                                <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470001.jpg" alt="">
-                                            </div>
-                                            <div class="product-button">
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Whishlist"><i class="fa fa-heart"></i></a>
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="product-detail">
-                                            <a class="tag" href="#">Men Fashion</a>
-                                            <p class="product-title"><a href="product_detail.html">United Colors of Benetton</a></p>
-                                            <div class="product-rating">
-                                                <div class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating" title="Rated 4 out of 5">
-                                                    <span style="width: 60%"></span>
-                                                </div>
-                                                <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
-                                            </div>
-                                            <p class="product-description">
-                                                When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.
-                                            </p>
-                                            <h5 class="item-price">$39.00</h5>
-                                        </div>
-                                    </div>
-                                    <!-- End Product Item-->
-                                </div>
-
-                                <!-- item.9 -->
-                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
-                                    <!--Product Item-->
-                                    <div class="product-item">
-                                        <div class="product-item-inner">
-                                            <div class="product-img-wrap">
-                                                <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470002.jpg" alt="">
-                                            </div>
-                                            <div class="product-button">
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Whishlist"><i class="fa fa-heart"></i></a>
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="product-detail">
-                                            <a class="tag" href="#">Men Fashion</a>
-                                            <p class="product-title"><a href="product_detail.html">United Colors of Benetton</a></p>
-                                            <div class="product-rating">
-                                                <div class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating" title="Rated 4 out of 5">
-                                                    <span style="width: 60%"></span>
-                                                </div>
-                                                <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
-                                            </div>
-                                            <p class="product-description">
-                                                When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.
-                                            </p>
-                                            <h5 class="item-price">$39.00</h5>
-                                        </div>
-                                    </div>
-                                    <!-- End Product Item-->
-                                </div>
-
-                                <!-- item.10 -->
-                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
-                                    <!--Product Item-->
-                                    <div class="product-item">
-                                        <div class="product-item-inner">
-                                            <div class="product-img-wrap">
-                                                <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470003.jpg" alt="">
-                                            </div>
-                                            <div class="product-button">
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Whishlist"><i class="fa fa-heart"></i></a>
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="product-detail">
-                                            <a class="tag" href="#">Men Fashion</a>
-                                            <p class="product-title"><a href="product_detail.html">United Colors of Benetton</a></p>
-                                            <div class="product-rating">
-                                                <div class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating" title="Rated 4 out of 5">
-                                                    <span style="width: 60%"></span>
-                                                </div>
-                                                <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
-                                            </div>
-                                            <p class="product-description">
-                                                When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.
-                                            </p>
-                                            <h5 class="item-price"><del>$79.00</del>$39.00</h5>
-                                        </div>
-                                    </div>
-                                    <!-- End Product Item-->
-                                </div>
-
-                                <!-- item.11 -->
-                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
-                                    <!--Product Item-->
-                                    <div class="product-item">
-                                        <div class="product-item-inner">
-                                            <div class="product-img-wrap">
-                                                <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470004.jpg" alt="">
-                                            </div>
-                                            <div class="product-button">
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Whishlist"><i class="fa fa-heart"></i></a>
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="product-detail">
-                                            <a class="tag" href="#">Men Fashion</a>
-                                            <p class="product-title"><a href="product_detail.html">United Colors of Benetton</a></p>
-                                            <div class="product-rating">
-                                                <div class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating" title="Rated 4 out of 5">
-                                                    <span style="width: 60%"></span>
-                                                </div>
-                                                <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
-                                            </div>
-                                            <p class="product-description">
-                                                When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.
-                                            </p>
-                                            <h5 class="item-price">$39.00</h5>
-                                        </div>
-                                    </div>
-                                    <!-- End Product Item-->
-                                </div>
-
-                                <!-- item.12 -->
-                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
-                                    <!--Product Item-->
-                                    <div class="product-item">
-                                        <div class="product-item-inner">
-                                            <div class="product-img-wrap">
-                                                <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470005.jpg" alt="">
-                                            </div>
-                                            <div class="product-button">
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Whishlist"><i class="fa fa-heart"></i></a>
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="product-detail">
-                                            <a class="tag" href="#">Men Fashion</a>
-                                            <p class="product-title"><a href="product_detail.html">United Colors of Benetton</a></p>
-                                            <div class="product-rating">
-                                                <div class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating" title="Rated 4 out of 5">
-                                                    <span style="width: 60%"></span>
-                                                </div>
-                                                <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
-                                            </div>
-                                            <p class="product-description">
-                                                When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.
-                                            </p>
-                                            <h5 class="item-price"><del>$79.00</del>$39.00</h5>
-                                        </div>
-                                    </div>
-                                    <!-- End Product Item-->
-                                </div>
-
-                                <!-- item.13 -->
-                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
-                                    <!--Product Item-->
-                                    <div class="product-item">
-                                        <div class="product-item-inner">
-                                            <div class="product-img-wrap">
-                                                <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470006.jpg" alt="">
-                                            </div>
-                                            <div class="product-button">
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Whishlist"><i class="fa fa-heart"></i></a>
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="product-detail">
-                                            <a class="tag" href="#">Men Fashion</a>
-                                            <p class="product-title"><a href="product_detail.html">United Colors of Benetton</a></p>
-                                            <div class="product-rating">
-                                                <div class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating" title="Rated 4 out of 5">
-                                                    <span style="width: 60%"></span>
-                                                </div>
-                                                <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
-                                            </div>
-                                            <p class="product-description">
-                                                When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.
-                                            </p>
-                                            <h5 class="item-price"><del>$79.00</del>$39.00</h5>
-                                        </div>
-                                    </div>
-                                    <!-- End Product Item-->
-                                </div>
-
-                                <!-- item.14 -->
-                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
-                                    <!--Product Item-->
-                                    <div class="product-item">
-                                        <div class="product-item-inner">
-                                            <div class="product-img-wrap">
-                                                <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470007.jpg" alt="">
-                                            </div>
-                                            <div class="product-button">
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Whishlist"><i class="fa fa-heart"></i></a>
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="product-detail">
-                                            <a class="tag" href="#">Men Fashion</a>
-                                            <p class="product-title"><a href="product_detail.html">United Colors of Benetton</a></p>
-                                            <div class="product-rating">
-                                                <div class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating" title="Rated 4 out of 5">
-                                                    <span style="width: 60%"></span>
-                                                </div>
-                                                <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
-                                            </div>
-                                            <p class="product-description">
-                                                When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.
-                                            </p>
-                                            <h5 class="item-price"><del>$79.00</del>$39.00</h5>
-                                        </div>
-                                    </div>
-                                    <!-- End Product Item-->
-                                </div>
-
-                                <!-- item.15 -->
-                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
-                                    <!--Product Item-->
-                                    <div class="product-item">
-                                        <div class="product-item-inner">
-                                            <div class="product-img-wrap">
-                                                <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_125470001.jpg" alt="">
-                                            </div>
-                                            <div class="product-button">
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Whishlist"><i class="fa fa-heart"></i></a>
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="product-detail">
-                                            <a class="tag" href="#">Men Fashion</a>
-                                            <p class="product-title"><a href="product_detail.html">United Colors of Benetton</a></p>
-                                            <div class="product-rating">
-                                                <div class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating" title="Rated 4 out of 5">
-                                                    <span style="width: 60%"></span>
-                                                </div>
-                                                <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
-                                            </div>
-                                            <p class="product-description">
-                                                When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic remaining essentially unchanged.
-                                            </p>
-                                            <h5 class="item-price"><del>$79.00</del>$39.00</h5>
-                                        </div>
-                                    </div>
-                                    <!-- End Product Item-->
-                                </div>
-
-                            </div>
+                                </c:forEach>
                             <!-- End Product Grid -->
 
                             <div class="pagination-wraper">
@@ -965,7 +388,7 @@
 
                         </div>
                         <!-- End Product Content -->
-
+						</div>
                     </div>
                 </div>
             </section>
@@ -975,102 +398,7 @@
         <!-- End Page Content Wraper -->
 
         <!-- Footer Section -------------->
-        <footer class="footer section-padding">
-            <!-- Footer Info -->
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-12 col-sm-12 mb-sm-45">
-                        <div class="footer-block about-us-block">
-                            <img src="<%=request.getContextPath()%>/userResources/image/logo_white.png" width="125" alt="">
-                            <p>Gumbo beet greens corn soko endive gum gourd. Parsley allot courgette tatsoi pea sprouts fava bean soluta nobis est ses eligendi optio.</p>
-                            <ul class="footer-social-icon list-none-ib">
-                                <li><a href="http://facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="https://www.pinterest.com/" target="_blank"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-                                <li><a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                <li><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-4 mb-sm-45">
-                        <div class="footer-block information-block">
-                            <h6>Information</h6>
-                            <ul>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Delivery Information</a></li>
-                                <li><a href="#">Discount</a></li>
-                                <li><a href="#">Latest News</a></li>
-                                <li><a href="#">Our Sitemap</a></li>
-                                <li><a href="#">Terms &amp; Condition</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-4 mb-sm-45">
-                        <div class="footer-block links-block">
-                            <h6>Our Links</h6>
-                            <ul>
-                                <li><a href="#">Brands</a></li>
-                                <li><a href="#">Gift Vouchers</a></li>
-                                <li><a href="#">Affiliates</a></li>
-                                <li><a href="#">Special Event</a></li>
-                                <li><a href="#">Retunrs</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-4 col-sm-4 mb-sm-45">
-                        <div class="footer-block extra-block">
-                            <h6>Extra</h6>
-                            <ul>
-                                <li><a href="#">New Collection</a></li>
-                                <li><a href="#">Women Dresses</a></li>
-                                <li><a href="#">Kids Collection</a></li>
-                                <li><a href="#">Mens Collection</a></li>
-                                <li><a href="#">Custom Service</a></li>
-                                <li><a href="#">Shipping policy</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-12 col-sm-12">
-                        <div class="footer-block contact-block">
-                            <h6>Contact</h6>
-                            <ul>
-                                <li><i class="fa fa-map-marker" aria-hidden="true"></i>1 Wintergreen Dr. Huntley
-                                    <br>
-                                    IL 60142, Usa</li>
-                                <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@sky.com">info@sky.com</a></li>
-                                <li><i class="fa fa-phone" aria-hidden="true"></i>(013) 456789</li>
-                                <li><i class="fa fa-fax" aria-hidden="true"></i>89567989</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Footer Info -->
-
-            <!-- Footer Newsletter -->
-            <div class="container">
-                <div class="footer-newsletter">
-                    <h4>Subscribe Newsletter</h4>
-                    <form class="footer-newslettr-inner">
-                        <input class="input-md fancy" name="footeremail" title="Enter Email Address.." placeholder="Enter Email Address.." type="text">
-                        <button class="btn btn-md btn-color fancy">Sing Up</button>
-                    </form>
-                </div>
-            </div>
-            <!-- End Footer Newsletter -->
-
-            <!-- Footer Copyright -->
-            <div class="container">
-                <div class="copyrights">
-                    <p class="copyright">&copy; Created by <a href="http://nileforest.com/" target="_blank">NileForest</a>. Philos Responsive Woocommerce Theme 2017</p>
-                    <p class="payment">
-                        <img src="<%=request.getContextPath()%>/userResources/image/payment_logos.png" alt="payment">
-                    </p>
-                </div>
-            </div>
-            <!-- End Footer Copyright -->
-        </footer>
+         <jsp:include page="footer.jsp"></jsp:include>
         <!-- End Footer Section -------------->
 
     </div>

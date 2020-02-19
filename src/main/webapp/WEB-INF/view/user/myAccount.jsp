@@ -30,6 +30,8 @@
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
+<%@taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 	
 
     <!-- Newsletter Popup ---------------------------------------------------->
@@ -192,28 +194,28 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div  class="map style1 mb-45">
-                             <h2 class="normal"><span>Contact Us</span></h2>
-                            <form class="Contact-form">
+                             <h2 class="normal"><span>Account Details</span></h2>
+                            <f:form class="Contact-form" modelAttribute="registerVO" method="post" action="updateAccount">
                                 <div class="form-field-wrapper">
-                                    <label>Your Name <span class="required">*</span></label>
-                                    <input id="author" class="input-md form-full-width" name="author" placeholder=" EnterYour Name (required)" value="" size="30" aria-required="true" required="" type="text">
+                                    <label>Your Name</label>
+                                    <f:input id="author" class="input-md form-full-width" name="author" path="name"  aria-required="true" disabled/>
                                 </div>
                                 <div class="form-field-wrapper">
-                                    <label>Your Email <span class="required">*</span></label>
-                                    <input id="author-email" class="input-md form-full-width" name="author" placeholder="Enter Your Email Address (required)" value="" size="30" aria-required="true" required="" type="email">
+                                    <label>Gender</label>
+                                    <f:input id="author" class="input-md form-full-width" name="author" path="gender" aria-required="true" disabled/>
                                 </div>
                                 <div class="form-field-wrapper">
-                                    <label>Your subject <span class="required">*</span></label>
-                                    <input id="subject" class="input-md form-full-width" name="author" placeholder="Enter Your Subject (required)" value="" size="30" aria-required="true" required="" type="text">
+                                    <label>Mobile Number</label>
+                                    <f:input id="author" class="input-md form-full-width" name="author" path="mobileNumber" aria-required="true" required="true"/>
                                 </div>
                                 <div class="form-field-wrapper">
-                                    <label>Comments<span class="required">*</span></label>
-                                    <textarea id="comment" class="form-full-width" name="comment" placeholder="Enter Your Subject (required)" cols="45" rows="8" aria-required="true" required=""></textarea>
+                                    <label>User Name</label>
+                                    <f:input id="author" class="input-md form-full-width" name="author" path="loginVO.username" aria-required="true" required="true"/>
                                 </div>
                                 <div class="form-field-wrapper">
                                     <input name="submit" id="submit" class="submit btn btn-md btn-color" value="Submit" type="submit">
                                 </div>
-                            </form>
+                            </f:form>
                             </div>
                         </div>
                     </div>
