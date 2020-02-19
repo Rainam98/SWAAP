@@ -335,11 +335,11 @@
                                             <div class="product-img-wrap">
                                                 <img src="<%=request.getContextPath()%>/category/${categoryVariable.categoryName}.jpg">
                                             </div>
-                                            <div class="product-button">
+                                            <!-- <div class="product-button">
                                                 <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
                                                 <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Whishlist"><i class="fa fa-heart"></i></a>
                                                 <a href="#" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
-                                            </div>
+                                            </div> -->
                                         </div>
                                         
                                         <div class="product-detail">

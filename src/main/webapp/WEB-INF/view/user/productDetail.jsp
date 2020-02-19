@@ -200,16 +200,16 @@
                                 <div class="product-filter-content-inner">
 
                                     <!--Product Filter Button-->
-                                    <div class="product-filter-dropdown-btn "><a href="javascript:void(0)" data-toggle-target="filter-slide-toggle" class="btn btn-sm btn-gray slide-toggle-btn"><i class="fa fa-bars left" aria-hidden="true"></i>Filter</a></div>
+                                    <!-- <div class="product-filter-dropdown-btn "><a href="javascript:void(0)" data-toggle-target="filter-slide-toggle" class="btn btn-sm btn-gray slide-toggle-btn"><i class="fa fa-bars left" aria-hidden="true"></i>Filter</a></div> -->
 
                                     <!--Product Sort By-->
                                     <form class="product-sort-by">
                                         <label for="short-by">Sort By</label>
                                         <select name="short-by" id="short-by" class="nice-select-box">
                                             <option value="default_sorting" selected="selected">Default sorting</option>
-                                            <option value="sort_by_popularity">Popularity</option>
+                                            <!-- <option value="sort_by_popularity">Popularity</option>
                                             <option value="sort_by_average_rating">Average rating</option>
-                                            <option value="sort_by_newness">New product</option>
+                                            <option value="sort_by_newness">New product</option> -->
                                             <option value="price_low_to_high">Price: low to high</option>
                                             <option value="price_high_to_low">Price: high to low</option>
                                         </select>
@@ -253,7 +253,7 @@
                                     <!-- End Shop Categories -->
 
                                     <!-- Filter Price -->
-                                    <div class="widget-sidebar widget-filter-price col-sm-6 col-md-6 col-lg-3">
+                                    <!-- <div class="widget-sidebar widget-filter-price col-sm-6 col-md-6 col-lg-3">
                                         <h6 class="widget-title">Select Price</h6>
                                         <ul class="widget-content">
                                             <li>
@@ -301,7 +301,7 @@
                                                 </a>
                                             </li>
                                         </ul>
-                                    </div>
+                                    </div> -->
                                     <!-- End Filter Price -->
 
                                     <!-- Filter Color -->
@@ -329,7 +329,7 @@
                                                 <img src="<%=request.getContextPath()%>/product/${productVariable.productFileName}" alt="">
                                             </div>
                                             <div class="product-button">
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
+                                                <a href="#" class="js_tooltip" data-mode="top"><i class="fa fa-shopping-bag"></i></a>
                                             </div>
                                         </div>
                                         <div class="product-detail">
