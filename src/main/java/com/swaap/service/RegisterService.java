@@ -23,4 +23,9 @@ public class RegisterService {
 	{
 		return this.registerDAO.searchUser();
 	}
+	
+	public List searchUserByUsername(String username)
+	{
+		return this.registerDAO.searchUserByUsername(username);
+	}
 }

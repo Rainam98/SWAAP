@@ -12,18 +12,18 @@
                     <div class="topbar-right">
                         <ul class="list-none">
                             <li class="dropdown-nav">
-                                <a href="login-register.html"><i class="fa fa-user left" aria-hidden="true"></i><span class="hidden-sm-down">My Account</span><i class="fa fa-angle-down right" aria-hidden="true"></i></a>
+                                <a><i class="fa fa-user left" aria-hidden="true"></i><span class="hidden-sm-down">My Account</span><i class="fa fa-angle-down right" aria-hidden="true"></i></a>
                                 <!--Dropdown-->
                                 <div class="dropdown-menu">
                                     <ul>
-                                        <li><a href="login-register.jsp">My Account</a></li>
+                                        <li><a href="myAccount">My Account</a></li>
                                         <li><a href="#">Order History</a></li>
                                         <li><a href="#">Returns</a></li>
                                         <li><a href="checkout.jsp">Checkout</a></li>
                                     </ul>
                                     <span class="divider"></span>
                                     <ul>
-                                        <li><a href="login-register.html"><i class="fa fa-lock left" aria-hidden="true"></i>Logout</a></li>
+                                        <li><a href="/logout"><i class="fa fa-lock left" aria-hidden="true"></i>Logout</a></li>
                                     </ul>
                                 </div>
                                 <!--End Dropdown-->

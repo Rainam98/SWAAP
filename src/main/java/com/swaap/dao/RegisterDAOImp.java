@@ -19,7 +19,7 @@ public class RegisterDAOImp implements RegisterDAO {
 	
 	public void insertRegister(RegisterVO registerVO) {
 		Session session = this.sessionFactory.getCurrentSession();
-		session.save(registerVO);
+		session.saveOrUpdate(registerVO);
 	}
 	
 	@Override
@@ -27,6 +27,15 @@ public class RegisterDAOImp implements RegisterDAO {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.openSession();
 		Query q=session.createQuery("from RegisterVO where status=true and loginVO.role='ROLE_USER'");
+		List users=q.list();
+		return users;
+	
+	}
+	
+	public List searchUserByUsername(String username) {
+		// TODO Auto-generated method stub
+		Session session = sessionFactory.openSession();
+		Query q=session.createQuery("from RegisterVO where loginVO.role='ROLE_USER' and loginVO.username='"+username+"'");
 		List users=q.list();
 		return users;
 	

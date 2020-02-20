@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -198,11 +197,11 @@
                             <f:form class="Contact-form" modelAttribute="registerVO" method="post" action="updateAccount">
                                 <div class="form-field-wrapper">
                                     <label>Your Name</label>
-                                    <f:input id="author" class="input-md form-full-width" name="author" path="name"  aria-required="true" disabled/>
+                                    <f:input id="author" class="input-md form-full-width" name="author" path="name"  aria-required="true" readonly="true"/>
                                 </div>
                                 <div class="form-field-wrapper">
                                     <label>Gender</label>
-                                    <f:input id="author" class="input-md form-full-width" name="author" path="gender" aria-required="true" disabled/>
+                                    <f:input id="author" class="input-md form-full-width" name="author" path="gender" aria-required="true" readonly="true"/>
                                 </div>
                                 <div class="form-field-wrapper">
                                     <label>Mobile Number</label>
@@ -213,8 +212,10 @@
                                     <f:input id="author" class="input-md form-full-width" name="author" path="loginVO.username" aria-required="true" required="true"/>
                                 </div>
                                 <div class="form-field-wrapper">
-                                    <input name="submit" id="submit" class="submit btn btn-md btn-color" value="Submit" type="submit">
+                                    <input name="submit" id="submit" class="submit btn btn-md btn-color" value="Update" type="submit">
                                 </div>
+                                <f:hidden path="registerId"/>
+                                <f:hidden path="loginVO.loginId"/>
                             </f:form>
                             </div>
                         </div>

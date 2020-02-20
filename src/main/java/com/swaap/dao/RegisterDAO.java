@@ -9,5 +9,7 @@ public interface RegisterDAO {
 	void insertRegister(RegisterVO registerVO);
 	
 	public List searchUser();
+	
+	public List searchUserByUsername(String username);
 
 }
