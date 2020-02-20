@@ -15,6 +15,7 @@ Rainam
 
 Ritu
 +Cart Management pages-  Cart and checkout
++cart slider seperate
 
 Tanay
 +ajax in search products
