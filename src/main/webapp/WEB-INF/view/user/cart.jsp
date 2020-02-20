@@ -31,126 +31,14 @@
 <body>
 
     <!-- Newsletter Popup ---------------------------------------------------->
-    <section id="nlpopup" data-expires="30" data-delay="10">
-        <!--Close Button-->
-        <a href="javascript:void(0)" class="nlpopup_close nlpopup_close_icon">
-            <img src="<%=request.getContextPath()%>/userResources/image/close-icon-white.png" alt="Newsletter Close" /></a>
-        <!--End Close Button-->
-
-        <h3 class="mb-40">Join Our Mailing List </h3>
-        <p class="black mb-20">
-            But I must explain to you how all this mistaken<br />
-            idea of denouncing pleasure pain.
-        </p>
-        <form>
-            <input class="input-md" name="footeremail" title="Enter Email Address.." placeholder="example@domain.com" type="email">
-            <button class="btn btn-md btn-color">Subscribe</button>
-        </form>
-        <label class="mt-20">
-            Sign up For Exclusive Updates, New Arrivals<br />
-            And Insider-Only Discount.</label>
-        <a class="nlpopup_close nlpopup_close_link mt-40">&#10006; Close</a>
-    </section>
+    
     <!-- Overlay -->
     <div id="nlpopup_overlay"></div>
     <!-- End Newsletter Popup ------------------------------------------------>
 
 
     <!-- Sidebar Menu (Cart Menu) ------------------------------------------------>
-    <section id="sidebar-right" class="sidebar-menu sidebar-right">
-        <div class="cart-sidebar-wrap">
-
-            <!-- Cart Headiing -->
-            <div class="cart-widget-heading">
-                <h4>Shopping Cart</h4>
-                <!-- Close Icon -->
-                <a href="javascript:void(0)" id="sidebar_close_icon" class="close-icon-white"></a>
-                <!-- End Close Icon -->
-            </div>
-            <!-- End Cart Headiing -->
-
-            <!-- Cart Product Content -->
-            <div class="cart-widget-content">
-                <div class="cart-widget-product ">
-
-                    <!-- Empty Cart -->
-                    <div class="cart-empty">
-                        <p>You have no items in your shopping cart.</p>
-                    </div>
-                    <!-- EndEmpty Cart -->
-
-                    <!-- Cart Products -->
-                    <ul class="cart-product-item">
-
-                        <!-- Item -->
-                        <li>
-                            <!--Item Image-->
-                            <a href="#" class="product-image">
-                                <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_12547554.jpg" alt="" /></a>
-
-                            <!--Item Content-->
-                            <div class="product-content">
-                                <!-- Item Linkcollateral -->
-                                <a class="product-link" href="#">Alpha Block Black Polo T-Shirt</a>
-
-                                <!-- Item Cart Totle -->
-                                <div class="cart-collateral">
-                                    <span class="qty-cart">1</span>&nbsp;<span>&#215;</span>&nbsp;<span class="product-price-amount"><span class="currency-sign">$</span>399.00</span>
-                                </div>
-
-                                <!-- Item Remove Icon -->
-                                <a class="product-remove" href="javascript:void(0)"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
-                            </div>
-                        </li>
-
-                        <!-- Item -->
-                        <li>
-                            <!--Item Image-->
-                            <a href="#" class="product-image">
-                                <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_12547555.jpg" alt="" /></a>
-
-                            <!--Item Content-->
-                            <div class="product-content">
-                                <!-- Item Linkcollateral -->
-                                <a class="product-link" href="#">Red Printed Round Neck T-Shirt</a>
-
-                                <!-- Item Cart Totle -->
-                                <div class="cart-collateral">
-                                    <span class="qty-cart">2</span>&nbsp;<span>&#215;</span>&nbsp;<span class="product-price-amount"><span class="currency-sign">$</span>299.00</span>
-                                </div>
-
-                                <!-- Item Remove Icon -->
-                                <a class="product-remove" href="javascript:void(0)"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
-                            </div>
-                        </li>
-
-                    </ul>
-                    <!-- End Cart Products -->
-
-                </div>
-            </div>
-            <!-- End Cart Product Content -->
-
-            <!-- Cart Footer -->
-            <div class="cart-widget-footer">
-                <div class="cart-footer-inner">
-
-                    <!-- Cart Total -->
-                    <h4 class="cart-total-hedding normal"><span>Total :</span><span class="cart-total-price">$698.00</span></h4>
-                    <!-- Cart Total -->
-
-                    <!-- Cart Buttons -->
-                    <div class="cart-action-buttons">
-                        <a href="cart.html" class="view-cart btn btn-md btn-gray">View Cart</a>
-                        <a href="checkout.html" class="checkout btn btn-md btn-color">Checkout</a>
-                    </div>
-                    <!-- End Cart Buttons -->
-
-                </div>
-            </div>
-            <!-- Cart Footer -->
-        </div>
-    </section>
+        <jsp:include page="cartSlider.jsp"></jsp:include>
     <!--Overlay-->
     <div class="sidebar_overlay"></div>
     <!-- End Sidebar Menu (Cart Menu) -------------------------------------------->
@@ -183,385 +71,13 @@
     <!--==========================================-->
     <div class="wraper">
         <!-- Header -->
-        <header class="header">
-            <!--Topbar-->
-            <div class="header-topbar">
-                <div class="header-topbar-inner">
-                    <!--Topbar Left-->
-                    <div class="topbar-left hidden-sm-down">
-                        <div class="phone"><i class="fa fa-phone left" aria-hidden="true"></i>Customer Support : <b>+77 7565 348 576</b></div>
-                    </div>
-                    <!--End Topbar Left-->
-
-                    <!--Topbar Right-->
-                    <div class="topbar-right">
-                        <ul class="list-none">
-                            <li>
-                                <a href="login-register.html"><i class="fa fa-lock left" aria-hidden="true"></i><span class="hidden-sm-down">Login</span></a>
-                            </li>
-                            <li class="dropdown-nav">
-                                <a href="login-register.html"><i class="fa fa-user left" aria-hidden="true"></i><span class="hidden-sm-down">My Account</span><i class="fa fa-angle-down right" aria-hidden="true"></i></a>
-                                <!--Dropdown-->
-                                <div class="dropdown-menu">
-                                    <ul>
-                                        <li><a href="login-register.html">My Account</a></li>
-                                        <li><a href="#">Order History</a></li>
-                                        <li><a href="#">Returns</a></li>
-                                        <li><a href="#">My Wishlist</a></li>
-                                        <li><a href="checkout.html">Checkout</a></li>
-                                    </ul>
-                                    <span class="divider"></span>
-                                    <ul>
-                                        <li><a href="login-register.html"><i class="fa fa-lock left" aria-hidden="true"></i>Login</a></li>
-                                        <li><a href="login-register.html"><i class="fa fa-user left" aria-hidden="true"></i>Create an Account</a></li>
-                                    </ul>
-                                </div>
-                                <!--End Dropdown-->
-                            </li>
-                            <li class="dropdown-nav">
-                                <a href="#">USD<i class="fa fa-angle-down right" aria-hidden="true"></i></a>
-                                <!--Dropdown-->
-                                <div class="dropdown-menu">
-                                    <ul>
-                                        <li><a href="#">USD</a></li>
-                                        <li><a href="#">EUR</a></li>
-                                        <li><a href="#">GBP</a></li>
-                                        <li><a href="#">AUD</a></li>
-                                    </ul>
-                                </div>
-                                <!--End Dropdown-->
-                            </li>
-                            <li>
-                                <a href="about.html">About</a>
-                            </li>
-                            <li>
-                                <a href="contact.html">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- End Topbar Right -->
-                </div>
-            </div>
-            <!--End Topbart-->
-
-            <!-- Header Container -->
-            <div id="header-sticky" class="header-main">
-                <div class="header-main-inner">
-                    <!-- Logo -->
-                    <div class="logo">
-                        <a href="index.html">
-                            <img src="<%=request.getContextPath()%>/userResources/image/logo_black.png" alt="Philos" />
-                        </a>
-                    </div>
-                    <!-- End Logo -->
-
-
-                    <!-- Right Sidebar Nav -->
-                    <div class="header-rightside-nav">
-                        <!-- Login-Register Link -->
-                        <div class="header-btn-link hidden-lg-down"><a href="#" class="btn btn-sm btn-color">Buy Now</a></div>
-                        <!-- End Login-Register Link -->
-
-                        <!-- Sidebar Icon -->
-                        <div class="sidebar-icon-nav">
-                            <ul class="list-none-ib">
-                                <!-- Search-->
-                                <li><a id="search-overlay-menu-btn"><i aria-hidden="true" class="fa fa-search"></i></a></li>
-
-                                <!-- Whishlist-->
-                                <li><a class="js_whishlist-btn"><i aria-hidden="true" class="fa fa-heart"></i><span class="countTip">10</span></a></li>
-
-                                <!-- Cart-->
-                                <li><a id="sidebar_toggle_btn">
-                                    <div class="cart-icon">
-                                        <i aria-hidden="true" class="fa fa-shopping-bag"></i>
-                                    </div>
-
-                                    <div class="cart-title">
-                                        <span class="cart-count">2</span>
-                                        /
-                                    <span class="cart-price strong">$698.00</span>
-                                    </div>
-                                </a></li>
-                            </ul>
-                        </div>
-                        <!-- End Sidebar Icon -->
-                    </div>
-                    <!-- End Right Sidebar Nav -->
-
-
-                    <!-- Navigation Menu -->
-                    <nav class="navigation-menu">
-                        <ul>
-                            <li>
-                                <a href="index.html">Home</a>
-                            </li>
-                            <li>
-                                <a href="shop_grid.html">Man</a>
-                                <!-- Drodown Menu ------->
-                                <ul class="nav-dropdown js-nav-dropdown">
-                                    <li class="container">
-                                        <ul class="row">
-                                            <!--Grid 1-->
-                                            <li class="nav-dropdown-grid">
-                                                <h6>New In</h6>
-                                                <ul>
-                                                    <li><a href="#">New In Clothing</a></li>
-                                                    <li><a href="#">New In Shoes<span class="new-label">New</span></a></li>
-                                                    <li><a href="#">New In Bags</a></li>
-                                                    <li><a href="#">New In Watches</a></li>
-                                                    <li><a href="#">New In Accesories</a></li>
-                                                </ul>
-                                            </li>
-                                            <!--Grid 2-->
-                                            <li class="nav-dropdown-grid">
-                                                <h6>Clothing</h6>
-                                                <ul>
-                                                    <li><a href="#">Polos & Tees</a></li>
-                                                    <li><a href="#">Casual Shirts</a></li>
-                                                    <li><a href="#">Jeans</a></li>
-                                                    <li><a href="#">Casual Trousers</a></li>
-                                                    <li><a href="#">Formal Shirts<span class="sale-label">Sale</span></a></li>
-                                                    <li><a href="#">Formal Trousers</a></li>
-                                                    <li><a href="#">Suits & Blazers</a></li>
-                                                    <li><a href="#">Winter Jackets</a></li>
-                                                    <li><a href="#">Track wear</a></li>
-                                                </ul>
-                                            </li>
-                                            <!--Grid 3-->
-                                            <li class="nav-dropdown-grid">
-                                                <h6>ACCESSORIES</h6>
-                                                <ul>
-                                                    <li><a href="#">Mens Jewellery</a></li>
-                                                    <li><a href="#">Bag</a></li>
-                                                    <li><a href="#">Sunglasses</a></li>
-                                                    <li><a href="#">Watches</a></li>
-                                                    <li><a href="#">Hair Care</a></li>
-                                                    <li><a href="#">Ties & Cufflinks</a></li>
-                                                    <li><a href="#">Perfume</a></li>
-                                                    <li><a href="#">Belt</a></li>
-                                                </ul>
-                                            </li>
-                                            <!--Grid 4-->
-                                            <li class="nav-dropdown-grid">
-                                                <h6>Brand</h6>
-                                                <ul>
-                                                    <li><a href="#">Analog</a></li>
-                                                    <li><a href="#">Chronograph</a></li>
-                                                    <li><a href="#">Digital</a></li>
-                                                    <li><a href="#">Watch Cases</a></li>
-                                                    <li><a href="#">Samsung</a></li>
-                                                    <li><a href="#">Apple</a></li>
-                                                    <li><a href="#">Hitachi</a></li>
-                                                </ul>
-                                            </li>
-
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <!-- End Drodown Menu -->
-                            </li>
-                            <li>
-                                <a href="shop_grid.html">Women</a>
-                                <!-- Drodown Menu ------->
-                                <ul class="nav-dropdown js-nav-dropdown">
-                                    <li class="container">
-                                        <ul class="row">
-                                            <!--Grid 1-->
-                                            <li class="nav-dropdown-grid">
-                                                <h6>New In</h6>
-                                                <ul>
-                                                    <li><a href="#">New In Clothing</a></li>
-                                                    <li><a href="#">New In Shoes</a></li>
-                                                    <li><a href="#">New In Bags</a></li>
-                                                    <li><a href="#">New In Watches</a></li>
-                                                    <li><a href="#">Sweaters</a></li>
-                                                    <li><a href="#">Winter Shrugs</a></li>
-                                                </ul>
-                                            </li>
-                                            <!--Grid 2-->
-                                            <li class="nav-dropdown-grid">
-                                                <h6>Clothing</h6>
-                                                <ul>
-                                                    <li><a href="#">Tops , tees & shirts</a></li>
-                                                    <li><a href="#">Dresses & Jumpsuits</a></li>
-                                                    <li><a href="#">Trousers & Jeans</a></li>
-                                                    <li><a href="#">Leggings & Jeggings</a></li>
-                                                    <li><a href="#">Capris,Shorts & Skirts</a></li>
-                                                    <li><a href="#">Winter Jackets</a></li>
-                                                    <li><a href="#">Clothing Accessories</a></li>
-                                                    <li><a href="#">Sweaters</a></li>
-                                                    <li><a href="#">Winter Shrugs</a></li>
-                                                </ul>
-                                            </li>
-                                            <!--Grid 3-->
-                                            <li class="nav-dropdown-grid">
-                                                <h6>Brand</h6>
-                                                <ul>
-                                                    <li><a href="#">A&C Signature</a></li>
-                                                    <li><a href="#">Angry Birds</a></li>
-                                                    <li><a href="#">Macadamia</a></li>
-                                                    <li><a href="#">Miller & Schweizer</a></li>
-                                                    <li><a href="#">Stylet</a></li>
-                                                    <li><a href="#">Van Heusen</a></li>
-                                                    <li><a href="#">Wrangler</a></li>
-                                                    <li><a href="#">Wills Lifestyle</a></li>
-                                                    <li><a href="#">X'Pose</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="nav-dropdown-grid">
-                                                <a href="#" class="sub-banner">
-                                                    <img src="<%=request.getContextPath()%>/userResources/image/banner/banner_115145.jpg" alt="" /></a>
-                                            </li>
-
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <!-- End Drodown Menu -->
-                            </li>
-                            <li>
-                                <a href="shop_grid.html">Kids</a>
-                                <!-- Drodown Menu ------->
-                                <ul class="nav-dropdown js-nav-dropdown">
-                                    <li class="container">
-                                        <ul class="row">
-                                            <!--Grid 1-->
-                                            <li class="nav-dropdown-grid">
-                                                <h6>Kid's</h6>
-                                                <ul>
-                                                    <li><a href="#">Tops & Tunics</a></li>
-                                                    <li><a href="#">Shorts & Capris</a></li>
-                                                    <li><a href="#">Twin Sets</a></li>
-                                                    <li><a href="#">Jeans & Trousers</a></li>
-                                                    <li><a href="#">Leggings & Jeggings</a></li>
-                                                    <li><a href="#">Skirts</a></li>
-                                                    <li><a href="#">Jumpsuits</a></li>
-                                                    <li><a href="#">Casual Dresses</a></li>
-                                                    <li><a href="#">Ethnic Wear</a></li>
-                                                </ul>
-                                            </li>
-
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <!-- End Drodown Menu -->
-                            </li>
-                            <li>
-                                <a href="shop_grid.html">Brand</a>
-                                <!-- Drodown Menu ------->
-                                <ul class="nav-dropdown js-nav-dropdown">
-                                    <li class="container">
-                                        <ul class="row">
-                                            <!--Grid 1-->
-                                            <li class="nav-dropdown-grid">
-                                                <ul>
-                                                    <li><a href="#">A&C Signature</a></li>
-                                                    <li><a href="#">Angry Birds</a></li>
-                                                    <li><a href="#">Macadamia</a></li>
-                                                    <li><a href="#">Miller & Schweizer</a></li>
-                                                    <li><a href="#">Stylet</a></li>
-                                                    <li><a href="#">Van Heusen</a></li>
-                                                    <li><a href="#">Wrangler</a></li>
-                                                    <li><a href="#">Wills Lifestyle</a></li>
-                                                    <li><a href="#">X'Pose</a></li>
-                                                </ul>
-                                            </li>
-                                            <!--Grid 2-->
-                                            <li class="nav-dropdown-grid">
-                                                <ul>
-                                                    <li><a href="#">Apple</a></li>
-                                                    <li><a href="#">United State</a></li>
-                                                    <li><a href="#">Google</a></li>
-                                                    <li><a href="#">Coca-Cola</a></li>
-                                                    <li><a href="#">Microsoft</a></li>
-                                                    <li><a href="#">Samsung</a></li>
-                                                    <li><a href="#">Apple</a></li>
-                                                    <li><a href="#">Facebook</a></li>
-                                                    <li><a href="#">Twitter</a></li>
-                                                    <li><a href="#">Instagram</a></li>
-
-                                                </ul>
-                                            </li>
-
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <!-- End Drodown Menu -->
-                            </li>
-                            <li>
-                                <a href="shop_grid.html">Accessories<span class="nav-label-sale"></span></a>
-                            </li>
-                            <li>
-                                <a href="#">Pages</a>
-                                <!-- Drodown Menu ------->
-                                <ul class="nav-dropdown js-nav-dropdown">
-                                    <li class="container">
-                                        <ul class="row">
-
-                                            <!--Grid 1-->
-                                            <li class="nav-dropdown-grid">
-                                                <h6>Shop Page</h6>
-                                                <ul>
-                                                    <li><a href="shop_grid.html">Shop Grid - Sidebar Left</a></li>
-                                                    <li><a href="shop_grid-sidebar_right.html">Shop Grid - Sidebar Right</a></li>
-                                                    <li><a href="shop_grid-no_sidebar.html">Shop Grid - No Sidebar</a></li>
-                                                    <li><a href="shop_list.html">Shop List - Sidebar Left</a></li>
-                                                    <li><a href="shop_list-sidebar_right.html">Shop List - Sidebar Right</a></li>
-                                                </ul>
-                                            </li>
-                                            <!--Grid 2-->
-                                            <li class="nav-dropdown-grid">
-                                                <h6>Product Page</h6>
-                                                <ul>
-                                                    <li><a href="product_detail.html">Product Page - Default</a></li>
-                                                    <li><a href="product_detail-with_sidebar.html">Product Page - With Sidebar</a></li>
-                                                    <li><a href="cart.html">Cart Page</a></li>
-                                                    <li><a href="checkout.html">Checkout Page</a></li>
-                                                </ul>
-                                            </li>
-                                            <!--Grid 3-->
-                                            <li class="nav-dropdown-grid">
-                                                <h6>Extra Page</h6>
-                                                <ul>
-                                                    <li><a href="index.html">Home</a></li>
-                                                    <li><a href="about.html">About Us</a></li>
-                                                    <li><a href="contact.html">Contact Us</a></li>
-                                                    <li><a href="portfolio.html">Portfolio</a></li>
-                                                    <li><a href="portfolio-single.html">Portfolio Detail</a></li>
-
-                                                </ul>
-                                            </li>
-
-                                            <!--Grid 1-->
-                                            <li class="nav-dropdown-grid">
-                                                <h6 class="white">Extra Page</h6>
-                                                <ul>
-                                                    <li><a href="blog.html">Blog</a></li>
-                                                    <li><a href="blog-with_sidebar.html">Blog - With sidebar</a></li>
-                                                    <li><a href="blog-single.html">Blog Detail</a></li>
-                                                    <li><a href="login-register.html">Login & Register</a></li>
-                                                </ul>
-                                            </li>
-
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <!-- End Drodown Menu -->
-                            </li>
-                        </ul>
-                    </nav>
-                    <!-- End Navigation Menu -->
-
-                </div>
-            </div>
-            <!-- End Header Container -->
-        </header>
+           <jsp:include page="header.jsp"></jsp:include>
         <!-- End Header -->
 
         <!-- Page Content Wraper -->
         <div class="page-content-wraper">
             <!-- Bread Crumb -->
-            <section class="breadcrumb">
+            <!-- <section class="breadcrumb">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -572,16 +88,18 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
             <!-- Bread Crumb -->
 
             <!-- Page Content -->
+            <%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+            <%@taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
             <section class="content-page">
                 <div class="container mb-80">
                     <div class="row">
                         <div class="col-sm-12">
                             <article class="post-8">
-                                <form class="cart-form" action="#" method="post">
+                                <f:form class="cart-form" modelAttribute="cartVO" method="post" action="saveCart">
                                     <div class="cart-product-table-wrap responsive-table">
                                         <table>
                                             <thead>
@@ -596,113 +114,60 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
+                                                <c:forEach items="${cartList}" var="cartVariable">
                                                     <td class="product-remove">
                                                         <a href="javascript:void(0)"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
                                                     </td>
                                                     <td class="product-thumbnail">
                                                         <a>
-                                                            <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_12547554.jpg" alt="" /></a>
+                                                            <img src="<%=request.getContextPath()%>/product/${cartVariable.productVO.productFileName}" alt="" /></a>
                                                     </td>
                                                     <td class="product-name">
-                                                        <a>Alpha Block Black Polo T-Shirt</a>
+                                                        <a>${cartVariable.productVO.productName }</a>
                                                     </td>
                                                     <td class="product-price">
-                                                        <span class="product-price-amount amount"><span class="currency-sign">$</span>399.00</span>
+                                                        <span class="product-price-amount amount"><span class="currency-sign">Rs.</span>${cartVariable.poductVO.productPrice }</span>
                                                     </td>
                                                     <td>
                                                         <div class="product-quantity">
                                                             <span data-value="+" class="quantity-btn quantityPlus"></span>
-                                                            <input class="quantity input-lg" step="1" min="1" max="9" name="quantity" value="1" title="Quantity" type="number" />
+                                                            <input class="quantity input-lg" step="1" min="1" max="9" name="quantity" value="1" title="Quantity" />
                                                             <span data-value="-" class="quantity-btn quantityMinus"></span>
                                                         </div>
                                                     </td>
                                                     <td class="product-subtotal">
-                                                        <span class="product-price-sub_totle amount"><span class="currency-sign">$</span>399.00</span>
+                                                        <span class="product-price-sub_totle amount"><span class="currency-sign">Rs.</span>399.00</span>
                                                     </td>
+                                                     </c:forEach>
                                                 </tr>
-                                                <tr>
-                                                    <td class="product-remove">
-                                                        <a href="javascript:void(0)"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
-                                                    </td>
-                                                    <td class="product-thumbnail">
-                                                        <a>
-                                                            <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_12547555.jpg" alt="" /></a>
-                                                    </td>
-                                                    <td class="product-name">
-                                                        <a>Red Printed Round Neck T-Shirt</a>
-                                                    </td>
-                                                    <td class="product-price">
-                                                        <span class="product-price-amount amount"><span class="currency-sign">$</span>299.00</span>
-                                                    </td>
-                                                    <td>
-                                                        <div class="product-quantity">
-                                                            <span data-value="+" class="quantity-btn quantityPlus"></span>
-                                                            <input class="quantity input-lg" step="1" min="1" max="9" name="quantity" value="2" title="Quantity" type="number" />
-                                                            <span data-value="-" class="quantity-btn quantityMinus"></span>
-                                                        </div>
-                                                    </td>
-                                                    <td class="product-subtotal">
-                                                        <span class="product-price-sub_totle amount"><span class="currency-sign">$</span>598.00</span>
-                                                    </td>
-                                                </tr>
+                                               
+                                                
                                             </tbody>
                                         </table>
                                     </div>
                                     <div class="row cart-actions">
-                                        <div class="col-md-6">
-                                            <div class="coupon">
-                                                <input class="input-md" id="coupon_code" name="coupon_code" title="Coupon Code" value="" placeholder="Enter Coupon Code" type="text">
-                                                <input class="btn btn-md btn-black" name="coupon_code" value="Apply Coupon" type="submit" />
-                                            </div>
-                                        </div>
                                         <div class="col-md-6 text-right">
-                                            <input class="btn btn-md btn-gray" name="update_cart" value="Update cart" disabled="" type="submit">
+                                            <input class="btn btn-md btn-gray" name="update_cart" value="Continue Shoppinh" type="submit">
                                         </div>
                                     </div>
-                                </form>
+                                </f:form>
                                 <div class="cart-collateral">
                                     <div class="cart_totals">
                                         <h3>Cart totals</h3>
                                         <div class="responsive-table">
                                             <table>
                                                 <tbody>
-                                                    <tr class="cart-subtotal">
-                                                        <th>Subtotal</th>
-                                                        <td><span class="product-price-amount amount"><span class="currency-sign">$</span>997.00</span></td>
-                                                    </tr>
-                                                    <tr class="shipping">
-                                                        <th>Shipping</th>
-                                                        <td>
-                                                            <ul id="shipping_method">
-                                                                <li>
-                                                                    <input name="shipping_method[0]" data-index="0" id="shipping_method_0_legacy_flat_rate" value="legacy_flat_rate" class="shipping_method" checked="checked" type="radio">
-                                                                    <label for="shipping_method_0_legacy_flat_rate">Flat Rate: <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>12.00</span></label>
-                                                                </li>
-                                                                <li>
-                                                                    <input name="shipping_method[0]" data-index="0" id="shipping_method_0_legacy_free_shipping" value="legacy_free_shipping" class="shipping_method" type="radio">
-                                                                    <label for="shipping_method_0_legacy_free_shipping">Free Shipping</label>
-                                                                </li>
-                                                                <li>
-                                                                    <input name="shipping_method[0]" data-index="0" id="shipping_method_0_legacy_local_delivery" value="legacy_local_delivery" class="shipping_method" type="radio">
-                                                                    <label for="shipping_method_0_legacy_local_delivery">Local Delivery</label>
-                                                                </li>
-                                                            </ul>
-                                                            <form>
-                                                                <p>
-                                                                    <a href="#">Calculate shipping</a>
-                                                                </p>
-                                                            </form>
-                                                        </td>
-                                                    </tr>
+                                                 
+                                                   
                                                     <tr class="order-total">
                                                         <th>Total</th>
-                                                        <td><span class="product-price-amount amount"><span class="currency-sign">$</span>1009.00</span></td>
+                                                        <td><span class="product-price-amount amount"><span class="currency-sign">Rs.</span>1009.00</span></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                         <div class="product-proceed-to-checkout">
-                                            <a class="btn btn-lg btn-color form-full-width" href="checkout.html">Proceed to checkout</a>
+                                            <a class="btn btn-lg btn-color form-full-width" href="checkout">Proceed to checkout</a>
                                         </div>
                                     </div>
                                 </div>
