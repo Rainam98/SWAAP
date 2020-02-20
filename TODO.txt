@@ -8,17 +8,17 @@
 
 
 
-12-02-2020
+20-02-2020
 Rainam
-+multipart file upload
-+manage user should have active and disable function
++Search products
++Cart Checkout VO and service dao 
 
 Ritu
-+Date picker
-+database upload later
++Cart Management pages-  Cart and checkout
 
 Tanay
-+changes in addOffer
-+email validator
++ajax in search products
++ajax in cart
++javascript + and - in cart
 
 

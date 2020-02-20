@@ -9,9 +9,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.swaap.model.LoginVO;
 import com.swaap.model.RegisterVO;
 import com.swaap.service.LoginService;
 import com.swaap.service.RegisterService;
@@ -36,6 +36,12 @@ public class CartController {
 	@RequestMapping(value = "/user/updateAccount", method = RequestMethod.POST)
 	public ModelAndView updateAccount(@ModelAttribute RegisterVO registerVO) {
 		this.registerService.insertRegister(registerVO);
+		return new ModelAndView("redirect:/user/index");
+	}
+	
+	@RequestMapping(value = "/user/search", method = RequestMethod.POST)
+	public ModelAndView searchProduct(@RequestParam String q) {
+		//this.registerService.insertRegister(registerVO);
 		return new ModelAndView("redirect:/user/index");
 	}
 }
