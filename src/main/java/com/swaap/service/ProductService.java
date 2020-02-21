@@ -13,4 +13,6 @@ public interface ProductService {
 	public List editProduct(ProductVO productVO);
 
 	public List searchProductBySubCategory(SubCategoryVO subCategoryVO);
+	
+	public List getProductByString(String searchString);
 }

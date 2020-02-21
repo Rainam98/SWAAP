@@ -46,4 +46,12 @@ public class ProductDAOImpl implements ProductDAO{
 		List productList=q.list();
 		return productList;
 	}
+
+	@Override
+	public List getProductByString(String searchString) {
+		Session session = sessionFactory.openSession();
+		Query q=session.createQuery("from ProductVO where status=true and productName Like '%"+searchString+"%' OR productDescription Like '%"+searchString+"%'");
+		List productList=q.list();
+		return productList;
+	}
 }

@@ -43,4 +43,11 @@ public class ProductServiceImpl implements ProductService{
 		List productList=this.productDAO.searchProductBySubCategory(subCategoryVO);
 		return productList;
 	}
+
+
+	@Override
+	public List getProductByString(String searchString) {
+		List productList=this.productDAO.getProductByString(searchString);
+		return productList;
+	}
 }

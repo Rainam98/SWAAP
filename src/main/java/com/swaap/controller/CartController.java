@@ -14,12 +14,16 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.swaap.model.RegisterVO;
 import com.swaap.service.LoginService;
+import com.swaap.service.ProductService;
 import com.swaap.service.RegisterService;
 
 @Controller
 public class CartController {
 	@Autowired
 	RegisterService registerService;
+	
+	@Autowired
+	ProductService productService;
 	
 	@Autowired
 	LoginService loginService;
@@ -39,9 +43,9 @@ public class CartController {
 		return new ModelAndView("redirect:/user/index");
 	}
 	
-	@RequestMapping(value = "/user/search", method = RequestMethod.POST)
+	@RequestMapping(value = "/search", method = RequestMethod.GET)
 	public ModelAndView searchProduct(@RequestParam String q) {
-		//this.registerService.insertRegister(registerVO);
-		return new ModelAndView("redirect:/user/index");
+		List productList=this.productService.getProductByString(q);
+		return new ModelAndView("/user/productDetail","productList",productList);
 	}
 }

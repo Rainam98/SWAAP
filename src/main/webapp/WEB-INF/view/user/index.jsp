@@ -38,6 +38,28 @@
 
     <!-- Sidebar Menu (Cart Menu) ------------------------------------------------>
     <jsp:include page="cartSlider.jsp"></jsp:include>
+    
+    <!-- Search Overlay Menu ----------------------------------------------------->
+    <section class="search-overlay-menu">
+        <!-- Close Icon -->
+        <a href="javascript:void(0)" class="search-overlay-close"></a>
+        <!-- End Close Icon -->
+        <div class="container">
+            <!-- Search Form -->
+            <form role="search" id="searchform" action="/search" method="get">
+                <div class="search-icon-lg">
+                    <img src="<%=request.getContextPath()%>/userResources/image/search-icon-lg.png" alt="" />
+                </div>
+                <label class="h6 normal search-input-label" for="search-query">Enter keywords to Search Product</label>
+                <input value="" name="q" type="search" placeholder="Search..." />
+                <button type="submit">
+                    <img src="<%=request.getContextPath()%>/userResources/image/search-lg-go-icon.png" alt="" />
+                </button>
+            </form>
+            <!-- End Search Form -->
+
+        </div>
+    </section>
     <!-- End Search Overlay Menu ------------------------------------------------>
 
     <!--==========================================-->
