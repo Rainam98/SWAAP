@@ -27,6 +27,9 @@ public class CartVO {
 	
 	@Column(name="status")
 	private boolean status=false;
+	
+	@Column(name="product_quantity_bought")
+	private int productQuantityBought;
 
 	public int getId() {
 		return id;
@@ -58,5 +61,13 @@ public class CartVO {
 
 	public void setStatus(boolean status) {
 		this.status = status;
+	}
+
+	public int getProductQuantityBought() {
+		return productQuantityBought;
+	}
+
+	public void setProductQuantityBought(int productQuantityBought) {
+		this.productQuantityBought = productQuantityBought;
 	}
 }
