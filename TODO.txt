@@ -19,7 +19,5 @@ Ritu
 
 Tanay
 +ajax in search products
-+ajax in cart
-+javascript + and - in cart
 
 

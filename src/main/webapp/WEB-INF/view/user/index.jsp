@@ -30,15 +30,15 @@
 <body>
 
 	<jsp:include page="header.jsp"></jsp:include>
-	
-   
+
+
     <!-- Overlay -->
     <div id="nlpopup_overlay"></div>
     <!-- End Newsletter Popup ------------------------------------------------>
 
     <!-- Sidebar Menu (Cart Menu) ------------------------------------------------>
     <jsp:include page="cartSlider.jsp"></jsp:include>
-    
+
     <!-- Search Overlay Menu ----------------------------------------------------->
     <section class="search-overlay-menu">
         <!-- Close Icon -->
@@ -67,7 +67,7 @@
     <!--==========================================-->
     <div class="wraper">
         <!-- Header -->
-        
+
         <!-- End Header -->
 
         <!-- Page Content Wraper -->
@@ -89,11 +89,11 @@
             <!-- Bread Crumb -->
 
             <!-- Page Content -->
-           
+
             <%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
-            
+
             <section class="content-page">
-                <div class="container"> 
+                <div class="container">
                     <div class="row">
 
                         <!-- Product Content -->
@@ -124,7 +124,7 @@
                                         </select>
                                     </form>
                                     <script>
-                                        
+
                                     </script>
                                     <!--Product Show-->
                                     <form class="product-show">
@@ -159,18 +159,18 @@
                             <div class="container product-filter-dropdown toggle-content" id="filter-slide-toggle">
                                 <div class="row col mlr-0">
                                     <!-- Shop Categories -->
-                                    
-                                    </div>
-                                    <!-- End Shop Categories -->
 
-                                    <!-- Filter Price -->
-                                    <div class="widget-sidebar widget-filter-price col-sm-6 col-md-6 col-lg-3">
-                                        <h6 class="widget-title">Select Price</h6>
-                                        <ul class="widget-content">
-                                            <li>
-                                                <a href="#">All</a>
-                                            </li>
-                                            <li>
+                                </div>
+                                <!-- End Shop Categories -->
+
+                                <!-- Filter Price -->
+                                <div class="widget-sidebar widget-filter-price col-sm-6 col-md-6 col-lg-3">
+                                    <h6 class="widget-title">Select Price</h6>
+                                    <ul class="widget-content">
+                                        <li>
+                                            <a href="#">All</a>
+                                        </li>
+                                        <li>
                                                 <a href="#">
                                                     <span class="amount"><span class="currencySymbol">$</span>0.00</span>
                                                     -
@@ -207,37 +207,39 @@
                                             </li>
                                             <li>
                                                 <a href="#">
-                                                    <span class="amount"><span class="currencySymbol">$</span>2600.00</span>
+                                                    <span class="amount"><span
+                                                            class="currencySymbol">$</span>2600.00</span>
                                                     +
                                                 </a>
                                             </li>
-                                        </ul>
-                                    </div>
-                                    <!-- End Filter Price -->
-
-                                    <!-- Filter Color -->
-                                
-                                    <!-- End Filter Color -->
-
-                                    <!-- Filter Size -->
-                                    
-                                    <!-- End Filter Size -->
+                                    </ul>
                                 </div>
+                                <!-- End Filter Price -->
+
+                                <!-- Filter Color -->
+
+                                <!-- End Filter Color -->
+
+                                <!-- Filter Size -->
+
+                                <!-- End Filter Size -->
                             </div>
-                            <!-- End Product filters Toggle-->
-							
-                            <!-- Product Grid -->
-                            <div class="row product-list-item">
-                                <!-- item.1 -->
-                                <c:forEach items="${categoryList}" var="categoryVariable">
+                        </div>
+                        <!-- End Product filters Toggle-->
+
+                        <!-- Product Grid -->
+                        <div class="row product-list-item">
+                            <!-- item.1 -->
+                            <c:forEach items="${categoryList}" var="categoryVariable">
                                 <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
                                     <!--Product Item-->
-                                    
+
                                     <div class="product-item">
-                                    
+
                                         <div class="product-item-inner">
                                             <div class="product-img-wrap">
-                                                <img src="<%=request.getContextPath()%>/category/${categoryVariable.categoryName}.jpg">
+                                                <img src="<%=request.getContextPath()%>/category/${categoryVariable.categoryName}.jpg"
+                                                     style="height: 175px;  width: 265px;">
                                             </div>
                                             <!-- <div class="product-button">
                                                 <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
@@ -245,20 +247,22 @@
                                                 <a href="#" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
                                             </div> -->
                                         </div>
-                                        
+
                                         <div class="product-detail">
-                                            
-                                            <p class="product-title"><a href="subCategoryDetail?categoryId=${categoryVariable.id }">${categoryVariable.categoryName}</a></p>
-                                            
-                                           
+
+                                            <p class="product-title"><a
+                                                    href="subCategoryDetail?categoryId=${categoryVariable.id }">${categoryVariable.categoryName}</a>
+                                            </p>
+
+
                                         </div>
-                                         
+
                                     </div>
-                                   
+
                                     <!-- End Product Item-->
                                 </div>
 
-                                </c:forEach>
+                            </c:forEach>
                             <!-- End Product Grid -->
 
                             <div class="pagination-wraper">
@@ -294,7 +298,6 @@
                         <!-- End Product Content -->
 						</div>
                     </div>
-                </div>
             </section>
             <!-- End Page Content -->
 
