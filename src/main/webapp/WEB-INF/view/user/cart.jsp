@@ -140,14 +140,12 @@
                                                     </td>
                                                      </c:forEach>
                                                 </tr>
-                                               
-                                                
                                             </tbody>
                                         </table>
                                     </div>
                                     <div class="row cart-actions">
                                         <div class="col-md-6 text-right">
-                                            <input class="btn btn-md btn-gray" name="update_cart" value="Continue Shoppinh" type="submit">
+                                            <input class="btn btn-md btn-gray" name="update_cart" value="Continue Shopping" type="submit">
                                         </div>
                                     </div>
                                 </f:form>

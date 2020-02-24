@@ -48,4 +48,10 @@ public class CartController {
 		List productList=this.productService.getProductByString(q);
 		return new ModelAndView("/user/productDetail","productList",productList);
 	}
+	
+	@RequestMapping(value = "/user/viewCart", method = RequestMethod.GET)
+	public ModelAndView viewCart()
+	{
+		return new ModelAndView("/user/cart");
+	}
 }

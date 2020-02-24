@@ -82,7 +82,7 @@
 
                     <!-- Cart Buttons -->
                     <div class="cart-action-buttons">
-                        <a href="cart.html" class="view-cart btn btn-md btn-gray">View Cart</a>
+                        <a href="viewCart" class="view-cart btn btn-md btn-gray">View Cart</a>
                         <a href="checkout.html" class="checkout btn btn-md btn-color">Checkout</a>
                     </div>
                     <!-- End Cart Buttons -->
