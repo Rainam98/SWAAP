@@ -29,6 +29,10 @@
 
     <!-- Color Picker -->
     <link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/color-switcher.min.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/bootstrap-datepicker.min.css">
+    <script type="text/javascript">  $(function () {
+        $('#datepicker-autoclose').datetimepicker();
+    });</script>
 </head>
 
 <body>
@@ -144,9 +148,9 @@
                             <label for="inp-type-1" class=" control-label">Offer Valid till</label>
                             <div class="input-group">
                                 <f:input path="offerValidTill" type="text" name="till" class="form-control"
-                                         placeholder="mm/dd/yyyy" id="datepicker-autoclose"/>
+                                         placeholder="mm/dd/yyyy"/>
                                 <span class="input-group-addon bg-primary text-white"><i
-                                        class="fa fa-calendar"></i></span>
+                                        class="fa fa-calendar" id="datepicker-autoclose"></i></span>
                             </div>
                             <!-- /.input-group -->
                         </div>
@@ -179,6 +183,10 @@
 <script>renderChanges({id: 'category'})</script>
 
 <script src="<%=request.getContextPath()%>/adminResources/js/jquery.min.js"></script>
+<script src="<%=request.getContextPath()%>/adminResources/js/moment.min.js"></script>
+<script src="<%=request.getContextPath()%>/adminResources/js/moment.js"></script>
+<script src="<%=request.getContextPath()%>/adminResources/js/datePicker.js"></script>
+<script src="<%=request.getContextPath()%>/adminResources/js/bootstrap-datepicker.min.js"></script>
 <script src="<%=request.getContextPath()%>/adminResources/js/modernizr.min.js"></script>
 <script src="<%=request.getContextPath()%>/adminResources/js/popper.min.js"></script>
 <script src="<%=request.getContextPath()%>/adminResources/js/bootstrap.min.js"></script>

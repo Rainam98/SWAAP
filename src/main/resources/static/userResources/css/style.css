@@ -1,4 +1,4 @@
-﻿/*
+/*
 // philos - Responsive Ecommerce Html Template
 // Created by Nileforest*/
 
@@ -3030,6 +3030,7 @@ img.tp-caption {
     padding: 0px 0px;
     font-size: 12px;
     font-weight: 400;
+    width: max-content;
 }
 
 .tipr_container_bottom {
@@ -3053,6 +3054,7 @@ img.tp-caption {
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
     padding: 2px 10px;
+   left: 2px; 
 }
 
     .tipr_point_top:after, .tipr_point_top:before {
@@ -4464,7 +4466,7 @@ img.tp-caption {
     -o-transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     display: table;
-    text-align: center;
+   text-align: center; 
 }
 
     .product-item .product-button a {
@@ -5196,7 +5198,7 @@ img.tp-caption {
 }
 
 .quantityMinus:before {
-    content: "–";
+    content: "�";
 }
 
 single-add_to_cart {
