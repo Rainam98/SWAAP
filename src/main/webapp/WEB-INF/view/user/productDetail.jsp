@@ -29,11 +29,8 @@
 </head>
 <body>
 
-	
 
-    <!-- Overlay -->
-    <div id="nlpopup_overlay"></div>
-    <!-- End Newsletter Popup ------------------------------------------------>
+<!-- End Newsletter Popup ------------------------------------------------>
 
     <!-- Sidebar Menu (Cart Menu) ------------------------------------------------>
        <jsp:include page="cartSlider.jsp"></jsp:include>

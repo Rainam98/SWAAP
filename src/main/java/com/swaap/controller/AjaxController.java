@@ -119,4 +119,13 @@ public class AjaxController {
         return new ResponseEntity(updateCount == 1 ? HttpStatus.OK : HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
+    @GetMapping("user/removeFromCart/{cartId}")
+    public ResponseEntity removeFromCart(@PathVariable int cartId) {
+        Session session = sessionFactory.openSession();
+        Query q = session.createQuery("delete from CartVO where id=:cartId");
+        q.setParameter("cartId", cartId);
+        int deleteCount = q.executeUpdate();
+        return new ResponseEntity(deleteCount == 1 ? HttpStatus.OK : HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
 }

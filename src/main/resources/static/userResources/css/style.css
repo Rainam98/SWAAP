@@ -5198,7 +5198,7 @@ img.tp-caption {
 }
 
 .quantityMinus:before {
-    content: "–";
+    content: "-";
 }
 
 single-add_to_cart {

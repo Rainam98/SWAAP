@@ -43,11 +43,11 @@
 </head>
 <body>
 
+<% double total = 0;%>
 	<!-- Newsletter Popup ---------------------------------------------------->
 
-	<!-- Overlay -->
-	<div id="nlpopup_overlay"></div>
-	<!-- End Newsletter Popup ------------------------------------------------>
+
+<!-- End Newsletter Popup ------------------------------------------------>
 
 
 	<!-- Sidebar Menu (Cart Menu) ------------------------------------------------>
@@ -131,74 +131,76 @@
 											</tr>
 										</thead>
 										<tbody>
-												<c:forEach items="${cartList}" var="cartVariable">
-											<tr>
-													<td class="product-remove"><a
-														href="javascript:void(0)"><i
-															class="fa fa-times-circle" aria-hidden="true"></i></a></td>
-													<td class="product-thumbnail"><a> <img
-															src="<%=request.getContextPath()%>/product/${cartVariable.productVO.productFileName}"
-															alt="" /></a></td>
-													<td class="product-name"><a>${cartVariable.productVO.productName }</a>
-													</td>
-													<td class="product-price"><span
+										<c:forEach items="${cartList}" var="cartVariable">
+											<tr id="product-${cartVariable.id}">
+												<td class="product-remove"><a
+														href="javascript:removeElementFromCart('product',${cartVariable.id})"><i
+														class="fa fa-times-circle" aria-hidden="true"></i></a></td>
+												<td class="product-thumbnail"><a> <img
+														src="<%=request.getContextPath()%>/product/${cartVariable.productVO.productFileName}"
+														alt=""/></a></td>
+												<td class="product-name"><a>${cartVariable.productVO.productName }</a>
+												</td>
+												<td class="product-price"><span
 														class="product-price-amount amount"><span
-															class="currency-sign">Rs.</span>${cartVariable.productVO.productPrice }</span>
-													</td>
-													<td>
+														class="currency-sign">Rs.</span>${cartVariable.productVO.productPrice }</span>
+												</td>
+												<td>
 
 
-														<div class="product-quantity">
+													<div class="product-quantity">
 															<span
-																onclick="changeQuantity(${cartVariable.id},${cartVariable.productVO.productPrice },'+')"
-																data-value="+" class="quantity-btn quantityPlus"></span>
-															<input id="quant-${cartVariable.id}"
-																class="quantity input-lg" step="1" min="1"
-																title="Quantity"
-																value="${cartVariable.productQuantityBought}" /> <span
+																	onclick="changeQuantity(${cartVariable.id},${cartVariable.productVO.productPrice },'+')"
+																	data-value="+"
+																	class="quantity-btn quantityPlus"></span>
+														<input id="quant-${cartVariable.id}"
+															   class="quantity input-lg" step="1" min="1"
+															   title="Quantity"
+															   value="${cartVariable.productQuantityBought}"/>
+														<span
 																onclick="changeQuantity(${cartVariable.id},${cartVariable.productVO.productPrice },'-')"
-																data-value="-" class="quantity-btn quantityMinus"></span>
-														</div>
-													</td>
-													<td class="product-subtotal"><span
+																data-value="-" class="quantity-btn quantityMinus">
+															</span>
+													</div>
+												</td>
+												<td class="product-subtotal"><span
 														class="product-price-sub_totle amount"> <span
-															class="currency-sign">Rs.</span> <span
-															id="cart-${cartVariable.id}">${cartVariable.productVO.productPrice }</span>
+														class="currency-sign">Rs.</span> <span
+														id="cart-${cartVariable.id}">${cartVariable.productVO.productPrice * cartVariable.productQuantityBought }</span>
 													</span></td>
-												
 											</tr>
-											</c:forEach>
+										</c:forEach>
 										</tbody>
 									</table>
 								</div>
-								<div class="row cart-actions">
-									<div class="col-md-6 text-right">
-										<input class="btn btn-md btn-gray" name="update_cart"
-											value="Continue Shopping" type="submit">
+									<div class="row cart-actions">
+										<div class="col-md-6 text-right">
+											<input class="btn btn-md btn-gray" name="update_cart"
+												   value="Continue Shopping" type="submit">
+										</div>
 									</div>
-								</div>
-								<div class="cart-collateral">
-									<div class="cart_totals">
-										<h3>Cart totals</h3>
-										<div class="responsive-table">
-											<table>
-												<tbody>
+									<div class="cart-collateral">
+										<div class="cart_totals">
+											<h3>Cart Total</h3>
+											<div class="responsive-table">
+												<table>
+													<tbody>
 
 
 													<tr class="order-total">
 														<th>Total</th>
 														<td><span class="product-price-amount amount"><span
-																class="currency-sign">Rs.</span>1009.00</span></td>
+																class="currency-sign">Rs.</span>1234.21</span></td>
 													</tr>
-												</tbody>
-											</table>
-										</div>
-										<div class="product-proceed-to-checkout">
-											<a class="btn btn-lg btn-color form-full-width"
-												href="checkout">Proceed to checkout</a>
+													</tbody>
+												</table>
+											</div>
+											<div class="product-proceed-to-checkout">
+												<a class="btn btn-lg btn-color form-full-width"
+												   href="checkout">Proceed to checkout</a>
+											</div>
 										</div>
 									</div>
-								</div>
 								</form>
 							</article>
 						</div>
@@ -217,22 +219,27 @@
 	</div>
 	<!-- End wrapper =============================-->
 
-	<!--==========================================-->
-	<!-- JAVASCRIPT -->
-	<!--==========================================-->
-	<script>
-    function changeQuantity(cartId, price, sign) {
-        var totalPrice = document.getElementById('cart-' + cartId);
-        var quantity = parseInt(document.getElementById('quant-' + cartId).value);
-        quantity = sign === '+' ? quantity + 1 : quantity - 1;
-        if (quantity != 0) {
-            totalPrice.innerText = (quantity * price) + '';
-            fetch('http://localhost:8080/api/user/modifyCart/' + cartId + '/' + quantity);
-        }
-        //TODO: call api in backend to make changes in database
-    }
+<!--==========================================-->
+<!-- JAVASCRIPT -->
+<!--==========================================-->
+<script>
+	function changeQuantity(cartId, price, sign) {
+		var totalPrice = document.getElementById('cart-' + cartId);
+		var quantity = parseInt(document.getElementById('quant-' + cartId).value);
+		quantity = sign === '+' ? quantity + 1 : quantity - 1;
+		if (quantity != 0) {
+			totalPrice.innerText = (quantity * price) + '';
+			fetch('http://localhost:8080/api/user/modifyCart/' + cartId + '/' + quantity);
+		}
+	}
+
+	function removeElementFromCart(idPrefix, cartId) {
+		fetch('http://localhost:8080/api/user/removeFromCart/' + cartId);
+		let elem = document.getElementById(idPrefix + '-' + cartId);
+		return elem.parentNode.removeChild(elem);
+	}
 </script>
-	<script type="text/javascript"
+<script type="text/javascript"
 		src="<%=request.getContextPath()%>/userResources/js/jquery.min.js"></script>
 	<script type="text/javascript"
 		src="<%=request.getContextPath()%>/userResources/js/jquery-ui.js"></script>

@@ -31,9 +31,8 @@
 <body>
 
     <!-- Newsletter Popup ---------------------------------------------------->
-   
-    <!-- Overlay -->
-    <div id="nlpopup_overlay"></div>
+
+
     <!-- End Newsletter Popup ------------------------------------------------>
 
 

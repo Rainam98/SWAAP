@@ -1,13 +1,3 @@
-~ Fix Redirects after insert and delete operations.
-+ Add code to for one more field "email" in the add-branch option.
-+ Add code in processing of insert branch page to add branch entry in login table with ROLE_BRANCH.
-+ add real gmail account and password in the application.properties file and make sure gmail account have https://myaccount.google.com/lesssecureapps activated.
-
-+fix add category section
-+add code for list user in mall
-
-
-
 20-02-2020
 Rainam
 +checkout
@@ -19,8 +9,12 @@ Ritu
 +Date Picker
 
 Tanay
-+Delete the product from cart
 +ajax in search products
 +total in cart
+
+*********************************************
+                BUGS
+*********************************************
++add to cart adds new product even if product is already in the cart
 
 
