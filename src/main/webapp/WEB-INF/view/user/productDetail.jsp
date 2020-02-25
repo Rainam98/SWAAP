@@ -236,7 +236,7 @@
                                                 <img src="<%=request.getContextPath()%>/product/${productVariable.productFileName}" alt="">
                                             </div>
                                             <div class="product-button">
-                                                <a href="#" class="js_tooltip" data-mode="top"><i class="fa fa-shopping-bag"></i></a>
+                                                <a href="/user/addToCart?productId=${productVariable.id}" class="js_tooltip" data-mode="top" data-tip="Add to Cart"><i class="fa fa-shopping-bag"></i></a>
                                             </div>
                                         </div>
                                         <div class="product-detail">
