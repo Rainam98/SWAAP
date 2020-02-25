@@ -35,7 +35,7 @@ public class RegisterDAOImp implements RegisterDAO {
 	public List searchUserByUsername(String username) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.openSession();
-		Query q=session.createQuery("from RegisterVO where loginVO.role='ROLE_USER' and loginVO.username='"+username+"'");
+		Query q=session.createQuery("from LoginVO where role='ROLE_USER' and username='"+username+"'");
 		List users=q.list();
 		return users;
 	

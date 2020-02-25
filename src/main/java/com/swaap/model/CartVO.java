@@ -10,23 +10,26 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="cart_table")
+@Table(name = "cart_table")
 public class CartVO {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
 	private int id;
-	
+
 	@ManyToOne
-	@JoinColumn(name="product_id")
+	@JoinColumn(name = "product_id")
 	private ProductVO productVO;
-	
+
 	@ManyToOne
-	@JoinColumn(name="login_id")
+	@JoinColumn(name = "login_id")
 	private LoginVO loginVO;
-	
-	@Column(name="status")
-	private boolean status=false;
+
+	@Column(name = "status")
+	private boolean status = false;
+
+	@Column(name = "product_quantity_bought")
+	private int productQuantityBought;
 
 	public int getId() {
 		return id;
@@ -59,4 +62,13 @@ public class CartVO {
 	public void setStatus(boolean status) {
 		this.status = status;
 	}
+
+	public int getProductQuantityBought() {
+		return productQuantityBought;
+	}
+
+	public void setProductQuantityBought(int productQuantityBought) {
+		this.productQuantityBought = productQuantityBought;
+	}
+
 }

@@ -10,16 +10,17 @@
 
 20-02-2020
 Rainam
-+Search products		Completed
-+Cart Checkout VO and service dao 
++checkout
++Ask the steps after cart management for order id
++logout
 
 Ritu
-+Cart Management pages-  Cart and checkout
-+cart slider seperate
++Image href
++Date Picker
 
 Tanay
++Delete the product from cart
 +ajax in search products
-+ajax in cart
-+javascript + and - in cart
++total in cart
 
 

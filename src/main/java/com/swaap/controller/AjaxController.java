@@ -102,11 +102,21 @@ public class AjaxController {
     @GetMapping("toggleUser/{userId}/{enabled}")
     public ResponseEntity toggleUser(@PathVariable int userId, @PathVariable boolean enabled) {
         Session session = sessionFactory.openSession();
-        Query q = session.createQuery(" update LoginVO set enabled=:enabled where id=:userId");
+        Query q = session.createQuery("update LoginVO set enabled=:enabled where id=:userId");
         q.setParameter("enabled", enabled ? "1" : "0");
         q.setParameter("userId", userId);
         int updateCount = q.executeUpdate();
-        return new ResponseEntity(updateCount == 1 ? HttpStatus.OK : HttpStatus.NOT_ACCEPTABLE);
+        return new ResponseEntity(updateCount == 1 ? HttpStatus.OK : HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    @GetMapping("user/modifyCart/{cartId}/{quantity}")
+    public ResponseEntity modifyCart(@PathVariable int cartId, @PathVariable int quantity) {
+        Session session = sessionFactory.openSession();
+        Query q = session.createQuery("update CartVO set productQuantityBought=:quantity where id=:cartId");
+        q.setParameter("quantity", quantity);
+        q.setParameter("cartId", cartId);
+        int updateCount = q.executeUpdate();
+        return new ResponseEntity(updateCount == 1 ? HttpStatus.OK : HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
 }
