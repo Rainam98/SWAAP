@@ -32,8 +32,6 @@
 	<jsp:include page="header.jsp"></jsp:include>
 
 
-    <!-- Overlay -->
-    <div id="nlpopup_overlay"></div>
     <!-- End Newsletter Popup ------------------------------------------------>
 
     <!-- Sidebar Menu (Cart Menu) ------------------------------------------------>

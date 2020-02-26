@@ -29,11 +29,8 @@
 </head>
 <body>
 
-	
 
-    <!-- Overlay -->
-    <div id="nlpopup_overlay"></div>
-    <!-- End Newsletter Popup ------------------------------------------------>
+<!-- End Newsletter Popup ------------------------------------------------>
 
     <!-- Sidebar Menu (Cart Menu) ------------------------------------------------>
        <jsp:include page="cartSlider.jsp"></jsp:include>
@@ -236,8 +233,13 @@
                                                 <img src="<%=request.getContextPath()%>/product/${productVariable.productFileName}" alt="">
                                             </div>
                                             <div class="product-button">
-                                                <a href="/user/addToCart?productId=${productVariable.id}" class="js_tooltip" data-mode="top" data-tip="Add to Cart"><i class="fa fa-shopping-bag"></i></a>
+
+                                               <!--  <a href="#" class="js_tooltip1" data-mode="top" data-tip="Add To Whishlist"><i class="fa fa-heart1"></i></a> -->
+                                               <a href="/user/addToCart?productId=${productVariable.id}" class="js_tooltip" data-mode="top" data-tip="Add to Cart"><i class="fa fa-shopping-bag"></i></a>
+
+                                                
                                             </div>
+
                                         </div>
                                         <div class="product-detail">
                                             <a class="tag" href="#">${productVariable.categoryVO.categoryName}</a>

@@ -52,8 +52,8 @@
             And Insider-Only Discount.</label>
         <a class="nlpopup_close nlpopup_close_link mt-40">&#10006; Close</a>
     </section>
-    <!-- Overlay -->
-    <div id="nlpopup_overlay"></div>
+
+
     <!-- End Newsletter Popup ------------------------------------------------>
 
     <!-- Sidebar Menu (Cart Menu) ------------------------------------------------>

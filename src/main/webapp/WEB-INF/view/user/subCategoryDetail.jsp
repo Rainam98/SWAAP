@@ -32,9 +32,8 @@
 	<jsp:include page="header.jsp"></jsp:include>
 	
     <!-- Newsletter Popup ---------------------------------------------------->
-    
-    <!-- Overlay -->
-    <div id="nlpopup_overlay"></div>
+
+
     <!-- End Newsletter Popup ------------------------------------------------>
 
     <!-- Sidebar Menu (Cart Menu) ------------------------------------------------>
@@ -301,6 +300,7 @@
                         <!-- End Product Content -->
 
                     </div>
+                </div>
                 </div>
             </section>
             <!-- End Page Content -->
