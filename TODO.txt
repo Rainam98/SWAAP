@@ -2,10 +2,9 @@
 Rainam
 +checkout
 +Ask the steps after cart management for order id
-+logout
++ Doubt about viewCart from cartSlider
 
 Ritu
-+Image href
 +Date Picker
 
 Tanay

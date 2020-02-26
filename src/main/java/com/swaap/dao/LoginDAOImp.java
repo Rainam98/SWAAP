@@ -34,4 +34,12 @@ public class LoginDAOImp implements LoginDAO {
 		List ls = q.list();
 		return ls;
 	}
+	
+	public List searchUserByUsername(String username) {
+		// TODO Auto-generated method stub
+		Session session = sessionFactory.openSession();
+		Query q=session.createQuery("from LoginVO where role='ROLE_USER' and username='"+username+"'");
+		List users=q.list();
+		return users;
+	}
 }

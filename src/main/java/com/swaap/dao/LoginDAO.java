@@ -12,5 +12,7 @@ public interface LoginDAO {
 	public void insertLogin(LoginVO loginVO);
 
 	public List searchLoginID(String loginService);
+	
+	public List searchUserByUsername(String username);
 
 }
