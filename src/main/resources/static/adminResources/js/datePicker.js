@@ -1,6 +1,0 @@
-/**
- * 
- */
-  $(function () {
-    $('#datepicker-autoclose').datetimepicker();
- });

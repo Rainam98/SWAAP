@@ -1,38 +1,54 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-         pageEncoding="ISO-8859-1" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
 
-    <title>Add Offer</title>
-    <!-- Main Styles -->
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/style.css">
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/custom.css">
+	<title>Add Offer</title>
 
-    <!-- mCustomScrollbar -->
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/jquery.mCustomScrollbar.min.css">
+	<!-- Main Styles -->
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/style.css">
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/custom.css">
 
-    <!-- Waves Effect -->
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/waves.min.css">
+	<!-- mCustomScrollbar -->
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/jquery.mCustomScrollbar.min.css">
 
-    <!-- Sweet Alert -->
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/sweetalert.css">
+	<!-- Waves Effect -->
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/waves.min.css">
 
-    <!-- Data Tables -->
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/responsive.bootstrap.min.css">
+	<!-- Sweet Alert -->
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/sweetalert.css">
+	
+	<!-- FlexDatalist -->
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/jquery.flexdatalist.min.css">
 
-    <!-- Color Picker -->
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/color-switcher.min.css">
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/bootstrap-datepicker.min.css">
-    <script type="text/javascript">  $(function () {
-        $('#datepicker-autoclose').datetimepicker();
-    });</script>
+	<!-- Popover -->
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/jquery.popSelect.min.css">
+
+	<!-- Select2 -->
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/select2.min.css">
+
+	<!-- Timepicker -->
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/bootstrap-timepicker.min.css">
+
+	<!-- Touch Spin -->
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/jquery.bootstrap-touchspin.min.css">
+
+	<!-- Colorpicker -->
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/bootstrap-colorpicker.min.css">
+
+	<!-- Datepicker -->
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/bootstrap-datepicker.min.css">
+
+	<!-- DateRangepicker -->
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/daterangepicker.css">
+
+	<!-- Color Picker -->
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/color-switcher.min.css">
 </head>
 
 <body>
@@ -46,14 +62,27 @@
 <%@taglib prefix="f" uri="http://www.springframework.org/tags/form" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 
-<div id="wrapper">
-    <div class="main-content">
-        <div class="row small-spacing">
-            <div class="col-12">
-                <div class="box-content">
-                    <f:form data-toggle="validator" modelAttribute="offerVO" method="post" action="saveOffer">
-                        <h4 class="box-title">Add Offer</h4>
-                        <div class="form-group">
+	
+	<!-- /.fixed-navbar -->
+
+	
+	<!-- /#notification-popup -->
+
+
+	<!-- /#message-popup -->
+	
+	<!-- #color-switcher -->
+
+	<div id="wrapper">
+		<div class="main-content">
+			<div class="row small-spacing">
+				<div class="col-12">
+					<div class="box-content">
+					    <f:form data-toggle="validator" modelAttribute="offerVO" method="post" action="saveOffer">
+
+						<h4 class="box-title">Add Offer</h4>
+						<!-- /.box-title -->
+						<div class="form-group">
                             <label for="category" class=" control-label">Select Type</label><br>
                             <input onclick="renderChanges(this);updateCategories();" type="radio" value="category"
                                    name="offType"
@@ -75,17 +104,6 @@
                                      placeholder="Enter Offer Name" required="true"/>
                         </div>
                         <!-- /.box-title -->
-                        <div class="dropdown js__drop_down">
-                            <a href="#" class="dropdown-icon fas fa-ellipsis-v js__drop_down_button"></a>
-                            <ul class="sub-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else there</a></li>
-                                <li class="split"></li>
-                                <li><a href="#">Separated link</a></li>
-                            </ul>
-                            <!-- /.sub-menu -->
-                        </div>
                         <!-- /.dropdown js__dropdown -->
                         <div class="form-group" id="categorySection">
                             <label for="categoryName" name="scatnme" class="control-label">Category</label>
@@ -134,78 +152,90 @@
                             <f:input path="discountPercent" type="text" name="dis" class="form-control" id="inp-type-1"
                                      placeholder="Enter Discount value"/>
                         </div>
-                        <div class="form-group">
+						<div class="form-group">
                             <label for="inp-type-1" class=" control-label">Offer Valid from</label>
-                            <div class="input-group">
-                                <f:input path="offerValidFrom" type="text" name="from" class="form-control"
-                                         placeholder="mm/dd/yyyy" id="datepicker-autoclose"/>
-                                <span class="input-group-addon bg-primary text-white"><i
-                                        class="fa fa-calendar"></i></span>
-                            </div>
+                           <div class="input-daterange input-group" id="date-range">
+												<f:input path="offerValidFrom" type="text" class="form-control" name="start"/>
+												<span class="input-group-addon bg-primary text-white">to</span>
+												<f:input path="offerValidTill" type="text" class="form-control" name="end"/>
+											</div>
                             <!-- /.input-group -->
                         </div>
-                        <div class="form-group">
-                            <label for="inp-type-1" class=" control-label">Offer Valid till</label>
-                            <div class="input-group">
-                                <f:input path="offerValidTill" type="text" name="till" class="form-control"
-                                         placeholder="mm/dd/yyyy"/>
-                                <span class="input-group-addon bg-primary text-white"><i
-                                        class="fa fa-calendar" id="datepicker-autoclose"></i></span>
-                            </div>
-                            <!-- /.input-group -->
-                        </div>
+                       
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary waves-effect waves-light">Add Offer</button>
                         </div>
                     </f:form>
-                </div>
-
-                <!-- /.box-content -->
-            </div>
-
-        </div>
-        <!-- /.col-12 -->
-        <jsp:include page="footer.jsp"></jsp:include>
-    </div>
-    <!-- /.row small-spacing -->
-</div>
-<!-- /.main-content -->
-</div><!--/#wrapper -->
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-		<script src="<%=request.getContextPath()%>/adminResources/js/html5shiv.min.js"></script>
-		<script src="<%=request.getContextPath()%>/adminResources/js/respond.min.js"></script>
+						</div>
+					<!-- /.box-content -->
+				</div>
+				<!-- /.col-12 -->
+			
+			</div>
+			<!-- /.row small-spacing -->		
+			 <jsp:include page="footer.jsp"></jsp:include>
+		</div>
+		<!-- /.main-content -->
+	</div><!--/#wrapper -->
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="assets/script/html5shiv.min.js"></script>
+		<script src="assets/script/respond.min.js"></script>
 	<![endif]-->
-<!--
-    ================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="<%=request.getContextPath()%>/adminResources/js/customAjaxHandler.js"></script>
-<script>renderChanges({id: 'category'})</script>
+	<!-- 
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="<%=request.getContextPath()%>/adminResources/js/jquery.min.js"></script>
+		<script src="<%=request.getContextPath()%>/adminResources/js/customAjaxHandler.js"></script>
+		<script>renderChanges({id: 'category'})</script>
+		<script src="<%=request.getContextPath()%>/adminResources/js/modernizr.min.js"></script>
+		<script src="<%=request.getContextPath()%>/adminResources/js/popper.min.js"></script>
+		<script src="<%=request.getContextPath()%>/adminResources/js/bootstrap.min.js"></script>
+		<script src="<%=request.getContextPath()%>/adminResources/js/jquery.mCustomScrollbar.concat.min.js"></script>
+		<script src="<%=request.getContextPath()%>/adminResources/js/nprogress.js"></script>
+		<script src="<%=request.getContextPath()%>/adminResources/js/sweetalert.min.js"></script>
+		<script src="<%=request.getContextPath()%>/adminResources/js/waves.min.js"></script>
+		<!-- Full Screen Plugin -->
+		<script src="<%=request.getContextPath()%>/adminResources/js/jquery.fullscreen-min.js"></script>
 
-<script src="<%=request.getContextPath()%>/adminResources/js/jquery.min.js"></script>
-<script src="<%=request.getContextPath()%>/adminResources/js/moment.min.js"></script>
-<script src="<%=request.getContextPath()%>/adminResources/js/moment.js"></script>
-<script src="<%=request.getContextPath()%>/adminResources/js/datePicker.js"></script>
-<script src="<%=request.getContextPath()%>/adminResources/js/bootstrap-datepicker.min.js"></script>
-<script src="<%=request.getContextPath()%>/adminResources/js/modernizr.min.js"></script>
-<script src="<%=request.getContextPath()%>/adminResources/js/popper.min.js"></script>
-<script src="<%=request.getContextPath()%>/adminResources/js/bootstrap.min.js"></script>
-<script src="<%=request.getContextPath()%>/adminResources/js/jquery.mCustomScrollbar.concat.min.js"></script>
-<script src="<%=request.getContextPath()%>/adminResources/js/nprogress.js"></script>
-<script src="<%=request.getContextPath()%>/adminResources/js/sweetalert.min.js"></script>
-<script src="<%=request.getContextPath()%>/adminResources/js/waves.min.js"></script>
-<!-- Full Screen Plugin -->
-<script src="<%=request.getContextPath()%>/adminResources/js/jquery.fullscreen-min.js"></script>
+		<!-- Flex Datalist -->
+		<script src="<%=request.getContextPath()%>/adminResources/js/jquery.flexdatalist.min.js"></script>
 
-<!-- Data Tables -->
-<script src="<%=request.getContextPath()%>/adminResources/js/jquery.dataTables.min.js"></script>
-<script src="<%=request.getContextPath()%>/adminResources/js/dataTables.bootstrap4.min.js"></script>
-<script src="<%=request.getContextPath()%>/adminResources/js/dataTables.responsive.min.js"></script>
-<script src="<%=request.getContextPath()%>/adminResources/js/responsive.bootstrap.min.js"></script>
-<script src="<%=request.getContextPath()%>/adminResources/js/datatables.demo.min.js"></script>
+		<!-- Popover -->
+		<script src="<%=request.getContextPath()%>/adminResources/js/jquery.popSelect.min.js"></script>
 
-<script src="<%=request.getContextPath()%>/adminResources/js/main.min.js"></script>
+		<!-- Select2 -->
+		<script src="<%=request.getContextPath()%>/adminResources/js/select2.min.js"></script>
+
+		<!-- Multi Select -->
+		<script src="<%=request.getContextPath()%>/adminResources/js/multiselect.min.js"></script>
+
+		<!-- Touch Spin -->
+		<script src="<%=request.getContextPath()%>/adminResources/js/jquery.bootstrap-touchspin.min.js"></script>
+
+		<!-- Timepicker -->
+		<script src="<%=request.getContextPath()%>/adminResources/js/bootstrap-timepicker.min.js"></script>
+
+		<!-- Colorpicker -->
+		<script src="<%=request.getContextPath()%>/adminResources/js/bootstrap-colorpicker.min.js"></script>
+
+		<!-- Datepicker -->
+		<script src="<%=request.getContextPath()%>/adminResources/js/bootstrap-datepicker.min.js"></script>
+
+		<!-- Moment -->
+		<script src="<%=request.getContextPath()%>/adminResources/js/moment.js"></script>
+
+		<!-- DateRangepicker -->
+		<script src="<%=request.getContextPath()%>/adminResources/js/daterangepicker.js"></script>
+
+		<!-- Maxlength -->
+		<script src="<%=request.getContextPath()%>/adminResources/js/bootstrap-maxlength.min.js"></script>
+
+		<!-- Demo Scripts -->
+		<script src="<%=request.getContextPath()%>/adminResources/js/form.demo.min.js"></script>
+
+		<script src="<%=request.getContextPath()%>/adminResources/js/main.min.js"></script>
 <script src="<%=request.getContextPath()%>/adminResources/js/mycommon.js"></script>
-<script src="<%=request.getContextPath()%>/adminResources/js/color-switcher.min.js"></script>
-</body>
-</html>
+		<script src="<%=request.getContextPath()%>/adminResources/js/color-switcher.min.js"></script>
+	</body>
+	</html>
