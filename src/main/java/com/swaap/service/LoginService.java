@@ -34,4 +34,11 @@ public class LoginService {
 		List ls = loginDAO.searchLoginID(loginService);
 		return ls;
 	}
+	
+	@Transactional
+	public List searchUserByUsername(String username) {
+		List ls = loginDAO.searchUserByUsername(username);
+		return ls;
+	}
+	
 }

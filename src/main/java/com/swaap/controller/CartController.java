@@ -52,15 +52,10 @@ public class CartController {
 		return new ModelAndView("redirect:/user/index");
 	}
 
-	@RequestMapping(value = "/search", method = RequestMethod.GET)
+	@RequestMapping(value = "/user/search", method = RequestMethod.GET)
 	public ModelAndView searchProduct(@RequestParam String q) {
 		List productList = this.productService.getProductByString(q);
 		return new ModelAndView("/user/productDetail", "productList", productList);
-	}
-
-	@RequestMapping(value = "/user/viewCart", method = RequestMethod.GET)
-	public ModelAndView viewCart() {
-		return new ModelAndView("/user/cart");
 	}
 
 	@RequestMapping(value = "/user/addToCart", method = RequestMethod.GET)
@@ -75,13 +70,23 @@ public class CartController {
 
 		LoginVO loginVO = new LoginVO();
 
-		List userList = this.registerService.searchUserByUsername(userName);
+		List userList = this.loginService.searchUserByUsername(userName);
 		loginVO = (LoginVO) userList.get(0);
 		cartVO.setLoginVO(loginVO);
 		cartVO.setStatus(true);
 
 		this.cartService.insertProductToCart(cartVO);
 
+		List cartList = this.cartService.searchCart(loginVO);
+		return new ModelAndView("/user/cart", "cartList", cartList);
+	}
+	
+	@RequestMapping(value = "/user/viewCart", method = RequestMethod.GET)
+	public ModelAndView viewCart() {
+		String userName = Basemethods.getUser();
+		LoginVO loginVO;
+		List userList = this.loginService.searchUserByUsername(userName);
+		loginVO = (LoginVO) userList.get(0);
 		List cartList = this.cartService.searchCart(loginVO);
 		return new ModelAndView("/user/cart", "cartList", cartList);
 	}

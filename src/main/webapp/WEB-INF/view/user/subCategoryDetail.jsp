@@ -50,7 +50,7 @@
         <!-- End Close Icon -->
         <div class="container">
             <!-- Search Form -->
-            <form role="search" id="searchform" action="/search" method="get">
+            <form role="search" id="searchform" action="/user/search" method="get">
                 <div class="search-icon-lg">
                     <img src="<%=request.getContextPath()%>/userResources/image/search-icon-lg.png" alt="" />
                 </div>
@@ -238,7 +238,7 @@
                                     <div class="product-item">
                                     <div class="product-item-inner">
                                             <div class="product-img-wrap">
-                                                <img src="<%=request.getContextPath()%>/sub-category/${subCategoryVariable.subCategoryName}.jpg">
+                                                <a href="productDetail?subCategoryId=${subCategoryVariable.id }"><img src="<%=request.getContextPath()%>/sub-category/${subCategoryVariable.subCategoryName}.jpg"></a>
                                             </div>
                                             <!-- <div class="product-button">
                                                 <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>

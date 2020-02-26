@@ -48,7 +48,7 @@
         <!-- End Close Icon -->
         <div class="container">
             <!-- Search Form -->
-            <form role="search" id="searchform" action="/search" method="get">
+            <form role="search" id="searchform" action="/user/search" method="get">
                 <div class="search-icon-lg">
                     <img src="<%=request.getContextPath()%>/userResources/image/search-icon-lg.png" alt="" />
                 </div>
