@@ -56,9 +56,7 @@ public class CartController {
 		return new ModelAndView("/user/productDetail", "productList", productList);
 	}
 
-<<<<<<< HEAD
-=======
-	@RequestMapping(value = "/user/viewCart", method = RequestMethod.GET)
+	/*@RequestMapping(value = "/user/viewCart", method = RequestMethod.GET)
 	public ModelAndView viewCart() {
 		String userName = Basemethods.getUser();
 		LoginVO loginVO;
@@ -66,14 +64,14 @@ public class CartController {
 		loginVO = (LoginVO) userList.get(0);
 		List cartList = this.cartService.searchCart(loginVO);
 		return new ModelAndView("/user/cart", "cartList", cartList);
-	}
+	}*/
 
->>>>>>> 5c3fbb1de25044b0a65fcccb7906004cb13380ce
+
 	@RequestMapping(value = "/user/addToCart", method = RequestMethod.GET)
 	public ModelAndView addToCart(@RequestParam int productId, @ModelAttribute CartVO cartVO) {
 		ProductVO productVO = new ProductVO();
 		productVO.setId(productId);
-
+		
 		cartVO.setProductQuantityBought(1);
 		cartVO.setProductVO(productVO);
 
@@ -83,11 +81,23 @@ public class CartController {
 
 		List userList = this.loginService.searchUserByUsername(userName);
 		loginVO = (LoginVO) userList.get(0);
+		
+		List productList=this.cartService.searchCart(loginVO);
 		cartVO.setLoginVO(loginVO);
-		cartVO.setStatus(true);
-
+		/*for(Object products:productList )
+		{
+			CartVO cart=(CartVO) products;
+			if(cart.getProductVO().getId()==productId)
+			{
+				cart.setProductQuantityBought(cart.getProductQuantityBought()+1);
+				this.cartService.insertProductToCart(cartVO);
+			}
+			else
+			{
+				this.cartService.insertProductToCart(cartVO);
+			}
+		}*/
 		this.cartService.insertProductToCart(cartVO);
-
 		List cartList = this.cartService.searchCart(loginVO);
 		return new ModelAndView("/user/cart", "cartList", cartList);
 	}
@@ -100,5 +110,15 @@ public class CartController {
 		loginVO = (LoginVO) userList.get(0);
 		List cartList = this.cartService.searchCart(loginVO);
 		return new ModelAndView("/user/cart", "cartList", cartList);
+	}
+	
+	@RequestMapping(value = "/user/checkout", method = RequestMethod.GET)
+	public ModelAndView checkout() {
+		String userName = Basemethods.getUser();
+		LoginVO loginVO;
+		List userList = this.loginService.searchUserByUsername(userName);
+		loginVO = (LoginVO) userList.get(0);
+		List checkoutList = this.cartService.searchCart(loginVO);
+		return new ModelAndView("/user/checkout", "checkoutList", checkoutList);
 	}
 }
