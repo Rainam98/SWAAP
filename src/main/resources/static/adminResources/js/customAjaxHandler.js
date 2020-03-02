@@ -1,4 +1,4 @@
-const ajaxAPILink = 'http://localhost:8080/api/';
+const ajaxAPILink = 'http://localhost:8085/api/';
 
 const CITY_OPTION_ID = 'selectCityOptions';
 const SUB_CATEGORY_OPTION_ID = 'selectSubCategoryOption';
@@ -49,6 +49,13 @@ async function getAllCategories() {
 
 async function toggleUser(id, enabled) {
     fetch(ajaxAPILink + 'toggleUser/' + id + '/' + enabled);
+}
+
+async function getProducts(){
+    return fetch(ajaxAPILink + 'allCategoryList/')
+        .then(result => {
+            return result.json();
+        }).catch(error => document.getElementById(CATEGORY_OPTION_ID).innerHtml = '');
 }
 
 //functions for updating data dynamically

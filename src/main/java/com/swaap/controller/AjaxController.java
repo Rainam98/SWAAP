@@ -128,4 +128,17 @@ public class AjaxController {
         return new ResponseEntity(deleteCount == 1 ? HttpStatus.OK : HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
+    @GetMapping("user/searchProduct/{rawProductName}")
+    public ResponseEntity findProducts(@PathVariable String rawProductName){
+        Session session = sessionFactory.openSession();
+        Query q = session.createQuery("from ProductVO where productName like '%"+rawProductName+"%'");
+        List<ProductVO> products = q.list();
+
+        if (products == null || products.isEmpty())
+            return new ResponseEntity<List<ProductVO>>(HttpStatus.NOT_FOUND);
+
+        return new ResponseEntity<List<ProductVO>>(products, HttpStatus.OK);
+
+    }
+
 }
