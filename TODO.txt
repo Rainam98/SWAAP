@@ -1,12 +1,13 @@
 20-02-2020
 Rainam
-
++OrderVO and add the data at the time of adding product to cart.
 
 Ritu
++Report BMC documentation
 
 Tanay
-+ajax in search products
 +total in cart
++Fix redirect in add to cart
 
 *********************************************
                 BUGS
