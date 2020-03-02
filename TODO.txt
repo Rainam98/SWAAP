@@ -6,12 +6,11 @@ Ritu
 +Report BMC documentation
 
 Tanay
-+total in cart
-+Fix redirect in add to cart
+
 
 *********************************************
                 BUGS
 *********************************************
-+add to cart adds new product even if product is already in the cart
+
 
 

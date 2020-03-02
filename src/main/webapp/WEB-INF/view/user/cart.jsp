@@ -165,9 +165,12 @@
 												</td>
 												<td class="product-subtotal"><span
 														class="product-price-sub_totle amount"> <span
-														class="currency-sign">Rs.</span> <span
-														id="cart-${cartVariable.id}">${cartVariable.productVO.productPrice * cartVariable.productQuantityBought }</span>
-													</span></td>
+														class="currency-sign">Rs.</span>
+													<span
+															id="cart-${cartVariable.id}"
+															class="sub-totals">${cartVariable.productVO.productPrice * cartVariable.productQuantityBought }</span>
+													</span>
+												</td>
 											</tr>
 										</c:forEach>
 										</tbody>
@@ -190,7 +193,9 @@
 													<tr class="order-total">
 														<th>Total</th>
 														<td><span class="product-price-amount amount"><span
-																class="currency-sign">Rs.</span>1234.21</span></td>
+																class="currency-sign">Rs.</span>
+															<span id="final_total">	0.0 </span>
+														</span></td>
 													</tr>
 													</tbody>
 												</table>
@@ -217,20 +222,24 @@
 		<!-- End Footer Section -------------->
 
 	</div>
-	<!-- End wrapper =============================-->
+<!-- End wrapper =============================-->
 
 <!--==========================================-->
 <!-- JAVASCRIPT -->
 <!--==========================================-->
 <script>
 	function changeQuantity(cartId, price, sign) {
-		var totalPrice = document.getElementById('cart-' + cartId);
-		var quantity = parseInt(document.getElementById('quant-' + cartId).value);
+		let totalPrice = document.getElementById('cart-' + cartId);
+		let quantity = parseInt(document.getElementById('quant-' + cartId).value);
 		quantity = sign === '+' ? quantity + 1 : quantity - 1;
 		if (quantity != 0) {
 			totalPrice.innerText = (quantity * price) + '';
 			fetch('http://localhost:8080/api/user/modifyCart/' + cartId + '/' + quantity);
+			let final_total_elem = document.getElementById('final_total');
+			let final_total = parseFloat(final_total_elem.innerHTML);
+			final_total_elem.innerHTML = (sign === '+') ? final_total + price : final_total - price;
 		}
+
 	}
 
 	function removeElementFromCart(idPrefix, cartId) {
@@ -238,6 +247,12 @@
 		let elem = document.getElementById(idPrefix + '-' + cartId);
 		return elem.parentNode.removeChild(elem);
 	}
+
+	(function () {
+		let subTotal = 0;
+		[].forEach.call(document.getElementsByClassName('sub-totals'), (e) => subTotal += parseFloat(e.innerText));
+		document.getElementById('final_total').innerHTML = subTotal;
+	})();
 </script>
 <script type="text/javascript"
 		src="<%=request.getContextPath()%>/userResources/js/jquery.min.js"></script>
