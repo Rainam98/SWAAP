@@ -1,6 +1,6 @@
 20-02-2020
 Rainam
-+OrderVO and add the data at the time of adding product to cart.
+
 
 Ritu
 +Report BMC documentation

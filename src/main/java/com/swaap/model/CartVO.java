@@ -30,6 +30,10 @@ public class CartVO {
 
 	@Column(name = "product_quantity_bought")
 	private int productQuantityBought;
+	
+	@ManyToOne
+	@JoinColumn(name = "order_id")
+	private OrderVO orderVO;
 
 	public int getId() {
 		return id;
@@ -69,6 +73,14 @@ public class CartVO {
 
 	public void setProductQuantityBought(int productQuantityBought) {
 		this.productQuantityBought = productQuantityBought;
+	}
+
+	public OrderVO getOrderVO() {
+		return orderVO;
+	}
+
+	public void setOrderVO(OrderVO orderVO) {
+		this.orderVO = orderVO;
 	}
 
 }

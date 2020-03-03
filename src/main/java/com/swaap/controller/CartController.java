@@ -53,16 +53,6 @@ public class CartController {
 		List productList = this.productService.getProductByString(q);
 		return new ModelAndView("/user/productDetail", "productList", productList);
 	}
-
-	/*@RequestMapping(value = "/user/viewCart", method = RequestMethod.GET)
-	public ModelAndView viewCart() {
-		String userName = Basemethods.getUser();
-		LoginVO loginVO;
-		List userList = this.registerService.searchUserByUsername(userName);
-		loginVO = (LoginVO) userList.get(0);
-		List cartList = this.cartService.searchCart(loginVO);
-		return new ModelAndView("/user/cart", "cartList", cartList);
-	}*/
 	
 	@RequestMapping(value = "/user/viewCart", method = RequestMethod.GET)
 	public ModelAndView viewCart() {
