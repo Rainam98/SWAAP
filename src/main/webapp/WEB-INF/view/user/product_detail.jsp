@@ -89,7 +89,8 @@
                         <li>
                             <!--Item Image-->
                             <a href="#" class="product-image">
-                                <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_12547554.jpg" alt="" /></a>
+                                <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_12547554.jpg"
+                                     alt=""/></a>
 
                             <!--Item Content-->
                             <div class="product-content">
@@ -98,11 +99,14 @@
 
                                 <!-- Item Cart Totle -->
                                 <div class="cart-collateral">
-                                    <span class="qty-cart">1</span>&nbsp;<span>&#215;</span>&nbsp;<span class="product-price-amount"><span class="currency-sign">$</span>399.00</span>
+                                    <span class="qty-cart">1</span>&nbsp;<span>&#215;</span>&nbsp;<span
+                                        class="product-price-amount"><span
+                                        class="currency-sign">&#8377;</span>399.00</span>
                                 </div>
 
                                 <!-- Item Remove Icon -->
-                                <a class="product-remove" href="javascript:void(0)"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                <a class="product-remove" href="javascript:void(0)"><i class="fa fa-times-circle"
+                                                                                       aria-hidden="true"></i></a>
                             </div>
                         </li>
 
@@ -110,7 +114,8 @@
                         <li>
                             <!--Item Image-->
                             <a href="#" class="product-image">
-                                <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_12547555.jpg" alt="" /></a>
+                                <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_12547555.jpg"
+                                     alt=""/></a>
 
                             <!--Item Content-->
                             <div class="product-content">
@@ -119,11 +124,14 @@
 
                                 <!-- Item Cart Totle -->
                                 <div class="cart-collateral">
-                                    <span class="qty-cart">2</span>&nbsp;<span>&#215;</span>&nbsp;<span class="product-price-amount"><span class="currency-sign">$</span>299.00</span>
+                                    <span class="qty-cart">2</span>&nbsp;<span>&#215;</span>&nbsp;<span
+                                        class="product-price-amount"><span
+                                        class="currency-sign">&#8377;</span>299.00</span>
                                 </div>
 
                                 <!-- Item Remove Icon -->
-                                <a class="product-remove" href="javascript:void(0)"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                <a class="product-remove" href="javascript:void(0)"><i class="fa fa-times-circle"
+                                                                                       aria-hidden="true"></i></a>
                             </div>
                         </li>
 

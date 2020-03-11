@@ -12,7 +12,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("api/")
@@ -137,11 +139,11 @@ public class AjaxController {
         productVO.setId(productId);
 
         Session session = sessionFactory.openSession();
-        Query q = session.createQuery("from CartVO where status=false and productVO.id =:productId");
+        Query q = session.createQuery("from CartVO where status=false and productVO.id =:productId and orderVO IS NULL");
         q.setParameter("productId", productId);
-        List<CityVO> cities = q.list();
+        List<CartVO> cartList = q.list();
 
-        if (cities == null || cities.isEmpty()) {
+        if (cartList == null || cartList.isEmpty()) {
             CartVO cartVO = new CartVO();
             cartVO.setProductQuantityBought(1);
             cartVO.setStatus(false);
@@ -153,8 +155,44 @@ public class AjaxController {
 
             cartVO.setLoginVO(loginVO);
             this.cartService.insertProductToCart(cartVO);
+            return new ResponseEntity(HttpStatus.OK);
+        } else {
+            return new ResponseEntity(HttpStatus.ALREADY_REPORTED);
         }
-        return new ResponseEntity(HttpStatus.OK);
+    }
+
+    @GetMapping("/user/viewCart")
+    public List searchCart() {
+        String userName = Basemethods.getUser();
+        List userList = this.loginService.searchUserByUsername(userName);
+        LoginVO loginVO = (LoginVO) userList.get(0);
+        Session session = sessionFactory.openSession();
+        Query q = session.createQuery("from CartVO where login_id=" + loginVO.getLoginId() + " and status=false and orderVO IS NULL");
+        List productList = q.list();
+        return productList;
+    }
+
+    @GetMapping("/user/getCartDetails")
+    public Map<String, String> getCartDetails() {
+        String userName = Basemethods.getUser();
+        List userList = this.loginService.searchUserByUsername(userName);
+        LoginVO loginVO = (LoginVO) userList.get(0);
+        Session session = sessionFactory.openSession();
+        Query q = session.createQuery("from CartVO where login_id=" + loginVO.getLoginId() + " and status=false and orderVO IS NULL");
+        List productList = q.list();
+        int totalProducts = 0;
+        double totalAmount = 0.0;
+        if (productList != null && !productList.isEmpty()) {
+            totalProducts = q.list().size();
+            for (Object obj : productList) {
+                CartVO cartVO = (CartVO) obj;
+                totalAmount += cartVO.getProductQuantityBought() * cartVO.getProductVO().getProductPrice();
+            }
+        }
+        HashMap<String, String> map = new HashMap<String, String>();
+        map.put("quantity", totalProducts + "");
+        map.put("totalAmount", totalAmount + "");
+        return map;
     }
 
 }

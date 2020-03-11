@@ -97,51 +97,51 @@
 						<!-- Item -->
 						<li>
 							<!--Item Image--> <a href="#" class="product-image"> <img
-								src="<%=request.getContextPath()%>/userResources/image/product-img/product_12547554.jpg"
-								alt="" /></a> <!--Item Content-->
-							<div class="product-content">
-								<!-- Item Linkcollateral -->
-								<a class="product-link" href="#">Alpha Block Black Polo
-									T-Shirt</a>
+                                src="<%=request.getContextPath()%>/userResources/image/product-img/product_12547554.jpg"
+                                alt=""/></a> <!--Item Content-->
+                            <div class="product-content">
+                                <!-- Item Linkcollateral -->
+                                <a class="product-link" href="#">Alpha Block Black Polo
+                                    T-Shirt</a>
 
-								<!-- Item Cart Totle -->
-								<div class="cart-collateral">
-									<span class="qty-cart">1</span>&nbsp;<span>&#215;</span>&nbsp;<span
-										class="product-price-amount"><span
-										class="currency-sign">$</span>399.00</span>
-								</div>
+                                <!-- Item Cart Totle -->
+                                <div class="cart-collateral">
+                                    <span class="qty-cart">1</span>&nbsp;<span>&#215;</span>&nbsp;<span
+                                        class="product-price-amount"><span
+                                        class="currency-sign">&#8377;</span>399.00</span>
+                                </div>
 
-								<!-- Item Remove Icon -->
-								<a class="product-remove" href="javascript:void(0)"><i
-									class="fa fa-times-circle" aria-hidden="true"></i></a>
-							</div>
-						</li>
+                                <!-- Item Remove Icon -->
+                                <a class="product-remove" href="javascript:void(0)"><i
+                                        class="fa fa-times-circle" aria-hidden="true"></i></a>
+                            </div>
+                        </li>
 
-						<!-- Item -->
-						<li>
+                        <!-- Item -->
+                        <li>
 							<!--Item Image--> <a href="#" class="product-image"> <img
-								src="<%=request.getContextPath()%>/userResources/image/product-img/product_12547555.jpg"
-								alt="" /></a> <!--Item Content-->
-							<div class="product-content">
-								<!-- Item Linkcollateral -->
-								<a class="product-link" href="#">Red Printed Round Neck
-									T-Shirt</a>
+                                src="<%=request.getContextPath()%>/userResources/image/product-img/product_12547555.jpg"
+                                alt=""/></a> <!--Item Content-->
+                            <div class="product-content">
+                                <!-- Item Linkcollateral -->
+                                <a class="product-link" href="#">Red Printed Round Neck
+                                    T-Shirt</a>
 
-								<!-- Item Cart Totle -->
-								<div class="cart-collateral">
-									<span class="qty-cart">2</span>&nbsp;<span>&#215;</span>&nbsp;<span
-										class="product-price-amount"><span
-										class="currency-sign">$</span>299.00</span>
-								</div>
+                                <!-- Item Cart Totle -->
+                                <div class="cart-collateral">
+                                    <span class="qty-cart">2</span>&nbsp;<span>&#215;</span>&nbsp;<span
+                                        class="product-price-amount"><span
+                                        class="currency-sign">&#8377;</span>299.00</span>
+                                </div>
 
-								<!-- Item Remove Icon -->
-								<a class="product-remove" href="javascript:void(0)"><i
-									class="fa fa-times-circle" aria-hidden="true"></i></a>
-							</div>
-						</li>
+                                <!-- Item Remove Icon -->
+                                <a class="product-remove" href="javascript:void(0)"><i
+                                        class="fa fa-times-circle" aria-hidden="true"></i></a>
+                            </div>
+                        </li>
 
-					</ul>
-					<!-- End Cart Products -->
+                    </ul>
+                    <!-- End Cart Products -->
 
 				</div>
 			</div>

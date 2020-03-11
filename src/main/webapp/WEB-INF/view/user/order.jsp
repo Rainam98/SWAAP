@@ -130,17 +130,18 @@
 										</thead>
 										<tbody>
 										<c:forEach items="${orderList}" var="cartVariable">
-											<tr id="product-${orderVariable.id}">
-												<td class="product-remove"><a
-														href="orderDetail"><i class="fas fa-share-square" aria-hidden="true"></i></a></td>
-												<td class="product-name"><a>${orderVariable.id }</a></td>
-												<td class="product-name"><a>${orderVariable.purchaseDate }</a></td>
-												
-												<td class="product-subtotal"><span
-														class="product-price-sub_totle amount"> <span
-														class="currency-sign">Rs.</span>
+                                            <tr class="product-${orderVariable.id}">
+                                                <td class="product-remove"><a
+                                                        href="orderDetail"><i class="fas fa-share-square"
+                                                                              aria-hidden="true"></i></a></td>
+                                                <td class="product-name"><a>${orderVariable.id }</a></td>
+                                                <td class="product-name"><a>${orderVariable.purchaseDate }</a></td>
+
+                                                <td class="product-subtotal"><span
+                                                        class="product-price-sub_totle amount"> <span
+                                                        class="currency-sign">Rs.</span>
 													<span
-															id="cart-${orderVariable.id}"
+                                                            id="cart-${orderVariable.id}"
 															class="sub-totals">${orderVariable.totalAmount }</span>
 													</span>
 												</td>
@@ -177,33 +178,7 @@
 <!--==========================================-->
 <!-- JAVASCRIPT -->
 <!--==========================================-->
-<script>
-	function changeQuantity(cartId, price, sign) {
-		let totalPrice = document.getElementById('cart-' + cartId);
-		let quantity = parseInt(document.getElementById('quant-' + cartId).value);
-		quantity = sign === '+' ? quantity + 1 : quantity - 1;
-		if (quantity != 0) {
-			totalPrice.innerText = (quantity * price) + '';
-			fetch('http://localhost:8080/api/user/modifyCart/' + cartId + '/' + quantity);
-			let final_total_elem = document.getElementById('final_total');
-			let final_total = parseFloat(final_total_elem.innerHTML);
-			final_total_elem.innerHTML = (sign === '+') ? final_total + price : final_total - price;
-		}
 
-	}
-
-	function removeElementFromCart(idPrefix, cartId) {
-		fetch('http://localhost:8080/api/user/removeFromCart/' + cartId);
-		let elem = document.getElementById(idPrefix + '-' + cartId);
-		return elem.parentNode.removeChild(elem);
-	}
-
-	(function () {
-		let subTotal = 0;
-		[].forEach.call(document.getElementsByClassName('sub-totals'), (e) => subTotal += parseFloat(e.innerText));
-		document.getElementById('final_total').innerHTML = subTotal;
-	})();
-</script>
 <script type="text/javascript"
 		src="<%=request.getContextPath()%>/userResources/js/jquery.min.js"></script>
 	<script type="text/javascript"

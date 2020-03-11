@@ -1,17 +1,5 @@
 package com.swaap.controller;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
-
 import com.swaap.model.CartVO;
 import com.swaap.model.LoginVO;
 import com.swaap.model.OrderVO;
@@ -19,8 +7,18 @@ import com.swaap.service.CartService;
 import com.swaap.service.LoginService;
 import com.swaap.service.OrderService;
 import com.swaap.service.ProductService;
-import com.swaap.service.RegisterService;
 import com.swaap.utils.Basemethods;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
 
 @Controller
 public class OrderController {
@@ -53,18 +51,17 @@ public class OrderController {
 		orderVO.setLoginVO(loginVO);
 		this.orderService.insertOrder(orderVO);
 		int totalAmount=0;
-		for(Object cartObjects: cartList)
-		{
-			CartVO cartVO=(CartVO) cartObjects;
-			cartVO.setOrderVO(orderVO);
-			cartVO.setStatus(true);
-			int quantity=cartVO.getProductQuantityBought();
-			int price=Integer.parseInt(cartVO.getProductVO().getProductPrice());
-			totalAmount+=quantity*price;
-			this.cartService.insertProductToCart(cartVO);
-			System.out.println(cartVO.getOrderVO().getId());
-			System.out.println(cartVO.isStatus());
-		}
+		for(Object cartObjects: cartList) {
+            CartVO cartVO = (CartVO) cartObjects;
+            cartVO.setOrderVO(orderVO);
+            cartVO.setStatus(true);
+            int quantity = cartVO.getProductQuantityBought();
+            double price = cartVO.getProductVO().getProductPrice();
+            totalAmount += quantity * price;
+            this.cartService.insertProductToCart(cartVO);
+            System.out.println(cartVO.getOrderVO().getId());
+            System.out.println(cartVO.isStatus());
+        }
 		orderVO.setTotalAmount(totalAmount);
 		this.orderService.insertOrder(orderVO);
 		return new ModelAndView("redirect:/user/index"); 

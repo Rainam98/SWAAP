@@ -236,7 +236,8 @@
                                             <div class="product-button">
 
                                                 <!--  <a href="#" class="js_tooltip1" data-mode="top" data-tip="Add To Whishlist"><i class="fa fa-heart1"></i></a> -->
-                                                <a href="#" onclick="addToCart(${productVariable.id});return false;"
+                                                <a href="#"
+                                                   onclick="addToCart(${productVariable.id},${productVariable.productPrice });return false;"
                                                    class="js_tooltip" data-mode="top" data-tip="Add to Cart"><i
                                                         class="fa fa-shopping-bag"></i></a>
 
@@ -525,8 +526,22 @@
     <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/custom.js"></script>
 <!-- custom js -->
 <script>
-    function addToCart(productId) {
-        fetch("http://localhost:8080/api/user/addToCart?productId=" + productId);
+    function addToCart(productId, productPrice) {
+        fetch("http://localhost:8080/api/user/addToCart?productId=" + productId).then(response => {
+            if (response.status === 208)
+                alert("Item is already in cart !");
+            else if (response.status === 200) {
+                let headerQuantityElem = document.getElementById('header-quantity');
+                let quantity = parseInt(headerQuantityElem.innerHTML);
+                headerQuantityElem.innerHTML = (quantity + 1) + "";
+
+                let headerTotal = document.getElementById('header-total');
+                let total = parseFloat(headerTotal.innerHTML);
+                headerTotal.innerHTML = (total + productPrice) + "";
+
+                alert("Item is added to cart successfully :)")
+            }
+        });
     }
 </script>
 <!-- end jquery -->

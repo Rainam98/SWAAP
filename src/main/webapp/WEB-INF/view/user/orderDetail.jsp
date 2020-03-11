@@ -131,17 +131,17 @@
 										</thead>
 										<tbody>
 										<c:forEach items="${cartList}" var="cartVariable">
-											<tr id="product-${cartVariable.id}">
-												
-												<td class="product-thumbnail"><a> <img
-														src="<%=request.getContextPath()%>/product/${cartVariable.productVO.productFileName}"
-														alt=""/></a></td>
-												<td class="product-name"><a>${cartVariable.productVO.productName }</a>
-												</td>
-												<td class="product-price"><span
-														class="product-price-amount amount"><span
-														class="currency-sign">Rs.</span>${cartVariable.productVO.productPrice }</span>
-												</td>
+                                            <tr class="product-${cartVariable.id}">
+
+                                                <td class="product-thumbnail"><a> <img
+                                                        src="<%=request.getContextPath()%>/product/${cartVariable.productVO.productFileName}"
+                                                        alt=""/></a></td>
+                                                <td class="product-name"><a>${cartVariable.productVO.productName }</a>
+                                                </td>
+                                                <td class="product-price"><span
+                                                        class="product-price-amount amount"><span
+                                                        class="currency-sign">Rs.</span>${cartVariable.productVO.productPrice }</span>
+                                                </td>
 												<td>
 
 
@@ -175,27 +175,27 @@
 									</div>
 									<div class="cart-collateral">
 										<div class="cart_totals">
-											<h3>Cart Total</h3>
-											<div class="responsive-table">
-												<table>
-													<tbody>
+                                            <h3>Cart Total</h3>
+                                            <div class="responsive-table">
+                                                <table>
+                                                    <tbody>
 
 
-													<tr class="order-total">
-														<th>Total</th>
-														<td><span class="product-price-amount amount"><span
-																class="currency-sign">Rs.</span>
-															<span id="final_total">	0.0 </span>
+                                                    <tr class="order-total">
+                                                        <th>Total</th>
+                                                        <td><span class="product-price-amount amount"><span
+                                                                class="currency-sign">Rs.</span>
+															<span class="final_total">	0.0 </span>
 														</span></td>
-													</tr>
-													</tbody>
-												</table>
-											</div>
-											
-										</div>
-									</div>
-								</form>
-							</article>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </form>
+                            </article>
 						</div>
 					</div>
 				</div>
@@ -205,54 +205,28 @@
 		</div>
 		<!-- End Page Content Wraper -->
 
-		<!-- Footer Section -------------->
-		<jsp:include page="footer.jsp"></jsp:include>
-		<!-- End Footer Section -------------->
+        <!-- Footer Section -------------->
+        <jsp:include page="footer.jsp"></jsp:include>
+        <!-- End Footer Section -------------->
 
-	</div>
+    </div>
 <!-- End wrapper =============================-->
 
 <!--==========================================-->
 <!-- JAVASCRIPT -->
 <!--==========================================-->
-<script>
-	function changeQuantity(cartId, price, sign) {
-		let totalPrice = document.getElementById('cart-' + cartId);
-		let quantity = parseInt(document.getElementById('quant-' + cartId).value);
-		quantity = sign === '+' ? quantity + 1 : quantity - 1;
-		if (quantity != 0) {
-			totalPrice.innerText = (quantity * price) + '';
-			fetch('http://localhost:8080/api/user/modifyCart/' + cartId + '/' + quantity);
-			let final_total_elem = document.getElementById('final_total');
-			let final_total = parseFloat(final_total_elem.innerHTML);
-			final_total_elem.innerHTML = (sign === '+') ? final_total + price : final_total - price;
-		}
-
-	}
-
-	function removeElementFromCart(idPrefix, cartId) {
-		fetch('http://localhost:8080/api/user/removeFromCart/' + cartId);
-		let elem = document.getElementById(idPrefix + '-' + cartId);
-		return elem.parentNode.removeChild(elem);
-	}
-
-	(function () {
-		let subTotal = 0;
-		[].forEach.call(document.getElementsByClassName('sub-totals'), (e) => subTotal += parseFloat(e.innerText));
-		document.getElementById('final_total').innerHTML = subTotal;
-	})();
-</script>
+<script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/cart.js"></script>
 <script type="text/javascript"
-		src="<%=request.getContextPath()%>/userResources/js/jquery.min.js"></script>
-	<script type="text/javascript"
-		src="<%=request.getContextPath()%>/userResources/js/jquery-ui.js"></script>
-	<!-- jquery library js -->
-	<script type="text/javascript"
-		src="<%=request.getContextPath()%>/userResources/js/modernizr.js"></script>
-	<!--modernizr Js-->
-	<script type="text/javascript"
-		src="<%=request.getContextPath()%>/userResources/js/jquery.themepunch.revolution.min.js"></script>
-	<script type="text/javascript"
+        src="<%=request.getContextPath()%>/userResources/js/jquery.min.js"></script>
+<script type="text/javascript"
+        src="<%=request.getContextPath()%>/userResources/js/jquery-ui.js"></script>
+<!-- jquery library js -->
+<script type="text/javascript"
+        src="<%=request.getContextPath()%>/userResources/js/modernizr.js"></script>
+<!--modernizr Js-->
+<script type="text/javascript"
+        src="<%=request.getContextPath()%>/userResources/js/jquery.themepunch.revolution.min.js"></script>
+<script type="text/javascript"
 		src="<%=request.getContextPath()%>/userResources/js/jquery.themepunch.tools.min.js"></script>
 	<script type="text/javascript"
 		src="<%=request.getContextPath()%>/userResources/js/revolution.extension.navigation.min.js"></script>
