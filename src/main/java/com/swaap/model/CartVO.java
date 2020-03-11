@@ -31,15 +31,10 @@ public class CartVO {
 	@Column(name = "product_quantity_bought")
 	private int productQuantityBought;
 	
-	@Column(name = "order_id")
-	private int orderId;
+	@ManyToOne
+	@JoinColumn(name = "order_id")
+	private OrderVO orderVO;
 	
-	@Column(name = "total_amount")
-	private int totalAmount;
-	
-	@Column(name = "purchase_date")
-	private String purchaseDate;
-
 	public int getId() {
 		return id;
 	}
@@ -79,21 +74,13 @@ public class CartVO {
 	public void setProductQuantityBought(int productQuantityBought) {
 		this.productQuantityBought = productQuantityBought;
 	}
+
+	public OrderVO getOrderVO() {
+		return orderVO;
+	}
+
+	public void setOrderVO(OrderVO orderVO) {
+		this.orderVO = orderVO;
+	}
 	
-	public int getTotalAmount() {
-		return totalAmount;
-	}
-
-	public void setTotalAmount(int totalAmount) {
-		this.totalAmount = totalAmount;
-	}
-
-	public String getPurchaseDate() {
-		return purchaseDate;
-	}
-
-	public void setPurchaseDate(String purchaseDate) {
-		this.purchaseDate = purchaseDate;
-	}
-
 }

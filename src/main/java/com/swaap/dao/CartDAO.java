@@ -13,4 +13,6 @@ public interface CartDAO {
 	public List editCart(CartVO cartVO);
 
 	public List searchCart(LoginVO loginVO);
+
+	public List searchOrderDetails(int orderId);
 }

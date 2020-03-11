@@ -163,7 +163,7 @@
                                                             </li>
                                                         </ul>
                                                         <div class="place-order">
-                                                            <a class="btn btn-lg btn-color form-full-width" href="#">Place Order</a>
+                                                            <a class="btn btn-lg btn-color form-full-width" href="placeOrder">Place Order</a>
                                                         </div>
                                                     </div>
 
