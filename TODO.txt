@@ -1,12 +1,15 @@
 20-02-2020
 Rainam
-
++checkout
++purchase history
 
 Ritu
 +Report BMC documentation
++database completion
 
 Tanay
-
++add to cart button
++cart slider
 
 *********************************************
                 BUGS
