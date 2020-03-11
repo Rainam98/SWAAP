@@ -18,6 +18,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.swaap.model.CartVO;
 import com.swaap.model.LoginVO;
 import com.swaap.model.OrderVO;
+import com.swaap.model.ProductVO;
 import com.swaap.model.RegisterVO;
 import com.swaap.service.CartService;
 import com.swaap.service.LoginService;
@@ -63,18 +64,6 @@ public class CartController {
 
 
 
-
-	@RequestMapping(value = "/user/addToCart", method = RequestMethod.GET)
-	public ModelAndView addToCart(@RequestParam int productId, @ModelAttribute CartVO cartVO) {
-		ProductVO productVO = new ProductVO();
-		productVO.setId(productId);
-
-		cartVO.setProductQuantityBought(1);
-		cartVO.setProductVO(productVO);
-
-		String userName = Basemethods.getUser();
-
-		LoginVO loginVO;
 
 
 	
