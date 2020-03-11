@@ -10,6 +10,7 @@ Ritu
 Tanay
 +add to cart button
 +cart slider
++total on checkout page
 
 *********************************************
                 BUGS
