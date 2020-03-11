@@ -20,7 +20,7 @@ public class CartDAOImpl implements CartDAO{
 	@Override
 	public List editCart(CartVO cartVO) {
 		Session session = sessionFactory.openSession();		
-		Query q=session.createQuery("from CartVO where id="+cartVO.getId());		
+		Query q=session.createQuery("from CartVO where id="+cartVO.getId()+" and status=false");		
 		List productList=q.list();
 		return productList;
 	}
@@ -34,7 +34,15 @@ public class CartDAOImpl implements CartDAO{
 	@Override
 	public List searchCart(LoginVO loginVO) {
 		Session session = sessionFactory.openSession();		
-		Query q=session.createQuery("from CartVO where login_id="+loginVO.getLoginId());		
+		Query q=session.createQuery("from CartVO where login_id="+loginVO.getLoginId()+" and status=false");		
+		List productList=q.list();
+		return productList;
+	}
+
+	@Override
+	public List searchOrderDetails(int orderId) {
+		Session session = sessionFactory.openSession();		
+		Query q=session.createQuery("from CartVO where status=true and order_id="+orderId);		
 		List productList=q.list();
 		return productList;
 	}

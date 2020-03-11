@@ -113,15 +113,16 @@
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
+                                                            <c:forEach items="${checkoutList}" var="checkoutVariable">
                                                                 <tr class="cart_item">
-                                                                	<c:forEach items="${checkoutList}" var="checkoutVariable">
-                                                                    <td class="product-name">Alpha Block Black Polo T-Shirt<strong> x 1</strong></td>
+                                                                	
+                                                                    <td class="product-name">${checkoutVariable.productVO.productName }<strong> x ${checkoutVariable.productQuantityBought }</strong></td>
                                                                     <td class="product-total">
-                                                                        <span class="product-price-amount amount"><span class="currency-sign">Rs.</span>399.00</span>
+                                                                        <span class="product-price-amount amount"><span class="currency-sign">Rs.</span>${checkoutVariable.productVO.productPrice * checkoutVariable.productQuantityBought}</span>
                                                                     </td>
-                                                                    </c:forEach>
+                                                                    
                                                                 </tr>
-                                                                
+                                                                </c:forEach>
                                                         
                                                             </tbody>
                                                             <tfoot>
@@ -162,7 +163,7 @@
                                                             </li>
                                                         </ul>
                                                         <div class="place-order">
-                                                            <a class="btn btn-lg btn-color form-full-width" href="#">Place Order</a>
+                                                            <a class="btn btn-lg btn-color form-full-width" href="placeOrder">Place Order</a>
                                                         </div>
                                                     </div>
 

@@ -1,19 +1,16 @@
 package com.swaap.controller;
 
-import com.swaap.model.CategoryVO;
-import com.swaap.model.CityVO;
-import com.swaap.model.ProductVO;
-import com.swaap.model.SubCategoryVO;
+import com.swaap.model.*;
+import com.swaap.service.CartService;
+import com.swaap.service.LoginService;
+import com.swaap.utils.Basemethods;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,8 +21,14 @@ public class AjaxController {
     @Autowired
     SessionFactory sessionFactory;
 
+    @Autowired
+    LoginService loginService;
+
+    @Autowired
+    CartService cartService;
+
     @GetMapping("cityList/{stateId}")
-    public ResponseEntity<List<CityVO>> getCityList(@PathVariable int stateId){
+    public ResponseEntity<List<CityVO>> getCityList(@PathVariable int stateId) {
         Session session = sessionFactory.openSession();
         Query q = session.createQuery("from CityVO where status=true and stateVO.status=true and stateVO.id =:stateId");
         q.setParameter("stateId", stateId);
@@ -126,6 +129,32 @@ public class AjaxController {
         q.setParameter("cartId", cartId);
         int deleteCount = q.executeUpdate();
         return new ResponseEntity(deleteCount == 1 ? HttpStatus.OK : HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    @GetMapping(value = "/user/addToCart")
+    public ResponseEntity addToCart(@RequestParam int productId) {
+        ProductVO productVO = new ProductVO();
+        productVO.setId(productId);
+
+        Session session = sessionFactory.openSession();
+        Query q = session.createQuery("from CartVO where status=false and productVO.id =:productId");
+        q.setParameter("productId", productId);
+        List<CityVO> cities = q.list();
+
+        if (cities == null || cities.isEmpty()) {
+            CartVO cartVO = new CartVO();
+            cartVO.setProductQuantityBought(1);
+            cartVO.setStatus(false);
+            cartVO.setProductVO(productVO);
+
+            String userName = Basemethods.getUser();
+            List userList = this.loginService.searchUserByUsername(userName);
+            LoginVO loginVO = (LoginVO) userList.get(0);
+
+            cartVO.setLoginVO(loginVO);
+            this.cartService.insertProductToCart(cartVO);
+        }
+        return new ResponseEntity(HttpStatus.OK);
     }
 
 }

@@ -1,19 +1,20 @@
 20-02-2020
 Rainam
 +checkout
-+Ask the steps after cart management for order id
-+ Doubt about viewCart from cartSlider
++purchase history
 
 Ritu
-+Date Picker
++Report BMC documentation
++database completion
 
 Tanay
-+ajax in search products
-+total in cart
++add to cart button
++cart slider
++total on checkout page
 
 *********************************************
                 BUGS
 *********************************************
-+add to cart adds new product even if product is already in the cart
+
 
 
