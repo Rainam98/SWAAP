@@ -26,7 +26,7 @@
 	rel="stylesheet" type="text/css" />
 <!-- bootstrap css -->
 <link
-	href="<%=request.getContextPath()%>/userResources/css/font-awesome.min.css"
+	href="<%=request.getContextPath()%>/userResources/css/fontawesome-all.min.css"
 	rel="stylesheet" type="text/css" />
 <!-- fontawesome css -->
 <link href="<%=request.getContextPath()%>/userResources/css/animate.css"
@@ -122,7 +122,7 @@
 									<table>
 										<thead>
 											<tr>
-												<th class="product-thumbnail">View Order</th>
+												<th class="product-thumbnail"></th>
 												<th class="product-name">Order ID</th>
 												<th class="product-price">Purchase  Date</th>
 												<th class="product-subtotal">Total Amount Paid</th>
@@ -132,8 +132,7 @@
 										<c:forEach items="${orderList}" var="orderVariable">
                                             <tr class="product-${orderVariable.id}">
                                                 <td class="product-remove"><a
-                                                        href="orderDetail"><i class="fas fa-share-square"
-                                                                              aria-hidden="true"></i></a></td>
+                                                        href="orderDetail">View</a></td>
                                                 <td class="product-name">${orderVariable.id }</td>
                                                 <td class="product-name">${orderVariable.purchaseDate }</td>
 
@@ -152,8 +151,7 @@
 								</div>
 									<div class="row cart-actions">
 										<div class="col-md-6 text-right">
-											<input class="btn btn-md btn-gray" name="update_cart"
-												   value="Continue Shopping" type="submit">
+											<a href="index" class="view-cart btn btn-md btn-gray">Continue Shopping</a>
 										</div>
 									</div>
 									

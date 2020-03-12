@@ -169,8 +169,8 @@
 								</div>
 									<div class="row cart-actions">
 										<div class="col-md-6 text-right">
-											<input class="btn btn-md btn-gray" name="update_cart"
-												   value="Continue Shopping" type="submit">
+											<a href="index" class="view-cart btn btn-md btn-gray">Continue Shopping</a>
+
 										</div>
 									</div>
 									<div class="cart-collateral">

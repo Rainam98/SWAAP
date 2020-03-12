@@ -5683,7 +5683,7 @@ table.shop_attributes th:last-child, table.shop_attributes td:last-child {
         }
 
         .post-8 table tr th.product-name {
-            text-align: left;
+            
         }
 
         .post-8 table tr th.product-quantity {
@@ -5703,7 +5703,7 @@ table.shop_attributes th:last-child, table.shop_attributes td:last-child {
 }
 
 .post-8 table tr td.product-name {
-    text-align: left;
+   
 }
 
 .post-8 td.product-price {
