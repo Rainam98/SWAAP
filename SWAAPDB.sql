@@ -39,6 +39,30 @@ CREATE TABLE `branch_table` (
 
 insert  into `branch_table`(`id`,`branch_name`,`password`,`status`,`username`,`cityVO`,`stateVO`) values (1,'Naranpura','branch1','','branch1@gmail.com',268,12),(2,'Panjrapole','branch2','','branch2@gmail.com',634,29),(3,'Jor Bagh','branch3','','branch3@gmail.com',973,9);
 
+/*Table structure for table `cart_table` */
+
+DROP TABLE IF EXISTS `cart_table`;
+
+CREATE TABLE `cart_table` (
+  `id` int(11) NOT NULL auto_increment,
+  `status` bit(1) default NULL,
+  `login_id` int(11) default NULL,
+  `product_id` int(11) default NULL,
+  `product_quantity_bought` int(11) default NULL,
+  `order_id` int(11) default NULL,
+  PRIMARY KEY  (`id`),
+  KEY `FKqqdpyk2dfje9bum8rsy3y7ku4` (`login_id`),
+  KEY `FKphru3q25sogwctpiwiq8id9p0` (`product_id`),
+  KEY `FK1mvqus7kbrmjerf1afgd3p5eb` (`order_id`),
+  CONSTRAINT `FK1mvqus7kbrmjerf1afgd3p5eb` FOREIGN KEY (`order_id`) REFERENCES `order_table` (`id`),
+  CONSTRAINT `FKphru3q25sogwctpiwiq8id9p0` FOREIGN KEY (`product_id`) REFERENCES `product_table` (`id`),
+  CONSTRAINT `FKqqdpyk2dfje9bum8rsy3y7ku4` FOREIGN KEY (`login_id`) REFERENCES `login_table` (`loginId`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `cart_table` */
+
+insert  into `cart_table`(`id`,`status`,`login_id`,`product_id`,`product_quantity_bought`,`order_id`) values (1,'',3,2,2,1),(2,'',3,2,3,3),(3,'',3,2,4,4);
+
 /*Table structure for table `category_table` */
 
 DROP TABLE IF EXISTS `category_table`;
@@ -181,12 +205,32 @@ CREATE TABLE `offer_table` (
   KEY `FKknds2vfi44seqh9nqcbkavdag` (`categoryVO`),
   KEY `FKcrn53ybdgemv5wlcgb8i7d9e6` (`productVO`),
   KEY `FKn0lf8ceodyo1f7252gfo1der8` (`subCategoryVO`),
-  CONSTRAINT `FKn0lf8ceodyo1f7252gfo1der8` FOREIGN KEY (`subCategoryVO`) REFERENCES `subcategory_table` (`id`),
   CONSTRAINT `FKcrn53ybdgemv5wlcgb8i7d9e6` FOREIGN KEY (`productVO`) REFERENCES `product_table` (`id`),
-  CONSTRAINT `FKknds2vfi44seqh9nqcbkavdag` FOREIGN KEY (`categoryVO`) REFERENCES `category_table` (`id`)
+  CONSTRAINT `FKknds2vfi44seqh9nqcbkavdag` FOREIGN KEY (`categoryVO`) REFERENCES `category_table` (`id`),
+  CONSTRAINT `FKn0lf8ceodyo1f7252gfo1der8` FOREIGN KEY (`subCategoryVO`) REFERENCES `subcategory_table` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `offer_table` */
+
+insert  into `offer_table`(`id`,`discount_percent`,`offer_name`,`offer_valid_from`,`offer_valid_till`,`status`,`categoryVO`,`productVO`,`subCategoryVO`) values (1,'10','paryshan sale','02/27/2020','02/29/2020','',1,NULL,NULL);
+
+/*Table structure for table `order_table` */
+
+DROP TABLE IF EXISTS `order_table`;
+
+CREATE TABLE `order_table` (
+  `id` int(11) NOT NULL auto_increment,
+  `purchase_date` varchar(255) default NULL,
+  `total_amount` int(11) default NULL,
+  `login_id` int(11) default NULL,
+  PRIMARY KEY  (`id`),
+  KEY `FK8k5bknj77oyuuexggqumnsmu0` (`login_id`),
+  CONSTRAINT `FK8k5bknj77oyuuexggqumnsmu0` FOREIGN KEY (`login_id`) REFERENCES `login_table` (`loginId`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `order_table` */
+
+insert  into `order_table`(`id`,`purchase_date`,`total_amount`,`login_id`) values (1,'12/03/2020',20,3),(2,'12/03/2020',0,3),(3,'12/03/2020',30,3),(4,'12/03/2020',40,3);
 
 /*Table structure for table `product_table` */
 
@@ -194,8 +238,6 @@ DROP TABLE IF EXISTS `product_table`;
 
 CREATE TABLE `product_table` (
   `id` int(11) NOT NULL auto_increment,
-  `barcode_file_name` varchar(255) default NULL,
-  `barcode_file_path` varchar(255) default NULL,
   `product_description` varchar(255) default NULL,
   `product_name` varchar(255) default NULL,
   `product_price` varchar(255) default NULL,
@@ -205,6 +247,8 @@ CREATE TABLE `product_table` (
   `categoryVO` int(11) default NULL,
   `subCategoryVO` int(11) default NULL,
   `product_quantity` varchar(255) default NULL,
+  `product_file_name` varchar(255) default NULL,
+  `product_file_path` varchar(255) default NULL,
   PRIMARY KEY  (`id`),
   KEY `FKb80k7dw0gmouj1o0nu1bsl73n` (`branchVO`),
   KEY `FKg3rtm27uqn6ias97ts0x8lkjn` (`categoryVO`),
@@ -215,6 +259,8 @@ CREATE TABLE `product_table` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `product_table` */
+
+insert  into `product_table`(`id`,`product_description`,`product_name`,`product_price`,`product_weight`,`status`,`branchVO`,`categoryVO`,`subCategoryVO`,`product_quantity`,`product_file_name`,`product_file_path`) values (2,'It is a biscuit which contains a high amount of glucose.','Parle-G','10','100gms','',1,1,1,'10','\\Parle-G.jpg','D:\\projectworkspace\\SWAAP1\\src\\main\\webapp\\product'),(3,'This biscuits are crunchy and salty.','Monaco','20.0','100gms','',1,1,1,'10','\\Monaco.jpg','D:\\projectworkspace\\SWAAP1\\src\\main\\webapp\\product'),(4,'This biscuits re sweet in taste.','Krack-Jack','10.0','100gms','',1,1,1,'10','\\Krack-Jack.jpg','D:\\projectworkspace\\SWAAP1\\src\\main\\webapp\\product'),(5,'Bournvita is a malted chocolate drink mix that can be enjoyed piping hot or deliciously cold. Try blending bournvita with milk and ice cream to make a chocolate milkshake that is delectable and nutritious.','Bournvita','500.0','1 kg','',1,1,2,'50','\\Bournvita.jpg','D:\\projectworkspace\\SWAAP1\\src\\main\\webapp\\product'),(6,'A range of tasty drinks and products full of extra nourishment to supplement your diet.','Complain','300.0','1 kg','',1,1,2,'10','\\Complain.jpg','D:\\projectworkspace\\SWAAP1\\src\\main\\webapp\\product'),(7,'Horlicks is a sweet malted milk hot drink powder .','Horlicks','450.0','1 kg','',1,1,2,'50','\\Horlicks.jpg','D:\\projectworkspace\\SWAAP1\\src\\main\\webapp\\product'),(8,'The mung bean, alternatively known as the green gram or moong is a plant species in the legume family.','Green-Gram','20.0','1 kg','',1,1,3,'10 kg','\\Green-Gram.jpg','D:\\projectworkspace\\SWAAP1\\src\\main\\webapp\\product'),(9,'Red kidney beans are rich in protein and nutrients. They fill you up. When dried, they can be stored for one year. ','Red Kidney Beans','30.0','1 kg','',1,1,3,'10 kg','\\Red Kidney Beans.jpg','D:\\projectworkspace\\SWAAP1\\src\\main\\webapp\\product'),(10,'As a cereal grain, it is the most widely consumed staple food for a large part of the world\'s human population, especially in Asia.','Rice','50.0','1 kg','',1,1,3,'10 kg','\\Rice.jpg','D:\\projectworkspace\\SWAAP1\\src\\main\\webapp\\product'),(11,'As a cereal grain, it is the most widely consumed staple food for a large part of the world\'s human population, especially in Asia.','Wheat','75.0','1 kg','',1,1,3,'10 kg','\\Wheat.jpg','D:\\projectworkspace\\SWAAP1\\src\\main\\webapp\\product'),(12,'Cabbage is a leafy green, red (purple), or white (pale green) biennial plant grown as an annual vegetable crop for its dense-leaved heads.','Cabbage','20.0','1 kg','',1,1,4,'10 kg','\\Cabbage.jpg','D:\\projectworkspace\\SWAAP1\\src\\main\\webapp\\product'),(13,'Cauliflower is one of several vegetables in the species Brassica oleracea in the genus Brassica, which is in the family Brassicaceae. It is an annual plant that reproduces by seed.','Cauliflower','25.0','1 kg','',1,1,4,'10 kg','\\Cauliflower.jpg','D:\\projectworkspace\\SWAAP1\\src\\main\\webapp\\product'),(14,'The tomato is the edible, often red, berry of the plant Solanum lycopersicum, commonly known as a tomato plant. ','Tomato','15.0','1 kg','',1,1,4,'10 kg','\\Tomato.jpg','D:\\projectworkspace\\SWAAP1\\src\\main\\webapp\\product'),(15,'Grapes can be eaten fresh as table grapes or they can be used for making wine, jam, grape juice, jelly, grape seed extract, raisins, vinegar, and grape seed oil.','Grapes','50.0','1 kg','',1,1,5,'10 kg','\\Grapes.jpg','D:\\projectworkspace\\SWAAP1\\src\\main\\webapp\\product'),(16,'Papaya is rich in fibre, Vitamin C and antioxidants which prevent cholesterol build up in your arteries. ','Papaya','20.0','1 kg','',1,1,5,'10 kg','\\Papaya.jpg','D:\\projectworkspace\\SWAAP1\\src\\main\\webapp\\product'),(17,'Pomegranate is a widely used plant having medicinal properties. ','Pomegranate','30.0','1 kg','',1,1,5,'10 kg','\\Pomegranate.jpg','D:\\projectworkspace\\SWAAP1\\src\\main\\webapp\\product'),(18,'Round neck t-shirt','Levis-tshirt','329.0','200gms','',1,2,6,'10','\\Levis-tshirt.jpg','D:\\projectworkspace\\SWAAP1\\src\\main\\webapp\\product'),(19,'Collar t-shirt','U.S.Polo','599.0','250gms','',1,2,6,'10','\\U.S.Polo.jpg','D:\\projectworkspace\\SWAAP1\\src\\main\\webapp\\product'),(20,'Sports t-shirt','Adidas','699.0','200gms','',1,2,6,'10','\\Adidas.jpg','D:\\projectworkspace\\SWAAP1\\src\\main\\webapp\\product'),(21,'Round neck t-shirt','Bewakoof t-shirt','399.0','200gms','',1,2,7,'10','\\Bewakoof t-shirt.jpg','D:\\projectworkspace\\SWAAP1\\src\\main\\webapp\\product'),(22,'Full sleevs t-shirt','Wrangler','499.0','250gms','',1,2,7,'10','\\Wrangler.jpg','D:\\projectworkspace\\SWAAP1\\src\\main\\webapp\\product'),(23,'half sleeve tshirt','Babyhug','299.0','100gms','',1,2,8,'10','\\Babyhug.jpg','D:\\projectworkspace\\SWAAP1\\src\\main\\webapp\\product'),(24,'They are very light to wear.','silver bangles','60.0','300gms','',1,3,9,'10 pairs','\\silver bangles.jpg','D:\\projectworkspace\\SWAAP1\\src\\main\\webapp\\product'),(25,'It can go with any clothes.','Three piece necklace','100.0','50gms','',1,3,10,'10','\\Three piece necklace.jpg','D:\\projectworkspace\\SWAAP1\\src\\main\\webapp\\product'),(26,'It can go with traditional as well as  western outfit.','Silver earrings','70.0','100gms','',1,3,11,'10 pairs','\\Silver earrings.jpg','D:\\projectworkspace\\SWAAP1\\src\\main\\webapp\\product'),(27,'Apple product.','iPhone 11','35000.0','600gms','',1,4,12,'10','\\iPhone 11.jpg','D:\\projectworkspace\\SWAAP1\\src\\main\\webapp\\product'),(28,'It is very useful for students.','HP laptop','50000.0','1.5kg','',1,4,13,'10','\\HP laptop.jpg','D:\\projectworkspace\\SWAAP1\\src\\main\\webapp\\product'),(29,'It is very useful for students.','HP laptop','50000.0','1.5kg','',1,4,13,'10','\\HP laptop.jpg','D:\\projectworkspace\\SWAAP1\\src\\main\\webapp\\product');
 
 /*Table structure for table `register_table` */
 
