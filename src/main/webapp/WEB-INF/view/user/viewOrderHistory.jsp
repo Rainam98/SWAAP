@@ -129,13 +129,13 @@
 											</tr>
 										</thead>
 										<tbody>
-										<c:forEach items="${orderList}" var="cartVariable">
+										<c:forEach items="${orderList}" var="orderVariable">
                                             <tr class="product-${orderVariable.id}">
                                                 <td class="product-remove"><a
                                                         href="orderDetail"><i class="fas fa-share-square"
                                                                               aria-hidden="true"></i></a></td>
-                                                <td class="product-name"><a>${orderVariable.id }</a></td>
-                                                <td class="product-name"><a>${orderVariable.purchaseDate }</a></td>
+                                                <td class="product-name">${orderVariable.id }</td>
+                                                <td class="product-name">${orderVariable.purchaseDate }</td>
 
                                                 <td class="product-subtotal"><span
                                                         class="product-price-sub_totle amount"> <span

@@ -17,7 +17,7 @@
                                 <div class="dropdown-menu">
                                     <ul>
                                         <li><a href="myAccount">My Account</a></li>
-                                        <li><a href="orderHistory">Order History</a></li>
+                                        <li><a href="viewOrderHistory">Order History</a></li>
                                         <li><a href="#">Returns</a></li>
                                         <li><a href="checkout.jsp">Checkout</a></li>
                                     </ul>

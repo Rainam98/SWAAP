@@ -59,15 +59,13 @@ public class OrderController {
             double price = cartVO.getProductVO().getProductPrice();
             totalAmount += quantity * price;
             this.cartService.insertProductToCart(cartVO);
-            System.out.println(cartVO.getOrderVO().getId());
-            System.out.println(cartVO.isStatus());
         }
 		orderVO.setTotalAmount(totalAmount);
 		this.orderService.insertOrder(orderVO);
 		return new ModelAndView("redirect:/user/index"); 
 	}
 	
-	@RequestMapping(value = "/user/vieworderHistory", method = RequestMethod.GET)
+	@RequestMapping(value = "/user/viewOrderHistory", method = RequestMethod.GET)
 	public ModelAndView orderHistory() {
 		String userName = Basemethods.getUser();
 		LoginVO loginVO;
