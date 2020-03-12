@@ -44,7 +44,7 @@
                     <!-- Logo -->
                     <div class="logo">
                         <a href="index.html">
-                            <img src="<%=request.getContextPath()%>/userResources/image/logo_black.png" alt="Philos" />
+                            <img src="<%=request.getContextPath()%>/userResources/image/logo_black.png" alt="SWAAP" />
                         </a>
                     </div>
                     <!-- End Logo -->
