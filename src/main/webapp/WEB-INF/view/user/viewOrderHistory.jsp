@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Philos - Responsive Ecommerce Html Template</title>
+<title>Order History</title>
 <meta name="description" content="Philos Template" />
 <meta name="keywords"
 	content="philos, WooCommerce, bootstrap, html template, philos template">
@@ -131,8 +131,10 @@
 										<tbody>
 										<c:forEach items="${orderList}" var="orderVariable">
                                             <tr class="product-${orderVariable.id}">
-                                                <td class="product-remove"><a
-                                                        href="orderDetail">View</a></td>
+                                                <td class="product-remove"><a href="orderDetail?orderId=${orderVariable.id }">View</a></td>
+
+                                                       
+
                                                 <td class="product-name">${orderVariable.id }</td>
                                                 <td class="product-name">${orderVariable.purchaseDate }</td>
 

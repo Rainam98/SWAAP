@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Philos - Responsive Ecommerce Html Template</title>
+    <title>Checkout</title>
     <meta name="description" content="Philos Template" />
     <meta name="keywords" content="philos, WooCommerce, bootstrap, html template, philos template">
     <meta name="author" content="philos" />
