@@ -14,4 +14,11 @@ Tanay
 *********************************************
 
 
+offers
+feedback
+stock
+check stock while adding to cart
+scanner
+payment
+stock prediction
 

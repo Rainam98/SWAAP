@@ -169,7 +169,7 @@
 								</div>
 									<div class="row cart-actions">
 										<div class="col-md-6 text-right">
-											<a href="index" class="view-cart btn btn-md btn-gray">Continue Shopping</a>
+											<a href="viewOrderHistory" class="view-cart btn btn-md btn-gray">Order History</a>
 
 										</div>
 									</div>

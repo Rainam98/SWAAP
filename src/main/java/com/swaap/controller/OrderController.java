@@ -16,6 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.swaap.model.CartVO;
 import com.swaap.model.LoginVO;
 import com.swaap.model.OrderVO;
+import com.swaap.model.ProductVO;
 import com.swaap.service.CartService;
 import com.swaap.service.LoginService;
 import com.swaap.service.OrderService;
@@ -57,6 +58,9 @@ public class OrderController {
             CartVO cartVO = (CartVO) cartObjects;
             cartVO.setOrderVO(orderVO);
             cartVO.setStatus(true);
+            ProductVO productVO=cartVO.getProductVO();
+            productVO.setProductQuantity((Integer.parseInt(productVO.getProductQuantity())-cartVO.getProductQuantityBought())+"");
+            this.productService.insertProduct(productVO);
             int quantity = cartVO.getProductQuantityBought();
             double price = cartVO.getProductVO().getProductPrice();
             totalAmount += quantity * price;
