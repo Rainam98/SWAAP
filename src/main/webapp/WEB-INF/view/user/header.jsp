@@ -29,7 +29,7 @@
                                 <!--End Dropdown-->
                             </li>
                             <li>
-                                <a href="blog-single.jsp">Feedback</a>
+                                <a href="addFeedback">Feedback</a>
                             </li>
                         </ul>
                     </div>
