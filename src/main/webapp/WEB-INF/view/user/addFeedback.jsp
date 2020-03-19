@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,6 +16,7 @@
 
     <!-- CSS -->
      <link href="<%=request.getContextPath()%>/userResources/css/themify-icons.css" rel="stylesheet" type="text/css" />
+     <link href="<%=request.getContextPath()%>/userResources/css/demo.css" rel="stylesheet" type="text/css" />
     <link href="<%=request.getContextPath()%>/userResources/css/bootstrap.css" rel="stylesheet" type="text/css" />
     <!-- bootstrap css -->
     <link href="<%=request.getContextPath()%>/userResources/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
