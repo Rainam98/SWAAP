@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,9 +33,9 @@
     float:left;
 }
 
-/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+/* :not(:checked) is a filter, so that browsers that donât support :checked donât 
    follow these rules. Every browser that supports :checked also supports :not(), so
-   it doesn’t make the test unnecessarily selective */
+   it doesnât make the test unnecessarily selective */
 .rating:not(:checked) > input {
     position:absolute;
     top:-9999px;
@@ -179,8 +180,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <div  class="map style1 mb-45">
-                             <h2 class="normal"><span>Contact Us</span></h2>
+                            
+                             <h2 class="normal"><span>Feedback</span></h2>
                             <f:form class="Contact-form" action="insertFeedback" modelAttribute="feedbackVO" method="post">
                                 <div class="form-field-wrapper">
                                     <label>Feedback <span class="required">*</span></label>
@@ -188,19 +189,18 @@
                                 </div>
                                 <div class="form-field-wrapper">
                                     <label>Rating <span class="required">*</span></label>
-                                    <div class="rating">			
-										<f:radiobutton id="star5" path="rating" value="5" /><label for="star5" title="Rocks!"><span class="ti-star "></span></label>
-										<f:radiobutton id="star4" path="rating" value="4" /><label for="star4" title="Pretty good"><span class="ti-star"></span></label>
-								    	<f:radiobutton id="star3" path="rating" value="3" /><label for="star3" title="Meh"><span class="ti-star"></span></label>
-								   		<f:radiobutton id="star2" path="rating" value="2" /><label for="star2" title="Kinda bad"><span class="ti-star"></span></label>
-								    	<f:radiobutton id="star1" path="rating" value="1" /><label for="star1" title="Sucks big time"><span class="ti-star"></span></label>
-						    		</div>
+         							 <div class="rating">			
+										<f:radiobutton id="star5" path="rating" value="5" /><label for="star5" title="Rocks!"><span class="fa fa-star "></span></label>
+										<f:radiobutton id="star4" path="rating" value="4" /><label for="star4" title="Pretty good"><span class="fa fa-star"></span></label>
+								    	<f:radiobutton id="star3" path="rating" value="3" /><label for="star3" title="Meh"><span class="fa fa-star"></span></label>
+								   		<f:radiobutton id="star2" path="rating" value="2" /><label for="star2" title="Kinda bad"><span class="fa fa-star"></span></label>
+								    	<f:radiobutton id="star1" path="rating" value="1" /><label for="star1" title="Sucks big time"><span class="fa fa-star"></span></label>
                                 </div>
                                 <div class="form-field-wrapper">
                                     <input name="submit" id="submit" class="submit btn btn-md btn-color" value="Submit" type="submit">
                                 </div>
                             </f:form>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
