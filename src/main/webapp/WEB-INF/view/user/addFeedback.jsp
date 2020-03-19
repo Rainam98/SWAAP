@@ -187,18 +187,18 @@
                                     <label>Feedback <span class="required">*</span></label>
                                     <f:input path="feedback" id="author" class="input-md form-full-width" name="author" placeholder=" Enter Your Feedback (required)" value="" size="30" aria-required="true" required="" type="text"/>
                                 </div>
+                                <input id="ratings" type="hidden" name="rating" path="rating"/>
                                 <div class="form-field-wrapper">
                                     <label>Rating <span class="required">*</span></label>
-         							 <div class="rating">			
-										<f:radiobutton id="star5" path="rating" value="5" /><label for="star5" title="Rocks!"><span class="fa fa-star "></span></label>
-										<f:radiobutton id="star4" path="rating" value="4" /><label for="star4" title="Pretty good"><span class="fa fa-star"></span></label>
-								    	<f:radiobutton id="star3" path="rating" value="3" /><label for="star3" title="Meh"><span class="fa fa-star"></span></label>
-								   		<f:radiobutton id="star2" path="rating" value="2" /><label for="star2" title="Kinda bad"><span class="fa fa-star"></span></label>
-								    	<f:radiobutton id="star1" path="rating" value="1" /><label for="star1" title="Sucks big time"><span class="fa fa-star"></span></label>
-                                </div>
-                                <div class="form-field-wrapper">
+         							 <div class="rating">
+                                         <span value="1" /><label onclick="changeRating(1)" style="display:inline-block" for="star1" title="Sucks big time"><span id="star1" class="fa fa-star"></span></label>
+                                         <span value="2" /><label onclick="changeRating(2)" style="display:inline-block" for="star2" title="Kinda bad"><span id="star2" class="fa fa-star"></span></label>
+                                         <span value="3" /><label onclick="changeRating(3)" style="display:inline-block" for="star3" title="Meh"><span id="star3" class="fa fa-star"></span></label>
+                                         <span value="4" /><label onclick="changeRating(4)" style="display:inline-block" for="star4" title="Pretty good"><span id="star4" class="fa fa-star"></span></label>
+                                         <span value="5" /><label onclick="changeRating(5)" style="display:inline-block" for="star5" title="Rocks!"><span id="star5" class="fa fa-star "></span></label>
+                                     </div>
+                                    <br>
                                     <input name="submit" id="submit" class="submit btn btn-md btn-color" value="Submit" type="submit">
-                                </div>
                             </f:form>
                             
                         </div>
@@ -220,6 +220,17 @@
     <!--==========================================-->
     <!-- JAVASCRIPT -->
     <!--==========================================-->
+    <script type="application/javascript">
+        function changeRating(id){
+            console.log(id);
+            for(let i = id ; i > 0 ; i--)
+                document.getElementById('star'+i).style.color = '#34b79d';
+            for(let i = id + 1 ; i < 6 ; i++)
+                document.getElementById('star'+i).style.color = '';
+
+            document.getElementById('ratings').value = id;
+        }
+    </script>
     <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/jquery.min.js"></script>
     <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/jquery-ui.js"></script>
     <!-- jquery library js -->

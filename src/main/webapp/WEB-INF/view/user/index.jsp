@@ -236,7 +236,7 @@
 
                                         <div class="product-item-inner">
                                             <div class="product-img-wrap">
-                                                <a href="subCategoryDetail?categoryId=${categoryVariable.id }"><img src="<%=request.getContextPath()%>/category/${categoryVariable.categoryName}.jpg""></a>
+                                                <a href="subCategoryDetail?categoryId=${categoryVariable.id }"><img style="width: 262px; height: 175px" src="<%=request.getContextPath()%>/category/${categoryVariable.categoryName}.jpg"></a>
                                             </div>
                                             <!-- <div class="product-button">
                                                 <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
