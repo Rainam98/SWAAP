@@ -13,4 +13,6 @@ public interface CartService {
 	public void insertProductToCart(CartVO cartVO);
 
 	public List searchCart(LoginVO loginVO);
+
+	public List getOrderDetails(int orderId);
 }

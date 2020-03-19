@@ -33,4 +33,10 @@ public class CartServiceImpl implements CartService{
 		List productList=this.cartDAO.searchCart(loginVO);
 		return productList;
 	}
+
+	@Override
+	public List getOrderDetails(int orderId) {
+		List orderList=this.cartDAO.searchOrderDetails(orderId);
+		return orderList;
+	}
 }

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Philos - Responsive Ecommerce Html Template</title>
+    <title>Sub-Category Details</title>
     <meta name="description" content="Philos Template" />
     <meta name="keywords" content="philos, WooCommerce, bootstrap, html template, philos template">
     <meta name="author" content="philos" />
@@ -111,11 +111,11 @@
                             <div class="product-filter-content">
                                 <div class="product-filter-content-inner">
 
-                                    <!--Product Filter Button-->
-                                    <div class="product-filter-dropdown-btn "><a href="javascript:void(0)" data-toggle-target="filter-slide-toggle" class="btn btn-sm btn-gray slide-toggle-btn"><i class="fa fa-bars left" aria-hidden="true"></i>Filter</a></div>
+                                    <!-- <!--Product Filter Button-->
+                                    
 
                                     <!--Product Sort By-->
-                                    <form class="product-sort-by">
+                                    <!-- <form class="product-sort-by">
                                         <label for="short-by">Sort By</label>
                                         <select name="short-by" id="short-by" class="nice-select-box">
                                             <option value="default_sorting" selected="selected">Default sorting</option>
@@ -125,7 +125,7 @@
                                             <option value="price_low_to_high">Price: low to high</option>
                                             <option value="price_high_to_low">Price: high to low</option>
                                         </select>
-                                    </form>
+                                    </form> -->
                                     <script>
                                         
                                     </script>

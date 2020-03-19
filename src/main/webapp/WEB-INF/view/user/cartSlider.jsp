@@ -21,49 +21,49 @@
                     <!-- EndEmpty Cart -->
 
                     <!-- Cart Products -->
-                    <ul class="cart-product-item">
+                    <ul class="cart-product-item" id="item-list">
 
                         <!-- Item -->
-                        <li>
-                            <!--Item Image-->
-                            <a href="#" class="product-image">
-                                <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_12547554.jpg" alt="" /></a>
+                        <%--                        <li>
+                                                    <!--Item Image-->
+                                                    <a href="#" class="product-image">
+                                                        <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_12547554.jpg" alt="" /></a>
 
-                            <!--Item Content-->
-                            <div class="product-content">
-                                <!-- Item Linkcollateral -->
-                                <a class="product-link" href="#">Alpha Block Black Polo T-Shirt</a>
+                                                    <!--Item Content-->
+                                                    <div class="product-content">
+                                                        <!-- Item Linkcollateral -->
+                                                        <a class="product-link" href="#">Alpha Block Black Polo T-Shirt</a>
 
-                                <!-- Item Cart Totle -->
-                                <div class="cart-collateral">
-                                    <span class="qty-cart">1</span>&nbsp;<span>&#215;</span>&nbsp;<span class="product-price-amount"><span class="currency-sign">$</span>399.00</span>
+                                                        <!-- Item Cart Totle -->
+                                                        <div class="cart-collateral">
+                                                            <span class="qty-cart">1</span>&nbsp;<span>&#215;</span>&nbsp;<span class="product-price-amount"><span class="currency-sign">&#8377;</span>399.00</span>
+                                                        </div>
+
+                                                        <!-- Item Remove Icon -->
+                                                        <a class="product-remove" href="javascript:void(0)"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+                                                    </div>
+                                                </li>--%>
+
+                        <%--    <!-- Item -->
+                            <li>
+                                <!--Item Image-->
+                                <a href="#" class="product-image">
+                                    <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_12547555.jpg" alt="" /></a>
+
+                                <!--Item Content-->
+                                <div class="product-content">
+                                    <!-- Item Linkcollateral -->
+                                    <a class="product-link" href="#">Red Printed Round Neck T-Shirt</a>
+
+                                    <!-- Item Cart Totle -->
+                                    <div class="cart-collateral">
+                                        <span class="qty-cart">2</span>&nbsp;<span>&#215;</span>&nbsp;<span class="product-price-amount"><span class="currency-sign">&#8377;</span>299.00</span>
+                                    </div>
+
+                                    <!-- Item Remove Icon -->
+                                    <a class="product-remove" href="javascript:void(0)"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
                                 </div>
-
-                                <!-- Item Remove Icon -->
-                                <a class="product-remove" href="javascript:void(0)"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
-                            </div>
-                        </li>
-
-                        <!-- Item -->
-                        <li>
-                            <!--Item Image-->
-                            <a href="#" class="product-image">
-                                <img src="<%=request.getContextPath()%>/userResources/image/product-img/product_12547555.jpg" alt="" /></a>
-
-                            <!--Item Content-->
-                            <div class="product-content">
-                                <!-- Item Linkcollateral -->
-                                <a class="product-link" href="#">Red Printed Round Neck T-Shirt</a>
-
-                                <!-- Item Cart Totle -->
-                                <div class="cart-collateral">
-                                    <span class="qty-cart">2</span>&nbsp;<span>&#215;</span>&nbsp;<span class="product-price-amount"><span class="currency-sign">$</span>299.00</span>
-                                </div>
-
-                                <!-- Item Remove Icon -->
-                                <a class="product-remove" href="javascript:void(0)"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
-                            </div>
-                        </li>
+                            </li>--%>
 
                     </ul>
                     <!-- End Cart Products -->
@@ -77,7 +77,12 @@
                 <div class="cart-footer-inner">
 
                     <!-- Cart Total -->
-                    <h4 class="cart-total-hedding normal"><span>Total :</span><span class="cart-total-price">$698.00</span></h4>
+                    <h4 class="cart-total-hedding normal"><span>Total :</span>
+                        <span class="cart-total-price">
+                            <span
+                                    class="currency-sign">&#8377;</span>
+                            <span class="final_total"></span>
+                        </span></h4>
                     <!-- Cart Total -->
 
                     <!-- Cart Buttons -->
@@ -108,12 +113,50 @@
                     <img src="<%=request.getContextPath()%>/userResources/image/search-icon-lg.png" alt="" />
                 </div>
                 <label class="h6 normal search-input-label" for="search-query">Enter keywords to Search Product</label>
-                <input value="" name="q" type="search" placeholder="Search..." />
+                <input value="" name="q" type="search" placeholder="Search..."/>
                 <button type="submit">
-                    <img src="<%=request.getContextPath()%>/userResources/image/search-lg-go-icon.png" alt="" />
+                    <img src="<%=request.getContextPath()%>/userResources/image/search-lg-go-icon.png" alt=""/>
                 </button>
             </form>
             <!-- End Search Form -->
 
         </div>
     </section>
+<script type="text/javascript"
+        src="<%=request.getContextPath()%>/userResources/js/cart.js">
+</script>
+<script>
+
+    function viewCartProducts() {
+        fetch("http://localhost:8080/api/user/viewCart").then(response => response.json())
+            .then(res => {
+                let itemList = document.getElementById("item-list");
+                itemList.innerText = "";
+                let total = 0.0;
+                for (let i = 0; i < res.length; i++) {
+                    total += res[i]['productVO']['productPrice'] * res[i]['productQuantityBought'];
+                    itemList.innerHTML += "<li class=\"product-" + res[i]['id'] + "\">\n" +
+                        "<input type=\"hidden\" id=\"cart-" + res[i]['id'] + "\" value=\"" + parseFloat(res[i]['productVO']['productPrice']) * res[i]['productQuantityBought'] + "\">" +
+                        "                            <!--Item Image-->\n" +
+                        "                            <a href=\"#\" class=\"product-image\">\n" +
+                        "                                <img src=\"<%=request.getContextPath()%>" + "/product/" + res[i]['productVO']['productFileName'] + "\" alt=\"\" /></a>\n" +
+                        "\n" +
+                        "                            <!--Item Content-->\n" +
+                        "                            <div class=\"product-content\">\n" +
+                        "                                <!-- Item Linkcollateral -->\n" +
+                        "                                <a class=\"product-link\" href=\"#\"> " + res[i]['productVO']['productName'] + "</a>\n" +
+                        "\n" +
+                        "                                <!-- Item Cart Totle -->\n" +
+                        "                                <div class=\"cart-collateral\">\n" +
+                        "                                    <span class=\"qty-cart\">" + res[i]['productQuantityBought'] + "</span>&nbsp;<span>&#215;</span>&nbsp;<span class=\"product-price-amount\"><span class=\"currency-sign\">&#8377;</span>" + res[i]['productVO']['productPrice'] + "</span>\n" +
+                        "                                </div>\n" +
+                        "\n" +
+                        "                                <!-- Item Remove Icon -->\n" +
+                        "                                <a class=\"product-remove\" href=\"javascript:removeElementFromCart('product'," + res[i]['id'] + ")\"><i class=\"fa fa-times-circle\" aria-hidden=\"true\"></i></a>\n" +
+                        "                            </div>\n" +
+                        "                        </li>"
+                }
+                [].forEach.call(document.getElementsByClassName('final_total'), e => e.innerHTML = total);
+            });
+    }
+</script>

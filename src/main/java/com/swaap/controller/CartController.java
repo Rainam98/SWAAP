@@ -1,14 +1,10 @@
 package com.swaap.controller;
 
-import com.swaap.model.CartVO;
-import com.swaap.model.LoginVO;
-import com.swaap.model.ProductVO;
-import com.swaap.model.RegisterVO;
-import com.swaap.service.CartService;
-import com.swaap.service.LoginService;
-import com.swaap.service.ProductService;
-import com.swaap.service.RegisterService;
-import com.swaap.utils.Basemethods;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
@@ -19,7 +15,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.List;
+import com.swaap.model.CartVO;
+import com.swaap.model.LoginVO;
+import com.swaap.model.OrderVO;
+import com.swaap.model.ProductVO;
+import com.swaap.model.RegisterVO;
+import com.swaap.service.CartService;
+import com.swaap.service.LoginService;
+import com.swaap.service.OrderService;
+import com.swaap.service.ProductService;
+import com.swaap.service.RegisterService;
+import com.swaap.utils.Basemethods;
 
 @Controller
 public class CartController {
@@ -55,37 +61,25 @@ public class CartController {
 		List productList = this.productService.getProductByString(q);
 		return new ModelAndView("/user/productDetail", "productList", productList);
 	}
-
+	
 	@RequestMapping(value = "/user/viewCart", method = RequestMethod.GET)
 	public ModelAndView viewCart() {
 		String userName = Basemethods.getUser();
 		LoginVO loginVO;
-		List userList = this.registerService.searchUserByUsername(userName);
+
+		List userList = this.loginService.searchUserByUsername(userName);
 		loginVO = (LoginVO) userList.get(0);
 		List cartList = this.cartService.searchCart(loginVO);
 		return new ModelAndView("/user/cart", "cartList", cartList);
 	}
-
-	@RequestMapping(value = "/user/addToCart", method = RequestMethod.GET)
-	public ModelAndView addToCart(@RequestParam int productId, @ModelAttribute CartVO cartVO) {
-		ProductVO productVO = new ProductVO();
-		productVO.setId(productId);
-
-		cartVO.setProductQuantityBought(1);
-		cartVO.setProductVO(productVO);
-
+	
+	@RequestMapping(value = "/user/checkout", method = RequestMethod.GET)
+	public ModelAndView checkout() {
 		String userName = Basemethods.getUser();
-
 		LoginVO loginVO;
-
 		List userList = this.loginService.searchUserByUsername(userName);
 		loginVO = (LoginVO) userList.get(0);
-		cartVO.setLoginVO(loginVO);
-		cartVO.setStatus(true);
-
-		this.cartService.insertProductToCart(cartVO);
-
-		List cartList = this.cartService.searchCart(loginVO);
-		return new ModelAndView("/user/cart", "cartList", cartList);
+		List checkoutList = this.cartService.searchCart(loginVO);
+		return new ModelAndView("/user/checkout", "checkoutList", checkoutList);
 	}
 }

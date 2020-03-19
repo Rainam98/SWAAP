@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Philos - Responsive Ecommerce Html Template</title>
+<title>MyCart</title>
 <meta name="description" content="Philos Template" />
 <meta name="keywords"
 	content="philos, WooCommerce, bootstrap, html template, philos template">
@@ -132,7 +132,7 @@
 										</thead>
 										<tbody>
 										<c:forEach items="${cartList}" var="cartVariable">
-											<tr id="product-${cartVariable.id}">
+											<tr class="product-${cartVariable.id}">
 												<td class="product-remove"><a
 														href="javascript:removeElementFromCart('product',${cartVariable.id})"><i
 														class="fa fa-times-circle" aria-hidden="true"></i></a></td>
@@ -165,9 +165,12 @@
 												</td>
 												<td class="product-subtotal"><span
 														class="product-price-sub_totle amount"> <span
-														class="currency-sign">Rs.</span> <span
-														id="cart-${cartVariable.id}">${cartVariable.productVO.productPrice * cartVariable.productQuantityBought }</span>
-													</span></td>
+														class="currency-sign">Rs.</span>
+													<span
+															id="cart-${cartVariable.id}"
+															class="sub-totals">${cartVariable.productVO.productPrice * cartVariable.productQuantityBought }</span>
+													</span>
+												</td>
 											</tr>
 										</c:forEach>
 										</tbody>
@@ -175,8 +178,8 @@
 								</div>
 									<div class="row cart-actions">
 										<div class="col-md-6 text-right">
-											<input class="btn btn-md btn-gray" name="update_cart"
-												   value="Continue Shopping" type="submit">
+											<a href="index" class="view-cart btn btn-md btn-gray">Continue Shopping</a>
+
 										</div>
 									</div>
 									<div class="cart-collateral">
@@ -190,7 +193,9 @@
 													<tr class="order-total">
 														<th>Total</th>
 														<td><span class="product-price-amount amount"><span
-																class="currency-sign">Rs.</span>1234.21</span></td>
+																class="currency-sign">Rs.</span>
+															<span class="final_total">	0.0 </span>
+														</span></td>
 													</tr>
 													</tbody>
 												</table>
@@ -217,39 +222,24 @@
 		<!-- End Footer Section -------------->
 
 	</div>
-	<!-- End wrapper =============================-->
+<!-- End wrapper =============================-->
 
 <!--==========================================-->
 <!-- JAVASCRIPT -->
 <!--==========================================-->
-<script>
-	function changeQuantity(cartId, price, sign) {
-		var totalPrice = document.getElementById('cart-' + cartId);
-		var quantity = parseInt(document.getElementById('quant-' + cartId).value);
-		quantity = sign === '+' ? quantity + 1 : quantity - 1;
-		if (quantity != 0) {
-			totalPrice.innerText = (quantity * price) + '';
-			fetch('http://localhost:8080/api/user/modifyCart/' + cartId + '/' + quantity);
-		}
-	}
 
-	function removeElementFromCart(idPrefix, cartId) {
-		fetch('http://localhost:8080/api/user/removeFromCart/' + cartId);
-		let elem = document.getElementById(idPrefix + '-' + cartId);
-		return elem.parentNode.removeChild(elem);
-	}
-</script>
+<script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/cart.js"></script>
 <script type="text/javascript"
 		src="<%=request.getContextPath()%>/userResources/js/jquery.min.js"></script>
-	<script type="text/javascript"
+<script type="text/javascript"
 		src="<%=request.getContextPath()%>/userResources/js/jquery-ui.js"></script>
-	<!-- jquery library js -->
-	<script type="text/javascript"
+<!-- jquery library js -->
+<script type="text/javascript"
 		src="<%=request.getContextPath()%>/userResources/js/modernizr.js"></script>
-	<!--modernizr Js-->
-	<script type="text/javascript"
+<!--modernizr Js-->
+<script type="text/javascript"
 		src="<%=request.getContextPath()%>/userResources/js/jquery.themepunch.revolution.min.js"></script>
-	<script type="text/javascript"
+<script type="text/javascript"
 		src="<%=request.getContextPath()%>/userResources/js/jquery.themepunch.tools.min.js"></script>
 	<script type="text/javascript"
 		src="<%=request.getContextPath()%>/userResources/js/revolution.extension.navigation.min.js"></script>

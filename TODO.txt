@@ -1,17 +1,24 @@
 20-02-2020
 Rainam
-+OrderVO and add the data at the time of adding product to cart.
++checkout
++purchase history
 
 Ritu
 +Report BMC documentation
++database completion
 
 Tanay
-+total in cart
-+Fix redirect in add to cart
 
 *********************************************
                 BUGS
 *********************************************
-+add to cart adds new product even if product is already in the cart
 
+
+offers
+feedback
+stock
+check stock while adding to cart
+scanner
+payment
+stock prediction
 

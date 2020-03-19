@@ -17,7 +17,7 @@
                                 <div class="dropdown-menu">
                                     <ul>
                                         <li><a href="myAccount">My Account</a></li>
-                                        <li><a href="#">Order History</a></li>
+                                        <li><a href="viewOrderHistory">Order History</a></li>
                                         <li><a href="#">Returns</a></li>
                                         <li><a href="checkout.jsp">Checkout</a></li>
                                     </ul>
@@ -29,7 +29,7 @@
                                 <!--End Dropdown-->
                             </li>
                             <li>
-                                <a href="blog-single.jsp">Feedback</a>
+                                <a href="addFeedback">Feedback</a>
                             </li>
                         </ul>
                     </div>
@@ -44,7 +44,7 @@
                     <!-- Logo -->
                     <div class="logo">
                         <a href="index.html">
-                            <img src="<%=request.getContextPath()%>/userResources/image/logo_black.png" alt="Philos" />
+                            <img src="<%=request.getContextPath()%>/userResources/image/logo_black.png" alt="SWAAP" />
                         </a>
                     </div>
                     <!-- End Logo -->
@@ -52,25 +52,28 @@
 
                     <!-- Right Sidebar Nav -->
                     <div class="header-rightside-nav">
-                        
+
 
                         <!-- Sidebar Icon -->
                         <div class="sidebar-icon-nav">
                             <ul class="list-none-ib">
                                 <!-- Search-->
-                                <li><a id="search-overlay-menu-btn"><i aria-hidden="true" class="fa fa-search"></i></a></li>
+                                <li><a id="search-overlay-menu-btn"><i aria-hidden="true" class="fa fa-search"></i></a>
+                                </li>
 
                                 <!-- Cart-->
-                                <li><a id="sidebar_toggle_btn">
-                                    <div class="cart-icon">
-                                        <i aria-hidden="true" class="fa fa-shopping-bag"></i>
-                                    </div>
+                                <li>
+                                    <a id="sidebar_toggle_btn" onclick="viewCartProducts();return false;">
+                                        <div class="cart-icon">
+                                            <i aria-hidden="true" class="fa fa-shopping-bag"></i>
+                                        </div>
 
-                                    <div class="cart-title">
-                                        <span class="cart-count">2</span>
-                                    <span class="cart-price strong">$698.00</span>
-                                    </div>
-                                </a></li>
+                                        <div class="cart-title">
+                                            <span class="cart-count" id="header-quantity"></span>
+                                            &#8377;<span class="cart-price strong" id="header-total"></span>
+                                        </div>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                         <!-- End Sidebar Icon -->
@@ -79,5 +82,14 @@
 
                 </div>
             </div>
-            <!-- End Header Container -->
-        </header>
+    <!-- End Header Container -->
+</header>
+
+<script>
+    (function () {
+        fetch('http://localhost:8080/api/user/getCartDetails').then(response => response.json()).then(res => {
+            document.getElementById('header-quantity').innerHTML = res['quantity'];
+            document.getElementById('header-total').innerHTML = res['totalAmount'];
+        });
+    })();
+</script>

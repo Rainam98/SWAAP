@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Philos - Responsive Ecommerce Html Template</title>
+    <title>Product Details</title>
     <meta name="description" content="Philos Template" />
     <meta name="keywords" content="philos, WooCommerce, bootstrap, html template, philos template">
     <meta name="author" content="philos" />
@@ -229,28 +229,33 @@
                                     <div class="product-item">
                                         <div class="product-item-inner">
                                             <div class="product-img-wrap">
-                                              
-                                                <img src="<%=request.getContextPath()%>/product/${productVariable.productFileName}" alt="">
+
+                                                <img src="<%=request.getContextPath()%>/product/${productVariable.productFileName}"
+                                                     alt="">
                                             </div>
                                             <div class="product-button">
 
-                                               <!--  <a href="#" class="js_tooltip1" data-mode="top" data-tip="Add To Whishlist"><i class="fa fa-heart1"></i></a> -->
-                                               <a href="/user/addToCart?productId=${productVariable.id}" class="js_tooltip" data-mode="top" data-tip="Add to Cart"><i class="fa fa-shopping-bag"></i></a>
+                                                <!--  <a href="#" class="js_tooltip1" data-mode="top" data-tip="Add To Whishlist"><i class="fa fa-heart1"></i></a> -->
+                                                <a href="#"
+                                                   onclick="addToCart(${productVariable.id},${productVariable.productPrice });return false;"
+                                                   class="js_tooltip" data-mode="top" data-tip="Add to Cart"><i
+                                                        class="fa fa-shopping-bag"></i></a>
 
-                                                
+
                                             </div>
 
                                         </div>
                                         <div class="product-detail">
                                             <a class="tag" href="#">${productVariable.categoryVO.categoryName}</a>
                                             <a class="tag" href="#">${productVariable.subCategoryVO.subCategoryName}</a>
-                                            <p class="product-title"><a href="product_detail.html">${productVariable.productName}</a></p>
-                                           <!--  <div class="product-rating">
-                                                <div class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating" title="Rated 4 out of 5">
-                                                    <span style="width: 60%"></span>
-                                                </div>
-                                                <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
-                                            </div> -->
+                                            <p class="product-title"><a
+                                                    href="product_detail.html">${productVariable.productName}</a></p>
+                                            <!--  <div class="product-rating">
+                                                 <div class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating" title="Rated 4 out of 5">
+                                                     <span style="width: 60%"></span>
+                                                 </div>
+                                                 <a href="#" class="product-rating-count"><span class="count">3</span> Reviews</a>
+                                             </div> -->
                                             <p class="product-description">
                                                 ${productVariable.productDescription }
                                             </p>
@@ -519,7 +524,26 @@
     <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/plugins-all.js"></script>
     <!-- Plugins All js -->
     <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/custom.js"></script>
-    <!-- custom js -->
-    <!-- end jquery -->
+<!-- custom js -->
+<script>
+    function addToCart(productId, productPrice) {
+        fetch("http://localhost:8080/api/user/addToCart?productId=" + productId).then(response => {
+            if (response.status === 208)
+                alert("Item is already in cart !");
+            else if (response.status === 200) {
+                let headerQuantityElem = document.getElementById('header-quantity');
+                let quantity = parseInt(headerQuantityElem.innerHTML);
+                headerQuantityElem.innerHTML = (quantity + 1) + "";
+
+                let headerTotal = document.getElementById('header-total');
+                let total = parseFloat(headerTotal.innerHTML);
+                headerTotal.innerHTML = (total + productPrice) + "";
+
+                alert("Item is added to cart successfully :)")
+            }
+        });
+    }
+</script>
+<!-- end jquery -->
 </body>
 </html>

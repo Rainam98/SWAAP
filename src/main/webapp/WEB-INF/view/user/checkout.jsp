@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Philos - Responsive Ecommerce Html Template</title>
+    <title>Checkout</title>
     <meta name="description" content="Philos Template" />
     <meta name="keywords" content="philos, WooCommerce, bootstrap, html template, philos template">
     <meta name="author" content="philos" />
@@ -114,25 +114,30 @@
                                                             </thead>
                                                             <tbody>
                                                             <c:forEach items="${checkoutList}" var="checkoutVariable">
-                                                                <tr class="cart_item">
-                                                                	
-                                                                    <td class="product-name">${checkoutVariable.productVO.productName }<strong> x ${checkoutVariable.productQuantityBought }</strong></td>
-                                                                    <td class="product-total">
-                                                                        <span class="product-price-amount amount"><span class="currency-sign">Rs.</span>${checkoutVariable.productVO.productPrice * checkoutVariable.productQuantityBought}</span>
+                                                                <tr class="cart_item product-${checkoutVariable.id}">
+
+                                                                    <td class="product-name">${checkoutVariable.productVO.productName }<strong>
+                                                                        x ${checkoutVariable.productQuantityBought }</strong>
                                                                     </td>
-                                                                    
+                                                                    <td class="product-total">
+                                                                        <span class="product-price-amount amount">&#8377;<span
+                                                                                class="sub-totals">${checkoutVariable.productVO.productPrice * checkoutVariable.productQuantityBought}</span></span>
+                                                                    </td>
+
                                                                 </tr>
-                                                                </c:forEach>
-                                                        
+                                                            </c:forEach>
+
                                                             </tbody>
                                                             <tfoot>
 
-                                                                <tr class="order-total">
-                                                                    <th>Total</th>
-                                                                    <td>
-                                                                        <span class="product-price-amount amount"><span class="currency-sign">$</span>1009.00</span>
-                                                                    </td>
-                                                                </tr>
+                                                            <tr class="order-total">
+                                                                <th>Total</th>
+                                                                <td>
+                                                                    <span class="product-price-amount amount"><span
+                                                                            class="currency-sign">&#8377;</span><span
+                                                                            class="final_total"></span></span>
+                                                                </td>
+                                                            </tr>
                                                             </tfoot>
                                                         </table>
                                                     </div>
@@ -140,7 +145,8 @@
                                                     <div class="product-checkout-payment">
                                                         <ul>
                                                             <li>
-                                                                <input id="payment_method_bacs" name="payment_method" value="bacs" checked="checked" type="radio" />
+                                                                <input id="payment_method_bacs" name="payment_method"
+                                                                       value="bacs" checked="checked" type="radio"/>
                                                                 <label for="payment_method_bacs">Direct Bank Transfer</label>
                                                                 <div class="payment_box payment_method_bacs">
                                                                     <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won't be shipped until the funds have cleared in our account.</p>
@@ -163,7 +169,7 @@
                                                             </li>
                                                         </ul>
                                                         <div class="place-order">
-                                                            <a class="btn btn-lg btn-color form-full-width" href="#">Place Order</a>
+                                                            <a class="btn btn-lg btn-color form-full-width" href="placeOrder">Place Order</a>
                                                         </div>
                                                     </div>
 
@@ -195,16 +201,24 @@
     <!--==========================================-->
     <!-- JAVASCRIPT -->
     <!--==========================================-->
+    <script type="text/javascript"
+            src="<%=request.getContextPath()%>/userResources/js/cart.js">
+    </script>
     <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/jquery.min.js"></script>
     <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/jquery-ui.js"></script>
     <!-- jquery library js -->
     <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/modernizr.js"></script>
     <!--modernizr Js-->
-    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/jquery.themepunch.revolution.min.js"></script>
-    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/jquery.themepunch.tools.min.js"></script>
-    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/revolution.extension.navigation.min.js"></script>
-    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/revolution.extension.parallax.min.js"></script>
-    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript"
+            src="<%=request.getContextPath()%>/userResources/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript"
+            src="<%=request.getContextPath()%>/userResources/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript"
+            src="<%=request.getContextPath()%>/userResources/js/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript"
+            src="<%=request.getContextPath()%>/userResources/js/revolution.extension.parallax.min.js"></script>
+    <script type="text/javascript"
+            src="<%=request.getContextPath()%>/userResources/js/revolution.extension.slideanims.min.js"></script>
     <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/revolution.extension.layeranimation.min.js"></script>
     <!--Slider Revolution Js File-->
     <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/tether.min.js"></script>

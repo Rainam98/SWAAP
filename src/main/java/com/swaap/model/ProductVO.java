@@ -1,13 +1,6 @@
 package com.swaap.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name="product_table")
@@ -22,9 +15,9 @@ public class ProductVO {
 	
 	@Column(name="product_weight")
 	private String productWeight;
-	
-	@Column(name="product_price")
-	private String productPrice;
+
+    @Column(name = "product_price")
+    private double productPrice;
 	
 	@Column(name="product_quantity")
 	private String productQuantity;
@@ -67,31 +60,31 @@ public class ProductVO {
 
 	public void setProductName(String productName) {
 		this.productName = productName;
-	}
+    }
 
-	public String getProductWeight() {
-		return productWeight;
-	}
+    public String getProductWeight() {
+        return productWeight;
+    }
 
-	public void setProductWeight(String productWeight) {
-		this.productWeight = productWeight;
-	}
+    public void setProductWeight(String productWeight) {
+        this.productWeight = productWeight;
+    }
 
-	public String getProductPrice() {
-		return productPrice;
-	}
+    public double getProductPrice() {
+        return productPrice;
+    }
 
-	public void setProductPrice(String productPrice) {
-		this.productPrice = productPrice;
-	}
-	
-	public String getProductQuantity() {
-		return productQuantity;
-	}
+    public void setProductPrice(double productPrice) {
+        this.productPrice = productPrice;
+    }
 
-	public void setProductQuantity(String productQuantity) {
-		this.productQuantity = productQuantity;
-	}
+    public String getProductQuantity() {
+        return productQuantity;
+    }
+
+    public void setProductQuantity(String productQuantity) {
+        this.productQuantity = productQuantity;
+    }
 
 	public String getProductFileName() {
 		return productFileName;

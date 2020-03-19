@@ -69,7 +69,6 @@
 									<th>Product Description</th>
 									<th>Product Weight</th>
 									<th>Product Price</th>
-									<th>Barcode File</th>
 								</tr>
 							</thead>
 							<tfoot>
