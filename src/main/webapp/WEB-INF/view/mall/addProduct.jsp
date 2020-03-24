@@ -74,11 +74,11 @@
                             <div class="form-group margin-bottom-20">
                                 <f:select class="form-control" path="subCategoryVO.id"
                                           placeholder="Select Sub-Category" id="selectSubCategoryOption">
-                                    <%--<c:forEach items="${subCategoryList}" var="subCategoryVariable">
+                                    <c:forEach items="${subCategoryList}" var="subCategoryVariable">
                                         <f:option
                                                 value="${subCategoryVariable.id}">${subCategoryVariable.subCategoryName }
                                         </f:option>
-                                    </c:forEach>--%>
+                                    </c:forEach>
                                 </f:select>
                             </div>
                         </div>
