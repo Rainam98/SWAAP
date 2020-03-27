@@ -7,6 +7,7 @@ import com.swaap.utils.Basemethods;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -117,34 +118,52 @@ public class AjaxController {
     @GetMapping("user/modifyCart/{cartId}/{quantity}")
     public ResponseEntity modifyCart(@PathVariable int cartId, @PathVariable int quantity) {
         Session session = sessionFactory.openSession();
-        Query q = session.createQuery("update CartVO set productQuantityBought=:quantity where id=:cartId");
-        q.setParameter("quantity", quantity);
-        q.setParameter("cartId", cartId);
-        int updateCount = q.executeUpdate();
-        return new ResponseEntity(updateCount == 1 ? HttpStatus.OK : HttpStatus.INTERNAL_SERVER_ERROR);
+        Transaction transaction = session.beginTransaction();
+        CartVO cartVO = session.load(CartVO.class, cartId);
+        if (cartVO != null) {
+            ProductVO productVO = session.load(ProductVO.class, cartVO.getProductVO().getId());
+            int availableQuantity = Integer.parseInt(productVO.getProductQuantity());
+            if (availableQuantity == 0) {
+                return new ResponseEntity(HttpStatus.REQUESTED_RANGE_NOT_SATISFIABLE);
+            }
+            productVO.setProductQuantity("" + (cartVO.getProductQuantityBought() < quantity ? (availableQuantity - 1) : (availableQuantity + 1)));
+            cartVO.setProductQuantityBought(quantity);
+            transaction.commit();
+        }
+        return new ResponseEntity(cartVO != null ? HttpStatus.OK : HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
     @GetMapping("user/removeFromCart/{cartId}")
     public ResponseEntity removeFromCart(@PathVariable int cartId) {
         Session session = sessionFactory.openSession();
-        Query q = session.createQuery("delete from CartVO where id=:cartId");
-        q.setParameter("cartId", cartId);
-        int deleteCount = q.executeUpdate();
-        return new ResponseEntity(deleteCount == 1 ? HttpStatus.OK : HttpStatus.INTERNAL_SERVER_ERROR);
+        Transaction transaction = session.beginTransaction();
+        CartVO cartVO = session.load(CartVO.class, cartId);
+        int availableQuantity = Integer.parseInt(cartVO.getProductVO().getProductQuantity());
+        cartVO.getProductVO().setProductQuantity("" + (availableQuantity + cartVO.getProductQuantityBought()));
+        session.delete(cartVO);
+        transaction.commit();
+        return new ResponseEntity(HttpStatus.OK);
     }
 
     @GetMapping(value = "/user/addToCart")
     public ResponseEntity addToCart(@RequestParam int productId) {
-        ProductVO productVO = new ProductVO();
-        productVO.setId(productId);
 
         Session session = sessionFactory.openSession();
+
+        Transaction transaction = session.beginTransaction();
+        ProductVO productVO = session.load(ProductVO.class, productId);
+
         Query q = session.createQuery("from CartVO where status=false and productVO.id =:productId and orderVO IS NULL");
         q.setParameter("productId", productId);
         List<CartVO> cartList = q.list();
 
         if (cartList == null || cartList.isEmpty()) {
             CartVO cartVO = new CartVO();
+            int availQuantity = Integer.parseInt(productVO.getProductQuantity());
+            if (availQuantity == 0) {
+                return new ResponseEntity(HttpStatus.REQUESTED_RANGE_NOT_SATISFIABLE);
+            }
+            productVO.setProductQuantity("" + (availQuantity - 1));
             cartVO.setProductQuantityBought(1);
             cartVO.setStatus(false);
             cartVO.setProductVO(productVO);
@@ -155,8 +174,10 @@ public class AjaxController {
 
             cartVO.setLoginVO(loginVO);
             this.cartService.insertProductToCart(cartVO);
+            transaction.commit();
             return new ResponseEntity(HttpStatus.OK);
         } else {
+            transaction.commit();
             return new ResponseEntity(HttpStatus.ALREADY_REPORTED);
         }
     }

@@ -117,6 +117,9 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="<%=request.getContextPath()%>/adminResources/js/customValidator.js"></script>
+<script type="text/javascript">
+    const ajaxAPILink = <%=request.getContextPath()%>'/api/';
+</script>
 <script src="<%=request.getContextPath()%>/adminResources/js/customAjaxHandler.js"></script>
 
 

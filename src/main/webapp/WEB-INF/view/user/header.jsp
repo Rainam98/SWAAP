@@ -87,9 +87,13 @@
 
 <script>
     (function () {
-        fetch('http://localhost:8080/api/user/getCartDetails').then(response => response.json()).then(res => {
+        fetch(<%=request.getContextPath()%>'/api/user/getCartDetails').then(response => response.json()).then(res => {
             document.getElementById('header-quantity').innerHTML = res['quantity'];
             document.getElementById('header-total').innerHTML = res['totalAmount'];
+            let finalTotalsElems = document.getElementsByClassName('final_total');
+            if (finalTotalsElems) {
+                [].forEach.call(finalTotalsElems, e => e.innerHTML = res['totalAmount']);
+            }
         });
     })();
 </script>

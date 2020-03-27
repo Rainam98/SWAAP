@@ -177,25 +177,28 @@
 		</div>
 		<!-- /.main-content -->
 	</div><!--/#wrapper -->
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-		<script src="assets/script/html5shiv.min.js"></script>
-		<script src="assets/script/respond.min.js"></script>
-	<![endif]-->
-	<!-- 
-		================================================== -->
-		<!-- Placed at the end of the document so the pages load faster -->
-		<script src="<%=request.getContextPath()%>/adminResources/js/jquery.min.js"></script>
-		<script src="<%=request.getContextPath()%>/adminResources/js/customAjaxHandler.js"></script>
-		<script>renderChanges({id: 'category'})</script>
-		<script src="<%=request.getContextPath()%>/adminResources/js/modernizr.min.js"></script>
-		<script src="<%=request.getContextPath()%>/adminResources/js/popper.min.js"></script>
-		<script src="<%=request.getContextPath()%>/adminResources/js/bootstrap.min.js"></script>
-		<script src="<%=request.getContextPath()%>/adminResources/js/jquery.mCustomScrollbar.concat.min.js"></script>
-		<script src="<%=request.getContextPath()%>/adminResources/js/nprogress.js"></script>
-		<script src="<%=request.getContextPath()%>/adminResources/js/sweetalert.min.js"></script>
-		<script src="<%=request.getContextPath()%>/adminResources/js/waves.min.js"></script>
-		<!-- Full Screen Plugin -->
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="assets/script/html5shiv.min.js"></script>
+<script src="assets/script/respond.min.js"></script>
+<![endif]-->
+<!--
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="<%=request.getContextPath()%>/adminResources/js/jquery.min.js"></script>
+<script type="text/javascript">
+	const ajaxAPILink = <%=request.getContextPath()%>'/api/';
+</script>
+<script src="<%=request.getContextPath()%>/adminResources/js/customAjaxHandler.js"></script>
+<script>renderChanges({id: 'category'})</script>
+<script src="<%=request.getContextPath()%>/adminResources/js/modernizr.min.js"></script>
+<script src="<%=request.getContextPath()%>/adminResources/js/popper.min.js"></script>
+<script src="<%=request.getContextPath()%>/adminResources/js/bootstrap.min.js"></script>
+<script src="<%=request.getContextPath()%>/adminResources/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="<%=request.getContextPath()%>/adminResources/js/nprogress.js"></script>
+<script src="<%=request.getContextPath()%>/adminResources/js/sweetalert.min.js"></script>
+<script src="<%=request.getContextPath()%>/adminResources/js/waves.min.js"></script>
+<!-- Full Screen Plugin -->
 		<script src="<%=request.getContextPath()%>/adminResources/js/jquery.fullscreen-min.js"></script>
 
 		<!-- Flex Datalist -->

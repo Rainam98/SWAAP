@@ -143,6 +143,9 @@
 <!--
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript">
+    const ajaxAPILink = <%=request.getContextPath()%>'/api/';
+</script>
 <script src="<%=request.getContextPath()%>/adminResources/js/customAjaxHandler.js"></script>
 
 <script src="<%=request.getContextPath()%>/adminResources/js/jquery.min.js"></script>

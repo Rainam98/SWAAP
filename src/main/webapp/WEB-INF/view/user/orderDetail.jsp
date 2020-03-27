@@ -205,24 +205,27 @@
 		</div>
 		<!-- End Page Content Wraper -->
 
-        <!-- Footer Section -------------->
-        <jsp:include page="footer.jsp"></jsp:include>
-        <!-- End Footer Section -------------->
+		<!-- Footer Section -------------->
+		<jsp:include page="footer.jsp"></jsp:include>
+		<!-- End Footer Section -------------->
 
-    </div>
+	</div>
 <!-- End wrapper =============================-->
 
 <!--==========================================-->
 <!-- JAVASCRIPT -->
 <!--==========================================-->
+<script type="text/javascript">
+	const USER_API_LINK = <%=request.getContextPath()%> '/api/user';
+</script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/cart.js"></script>
 <script type="text/javascript"
-        src="<%=request.getContextPath()%>/userResources/js/jquery.min.js"></script>
+		src="<%=request.getContextPath()%>/userResources/js/jquery.min.js"></script>
 <script type="text/javascript"
-        src="<%=request.getContextPath()%>/userResources/js/jquery-ui.js"></script>
+		src="<%=request.getContextPath()%>/userResources/js/jquery-ui.js"></script>
 <!-- jquery library js -->
 <script type="text/javascript"
-        src="<%=request.getContextPath()%>/userResources/js/modernizr.js"></script>
+		src="<%=request.getContextPath()%>/userResources/js/modernizr.js"></script>
 <!--modernizr Js-->
 <script type="text/javascript"
         src="<%=request.getContextPath()%>/userResources/js/jquery.themepunch.revolution.min.js"></script>

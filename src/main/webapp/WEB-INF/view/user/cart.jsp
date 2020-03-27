@@ -11,7 +11,6 @@
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 <!--[if IE]>
     <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-
 <!-- Favicone Icon -->
 <link rel="shortcut icon" type="image/x-icon"
 	href="<%=request.getContextPath()%>/userResources/image/favicon.ico">
@@ -228,6 +227,9 @@
 <!-- JAVASCRIPT -->
 <!--==========================================-->
 
+<script type="text/javascript">
+	const USER_API_LINK = <%=request.getContextPath()%>  '/api/user';
+</script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/cart.js"></script>
 <script type="text/javascript"
 		src="<%=request.getContextPath()%>/userResources/js/jquery.min.js"></script>

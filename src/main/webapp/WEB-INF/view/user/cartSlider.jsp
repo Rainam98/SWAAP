@@ -128,7 +128,7 @@
 <script>
 
     function viewCartProducts() {
-        fetch("http://localhost:8080/api/user/viewCart").then(response => response.json())
+        fetch(<%=request.getContextPath()%>"/api/user/viewCart").then(response => response.json())
             .then(res => {
                 let itemList = document.getElementById("item-list");
                 itemList.innerText = "";

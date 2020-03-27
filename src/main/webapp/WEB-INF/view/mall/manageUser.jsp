@@ -99,16 +99,19 @@
 					</div>
 					<!-- /.box-content -->
 				</div>
-				
-				</div>
-				<!-- /.col-12 -->
-				<jsp:include page="footer.jsp"></jsp:include>
+
 			</div>
-			<!-- /.row small-spacing -->		
+			<!-- /.col-12 -->
+			<jsp:include page="footer.jsp"></jsp:include>
 		</div>
-		<!-- /.main-content -->
+		<!-- /.row small-spacing -->
+	</div>
+	<!-- /.main-content -->
 	</div><!--/#wrapper -->
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<script type="text/javascript">
+		const ajaxAPILink = <%=request.getContextPath()%>'/api/';
+	</script>
 	<script src="<%=request.getContextPath()%>/adminResources/js/customAjaxHandler.js"></script>
 
 	<!--[if lt IE 9]>

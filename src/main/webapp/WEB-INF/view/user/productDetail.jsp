@@ -517,19 +517,21 @@
     <!--Bootstrap tooltips require Tether (Tether Js)-->
     <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/bootstrap.min.js"></script>
     <!-- bootstrap js -->
-    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/owl.carousel.js"></script>
-    <!-- OWL carousel js -->
-    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/slick.js"></script>
-    <!-- Slick Slider js -->
-    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/plugins-all.js"></script>
-    <!-- Plugins All js -->
-    <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/custom.js"></script>
+<script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/owl.carousel.js"></script>
+<!-- OWL carousel js -->
+<script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/slick.js"></script>
+<!-- Slick Slider js -->
+<script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/plugins-all.js"></script>
+<!-- Plugins All js -->
+<script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/custom.js"></script>
 <!-- custom js -->
 <script>
     function addToCart(productId, productPrice) {
-        fetch("http://localhost:8080/api/user/addToCart?productId=" + productId).then(response => {
+        fetch(<%=request.getContextPath()%>"/api/user/addToCart?productId=" + productId).then(response => {
             if (response.status === 208)
                 alert("Item is already in cart !");
+            else if (response.status == 416)
+                alert("Item has been sold Out");
             else if (response.status === 200) {
                 let headerQuantityElem = document.getElementById('header-quantity');
                 let quantity = parseInt(headerQuantityElem.innerHTML);
