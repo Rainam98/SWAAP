@@ -11,11 +11,11 @@
 
 	<script src="adminResources/js/customValidator.js"></script>
 	<title>Home</title>
-	<link rel="stylesheet" href="adminResources/css/style.css">
-	<link rel="stylesheet" href="adminResources/css/custom.css">
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/style.css">
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/custom.css">
 
 	<!-- Waves Effect -->
-	<link rel="stylesheet" href="adminResources/css/waves.min.css">
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/waves.min.css">
 
 </head>
 
@@ -87,14 +87,14 @@
 <!--
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="adminResources/js/jquery.min.js"></script>
-<script src="adminResources/js/modernizr.min.js"></script>
-<script src="adminResources/js/popper.min.js"></script>
-<script src="adminResources/js/bootstrap.min.js"></script>
-<script src="adminResources/js/nprogress.js"></script>
-<script src="adminResources/js/waves.min.js"></script>
+<script src="<%=request.getContextPath()%>/adminResources/js/jquery.min.js"></script>
+<script src="<%=request.getContextPath()%>/adminResources/js/modernizr.min.js"></script>
+<script src="<%=request.getContextPath()%>/adminResources/js/popper.min.js"></script>
+<script src="<%=request.getContextPath()%>/adminResources/js/bootstrap.min.js"></script>
+<script src="<%=request.getContextPath()%>/adminResources/js/nprogress.js"></script>
+<script src="<%=request.getContextPath()%>/adminResources/js/waves.min.js"></script>
 
-<script src="adminResources/js/main.min.js"></script>
-<script src="adminResources/js/mycommon.js"></script>
+<script src="<%=request.getContextPath()%>/adminResources/js/main.min.js"></script>
+<script src="<%=request.getContextPath()%>/adminResources/js/mycommon.js"></script>
 </body>
 </html>
