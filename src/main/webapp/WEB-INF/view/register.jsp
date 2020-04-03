@@ -59,8 +59,8 @@
 			<button type="submit" class="frm-submit">Register<i class="fa fa-arrow-circle-right"></i></button>
 			
 			<!-- /.row -->
-			<a href="login.html" class="a-link"><i class="fa fa-sign-in"></i>Already have account? Login.</a>
-			<div class="frm-footer">NinjaAdmin © 2016.</div>
+			<a href="login" class="a-link"><i class="fa fa-sign-in"></i>Already have account? Login.</a>
+			<div class="frm-footer">SWAAP © 2020.</div>
 			<!-- /.footer -->
 		</div>
 		<!-- .inside -->

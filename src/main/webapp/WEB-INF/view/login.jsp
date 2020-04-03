@@ -52,7 +52,7 @@
 				</div>
 			</div>
 			<!-- /.row -->
-			<div class="frm-footer">SWAAP © 2016.</div>
+			<div class="frm-footer">SWAAP © 2020.</div>
 			<!-- /.footer -->
 		</div>
 		<!-- .inside -->
