@@ -1,11 +1,12 @@
 package com.swaap.controller;
 
-import com.swaap.model.ProductVO;
-import com.swaap.model.SubCategoryVO;
-import com.swaap.service.BranchService;
-import com.swaap.service.CategoryService;
-import com.swaap.service.ProductService;
-import com.swaap.service.SubCategoryService;
+import java.io.BufferedOutputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.List;
+
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,11 +17,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpSession;
-import java.io.BufferedOutputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.util.List;
+import com.swaap.model.ProductCountVO;
+import com.swaap.model.ProductVO;
+import com.swaap.model.SubCategoryVO;
+import com.swaap.service.BranchService;
+import com.swaap.service.CategoryService;
+import com.swaap.service.ProductService;
+import com.swaap.service.SubCategoryService;
 
 @Controller
 public class ProductController {
@@ -114,5 +117,19 @@ public class ProductController {
         List productList = this.productService.searchProductBySubCategory(productVO.getSubCategoryVO());
         System.out.println(productList.get(0).toString());
         return new ModelAndView("user/productDetail", "productList", productList);
+    }
+    
+    @RequestMapping(value = "mall/viewProductPurchaseHistory", method = RequestMethod.GET)
+    public ModelAndView viewProductPurchaseHistory(Model model) {
+    	List CategoryList = this.categoryService.searchCategory();
+        List SubCategoryList = this.subCategoryService.searchSubCategory();
+        List BranchList = this.branchService.searchBranch();
+        List ProductList=this.productService.searchProduct();
+        model.addAttribute("categoryList", CategoryList);
+        model.addAttribute("subCategoryList", SubCategoryList);
+        model.addAttribute("branchList", BranchList);
+        model.addAttribute("productList",ProductList);
+        model.addAttribute("productVO", new ProductVO());
+        return new ModelAndView("mall/selectProduct");
     }
 }

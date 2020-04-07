@@ -1,6 +1,33 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ page import="java.util.*" %>
+<%@ page import="com.google.gson.Gson"%>
+<%@ page import="com.google.gson.JsonObject"%>
+
+<%
+	Gson gsonObj = new Gson();
+	Map<Object,Object> map = null;
+	List<Map<Object,Object>> list = new ArrayList<Map<Object,Object>>();
+%>
+<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+<c:forEach items="${productCountList}" var="i">
+
+<c:set var="date" value="${i.date}"></c:set>
+<c:set var="freq" value="${i.frequency}"></c:set>
+<c:set var="product" value="${i.productVO.productName }"></c:set>
+
+<%
+	String date=(String)pageContext.getAttribute("date");
+	Integer freq=(Integer)pageContext.getAttribute("freq");
+	map = new HashMap<Object,Object>(); 
+	map.put("label", date);
+	map.put("y", freq); 
+	list.add(map);
+	%>
+</c:forEach>
+<%
+	String dataPoints = gsonObj.toJson(list);
+%>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -9,7 +36,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>View Product</title>
+	<title>Graph</title>
 
 	<!-- Main Styles -->
 	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/style.css">
@@ -30,92 +57,67 @@
 
 	<!-- Color Picker -->
 	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/color-switcher.min.css">
+	<script type="text/javascript">
+	window.onload = function() { 
+	 
+	var chart = new CanvasJS.Chart("chartContainer", {
+		theme: "light2",
+		title: {
+			text:"Product Frequency Graph"
+		},
+		axisX: {
+			title: "Date"
+		},
+		axisY: {
+			title: "Product Frequency"
+		},
+		data: [{
+			type: "line",
+			yValueFormatString: "#,##0",
+			dataPoints : <%out.print(dataPoints);%>
+		}]
+	});
+	chart.render();
+	 
+	}
+</script>
+	
 </head>
 
 <body>
 	<jsp:include page="menu.jsp"></jsp:include>
-	<!-- /.main-menu -->
+<!-- /.main-menu -->
 
 	<jsp:include page="header.jsp"></jsp:include>
-	<!-- /.fixed-navbar -->
+<!-- /.fixed-navbar -->
 
-	<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
-	<div id="wrapper">
-		<div class="main-content">
-			<div class="row small-spacing">
-				<div class="col-12">
-					<div class="box-content">
-						<h4 class="box-title">View Product</h4>
-						<!-- /.box-title -->
-						<div class="dropdown js__drop_down">
-							<a href="#" class="dropdown-icon fas fa-ellipsis-v js__drop_down_button"></a>
-							<ul class="sub-menu">
-								<li><a href="addProduct">Add Product</a></li>
-							</ul>
-							<!-- /.sub-menu -->
+
+
+
+<%@taglib prefix="f" uri="http://www.springframework.org/tags/form"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
+<div id="wrapper">
+	<div class="main-content">
+		<div class="row small-spacing">
+			<div class="col-12">
+				<div class="box-content">
+					<f:form data-toggle="validator" action="insertDataset" method="post">
+						<h1 class="page-title">Graph for <%=(String)pageContext.getAttribute("product") %></h1>
+						<div class="form-group">
+							<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+							<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 						</div>
-						<!-- /.dropdown js__dropdown -->
-						<table id="example" class="table table-striped table-bordered display" style="width:100% ; height:100%">
-							<thead>
-								<tr>
-									<th>ID</th>
-									<th>Branch Name</th>
-									<th>Category Name</th>
-									<th>Sub-Category Name</th>
-									<th>Product Name</th>
-									<th>Product Weight</th>
-									<th>Product Price</th>
-									<th>Product Quantity</th>
-									<th>Delete</th>
-									<th>Update</th>
-									<th>View Graph</th>
-								</tr>
-							</thead>
-							<tfoot>
-								<tr>
-									<th>ID</th>
-									<th>Branch Name</th>
-									<th>Category Name</th>
-									<th>Sub-Category Name</th>
-									<th>Product Name</th>
-									<th>Product Weight</th>
-									<th>Product Price</th>
-									<th>Product Quantity</th>
-									<th>Delete</th>
-									<th>Update</th>
-									<th>View Graph</th>
-								</tr>
-							</tfoot>
-							<tbody>
-								<c:forEach items="${productList}" var="productVariable">
-									<tr>
-										<td>${productVariable.id}</td>
-										<td>${productVariable.branchVO.branchName}</td>
-										<td>${productVariable.categoryVO.categoryName}</td>
-										<td>${productVariable.subCategoryVO.subCategoryName}</td>
-										<td>${productVariable.productName}</td>
-										<td>${productVariable.productWeight}</td>
-										<td>${productVariable.productPrice}</td>
-										<td>${productVariable.productQuantity}</td>
-										<td><a  href="deleteProduct?findById=${productVariable.id}"><i class="menu-icon fa fa-trash-alt" aria-hidden="true"></i></a></td>
-										<td><a  href="updateProduct?findById=${productVariable.id}"><i class="menu-icon fa fa-edit" aria-hidden="true"></i></a></td>
-										<td><a  href="viewGraph?findById=${productVariable.id}"><i class="menu-icon fa fa-edit" aria-hidden="true"></i></a></td>
-									</tr>
-								</c:forEach>
-							</tbody>
-						</table>
-					</div>
-					<!-- /.box-content -->
+					</f:form>
 				</div>
-				
-				</div>
-				<!-- /.col-12 -->
-				<jsp:include page="footer.jsp"></jsp:include>
+				<!-- /.box-content -->
 			</div>
-			<!-- /.row small-spacing -->		
+			<!-- /.col-12 -->
 		</div>
-		<!-- /.main-content -->
-	</div><!--/#wrapper -->
+		<!-- /.row small-spacing -->		
+		<jsp:include page="footer.jsp"></jsp:include>
+	</div>
+	<!-- /.main-content -->
+</div><!--/#wrapper -->
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
 		<script src="<%=request.getContextPath()%>/adminResources/js/html5shiv.min.js"></script>
@@ -145,5 +147,5 @@
 		<script src="<%=request.getContextPath()%>/adminResources/js/main.min.js"></script>
 <script src="<%=request.getContextPath()%>/adminResources/js/mycommon.js"></script>
 		<script src="<%=request.getContextPath()%>/adminResources/js/color-switcher.min.js"></script>
-	</body>
-	</html>
+</body>
+</html>

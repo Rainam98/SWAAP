@@ -42,10 +42,10 @@ public class FeedbackController {
 		return new ModelAndView("redirect:/user/index");
 	}
 	
-	@RequestMapping(value="/admin/viewFeedback")
+	@RequestMapping(value="/mall/viewFeedback")
 	public ModelAndView viewFeedback()
 	{
 		List feedbackList=this.feedbackService.searchFeedback();
-		return new ModelAndView("admin/viewFeedback","feedbackList",feedbackList);
+		return new ModelAndView("mall/viewFeedback","feedbackList",feedbackList);
 	}
 }

@@ -77,6 +77,7 @@
 					<ul class="sub-menu js__content">
 						<li><a href="addProduct">Add Product</a></li>
 						<li><a href="viewProduct">View Product</a></li>
+						
 					</ul>
 					<!-- /.sub-menu js__content -->
 				</li>
@@ -103,7 +104,7 @@
 					<!-- /.sub-menu js__content -->
 				</li>
 				<li>
-					<a class="waves-effect parent-item js__control" href="viewFeedback"><i class="menu-icon far fa-smile" aria-hidden="true"></i><span>Feedback</span></a>
+					<a class="waves-effect parent-item" href="viewFeedback"><i class="menu-icon far fa-smile" aria-hidden="true"></i><span>Feedback</span></a>
 					<!-- /.sub-menu js__content -->
 				</li>
 			</ul>

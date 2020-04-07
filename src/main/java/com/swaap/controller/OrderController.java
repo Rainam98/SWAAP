@@ -16,10 +16,11 @@ import org.springframework.web.servlet.ModelAndView;
 import com.swaap.model.CartVO;
 import com.swaap.model.LoginVO;
 import com.swaap.model.OrderVO;
-import com.swaap.model.ProductVO;
+import com.swaap.model.ProductCountVO;
 import com.swaap.service.CartService;
 import com.swaap.service.LoginService;
 import com.swaap.service.OrderService;
+import com.swaap.service.ProductCountService;
 import com.swaap.service.ProductService;
 import com.swaap.utils.Basemethods;
 
@@ -31,6 +32,9 @@ public class OrderController {
 
 	@Autowired
 	ProductService productService;
+	
+	@Autowired
+	ProductCountService productCountService;
 
 	@Autowired
 	LoginService loginService;
@@ -45,7 +49,8 @@ public class OrderController {
 		DateFormat dateformat=new SimpleDateFormat(setDateFormat);
 		String formattedDate=dateformat.format(date);
 		orderVO.setPurchaseDate(formattedDate);
-		
+		ProductCountVO productCountVO=new ProductCountVO();
+		productCountVO.setDate(formattedDate);
 		String userName = Basemethods.getUser();
 		LoginVO loginVO;
 		List userList = this.loginService.searchUserByUsername(userName);
@@ -58,16 +63,34 @@ public class OrderController {
             CartVO cartVO = (CartVO) cartObjects;
             cartVO.setOrderVO(orderVO);
             cartVO.setStatus(true);
-            ProductVO productVO=cartVO.getProductVO();
-            productVO.setProductQuantity((Integer.parseInt(productVO.getProductQuantity())-cartVO.getProductQuantityBought())+"");
-            this.productService.insertProduct(productVO);
             int quantity = cartVO.getProductQuantityBought();
             double price = cartVO.getProductVO().getProductPrice();
             totalAmount += quantity * price;
             this.cartService.insertProductToCart(cartVO);
+            
         }
 		orderVO.setTotalAmount(totalAmount);
 		this.orderService.insertOrder(orderVO);
+		for(Object cartObjects: cartList) 
+		{
+            CartVO cartVO = (CartVO) cartObjects;
+            List productCountList=this.productCountService.searchProductCount(cartVO.getProductVO(), formattedDate);
+            if(!(productCountList.isEmpty()))
+            {
+            	for(Object productCountObjects : productCountList)
+            	{
+            		ProductCountVO productCount=(ProductCountVO)productCountObjects;
+            		productCount.setFrequency(cartVO.getProductQuantityBought()+productCount.getFrequency());
+            		this.productCountService.insertProductCount(productCount);	
+            	}
+            }
+            else
+            {
+            		productCountVO.setProductVO(cartVO.getProductVO());
+            		productCountVO.setFrequency(cartVO.getProductQuantityBought());
+            		this.productCountService.insertProductCount(productCountVO);	
+            }
+		}
 		return new ModelAndView("redirect:/user/index"); 
 	}
 	

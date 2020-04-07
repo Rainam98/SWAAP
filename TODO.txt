@@ -23,3 +23,7 @@ payment
 stock prediction
 test todo
 
+
+Query for product count table
+insert into product_count(date,frequency,productvo) values("06/04/2020" , 10 , 24);
+productvo ranges from 2 to 52;
