@@ -99,7 +99,7 @@
 										<td>${productVariable.productQuantity}</td>
 										<td><a  href="deleteProduct?findById=${productVariable.id}"><i class="menu-icon fa fa-trash-alt" aria-hidden="true"></i></a></td>
 										<td><a  href="updateProduct?findById=${productVariable.id}"><i class="menu-icon fa fa-edit" aria-hidden="true"></i></a></td>
-										<td><a  href="viewGraph?findById=${productVariable.id}"><i class="menu-icon fa fa-edit" aria-hidden="true"></i></a></td>
+										<td><a  href="viewGraph?findById=${productVariable.id}"><i class="fas fa-chart-line" aria-hidden="true"></i></a></td>
 									</tr>
 								</c:forEach>
 							</tbody>
