@@ -60,6 +60,11 @@
                                 <!-- Search-->
                                 <li><a id="search-overlay-menu-btn"><i aria-hidden="true" class="fa fa-search"></i></a>
                                 </li>
+                                <li>
+                                    <a id="scanner" href="./scanner">
+                                        <i aria-hidden="true" class="fa fa-qrcode"></i>
+                                    </a>
+                                </li>
 
                                 <!-- Cart-->
                                 <li>
