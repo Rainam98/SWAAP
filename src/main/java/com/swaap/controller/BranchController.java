@@ -4,6 +4,7 @@ import com.swaap.model.BranchVO;
 import com.swaap.model.LoginVO;
 import com.swaap.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -21,35 +22,36 @@ public class BranchController {
 	
 	@Autowired
 	CityService cityService;
-	
+
 	@Autowired
 	BranchService branchService;
 
 	@Autowired
 	EmailSendService emailSendService;
-	
+
 	@Autowired
 	LoginService loginService;
-	
-	@RequestMapping(value="mall/addBranch", method=RequestMethod.GET)
-	public ModelAndView addBranch(Model model)
-	{
-		List StateList=this.stateService.searchState();
-		List CityList=this.cityService.searchCity();
-		model.addAttribute("stateList",StateList);
-		model.addAttribute("cityList",CityList);
+
+	@Autowired
+	BCryptPasswordEncoder bCryptPasswordEncoder;
+
+	@RequestMapping(value = "mall/addBranch", method = RequestMethod.GET)
+	public ModelAndView addBranch(Model model) {
+		List StateList = this.stateService.searchState();
+		List CityList = this.cityService.searchCity();
+		model.addAttribute("stateList", StateList);
+		model.addAttribute("cityList", CityList);
 		model.addAttribute("branchVO", new BranchVO());
 
 		return new ModelAndView("mall/addBranch");
 	}
 
 	@RequestMapping(value="mall/saveBranch", method=RequestMethod.POST)
-	public ModelAndView saveBranch(@ModelAttribute BranchVO branchVO)
-	{
+	public ModelAndView saveBranch(@ModelAttribute BranchVO branchVO) {
 		branchVO.setStatus(true);
 		this.branchService.insertBranch(branchVO);
-		LoginVO loginVO=new LoginVO();
-		loginVO.setPassword(branchVO.getPassword());
+		LoginVO loginVO = new LoginVO();
+		loginVO.setPassword(bCryptPasswordEncoder.encode(branchVO.getPassword()));
 		loginVO.setRole("ROLE_BRANCH");
 		loginVO.setUsername(branchVO.getUserName());
 		loginVO.setStatus(true);

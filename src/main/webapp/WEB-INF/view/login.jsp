@@ -9,7 +9,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>Home</title>
+	<title>SWAAP - Login</title>
 	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/style.css">
 <link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/custom.css">
 

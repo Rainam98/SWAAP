@@ -10,7 +10,7 @@
 	<meta name="author" content="">
 
 	<script src="adminResources/js/customValidator.js"></script>
-	<title>Home</title>
+	<title>SWAAP - Register</title>
 	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/style.css">
 	<link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/custom.css">
 
@@ -39,25 +39,27 @@
 					path="gender" value="Female" name="underwear" id="underwear2" class="frm-inp"
 					required="true"/><label for="underwear2">Female</label></div>
 			<!-- /.frm-input -->
-			<div class="frm-input"><f:input path="mobileNumber" placeholder="Contact Number" class="frm-inp"
+			<div class="frm-input"><f:input path="mobileNumber" id="contact-number" onkeyup="validatePhone()"
+											placeholder="Contact Number" class="frm-inp"
 											required="true"/><i class="fa fa-phone frm-ico"></i></div>
 			<!-- /.frm-input -->
-			<div class="frm-input"><f:input onblur="validateEmail()" id="username" path="loginVO.username"
+			<div class="frm-input"><f:input onkeyup="validateEmail()" id="username" path="loginVO.username"
 											placeholder="Username" class="frm-inp"
 											data-error="Bruh, that email address is invalid" required="true"/><i
 					class="fa fa-user frm-ico"></i></div>
 			<!-- /.frm-input -->
-			<div class="frm-input"><f:password path="loginVO.password" placeholder="Password" data-minlength="8"
-											   id="inputPassword" class="frm-inp" required="true"/><i
+			<div class="frm-input"><f:password path="loginVO.password" onkeyup="validatePassword()"
+											   placeholder="Password" data-minlength="8"
+											   id="password" class="frm-inp" required="true"/><i
 					class="fa fa-lock frm-ico"></i></div>
 			<!-- /.frm-input -->
-			<div class="frm-input"><input type="password" placeholder="Confirm Password" id="inputPasswordConfirm"
-										  data-match="#inputPassword" data-match-error="Whoops, these don't match"
+			<div class="frm-input"><input type="password" onkeyup="comparePassword()" placeholder="Confirm Password"
+										  id="confirm-password"
 										  class="frm-inp" required="true"/><i class="fa fa-lock frm-ico"></i></div>
 			<!-- /.frm-input -->
 			<!-- /.clearfix -->
 			<button type="submit" class="frm-submit">Register<i class="fa fa-arrow-circle-right"></i></button>
-			
+
 			<!-- /.row -->
 			<a href="login" class="a-link"><i class="fa fa-sign-in"></i>Already have account? Login.</a>
 			<div class="frm-footer">SWAAP © 2020.</div>
