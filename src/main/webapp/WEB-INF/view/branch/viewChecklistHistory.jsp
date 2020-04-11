@@ -43,7 +43,7 @@
 			<div class="row small-spacing">
 				<div class="col-12">
 					<div class="box-content">
-						<h4 class="box-title">View Checklist</h4>
+						<h4 class="box-title">View Checklist History</h4>
 						
 						
 						<!-- /.dropdown js__dropdown -->

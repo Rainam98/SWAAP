@@ -3,19 +3,10 @@
 		<a href="index.html" class="logo">SWAAP</a>
 		<button type="button" class="button-close fa fa-times js__menu_close"></button>
 		<div class="user">
-			<a href="#" class="avatar"><img src="<%=request.getContextPath()%>/adminResources/image/avatar.png" alt=""><span class="status online"></span></a>
-			<h5 class="name"><a href="profile.html">Ritu Shah</a></h5>
-			<h5 class="position">Designer</h5>
+			<a href="#" class="avatar"><img src="<%=request.getContextPath()%>/adminResources/image/avatar-4.jpg" alt=""><span class="status online"></span></a>
+			<h5 class="name"><a href="profile.html">Tanay Shah</a></h5>
+			<h5 class="position">Team Leader</h5>
 			<!-- /.name -->
-			<div class="control-wrap js__drop_down">
-				<i class="fa fa-caret-down js__drop_down_button"></i>
-				<div class="control-list">
-					<div class="control-item"><a href="profile.html"><i class="fa fa-user"></i> Profile</a></div>
-					<div class="control-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
-					<div class="control-item"><a href="#"><i class="fa fa-sign-out"></i> Log out</a></div>
-				</div>
-				<!-- /.control-list -->
-			</div>
 			<!-- /.control-wrap -->
 		</div>
 		<!-- /.user -->
@@ -92,7 +83,7 @@
 				<li>
 					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon far fa-check-square"></i><span>Manage Checklist</span><span class="menu-arrow fa fa-angle-down"></span></a>
 					<ul class="sub-menu js__content">
-						<li><a href="viewChecklistMall">View Checklist History</a></li>
+						<li><a href="viewChecklistMall">View Checklist</a></li>
 					</ul>
 					<!-- /.sub-menu js__content -->
 				</li>

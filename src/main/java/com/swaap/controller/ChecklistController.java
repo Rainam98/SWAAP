@@ -47,8 +47,11 @@ public class ChecklistController {
 		DateFormat dateformat=new SimpleDateFormat(setDateFormat);
 		String formattedDate=dateformat.format(date);
 		checklistVO.setApproveDate(formattedDate);
-		
+		ProductVO product=checklistVO.getProductVO();
+		String updatedQuantity=Integer.toString(checklistVO.getRequestQuantity()+Integer.parseInt(product.getProductQuantity()));
+		product.setProductQuantity(updatedQuantity);
 		this.checklistService.insertChecklist(checklistVO);
+		this.productService.insertProduct(product);
 		return new ModelAndView("redirect:/mall/viewChecklistMall");
 	}
 

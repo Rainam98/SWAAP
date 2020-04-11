@@ -17,11 +17,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.swaap.model.CategoryVO;
 import com.swaap.model.LoginVO;
-import com.swaap.model.SubCategoryVO;
+import com.swaap.model.ProductVO;
 import com.swaap.service.CategoryService;
 import com.swaap.service.LoginService;
+import com.swaap.service.ProductService;
 import com.swaap.service.SubCategoryService;
 
 
@@ -33,6 +33,8 @@ public class LoginController {
 	@Autowired
 	CategoryService categoryService;
 	@Autowired
+	ProductService productService;
+	@Autowired
 	SubCategoryService subCategoryService;
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ModelAndView loadLogin() {
@@ -41,21 +43,22 @@ public class LoginController {
 	}
 	
 	@RequestMapping(value = "/mall/index", method = RequestMethod.GET)
-	public ModelAndView mallIndex(LoginVO loginVO,CategoryVO categoryVO, SubCategoryVO subCategoryVO, Model model ) {
+	public ModelAndView mallIndex(Model model ) {
 
 		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		String userName = user.getUsername();
-	/*	List categoryList=this.categoryService.searchCategory();
-		List subCategoryList=this.subCategoryService.searchSubCategory();
-		model.addAttribute("categoryList",categoryList);
-		model.addAttribute("subCategoryList",subCategoryList);*/
+		List productList=this.productService.searchProduct();
+		
+		model.addAttribute("productList", productList);
 		return new ModelAndView("mall/index");
 	}
 	
 	@RequestMapping(value = "/branch/index", method = RequestMethod.GET)
-	public ModelAndView userIndex() {
+	public ModelAndView userIndex(Model model) {
 		User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		String userName = user.getUsername();
+		List productList=this.productService.searchProduct();
+		model.addAttribute("productList", productList);
 		return new ModelAndView("branch/index");
 	}
 	
