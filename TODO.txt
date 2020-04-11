@@ -23,6 +23,9 @@ payment
 stock prediction
 test todo
 
+mall = $2a$10$lB46TIX21Gw5wNp053BO5eaJeZ/JdLh.iDP0e/BLhVuPBmOnbqH4K
+branch = $2a$10$TYW9/zUZn.pdb82CY5FJdu9jv.Mi873IykbWzyW6yOiXgMLFZYANm
+user = $2a$10$ybVGawU/FdwObsFqIktAVukC5s476unZsMVAuCTrPchKu/udS2kj6
 
 Query for product count table
 insert into product_count(date,frequency,productvo) values("06/04/2020" , 10 , 24);
