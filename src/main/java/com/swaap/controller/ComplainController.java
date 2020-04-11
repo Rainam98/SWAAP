@@ -73,7 +73,7 @@ public class ComplainController {
 			e.printStackTrace();
 		}
 		this.complainService.insertComplain(complainVO);
-		return new ModelAndView("redirect:/branch/index");
+		return new ModelAndView("redirect:/branch/viewBranchComplain");
 	}
 	
 	@RequestMapping(value="/mall/insertReply")

@@ -44,19 +44,8 @@
 				<div class="col-12">
 					<div class="box-content">
 						<h4 class="box-title">View Checklist</h4>
-						<!-- /.box-title -->
-						<!-- <!-- <div class="dropdown js__drop_down">
-							<a href="#"
-								class="dropdown-icon glyphicon glyphicon-option-vertical js__drop_down_button"></a>
-							<ul class="sub-menu">
-								<li><a href="#">Action</a></li>
-								<li><a href="#">Another action</a></li>
-								<li><a href="#">Something else there</a></li>
-								<li class="split"></li>
-								<li><a href="#">Separated link</a></li>
-							</ul>
-							<!-- /.sub-menu -->
-						</div> --> -->
+						
+						
 						<!-- /.dropdown js__dropdown -->
 						<table id="example"
 							class="table table-striped table-bordered display"
@@ -94,6 +83,7 @@
 				</div>
 				</div>
 				</div>
+				
 				<!-- /.col-12 -->
 		<!--/#wrapper -->
 	<!--/#wrapper -->

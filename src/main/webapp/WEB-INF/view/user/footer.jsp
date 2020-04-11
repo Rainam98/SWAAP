@@ -6,7 +6,6 @@
                     <div class="col-lg-3 col-md-12 col-sm-12 mb-sm-45">
                         <div class="footer-block about-us-block">
                             <img src="<%=request.getContextPath()%>/userResources/image/logo_white.png" width="125" alt="">
-                            <p>Gumbo beet greens corn soko endive gum gourd. Parsley allot courgette tatsoi pea sprouts fava bean soluta nobis est ses eligendi optio.</p>
                             <ul class="footer-social-icon list-none-ib">
                                 <li><a href="http://facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                                 <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>

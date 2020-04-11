@@ -1,6 +1,6 @@
-<div class="main-menu">
+<div class="main-menu " style="height:100%">
 	<header class="header">
-		<a href="index.html" class="logo">SWAAP Team</a>
+		<a href="index.html" class="logo">SWAAP</a>
 		<button type="button" class="button-close fa fa-times js__menu_close"></button>
 		<div class="user">
 			<a href="#" class="avatar"><img src="<%=request.getContextPath()%>/adminResources/image/avatar.png" alt=""><span class="status online"></span></a>
