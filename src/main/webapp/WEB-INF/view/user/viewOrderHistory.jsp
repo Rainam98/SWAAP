@@ -1,50 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Order History</title>
-<meta name="description" content="Philos Template" />
-<meta name="keywords"
-	content="philos, WooCommerce, bootstrap, html template, philos template">
-<meta name="author" content="philos" />
-<meta name="viewport"
-	content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-<!--[if IE]>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+	<meta charset="utf-8">
+	<title>Order History</title>
+	<meta name="description" content="Philos Template"/>
+	<meta name="keywords" content="philos, WooCommerce, bootstrap, html template, philos template">
+	<meta name="author" content="philos"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+	<!--[if IE]>
+	<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
 
-<!-- Favicone Icon -->
-<link rel="shortcut icon" type="image/x-icon"
-	href="<%=request.getContextPath()%>/userResources/image/favicon.ico">
-<link rel="icon" type="img/png"
-	href="<%=request.getContextPath()%>/userResources/image/favicon.png">
-<link rel="apple-touch-icon"
-	href="<%=request.getContextPath()%>/userResources/image/favicon.png">
+	<!-- Favicone Icon -->
+	<link rel="shortcut icon" type="image/x-icon"
+		  href="<%=request.getContextPath()%>/<%=request.getContextPath()%>/userResources/imagefavicon.ico">
+	<link rel="icon" type="img/png" href="<%=request.getContextPath()%>/userResources/image/favicon.png">
+	<link rel="apple-touch-icon" href="<%=request.getContextPath()%>/userResources/image/favicon.png">
 
-<!-- CSS -->
-<link
-	href="<%=request.getContextPath()%>/userResources/css/bootstrap.css"
-	rel="stylesheet" type="text/css" />
-<!-- bootstrap css -->
-<link
-	href="<%=request.getContextPath()%>/userResources/css/fontawesome-all.min.css"
-	rel="stylesheet" type="text/css" />
-<!-- fontawesome css -->
-<link href="<%=request.getContextPath()%>/userResources/css/animate.css"
-	rel="stylesheet" type="text/css" />
-<!-- animate css -->
-<link href="<%=request.getContextPath()%>/userResources/css/style.css"
-	rel="stylesheet" type="text/css" />
-<!-- template css -->
-<link
-	href="<%=request.getContextPath()%>/userResources/css/settings-ver.5.3.1.css"
-	rel="stylesheet" type="text/css" />
-<!-- Slider Revolution Css Setting -->
+	<!-- CSS -->
+	<link href="<%=request.getContextPath()%>/userResources/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+	<!-- bootstrap css -->
+	<link href="<%=request.getContextPath()%>/userResources/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<!-- fontawesome css -->
+	<link href="<%=request.getContextPath()%>/userResources/css/animate.css" rel="stylesheet" type="text/css"/>
+	<!-- animate css -->
+	<link href="<%=request.getContextPath()%>/userResources/css/style.css" rel="stylesheet" type="text/css"/>
+	<!-- template css -->
+	<link href="<%=request.getContextPath()%>/userResources/css/settings-ver.5.3.1.css" rel="stylesheet"
+		  type="text/css"/>
+	<!-- Slider Revolution Css Setting -->
+
+	<!-- Slider Revolution Css Setting -->
 
 </head>
 <body>
 
 <% double total = 0;%>
-	<!-- Newsletter Popup ---------------------------------------------------->
+<!-- Newsletter Popup ---------------------------------------------------->
 
 
 <!-- End Newsletter Popup ------------------------------------------------>
@@ -179,46 +170,35 @@
 <!-- JAVASCRIPT -->
 <!--==========================================-->
 
+<script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/jquery.min.js"></script>
+<script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/jquery-ui.js"></script>
+<!-- jquery library js -->
+<script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/modernizr.js"></script>
+<!--modernizr Js-->
 <script type="text/javascript"
-		src="<%=request.getContextPath()%>/userResources/js/jquery.min.js"></script>
-	<script type="text/javascript"
-		src="<%=request.getContextPath()%>/userResources/js/jquery-ui.js"></script>
-	<!-- jquery library js -->
-	<script type="text/javascript"
-		src="<%=request.getContextPath()%>/userResources/js/modernizr.js"></script>
-	<!--modernizr Js-->
-	<script type="text/javascript"
 		src="<%=request.getContextPath()%>/userResources/js/jquery.themepunch.revolution.min.js"></script>
-	<script type="text/javascript"
+<script type="text/javascript"
 		src="<%=request.getContextPath()%>/userResources/js/jquery.themepunch.tools.min.js"></script>
-	<script type="text/javascript"
+<script type="text/javascript"
 		src="<%=request.getContextPath()%>/userResources/js/revolution.extension.navigation.min.js"></script>
-	<script type="text/javascript"
+<script type="text/javascript"
 		src="<%=request.getContextPath()%>/userResources/js/revolution.extension.parallax.min.js"></script>
-	<script type="text/javascript"
+<script type="text/javascript"
 		src="<%=request.getContextPath()%>/userResources/js/revolution.extension.slideanims.min.js"></script>
-	<script type="text/javascript"
+<script type="text/javascript"
 		src="<%=request.getContextPath()%>/userResources/js/revolution.extension.layeranimation.min.js"></script>
-	<!--Slider Revolution Js File-->
-	<script type="text/javascript"
-		src="<%=request.getContextPath()%>/userResources/js/tether.min.js"></script>
-	<!--Bootstrap tooltips require Tether (Tether Js)-->
-	<script type="text/javascript"
-		src="<%=request.getContextPath()%>/userResources/js/bootstrap.min.js"></script>
-	<!-- bootstrap js -->
-	<script type="text/javascript"
-		src="<%=request.getContextPath()%>/userResources/js/owl.carousel.js"></script>
-	<!-- carousel js -->
-	<script type="text/javascript"
-		src="<%=request.getContextPath()%>/userResources/js/slick.js"></script>
-	<!-- Slick Slider js -->
-	<script type="text/javascript"
-		src="<%=request.getContextPath()%>/userResources/js/plugins-all.js"></script>
-	<!-- Plugins All js -->
-	<script type="text/javascript"
-		src="<%=request.getContextPath()%>/userResources/js/custom.js"></script>
-	<!-- custom js -->
-	<!-- end jquery -->
+<!--Slider Revolution Js File-->
+<script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/tether.min.js"></script>
+<!--Bootstrap tooltips require Tether (Tether Js)-->
+<script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/bootstrap.min.js"></script>
+<!-- bootstrap js -->
+<script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/owl.carousel.js"></script>
+<!-- OWL carousel js -->
+<script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/slick.js"></script>
+<!-- Slick Slider js -->
+<script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/plugins-all.js"></script>
+<!-- Plugins All js -->
+<script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/custom.js"></script>
 
 </body>
 </html>

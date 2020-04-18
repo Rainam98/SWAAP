@@ -175,27 +175,27 @@
 									</div>
 									<div class="cart-collateral">
 										<div class="cart_totals">
-                                            <h3>Cart Total</h3>
-                                            <div class="responsive-table">
-                                                <table>
-                                                    <tbody>
+											<h3>Cart Total</h3>
+											<div class="responsive-table">
+												<table>
+													<tbody>
 
 
-                                                    <tr class="order-total">
-                                                        <th>Total</th>
-                                                        <td><span class="product-price-amount amount"><span
-                                                                class="currency-sign">Rs.</span>
-															<span class="final_total">	0.0 </span>
+													<tr class="order-total">
+														<th>Total</th>
+														<td><span class="product-price-amount amount"><span
+																class="currency-sign">Rs.</span>
+															<span class="final_total-order">${cartList.get(0).orderVO.getTotalAmount()} </span>
 														</span></td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
+													</tr>
+													</tbody>
+												</table>
+											</div>
 
-                                        </div>
-                                    </div>
-                                </form>
-                            </article>
+										</div>
+									</div>
+								</form>
+							</article>
 						</div>
 					</div>
 				</div>

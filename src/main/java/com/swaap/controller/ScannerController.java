@@ -23,9 +23,9 @@ public class ScannerController {
     @PostMapping("/user/decode")
     public ResponseEntity<String> decode(@RequestBody String imageData) {
         getImage(imageData);
-        File codeImage = new File("src/tmp/code.png");
-        if (codeImage.exists())
-            codeImage.delete();
+//        File codeImage = new File("src/tmp/code.png");
+//        if (codeImage.exists())
+//            codeImage.delete();
         return new ResponseEntity<String>(decodeImage(), HttpStatus.OK);
     }
 
