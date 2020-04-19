@@ -64,7 +64,6 @@
 									<th>City Name</th>
 									<th>Branch Name</th>
 									<th>User Name</th>
-									<th>Password</th>
 									<th>Delete</th>
 									<th>Update</th>
 								</tr>
@@ -76,7 +75,6 @@
 									<th>City Name</th>
 									<th>Branch Name</th>
 									<th>User Name</th>
-									<th>Password</th>
 									<th>Delete</th>
 									<th>Update</th>
 								</tr>
@@ -89,7 +87,6 @@
 										<td>${branchVariable.cityVO.cityName}</td>
 										<td>${branchVariable.branchName}</td>
 										<td>${branchVariable.userName}</td>
-										<td>${branchVariable.password}</td>
 										<td><a  href="deleteBranch?findById=${branchVariable.id}"><i class="menu-icon fa fa-trash-alt" aria-hidden="true"></i></a></td>
 										<td><a  href="updateBranch?findById=${branchVariable.id}"><i class="menu-icon fa fa-edit" aria-hidden="true"></i></a></td>
 									</tr>

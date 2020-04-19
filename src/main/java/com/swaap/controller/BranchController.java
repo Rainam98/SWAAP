@@ -57,7 +57,7 @@ public class BranchController {
 		loginVO.setStatus(true);
 		loginVO.setEnabled("1");
 		this.loginService.insertLogin(loginVO);
-//		emailSendService.sendMail(branchVO.getUserName(),"User added","your  password is: "+branchVO.getPassword());
+		emailSendService.sendMail(branchVO.getUserName(),"Branch added","your  password is: "+branchVO.getPassword());
 		return new ModelAndView("redirect:/mall/viewBranch");
 	}
 	
