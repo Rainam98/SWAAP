@@ -135,7 +135,8 @@
                                                                 <td>
                                                                     <span class="product-price-amount amount"><span
                                                                             class="currency-sign">&#8377;</span><span
-                                                                            class="final_total"></span></span>
+                                                                            class="final_total"
+                                                                            id="txn_amt"></span></span>
                                                                 </td>
                                                             </tr>
                                                             </tfoot>
@@ -161,25 +162,28 @@
                                                                 <label for="payment_method_cod">Cash on Delivery</label>
                                                             </li>
                                                             <li>
-                                                                <input id="payment_method_paypal" name="payment_method" value="paypal" type="radio" />
+                                                                <input id="payment_method_paypal" name="payment_method"
+                                                                       value="paypal" type="radio"/>
                                                                 <label for="payment_method_paypal">
-                                                                    PayPal<img class="paypal-img" src="https://www.paypalobjects.com/webstatic/mktg/Logo/AM_mc_vs_ms_ae_UK.png" />
-                                                                    <a href="https://www.paypal.com/gb/webapps/mpp/paypal-popup" onclick="javascript:window.open('https://www.paypal.com/gb/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;">What is PayPal?</a>
+                                                                    PayPal<img class="paypal-img"
+                                                                               src="https://www.paypalobjects.com/webstatic/mktg/Logo/AM_mc_vs_ms_ae_UK.png"/>
+                                                                    <a href="https://www.paypal.com/gb/webapps/mpp/paypal-popup"
+                                                                       onclick="javascript:window.open('https://www.paypal.com/gb/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;">What
+                                                                        is PayPal?</a>
                                                                 </label>
                                                             </li>
                                                         </ul>
                                                         <div class="place-order">
-                                                            <a class="btn btn-lg btn-color form-full-width" href="placeOrder">Place Order</a>
+                                                            <a class="btn btn-lg btn-color form-full-width"
+                                                               href="/user/payonline">Place Order</a>
                                                         </div>
                                                     </div>
 
                                                 </div>
                                             </div>
-                                        </div>
+                                     </div>
 
-                                       
-                                       
-                                    
+
                                 </form>
                             </article>
                              </div>
