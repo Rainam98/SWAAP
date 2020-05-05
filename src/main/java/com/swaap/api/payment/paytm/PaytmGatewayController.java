@@ -58,6 +58,9 @@ public class PaytmGatewayController {
             double price = cartVO.getProductVO().getProductPrice();
             txn_amount += quantity * price;
         }
+        if (txn_amount == 0) {
+            return new ModelAndView("redirect:/user/index");
+        }
         String emailid = userName;
         String encOrderId = Basemethods.generateHash(userName + new Date());
         String merchantMid = environment.getProperty("paytm.merchantId");

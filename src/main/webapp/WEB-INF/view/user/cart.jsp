@@ -166,9 +166,10 @@
 														class="product-price-sub_totle amount"> <span
 														class="currency-sign">Rs.</span>
 													<span
-															id="cart-${cartVariable.id}"
 															class="sub-totals">${cartVariable.productVO.productPrice * cartVariable.productQuantityBought }</span>
 													</span>
+													<input type="hidden" id="cart-${cartVariable.id}"
+														   value="${cartVariable.productVO.productPrice * cartVariable.productQuantityBought }"/>
 												</td>
 											</tr>
 										</c:forEach>
@@ -227,9 +228,9 @@
 <!-- JAVASCRIPT -->
 <!--==========================================-->
 
-<script type="text/javascript">
-	const USER_API_LINK = <%=request.getContextPath()%>  '/api/user';
-</script>
+<%--<script type="text/javascript">--%>
+<%--	const USER_API_LINK = <%=request.getContextPath()%>  '/api/user';--%>
+<%--</script>--%>
 <script type="text/javascript" src="<%=request.getContextPath()%>/userResources/js/cart.js"></script>
 <script type="text/javascript"
 		src="<%=request.getContextPath()%>/userResources/js/jquery.min.js"></script>

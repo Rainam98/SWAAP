@@ -124,12 +124,13 @@
                 <div class="cart-footer-inner">
 
                     <!-- Cart Total -->
-                    <h4 class="cart-total-hedding normal"><span>Total :</span><span class="cart-total-price">$698.00</span></h4>
+                    <h4 class="cart-total-hedding normal"><span>Total :</span><span
+                            class="cart-total-price">$698.00</span></h4>
                     <!-- Cart Total -->
 
                     <!-- Cart Buttons -->
                     <div class="cart-action-buttons">
-                        <a href="cart.html" class="view-cart btn btn-md btn-gray">View Cart</a>
+                        <a href="/user/viewCart" class="view-cart btn btn-md btn-gray">View Cart</a>
                         <a href="checkout.html" class="checkout btn btn-md btn-color">Checkout</a>
                     </div>
                     <!-- End Cart Buttons -->

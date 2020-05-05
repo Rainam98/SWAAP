@@ -144,12 +144,13 @@
                 <div class="cart-footer-inner">
 
                     <!-- Cart Total -->
-                    <h4 class="cart-total-hedding normal"><span>Total :</span><span class="cart-total-price">$698.00</span></h4>
+                    <h4 class="cart-total-hedding normal"><span>Total :</span><span
+                            class="cart-total-price">$698.00</span></h4>
                     <!-- Cart Total -->
 
                     <!-- Cart Buttons -->
                     <div class="cart-action-buttons">
-                        <a href="cart.html" class="view-cart btn btn-md btn-gray">View Cart</a>
+                        <a href="/user/viewCart" class="view-cart btn btn-md btn-gray">View Cart</a>
                         <a href="checkout.html" class="checkout btn btn-md btn-color">Checkout</a>
                     </div>
                     <!-- End Cart Buttons -->
@@ -514,7 +515,8 @@
                                                     <li><a href="shop_grid-sidebar_right.html">Shop Grid - Sidebar Right</a></li>
                                                     <li><a href="shop_grid-no_sidebar.html">Shop Grid - No Sidebar</a></li>
                                                     <li><a href="shop_list.html">Shop List - Sidebar Left</a></li>
-                                                    <li><a href="shop_list-sidebar_right.html">Shop List - Sidebar Right</a></li>
+                                                    <li><a href="shop_list-sidebar_right.html">Shop List - Sidebar
+                                                        Right</a></li>
                                                 </ul>
                                             </li>
                                             <!--Grid 2-->
@@ -522,8 +524,9 @@
                                                 <h6>Product Page</h6>
                                                 <ul>
                                                     <li><a href="product_detail.html">Product Page - Default</a></li>
-                                                    <li><a href="product_detail-with_sidebar.html">Product Page - With Sidebar</a></li>
-                                                    <li><a href="cart.html">Cart Page</a></li>
+                                                    <li><a href="product_detail-with_sidebar.html">Product Page - With
+                                                        Sidebar</a></li>
+                                                    <li><a href="/user/viewCart">Cart Page</a></li>
                                                     <li><a href="checkout.html">Checkout Page</a></li>
                                                 </ul>
                                             </li>

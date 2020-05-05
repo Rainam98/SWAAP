@@ -123,7 +123,7 @@
         </div>
     </section>
 <script type="text/javascript">
-    const USER_API_LINK = <%=request.getContextPath()%>  '/api/user';
+    const USER_API_LINK = <%=request.getContextPath()%>'/api/user';
 </script>
 <script type="text/javascript"
         src="<%=request.getContextPath()%>/userResources/js/cart.js">

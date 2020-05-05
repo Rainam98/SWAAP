@@ -99,6 +99,9 @@
             if (finalTotalsElems) {
                 [].forEach.call(finalTotalsElems, e => e.innerHTML = res['totalAmount']);
             }
+
+            if (window.location.pathname == "/user/checkout" && res['totalAmount'] == 0)
+                window.location.pathname = "/user/index"
         });
     })();
 </script>

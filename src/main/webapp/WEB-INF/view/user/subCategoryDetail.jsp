@@ -111,8 +111,8 @@
                             <div class="product-filter-content">
                                 <div class="product-filter-content-inner">
 
-                                    <!-- <!--Product Filter Button-->
-                                    
+                                    <!-- Product Filter Button-->
+
 
                                     <!--Product Sort By-->
                                     <!-- <form class="product-sort-by">
@@ -232,23 +232,25 @@
                             <div class="row product-list-item">
                                 <!-- item.1 -->
                                 <c:forEach items="${subCategoryList}" var="subCategoryVariable">
-                                <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
-                                    <!--Product Item-->
-                                    <div class="product-item">
-                                    <div class="product-item-inner">
-                                            <div class="product-img-wrap">
-                                                <a href="productDetail?subCategoryId=${subCategoryVariable.id }"><img style="width: 262px; height: 175px" src="<%=request.getContextPath()%>/sub-category/${subCategoryVariable.subCategoryName}.jpg"></a>
+                                    <div class="product-item-element col-sm-6 col-md-4 col-lg-3">
+                                        <!--Product Item-->
+                                        <div class="product-item">
+                                            <div class="product-item-inner">
+                                                <div class="product-img-wrap">
+                                                    <a href="productDetail?subCategoryId=${subCategoryVariable.id }">
+                                                        <img style="width: 262px; height: 175px"
+                                                             src="<%=request.getContextPath()%>/sub-category/${subCategoryVariable.subCategoryName}.jpg"></a>
+                                                </div>
+                                                <!-- <div class="product-button">
+                                                    <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
+                                                    <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Whishlist"><i class="fa fa-heart"></i></a>
+                                                    <a href="#" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
+                                                </div> -->
                                             </div>
-                                            <!-- <div class="product-button">
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Cart"><i class="fa fa-shopping-bag"></i></a>
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Add To Whishlist"><i class="fa fa-heart"></i></a>
-                                                <a href="#" class="js_tooltip" data-mode="top" data-tip="Quick&nbsp;View"><i class="fa fa-eye"></i></a>
-                                            </div> -->
-                                        </div>
-                                        
-                                        <div class="product-detail">
-                                            
-                           <p class="product-title"><a href="productDetail?subCategoryId=${subCategoryVariable.id }">${subCategoryVariable.subCategoryName}</a></p>
+
+                                            <div class="product-detail">
+
+                                                <p class="product-title"><a href="productDetail?subCategoryId=${subCategoryVariable.id }">${subCategoryVariable.subCategoryName}</a></p>
                                            <!--  <div class="product-rating">
                                                 <div class="star-rating" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating" title="Rated 4 out of 5">
                                                     <span style="width: 60%"></span>

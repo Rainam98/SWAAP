@@ -29,8 +29,7 @@ function removeElementFromCart(idPrefix, cartId) {
     let final_total = parseFloat(final_total_elem.innerHTML);
     let subTotal;
     if (document.getElementById('cart-' + cartId)) {
-        subTotal = parseFloat(document.getElementById('cart-' + cartId).innerHTML);
-
+        subTotal = parseFloat(document.getElementById('cart-' + cartId).value);
     }
     final_total = final_total - subTotal;
     [].forEach.call(document.getElementsByClassName('final_total'), e => e.innerHTML = final_total);
@@ -55,6 +54,6 @@ function updateHeader() {
 // (function () {
 //     var subTotal = 0;
 //     [].forEach.call(document.getElementsByClassName('sub-totals'), (e) => subTotal += parseFloat(e.innerText));
-// [].forEach.call(document.getElementsByClassName('final_total'), e => e.innerHTML = document.getElementById('header-total').innerHTML);
+//     [].forEach.call(document.getElementsByClassName('final_total'), e => e.innerHTML = document.getElementById('header-total').innerHTML);
 // })();
 
