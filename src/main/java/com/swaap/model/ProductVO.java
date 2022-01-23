@@ -1,6 +1,20 @@
 package com.swaap.model;
 
-import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="product_table")
@@ -30,22 +44,25 @@ public class ProductVO {
 	
 	@Column(name="product_file_path")
 	private String productFilePath;
-	
-	@Column(name="status")
-	private boolean status=false;
-	
+
+	@Column(name = "status")
+	private boolean status = false;
+
 	@ManyToOne
-	@JoinColumn(name="branchVO")
-	private BranchVO branchVO;
-	
-	@ManyToOne
-	@JoinColumn(name="categoryVO")
+	@JoinColumn(name = "categoryVO")
 	private CategoryVO categoryVO;
-	
+
 	@ManyToOne
-	@JoinColumn(name="subCategoryVO")
+	@JoinColumn(name = "subCategoryVO")
 	private SubCategoryVO subCategoryVO;
-	
+
+	@ManyToMany(fetch = FetchType.LAZY,
+							cascade = { CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
+	@JoinTable(name = "branch_product",
+						 joinColumns = @JoinColumn(name = "product_id"),
+						 inverseJoinColumns = @JoinColumn(name = "branch_id"))
+	private List<BranchVO> branchVOList;
+
 	public int getId() {
 		return id;
 	}
@@ -110,14 +127,6 @@ public class ProductVO {
 		this.status = status;
 	}
 
-	public BranchVO getBranchVO() {
-		return branchVO;
-	}
-
-	public void setBranchVO(BranchVO branchVO) {
-		this.branchVO = branchVO;
-	}
-
 	public CategoryVO getCategoryVO() {
 		return categoryVO;
 	}
@@ -140,5 +149,20 @@ public class ProductVO {
 
 	public void setProductDescription(String productDescription) {
 		this.productDescription = productDescription;
+	}
+
+	public List<BranchVO> getBranchVOList() {
+		return branchVOList;
+	}
+
+	public void setBranchVOList(List<BranchVO> branchVOList) {
+		this.branchVOList = branchVOList;
+	}
+
+	public void addBranch(BranchVO branchVO) {
+		if (this.branchVOList == null) {
+			branchVOList = new ArrayList<BranchVO>();
+		}
+		branchVOList.add(branchVO);
 	}
 }

@@ -1,6 +1,13 @@
 package com.swaap.model;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "order_table")
@@ -28,6 +35,10 @@ public class OrderVO {
 	@ManyToOne
 	@JoinColumn(name = "login_id")
 	private LoginVO loginVO;
+
+	@ManyToOne
+	@JoinColumn(name = "branch_id")
+	private BranchVO branchVO;
 
 	public String getPurchaseDate() {
 		return purchaseDate;
@@ -83,5 +94,13 @@ public class OrderVO {
 
 	public void setPaymentGateway(String paymentGateway) {
 		this.paymentGateway = paymentGateway;
+	}
+
+	public BranchVO getBranchVO() {
+		return branchVO;
+	}
+
+	public void setBranchVO(BranchVO branchVO) {
+		this.branchVO = branchVO;
 	}
 }

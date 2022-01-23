@@ -24,6 +24,9 @@
     <!-- Sweet Alert -->
     <link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/sweetalert.css">
 
+    <!-- Popover -->
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/jquery.popSelect.min.css">
+
     <!-- Color Picker -->
     <link rel="stylesheet" href="<%=request.getContextPath()%>/adminResources/css/color-switcher.min.css">
 </head>
@@ -49,17 +52,62 @@
                         <div class="form-group">
                             <label for="categoryName" name="brn" class="control-label">Branch Location</label>
                             <div class="form-group margin-bottom-20">
-                                <f:select class="form-control" path="branchVO.id" placeholder="Select Branch">
+                                <f:select class="form-control" path="branchVOList" placeholder="Select Branch"
+                                          itemValue="branch_id">
                                     <c:forEach items="${branchList}" var="branchVariable">
                                         <f:option value="${branchVariable.id}">${branchVariable.branchName }</f:option>
                                     </c:forEach>
                                 </f:select>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="subCategoryName" name="scatnme" class="control-label">Category</label>
-                            <div class="form-group margin-bottom-20">
-                                <f:select onchange="updateSubCategories(this)" class="form-control" path="categoryVO.id"
+
+                    <div class="form-group">
+                        <div class="popover-select-wrapper" style="width: 417px; height: 45px;"><select id="popover-2"
+                                                                                                        class="form-control"
+                                                                                                        multiple=""
+                                                                                                        style="display: none;">
+                            <option value="game-of-thrones">Game Of Thrones</option>
+                            <option value="prison-break">Prison Break</option>
+                            <option value="lost">Lost</option>
+                            <option value="sherlock-holmes">Sherlock Holmes</option>
+                            <option value="true-detectives">True Detectives</option>
+                        </select>
+                            <div class="popover-tag-wrapper"><textarea class="popover-select-textarea"></textarea>
+                                <ul class="popover-select-tags" style="height: 39px;">
+                                    <li class="placeholder">
+                                        <div><input type="text" readonly="true"></div>
+                                    </li>
+                                </ul>
+                                <div class="placeholder-text">Click to Add More</div>
+                            </div>
+                            <div class="popover-select bottom" style="top: 39px; left: 25.5px; display: none;">
+                                <div class="popover-select-body">
+                                    <ul class="popover-select-list">
+                                        <li data-value="game-of-thrones" data-text="Game Of Thrones">Game Of
+                                            Thrones
+                                        </li>
+                                        <li data-value="prison-break" data-text="Prison Break">Prison Break</li>
+                                        <li data-value="lost" data-text="Lost">Lost</li>
+                                        <li data-value="sherlock-holmes" data-text="Sherlock Holmes">Sherlock
+                                            Holmes
+                                        </li>
+                                        <li data-value="true-detectives" data-text="True Detectives">True
+                                            Detectives
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="arrow"></div>
+                            </div>
+                        </div>
+                        <!-- /.box-content -->
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="subCategoryName" name="scatnme" class="control-label">Category</label>
+                    <div class="form-group margin-bottom-20">
+                        <f:select onchange="updateSubCategories(this)" class="form-control" path="categoryVO.id"
                                           placeholder="Select Category">
                                     <f:option value="-1"> select category </f:option>
                                     <c:forEach items="${categoryList}" var="categoryVariable">
@@ -156,6 +204,10 @@
 <script src="<%=request.getContextPath()%>/adminResources/js/nprogress.js"></script>
 <script src="<%=request.getContextPath()%>/adminResources/js/sweetalert.min.js"></script>
 <script src="<%=request.getContextPath()%>/adminResources/js/waves.min.js"></script>
+
+<!-- Popover -->
+<script src="<%=request.getContextPath()%>/adminResources/js/jquery.popSelect.min.js"></script>
+
 <!-- Full Screen Plugin -->
 <script src="<%=request.getContextPath()%>/adminResources/js/jquery.fullscreen-min.js"></script>
 
